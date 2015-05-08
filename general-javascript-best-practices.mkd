@@ -16,7 +16,7 @@ When writing functions, their names should give a good indication of what they d
 
 ```javascript
 // Function name is misleading.
-var notifyBookingComplete = function() {
+var notifyThingies = function() {
   if (userLoggedIn) {
     trigger("booking_complete");
   }
