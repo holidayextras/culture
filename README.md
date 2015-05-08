@@ -5,16 +5,16 @@
 This is a collection of documents that outline Holiday Extras' culture and developer expectations.
 
 ## Contents
- * [General Javascript Best Practices](https://github.com/holidayextras/hx-culture/blob/master/general-javascript-best-practices.md)
- * [Clientside Javascript (Backbone) Best Practices](https://github.com/holidayextras/hx-culture/blob/master/clientside-javascript-best-practices.md)
- * [Clientside Javascript (jQuery) Best Practices](https://github.com/holidayextras/hx-culture/blob/master/clientside-jquery-best-practices.md)
- * [Coding Principles](https://github.com/holidayextras/hx-culture/blob/master/coding-principles.md)
- * [Organising code in backbone projects](https://github.com/holidayextras/hx-culture/blob/master/organising-code-backbone-projects.md)
- * [PR template](https://github.com/holidayextras/hx-culture/blob/master/pr-template.md)
- * [Holiday Extras Security Policy](https://github.com/holidayextras/hx-culture/blob/master/security-policy.md)
- * [Server Side Javascript Best Practices](https://github.com/holidayextras/hx-culture/blob/master/serverside-javascript-best-practices.md)
- * [Technical Planning Meetings](https://github.com/holidayextras/hx-culture/blob/master/technical-planning-meeting.md)
- * [Expedited Procedure](https://github.com/holidayextras/hx-culture/blob/master/expedited-procedure.md)
+ * [General Javascript Best Practices](https://github.com/holidayextras/culture/blob/master/general-javascript-best-practices.md)
+ * [Clientside Javascript (Backbone) Best Practices](https://github.com/holidayextras/culture/blob/master/clientside-javascript-best-practices.md)
+ * [Clientside Javascript (jQuery) Best Practices](https://github.com/holidayextras/culture/blob/master/clientside-jquery-best-practices.md)
+ * [Coding Principles](https://github.com/holidayextras/culture/blob/master/coding-principles.md)
+ * [Organising code in backbone projects](https://github.com/holidayextras/culture/blob/master/organising-code-backbone-projects.md)
+ * [PR template](https://github.com/holidayextras/culture/blob/master/pr-template.md)
+ * [Holiday Extras Security Policy](https://github.com/holidayextras/culture/blob/master/security-policy.md)
+ * [Server Side Javascript Best Practices](https://github.com/holidayextras/culture/blob/master/serverside-javascript-best-practices.md)
+ * [Technical Planning Meetings](https://github.com/holidayextras/culture/blob/master/technical-planning-meeting.md)
+ * [Expedited Procedure](https://github.com/holidayextras/culture/blob/master/expedited-procedure.md)
 
 ## Contributing
 
