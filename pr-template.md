@@ -46,7 +46,7 @@
 - [ ] I don’t believe this work introduces unnecessary technical debt.
 - [ ] +1 from me!
 
-#### Software Tester Review
+#### Software Tester review
 - [ ] I’ve run all the selenium tests locally and they pass.
 - [ ] I agree with the test coverage.
 - [ ] I've checked for Ruby changes and understand how to deploy if present. 
