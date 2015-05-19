@@ -15,6 +15,7 @@ This is a collection of documents that outline Holiday Extras' culture and devel
  * [Server Side Javascript Best Practices](/serverside-javascript-best-practices.md)
  * [Technical Planning Meetings](/technical-planning-meeting.md)
  * [Expedited Procedure](/expedited-procedure.md)
+ * [CoffeeScript to JavaScript Guidelines](/coffeescript-to-javascript-guidelines.md)
 
 ## Contributing
 
