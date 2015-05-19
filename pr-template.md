@@ -21,13 +21,11 @@
 - [ ] I am ready for this to be code reviewed, merged and tested.
 
 #### IP or Developer Review:
-- [ ] I agree with the assumptions made in the quality checklist.
 - [ ] I’ve witnessed the work behaving as expected.
 - [ ] I’ve run all the tests locally and they pass.
 - [ ] +1 from me!
 
 #### Software Engineer or Developer review:
-- [ ] I agree with the assumptions made in the quality checklist.
 - [ ] I’ve witnessed the work behaving as expected.
 - [ ] I’ve run all the tests locally and they pass.
 - [ ] I’ve checked for appropriate test coverage.
@@ -36,7 +34,6 @@
 - [ ] +1 from me!
 
 #### Software Engineer or project guru review:
-- [ ] I agree with the assumptions made in the quality checklist.
 - [ ] I’ve witnessed the work behaving as expected.
 - [ ] I’ve run all the tests locally and they pass.
 - [ ] I’ve checked for appropriate test coverage.
