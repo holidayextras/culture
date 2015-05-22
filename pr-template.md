@@ -26,19 +26,19 @@
 - [ ] +1 from me!
 
 #### Software Engineer or Developer review:
-- [ ] I’ve witnessed the work behaving as expected.
-- [ ] I’ve run all the tests locally and they pass.
 - [ ] I’ve checked for appropriate test coverage.
 - [ ] I’ve checked for coding anti-patterns.
 - [ ] I've checked this work against the requirements of the Jira.
+- [ ] I’ve witnessed the work behaving as expected.
+- [ ] I’ve run all the tests locally and they pass.
 - [ ] +1 from me!
 
 #### Software Engineer or project guru review:
-- [ ] I’ve witnessed the work behaving as expected.
-- [ ] I’ve run all the tests locally and they pass.
 - [ ] I’ve checked for appropriate test coverage.
 - [ ] I’ve checked for coding anti-patterns.
 - [ ] I don’t believe this work introduces unnecessary technical debt.
+- [ ] I’ve witnessed the work behaving as expected.
+- [ ] I’ve run all the tests locally and they pass.
 - [ ] +1 from me!
 
 #### Software Tester review
