@@ -22,3 +22,12 @@ Anyone associated with Holiday Extras, including our customers and partners, sho
 
 * Edits should attempt to avoid [fallacies](http://en.wikipedia.org/wiki/List_of_fallacies) and [cognitive biases](http://en.wikipedia.org/wiki/List_of_cognitive_biases) when making their cases for inclusion of contributions. We prefer to follow objective data and arguments.
 * We use [Markdown](http://daringfireball.net/projects/markdown/syntax) syntax to format these documents.
+
+The PR template in this repository is targeted at code changes, so we'd suggest something simpler if you're looking for something to use when opening a pull request to add documentation here:
+
+```
+# What does this change?
+# Why?
+```
+
+Pull requests to this repository are open to input / discussion / agreement by all, there is no requirement of approval by a fixed number of people with specific roles as in the template for code changes. If a PR has been open for several days with no unresolved comments, or it's otherwise clear from comments many people have had the chance to read and agree, we should consider it good to merge; further changes can always be raised through additional followup PRs.
