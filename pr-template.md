@@ -44,4 +44,3 @@
 #### Software Tester review
 - [ ] I’ve run all the selenium tests locally and they pass.
 - [ ] I agree with the test coverage.
-- [ ] I've checked for Ruby changes and understand how to deploy if present.
