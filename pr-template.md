@@ -5,7 +5,7 @@
 #### What gif best describes how you feel about this work?
 ---
 #### Developer Definition of Done/Quality Checklist (for PR author to complete BEFORE code review):
-- [ ] I have checked the contrbuting document and I'm happy for this to be reviewed.
+- [ ] I have checked the contributing document and I'm happy for this to be reviewed.
 
 #### Software Engineer or Developer review:
 - [ ] I’ve witnessed the work behaving as expected (this could be on the authors machine or screencast).
