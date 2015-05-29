@@ -1,6 +1,6 @@
 #### What does this PR do? (please provide any background)
 #### What tests does this PR have?
-#### How can this tested?
+#### How can be this tested?
 #### Screenshots / Screencast
 #### What gif best describes how you feel about this work?
 ---
