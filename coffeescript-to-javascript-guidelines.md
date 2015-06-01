@@ -9,6 +9,12 @@
 6. If this conversion is being done at the same time as a feature, submit a PR using the [interstitial PR process](#interstitial-pr-process)
 
 ## Refactoring CoffeeScript magic
+
+_**Disclaimer**: This file is not a JavaScript style guide. Reference the following files for coding style & principles:_
+* [General Javascript Best Practices](/general-javascript-best-practices.md)
+* [Clientside Javascript (Backbone) Best Practices](/clientside-javascript-best-practices.md)
+* [Coding Principles](/coding-principles.md)
+
 ### Classes & super
 #### CoffeeScript
 
@@ -126,35 +132,7 @@ _hasFlightCode: function() {
 }
 ```
 
-_Note: this particular example is excessively complicated. Ideally, if we're having to check a property that's nested this deeply then the checks should be pushed further upstream, such as a flight model in this case._
-
-### Binding
-#### CoffeeScript
-
-```coffee
-_.debounce((=> @trigger('scroll')), 100)
-```
-
-#### Generated JavaScript
-This is what would be output from js2coffee
-
-```javascript
-_.debounce(((function(_this) {
-  return function() {
-    return _this.trigger('scroll');
-  };
-})(this)), 100);
-```
-
-#### Refactored JavaScript
-Rather than wrapping & passing `this` into the scope of the callback, we would assign `this` to `self` outside the scope of `debounce`, like so
-
-```javascript
-var self = this;
-_.debounce(function() {
-  return self.trigger('scroll');
-}), 100);
-```
+_**Note**: this particular example is excessively complicated. Ideally, if we're having to check a property that's nested this deeply then the checks should be pushed further upstream, such as a flight model in this case._
 
 ### Full conversion example of `models/carpark.coffee`
 https://gist.github.com/jackdcrawford/a8e5dacf6cecdb9b6bfe
