@@ -114,17 +114,19 @@ _hasFlightCode: function() {
 ```
 
 #### Refactored JavaScript
-This is fairly unreadable, we would remove the temporary `ref` variables and do the following
+This is fairly unreadable, we would remove the temporary `ref` variables and do the following.
 
 ```javascript
 _hasFlightCode: function() {
   var flights = this.get('flights');
-  if(!(flights && flights.out && flights.out.flight && flights.out.flight.code)) {
+  if(!flights || !flights.out || !flights.out.flight || !flights.out.flight.code)) {
     return;
   }
   return flights.out.flight.code;
 }
 ```
+
+_Note: this particular example is excessively complicated. Ideally, if we're having to check a property that's nested this deeply then the checks should be pushed further upstream, such as a flight model in this case._
 
 ### Binding
 #### CoffeeScript
