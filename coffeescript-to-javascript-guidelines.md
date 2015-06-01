@@ -145,4 +145,4 @@ The process for converting CoffeeScript to JavaScript at the same time as writin
 3. Create a “feature” branch, based on the “code conversion branch”
 4. Both “code conversion” and “feature” can then be merged into “interstitial”, removing the need for two pull requests to be tested
 
-![Interstitial PR process](https://cldup.com/muwx4cVtou.png)
+![Interstitial PR process](https://cloud.githubusercontent.com/assets/1485654/7913291/a1fece40-0866-11e5-84b5-1698ecae101a.png)
