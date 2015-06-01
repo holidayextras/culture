@@ -140,9 +140,9 @@ https://gist.github.com/jackdcrawford/a8e5dacf6cecdb9b6bfe
 ## Interstitial PR process
 The process for converting CoffeeScript to JavaScript at the same time as writing features
 
-1. Create a new “interstitial” branch, based on the project’s edge branch
+1. Create a new “interstitial” branch, based on the project’s master branch
 2. Create a “code conversion” branch, based on the “interstitial” branch
 3. Create a “feature” branch, based on the “code conversion branch”
 4. Both “code conversion” and “feature” can then be merged into “interstitial”, removing the need for two pull requests to be tested
 
-![Interstitial PR process](https://cldup.com/5sAdTVvgH2.png)
+![Interstitial PR process](https://cloud.githubusercontent.com/assets/1485654/7913291/a1fece40-0866-11e5-84b5-1698ecae101a.png)
