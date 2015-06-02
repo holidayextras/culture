@@ -9,6 +9,10 @@
 
 Please also see the respective serverside and clientside best practice docs.
 
+## ECMAScript version support
+
+We write ECMAScript 5 at Hx. This is up for debate, but until ECMAScript 6 is widely supported without polyfills and other supporting libraries, all of our code should be ECMAScript 5. 
+
 ## Function names should reflect behaviour (as much as possible): 
 When writing functions, their names should give a good indication of what they do, for example:
 

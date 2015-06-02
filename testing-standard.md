@@ -105,6 +105,3 @@ someModule._action = function(number) {
   return number;
 };
 ```
-
-
-
