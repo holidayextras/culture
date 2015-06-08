@@ -16,6 +16,7 @@ This is a collection of documents that outline Holiday Extras' culture and devel
  * [Technical Planning Meetings](/technical-planning-meeting.md)
  * [Expedited Procedure](/expedited-procedure.md)
  * [CoffeeScript to JavaScript Guidelines](/coffeescript-to-javascript-guidelines.md)
+ * [Javascript linting Rules](/javascript-linting-rules.md)
 
 ## Contributing
 
