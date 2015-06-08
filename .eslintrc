@@ -1,0 +1,13 @@
+{
+  "globals": {
+  },
+  "env": {
+  },
+  "plugins": [
+  ],
+  "ecmaFeatures": {
+  },
+  "rules": {
+    "quotes": 0
+  }
+}
