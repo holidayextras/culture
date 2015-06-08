@@ -3,7 +3,9 @@
   },
   "env": {
     "node": true,
-    "mocha": true
+    "mocha": true,
+    "amd": true,
+    "browser": true
   },
   "plugins": [
   ],
