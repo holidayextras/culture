@@ -2,12 +2,17 @@
   "globals": {
   },
   "env": {
+    "node": true,
+    "mocha": true
   },
   "plugins": [
   ],
   "ecmaFeatures": {
   },
   "rules": {
-    "quotes": 0
+    "quotes": 0,
+    "no-underscore-dangle": 0,
+    "curly": [2, "multi-line"],
+    "camelcase": [2, {"properties": "never"}]
   }
 }
