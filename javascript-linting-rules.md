@@ -6,30 +6,28 @@ _A project may use additional rules to ones listed here, but these would not be 
 
 ## Current Rules
 
-### Trailing white space
+These are stored in the [.eslintrc](https://github.com/holidayextras/culture/blob/linting/.eslintrc) in this repository.
 
-Rule: [no-trailing-spaces](http://eslint.org/docs/rules/no-trailing-spaces)
-
-Extra whitespace changes on lines and show up on code diffs, whitespace changes can be ignored on diffs but its extra work/clicks that we don't need.
-
-This also allows the go to end of line function in your editor to work in a useful way.
-
-This included empty lines.
+For an explanation of these rules please refer to the [ESLint documentation](http://eslint.org/docs/rules/).
 
 ## Implementation
 
 ### Tech
 
-The rule set will be compatible with [ESLint](http://eslint.org/).
+The rule set is compatible with [ESLint](http://eslint.org/).
 
 ### Adding to your project
 
-TODO how to use the rules in your project.
+Rather than adding the ruleset from this repo into your own project, please use [make-up](https://github.com/holidayextras/make-up/tree/check) to add the checks
+to your project as follows:
+
+    npm install make-up --save-dev
+
+Then add a call to `node_modules/.bin/make-up` in your npm script to perform the checks.
 
 ## Expanding current rules
 
 In order for a rule to be added to the above list it requires the following:
 
-1. A corresponding configuration option to enable lint rule.
 1. A valid reason for adoption the rule.
 1. An example showing code that passes the specific lint check.
