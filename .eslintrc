@@ -15,6 +15,7 @@
     "quotes": 0,
     "no-underscore-dangle": 0,
     "curly": [2, "multi-line"],
-    "camelcase": [2, {"properties": "never"}]
+    "camelcase": [2, {"properties": "never"}],
+    "space-in-parens": [2, "never"]
   }
 }
