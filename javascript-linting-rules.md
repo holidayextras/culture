@@ -23,11 +23,13 @@ to your project as follows:
 
     npm install make-up --save-dev
 
-Then add a call to `node_modules/.bin/make-up` in your npm script to perform the checks.
+Then add a call to `node_modules/.bin/make-up dir1 dir2 ... dirN` in your npm script to perform the checks.
+
+If adding linting to an existing project, it would be advisable to add one directory at a time and resolve errors as they arise.
 
 ## Expanding current rules
 
 In order for a rule to be added to the above list it requires the following:
 
 1. A valid reason for adoption the rule.
-1. An example showing code that passes the specific lint check.
+1. Agreement from the SA's.
