@@ -86,3 +86,9 @@ Before placing a new system or end point live, the following points should be co
  1. Check results of next external security audit for potential issues in new system.
 
 The above would be performed in conjuction with IT and project owners would need to be mindful of the extras time this will incur before go live.
+
+## Linting:
+
+All new projects must have code linting enabled and configured to fail CI if the standard are not meet.
+
+The preferred way of implementing this is to use our [make-up](https://github.com/holidayextras/make-up) project, as this simplifies the approach provides further consistency among project.
