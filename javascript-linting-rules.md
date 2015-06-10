@@ -6,7 +6,7 @@ _A project may use additional rules to ones listed here, but these would not be 
 
 ## Current Rules
 
-These are stored in the [.eslintrc](https://github.com/holidayextras/culture/blob/linting/.eslintrc) in this repository.
+These are stored in the [.eslintrc](https://github.com/holidayextras/culture/.eslintrc) in this repository.
 
 For an explanation of these rules please refer to the [ESLint documentation](http://eslint.org/docs/rules/).
 
@@ -18,7 +18,7 @@ The rule set is compatible with [ESLint](http://eslint.org/).
 
 ### Adding to your project
 
-Rather than adding the ruleset from this repo into your own project, please use [make-up](https://github.com/holidayextras/make-up/tree/check) to add the checks
+Rather than adding the ruleset from this repo into your own project, please use [make-up](https://github.com/holidayextras/make-up) to add the checks
 to your project as follows:
 
     npm install make-up --save-dev

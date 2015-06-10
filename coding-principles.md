@@ -91,4 +91,4 @@ The above would be performed in conjuction with IT and project owners would need
 
 All new projects must have code linting enabled and configured to fail CI if the standard are not meet.
 
-The preferred way of implementing this is to use our [make-up](https://github.com/holidayextras/make-up) project, as this simplifies the approach provides further consistency among project.
+The preferred way of implementing this is to see our [linting rules documentation](https://github.com/holidayextras/culture/javascript-linting-rules.md#adding-to-your-project), as this simplifies the approach provides further consistency among project.
