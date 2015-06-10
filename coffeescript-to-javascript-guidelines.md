@@ -134,6 +134,32 @@ _hasFlightCode: function() {
 
 _**Note**: this particular example is excessively complicated. Ideally, if we're having to check a property that's nested this deeply then the checks should be pushed further upstream, such as a flight model in this case._
 
+### Return values
+#### CoffeeScript
+
+```coffee
+func = ->
+  doSomething()
+```
+
+#### Generated JavaScript
+This is what would be output after the conversion:
+
+```javascript
+var func;
+
+func = function() {
+  return doSomething();
+};
+```
+
+#### Refactoring process
+With coffeescript the last statement of a function is always returned even if not required.
+
+The first thing to do here is to check how this function is called. It could be called from many places so it's best to perform a search of the code base for the method name.
+
+If the callers expect a return value from the function please keep the `return` keyword, if not please remove it to avoid confusion.
+
 ### Full conversion example of `models/carpark.coffee`
 https://gist.github.com/jackdcrawford/a8e5dacf6cecdb9b6bfe
 
