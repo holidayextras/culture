@@ -134,6 +134,43 @@ _hasFlightCode: function() {
 
 _**Note**: this particular example is excessively complicated. Ideally, if we're having to check a property that's nested this deeply then the checks should be pushed further upstream, such as a flight model in this case._
 
+### Forcing context
+
+#### CoffeeScript
+```coffee
+parent: ->
+  @someMethod (err, result) =>
+    @foo() # Executed in context of parent
+```
+
+
+#### Generated JavaScript
+This is what would be output after the conversion:
+
+```javascript
+parent: function() {
+  return this.someMethod((function(_this) {
+    return function(err, result) {
+      return _this.foo(); // Executed in context of parent
+    };
+  })(this));
+}
+```
+
+
+#### Desireable JavaScript
+```javascript
+parent: function() {
+  var self = this;
+  this.someMethod(function(err, result) {
+      self.foo(); // Executed in context of parent
+  });
+}
+```
+
+
+
+
 ### Return values
 #### CoffeeScript
 
