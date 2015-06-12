@@ -85,4 +85,10 @@ Before placing a new system or end point live, the following points should be co
  1. Add new endpoint/system to PCI and penetration testing hosts list.
  1. Check results of next external security audit for potential issues in new system.
 
-The above would be performed in conjuction with IT and project owners would need to be mindful of the extras time this will incur before go live.
+The above would be performed in conjuction with IT and project owners would need to be mindful of the extra time this will incur before go live.
+
+## Linting:
+
+All new projects must have code linting enabled and configured to fail CI if the standard are not met.
+
+The preferred way of implementing this is to see our [linting rules documentation](javascript-linting-rules.md#adding-to-your-project), as this simplifies the approach provides further consistency among project.
