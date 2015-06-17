@@ -61,7 +61,7 @@ if(abba.test('My test').isnt('show_original')){
 
 ### Completing a test
 
-When you want to register the test as complete, most likely to indicate conversion then you can call the `complete` method.
+When you want to register the test as complete, most likely to indicate conversion, then you can call the `complete` method.
 
 ```javascript
 // complete the test
