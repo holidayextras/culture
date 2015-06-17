@@ -66,19 +66,19 @@ Any piece of logically distinct code that we share between other projects should
 
 All modules should follow this order:
 
-1. `require()` in any dependencies
-2. define a local object and export it
+1. define a local object and export it
+2. `require()` in any dependencies
 3. (all the logic goes here)
 
 For example:
 ```javascript
-// Require any dependencies at the top, eg;
+// define a local object and export it
+var ourModuleName = module.exports = { };
+
+// Next, require any dependencies:
 var _ = require('underscore');
 var moment = require('moment');
 var async = require('async');
-
-// Next, define a local object and export it:
-var ourModuleName = module.exports = { };
 
 // Now attach all functionality to our local object:
 ourModuleName.somePublicFunction = function() { };
@@ -115,7 +115,7 @@ Good
 ```javascript
 if (a == 5) {
   return 1;
-} 
+}
 
 if (b == 7) {
   return 2;
@@ -147,9 +147,9 @@ if (( a && b ) || ( a && c )) {
 ```
 Good
 ```javascript
-if (!a || b) return; 
-if (!c && !d) return; 
-if (!e) return; 
+if (!a || b) return;
+if (!c && !d) return;
+if (!e) return;
 
 // stuff goes here
 ```
@@ -245,7 +245,7 @@ obj._preprocess = function(p1, p2, callback) {
 obj._request = function(p1, p2, callback) {
   if (p1 < 10) {
     return extService.carparkSearch(p1, p2, callback);
-  } 
+  }
   return extService.refund(p1, p2, callback);
 };
 ```
@@ -262,53 +262,54 @@ obj._request = function(p1, p2, callback) {
 * One unit test can efficiently validate the entire code block
 
 ```javascript
-async.waterfall([     
-  function sendMisBook1Request(misPrebookingResponse, callback) {
-    createBooking._sendMisBook1Request(misPrebookingResponse, params, magenta, function(err, misBook1Response) {
-      return callback(err, misBook1Response);
+async.waterfall([
+  // ... ,
+  function sendBook1Request(prebookingResponse, callback) {
+    createBooking._sendBook1Request(prebookingResponse, params, supplier, function(err, book1Response) {
+      return callback(err, book1Response);
     });
   },
-  function generateChauntryPaymentRequest(misBook1Response, callback) {
-    createBooking._generateChauntryPaymentRequest(params, chauntryPayment, function(err, chauntryPaymentRequest) {
-      return callback(err, misBook1Response, chauntryPaymentRequest)
+  function generatePaymentRequest(book1Response, callback) {
+    createBooking._generatePaymentRequest(params, payment, function(err, paymentRequest) {
+      return callback(err, book1Response, paymentRequest)
     });
   },
-  function processPaymentViaChips(misBook1Response, chauntryPaymentRequest, callback) {
-    createBooking._processPaymentViaChips(chauntryPaymentRequest, chauntryPayment, function(err, chauntryBookingResponse) {
-      return callback(err, misBook1Response, chauntryPaymentRequest, chauntryBookingResponse);
+  function processPayment(book1Response, paymentRequest, callback) {
+    createBooking._processPayment(paymentRequest, payment, function(err, bookingResponse) {
+      return callback(err, book1Response, paymentRequest, bookingResponse);
     });
   },
-  function sendMisBook2Request(misBook1Response, chauntryPaymentRequest, chauntryBookingResponse, callback) {
-    createBooking._sendMisBook2Request(params, misBook1Response, chauntryPaymentRequest, chauntryBookingResponse, magenta, chauntryPayment, function(err, misBook2Response) {
-      return callback(err, chauntryBookingResponse, misBook2Response);
+  function sendBook2Request(book1Response, paymentRequest, bookingResponse, callback) {
+    createBooking._sendBook2Request(params, book1Response, paymentRequest, bookingResponse, supplier, payment, function(err, book2Response) {
+      return callback(err, bookingResponse, book2Response);
     });
   },
-  function generateBookingReference(chauntryBookingResponse, misBook2Response, callback) {
-    createBooking._generateBookingReference(self, chauntryBookingResponse, misBook2Response, callback);
+  function generateBookingReference(bookingResponse, book2Response, callback) {
+    createBooking._generateBookingReference(self, bookingResponse, book2Response, callback);
   },
 ], callback);
 ```
 ```javascript
 var sandbox = sinon.sandbox.create();
-sandbox.stub(createBooking, '_sendMisBook1Request').callsArgWith(3, null, 'misBook1Response');
-sandbox.stub(createBooking, '_generateChauntryPaymentRequest').callsArgWith(2, null, 'chauntryPaymentRequest');
-sandbox.stub(createBooking, '_processPaymentViaChips').callsArgWith(2, null, 'chauntryBookingResponse');
-sandbox.stub(createBooking, '_sendMisBook2Request').callsArgWith(6, null, 'misBook2Response');
+sandbox.stub(createBooking, '_sendBook1Request').callsArgWith(3, null, 'book1Response');
+sandbox.stub(createBooking, '_generatePaymentRequest').callsArgWith(2, null, 'paymentRequest');
+sandbox.stub(createBooking, '_processPayment').callsArgWith(2, null, 'bookingResponse');
+sandbox.stub(createBooking, '_sendBook2Request').callsArgWith(6, null, 'book2Response');
 sandbox.stub(createBooking, '_generateBookingReference').callsArgWith(3, null, 'AAbookingRef');
 
 var product = { _product: { } };
 var params = { booking: { params: { } } };
 var self = { se:'lf' };
 
-createBooking.call(self, product, params, 'upgrades', 'magenta', 'chauntryPayment', function(err, result) {
+createBooking.call(self, product, params, 'upgrades', 'supplier', 'payment', function(err, result) {
   assert.equal(err, null);
   assert.ok(result, 'AAbookingRef');
 
-  assert.ok(createBooking._sendMisBook1Request.calledWith('lastMisResponse', params, 'magenta'));
-  assert.ok(createBooking._generateChauntryPaymentRequest.calledWith(params, 'chauntryPayment'));
-  assert.ok(createBooking._processPaymentViaChips.calledWith('chauntryPaymentRequest', 'chauntryPayment'));
-  assert.ok(createBooking._sendMisBook2Request.calledWith(params, 'misBook1Response', 'chauntryPaymentRequest', 'chauntryBookingResponse', 'magenta', 'chauntryPayment'));
-  assert.ok(createBooking._generateBookingReference.calledWith(self, 'chauntryBookingResponse', 'misBook2Response'));
+  assert.ok(createBooking._sendBook1Request.calledWith('lastResponse', params, 'supplier'));
+  assert.ok(createBooking._generatePaymentRequest.calledWith(params, 'payment'));
+  assert.ok(createBooking._processPayment.calledWith('paymentRequest', 'payment'));
+  assert.ok(createBooking._sendBook2Request.calledWith(params, 'book1Response', 'paymentRequest', 'bookingResponse', 'supplier', 'payment'));
+  assert.ok(createBooking._generateBookingReference.calledWith(self, 'bookingResponse', 'book2Response'));
 
   sandbox.restore();
   done();
@@ -328,7 +329,7 @@ createBooking.call(self, product, params, 'upgrades', 'magenta', 'chauntryPaymen
 
 ```javascript
 var mySequentialFunction = function(a, b, c) {
-  
+
   return d;
 };
 ```
@@ -360,7 +361,7 @@ var ourIdealFunction = function(params, callback) {
 
   agentLookup({ code: params.agent }, function(err, result) {
     if (err || !result) return callback(‘Unable to lookup agent’);
-      
+
     var output = transformAgentLookup(result);
     return callback(null, output);
   });
@@ -383,7 +384,7 @@ Bad
 ```javascript
 controller.doStuff = function(params, callback) {
   // do stuff ..
-  chauntry.send(params, function(err, result) {
+  supplier.send(params, function(err, result) {
     return callback( );
   });
 });
@@ -391,14 +392,14 @@ controller.doStuff = function(params, callback) {
 Good
 ```javascript
 controller.doStuff = function(params, callback) {
-  var chauntryParams = {
+  var supplierParams = {
     param1: params.param1,
     param2: params.param2 || null,
     param3: params.flight ?
-              params.flight.transform( ) : 
+              params.flight.transform( ) :
               null
   };
-  chauntry.send(chauntryParams, function(err, result) {
+  supplier.send(supplierParams, function(err, result) {
     return callback( );
   });
 });
@@ -466,7 +467,7 @@ Error()s don't stringify into log files:
 Our synchronous functions return truthy values or nulll, never Error()s:
 ```javascript
 var add = function(a, b) {
-  
+
   return a || null;
 };
 
@@ -498,7 +499,7 @@ something(1, function(err, result) {
 try {
   someAsyncFunc(function(err) {
     if (err) throw err; // this will not be caught
-    
+
   });
 } catch (err) {
   console.log(err);
