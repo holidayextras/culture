@@ -35,7 +35,7 @@ abba.test('My test').start();
 Though if you require customisation you can set these yourself.
 
 ```javascript
-// start a simple ab
+// start a custom ab
 abba.test('My test')
   .control('control', {weight:3})
   .variant('variant', {weight:1})
