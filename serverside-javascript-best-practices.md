@@ -91,6 +91,36 @@ In the above example its easy to identify a module's dependencies and the module
 
 
 
+## Promises or Callbacks?
+
+Provided the orchestration of asynchronous actions are decoupled from the code that provides functionality, both conventions are acceptable. For example, both of the following examples are great:
+
+```javascript
+ourModuleName._orchestrate = function() {
+  return ourModuleName._firstThing()
+    .then(ourModuleName._secondThing)
+    .then(ourModuleName._thirdThing)
+    .then(ourModuleName._fourthThing)
+    .fail(function(err) {
+      //
+    });
+};
+```
+```javascript
+ourModuleName._orchestrate = function(callback) {
+  async.waterfall([
+    ourModuleName._firstThing,
+    ourModuleName._secondThing,
+    ourModuleName._thirdThing,
+    ourModuleName._fourthThing
+  ], callback);
+};
+```
+
+
+
+
+
 ## Return Early
 
 * Each logic block is isolated
@@ -255,7 +285,7 @@ obj._request = function(p1, p2, callback) {
 
 
 
-## Handling heavily sequential async code
+## Handling heavily sequential async code with callbacks
 
 * `async.waterfall` allows us to chain functions together
 * The closures around `_task1/2/3/4` allow us to pass data over each private function instead of needing to proxy data through functions.
@@ -316,6 +346,53 @@ createBooking.call(self, product, params, 'upgrades', 'supplier', 'payment', fun
 });
 ```
 
+
+
+
+
+## Handling heavily sequential async code with promises
+
+* !! Using promises for heavily sequential async code has the downside of hiding the data being passed between functions. We lose the ability to wrap each layer in a closure to selectively pass the correct data betweeen the correct entites. Eveything must flow through the middle to get to the end. This breaks our rules on single-responsibility, but allows for slightly cleaner orchestration:
+* !! Sinon promises do not support sandboxing yet, so you'll have to manually restore everything by hand
+* !! Its impossible to prove that the data flow between promises is correct, only that data moves between them.
+
+```javascript
+createBooking._orchestrate = function(data) {
+  return createBooking._sendBook1Request(data)
+    .then(createBooking._generatePaymentRequest)
+    .then(createBooking._processPayment)
+    .then(createBooking._sendBook2Request)
+    .then(createBooking._generateBookingReference);
+};
+```
+```javascript
+require('sinon-bluebird');
+
+sinon.stub(createBooking, '_sendBook1Request').resolves('data1');
+sinon.stub(createBooking, '_generatePaymentRequest').resolves('data2');
+sinon.stub(createBooking, '_processPayment').resolves('data3');
+sinon.stub(createBooking, '_sendBook2Request').resolves('data4');
+sinon.stub(createBooking, '_generateBookingReference').resolves('data5');
+
+var data = 'data0';
+
+createBooking._orchestrate(data).then(function(result) {
+  assert.equal(result, 'data5');
+
+  assert.ok(createBooking._sendBook1Request.calledWithPromise('data0'));
+  assert.ok(createBooking._generatePaymentRequest.calledWithPromise('data1'));
+  assert.ok(createBooking._processPayment.calledWithPromise('data2'));
+  assert.ok(createBooking._sendBook2Request.calledWithPromise('data3'));
+  assert.ok(createBooking._generateBookingReference.calledWithPromise('data4'));
+
+  sinon.restore(createBooking._sendBook1Request);
+  sinon.restore(createBooking._generatePaymentRequest);
+  sinon.restore(createBooking._processPayment);
+  sinon.restore(createBooking._sendBook2Request);
+  sinon.restore(createBooking._generateBookingReference);
+  done();
+});
+```
 
 
 
