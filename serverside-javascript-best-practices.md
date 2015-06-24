@@ -355,6 +355,7 @@ createBooking.call(self, product, params, 'upgrades', 'supplier', 'payment', fun
 * !! Using promises for heavily sequential async code has the downside of hiding the data being passed between functions. We lose the ability to wrap each layer in a closure to selectively pass the correct data between the correct entites. Everything must flow through the middle to get to the end. This breaks our rules on single-responsibility, but allows for slightly cleaner orchestration:
 * !! Sinon promises do not support sandboxing yet, so you'll have to manually restore everything by hand
 * !! It's impossible to prove that the data flow between promises is correct, only that data moves between them.
+* The following test example uses `sinon-bluebird` to enable stubbing of promises. Any stubbing implementation is acceptable provided it allows us to control the data the stub resolves/fails with and provided we can assert against the data a stub is invoked with.
 
 ```javascript
 createBooking._orchestrate = function(data) {
