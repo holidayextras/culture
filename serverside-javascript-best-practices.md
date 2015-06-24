@@ -352,9 +352,9 @@ createBooking.call(self, product, params, 'upgrades', 'supplier', 'payment', fun
 
 ## Handling heavily sequential async code with promises
 
-* !! Using promises for heavily sequential async code has the downside of hiding the data being passed between functions. We lose the ability to wrap each layer in a closure to selectively pass the correct data betweeen the correct entites. Eveything must flow through the middle to get to the end. This breaks our rules on single-responsibility, but allows for slightly cleaner orchestration:
+* !! Using promises for heavily sequential async code has the downside of hiding the data being passed between functions. We lose the ability to wrap each layer in a closure to selectively pass the correct data between the correct entites. Everything must flow through the middle to get to the end. This breaks our rules on single-responsibility, but allows for slightly cleaner orchestration:
 * !! Sinon promises do not support sandboxing yet, so you'll have to manually restore everything by hand
-* !! Its impossible to prove that the data flow between promises is correct, only that data moves between them.
+* !! It's impossible to prove that the data flow between promises is correct, only that data moves between them.
 
 ```javascript
 createBooking._orchestrate = function(data) {
