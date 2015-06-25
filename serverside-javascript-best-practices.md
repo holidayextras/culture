@@ -767,7 +767,7 @@ ourUsername: "hapi",
 ## Caveats with basic Promise Chains
 
 Consider these functions:
-```
+```javascript
 createBooking._orchestrate = function(data) {
   return createBooking._sendBook1Request(data)
     .then(createBooking._generatePaymentRequest)
@@ -790,7 +790,7 @@ If someone were to come in and alter the behaviour of `createBooking._generatePa
 On a side not, it is not possible to get data between `createBooking._sendBook1Request` and `createBooking._processPayment` WITHOUT passing it through `createBooking._generatePaymentRequest`, which shouldn't care about the requirements of the functions around it. Someone could modify `createBooking._generatePaymentRequest` and break the expectations of the other two functions.
 
 We could wrap things up to fix these issues, but it gets pretty nasty:
-```
+```javascript
 // -- Promise Module --
 
 var createBooking = module.exports = { };
@@ -865,7 +865,7 @@ createBooking._orchestrate(data).then(function(result) {
 ```
 
 The callback variation of the above looks like this:
-```
+```javascript
 // -- Callback Module --
 
 var createBooking = module.exports = { };
