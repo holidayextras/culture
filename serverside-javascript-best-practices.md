@@ -764,7 +764,7 @@ ourUsername: "hapi",
 
 # Appendix
 
-## Caveats with basic Promise Chains
+## Caveats with testing heavily async code
 
 Consider these functions:
 ```javascript
