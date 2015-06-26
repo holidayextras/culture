@@ -773,6 +773,7 @@ createBooking._orchestrate = function(data) {
     .then(createBooking._generatePaymentRequest)
     .then(createBooking._processPayment);
 };
+
 createBooking._orchestrate = function(data) {
   async.waterfall([
     function(callback) { return callback(null, data); },
