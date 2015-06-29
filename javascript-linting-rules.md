@@ -35,6 +35,7 @@ For the lazy here is a brief description of the rules specified:
 1. `"object-curly-spacing": [2, "always"]` Force spaces inside curly braces.
 1. `"space-after-keywords": [2, "always"]` Force spaces after keywords (if, for, etc).
 1. `"space-before-function-paren": [2, "never"]` Don't allow spaces after function keyword.
+1. `"valid-jsdoc": 2` Check if JSDoc blocks are valid if used.
 
 The above rules are applied over the top of the eslint defaults.
 
