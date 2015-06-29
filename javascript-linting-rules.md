@@ -28,6 +28,7 @@ For the lazy here is a brief description of the rules specified:
 1. `"comma-style": [2, "last"]` Force multi line lists to have the separating comma after each item.
 1. `"indent": [2, 2]` Force two space indentation.
 1. `"quotes": [2, "single", "avoid-escape"]` Force use of single quotes for strings, except when you need to escape characters.
+1. `"linebreak-style": [2, "unix"]` Force UNIX line endings.
 
 The above rules are applied over the top of the eslint defaults.
 

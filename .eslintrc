@@ -27,6 +27,7 @@
     "radix": 2,
     "comma-style": [2, "last"],
     "indent": [2, 2],
-    "quotes": [2, "single", "avoid-escape"]
+    "quotes": [2, "single", "avoid-escape"],
+    "linebreak-style": [2, "unix"]
   }
 }
