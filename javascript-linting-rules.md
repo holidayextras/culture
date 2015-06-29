@@ -26,6 +26,7 @@ For the lazy here is a brief description of the rules specified:
 1. `"no-self-compare": 2` Don't allow a variable to be compared to itself.
 1. `"radix": 2` Enforce the specification of the base to use with the `parseInt()` function.
 1. `"comma-style": [2, "last"]` Force multi line lists to have the separating comma after each item.
+1. `"indent": [2, 2]` Force two space indentation.
 
 The above rules are applied over the top of the eslint defaults.
 

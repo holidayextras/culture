@@ -26,6 +26,7 @@
     "no-else-return": 2,
     "no-self-compare": 2,
     "radix": 2,
-    "comma-style": [2, "last"]
+    "comma-style": [2, "last"],
+    "indent": [2, 2]
   }
 }
