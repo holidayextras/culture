@@ -14,7 +14,6 @@ For an explanation of these rules please refer to the [ESLint documentation](htt
 
 For the lazy here is a brief description of the rules specified:
 
-1. `"quotes": 0`
 1. `"no-underscore-dangle": 0`  Allow variables beginning with `_`.
 1. `"curly": [2, "multi-line"]` Force curly braces except on single line statements.
 1. `"camelcase": [2, {"properties": "never"}]` Force camel case variables except on object properties.
@@ -29,6 +28,13 @@ For the lazy here is a brief description of the rules specified:
 1. `"indent": [2, 2]` Force two space indentation.
 1. `"quotes": [2, "single", "avoid-escape"]` Force use of single quotes for strings, except when you need to escape characters.
 1. `"linebreak-style": [2, "unix"]` Force UNIX line endings.
+1. `"brace-style": [2, "1tbs"]` Force the `one true brace style`.
+1. `"no-new-object": 2` Don't allow `new Object()`, use shortened syntax instead.
+1. `"no-nested-ternary": 2` Don't allow nested ternary expressions.
+1. `"no-unneeded-ternary": 2` Don't allow ternary expressions for just coverting to a boolean.
+1. `"object-curly-spacing": [2, "always"]` Force spaces inside curly braces.
+1. `"space-after-keywords": [2, "always"]` Force spaces after keywords (if, for, etc).
+1. `"space-before-function-paren": [2, "never"]` Don't allow spaces after function keyword.
 
 The above rules are applied over the top of the eslint defaults.
 
