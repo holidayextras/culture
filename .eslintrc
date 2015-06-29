@@ -15,7 +15,6 @@
     "jsx": true
   },
   "rules": {
-    "quotes": 0,
     "no-underscore-dangle": 0,
     "curly": [2, "multi-line"],
     "camelcase": [2, {"properties": "never"}],
@@ -27,6 +26,7 @@
     "no-self-compare": 2,
     "radix": 2,
     "comma-style": [2, "last"],
-    "indent": [2, 2]
+    "indent": [2, 2],
+    "quotes": [2, "single", "avoid-escape"]
   }
 }
