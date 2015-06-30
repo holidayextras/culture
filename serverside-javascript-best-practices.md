@@ -399,6 +399,36 @@ var myAsyncFunction = function(a, b, callback) {
 
 
 
+## Data returned from a function must be explicit
+
+* It should be clear what data we're expecting a function to provide back to its callee.
+* Here are 2x very contrived examples to demonstrate the difference:
+
+Bad (what data flows back to the callee??):
+```javascript
+// Callback pattern
+return database.query(data, callback);
+
+// Promise pattern
+return database.query(data);
+```
+Good:
+```javascript
+// Callback pattern
+database.query(data, function(err, result) {
+  if (err) return callback(err);
+  return callback(null, result);
+});
+
+// Promise pattern
+return database.query(data).then(function(result) {
+  return Promise.resolve(result);
+});
+```
+
+
+
+
 
 ## Error Handling
 
