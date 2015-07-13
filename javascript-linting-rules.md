@@ -2,6 +2,8 @@
 
 The following rules should be applied to all of our javascript projects.
 
+If a rule is absent from rule set below, please adhere to the conventions used in the current project.
+
 _A project may use additional rules to ones listed here, but these would not be part of the current standard and such rules are subject to change in the future._
 
 ## Current Rules
@@ -17,7 +19,6 @@ For the lazy here is a brief description of the rules specified:
 1. `"no-underscore-dangle": 0`  Allow variables beginning with `_`.
 1. `"curly": [2, "multi-line"]` Force curly braces except on single line statements.
 1. `"camelcase": [2, {"properties": "never"}]` Force camel case variables except on object properties.
-1. `"space-in-parens": [2, "always"]` Forces spaces inside round brackets and content.
 1. `"space-before-blocks": [2, "always"]` Force spaces before starting a block.
 1. `"no-extra-parens": [2, "always"]` Don't allow extra redundant brackets in expressions.
 1. `"block-scoped-var": 2` Don't allow variables to be defined in a block but used outside of one.
