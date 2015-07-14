@@ -8,7 +8,7 @@ _A project may use additional rules to ones listed here, but these would not be 
 
 ## Current Rules
 
-These are stored in the [.eslintrc](https://raw.githubusercontent.com/holidayextras/culture/.eslintrc) in this repository.
+These are stored in the [.eslintrc](https://raw.githubusercontent.com/holidayextras/culture/master/.eslintrc) in this repository.
 
 For an explanation of these rules please refer to the [ESLint documentation](http://eslint.org/docs/rules/).
 
