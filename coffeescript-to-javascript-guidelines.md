@@ -2,11 +2,45 @@
 
 ## Steps
 1. Rename your file extension from `foo.coffee` to `foo.js`
-2. Open http://js2.coffee/ & paste the entire contents `foo.js` into the CoffeeScript side
-3. Paste the entire contents of the output back into your `foo.js`
-4. Rebuild the app, functionality should be unchanged & there should be no JS errors in the console
-5. Refactor the “CoffeeScript magic”, using [examples below](#refactoring-coffeescript-magic)
-6. If this conversion is being done at the same time as a feature, submit a PR using the [interstitial PR process](#interstitial-pr-process)
+1. Open http://js2.coffee/ & paste the entire contents `foo.js` into the CoffeeScript side
+1. Paste the entire contents of the output back into your `foo.js`
+1. Rebuild the app, functionality should be unchanged & there should be no JS errors in the console
+1. If necessary, convert AMD (requirejs) style modules to Browserify (commonjs) style, as [described below](#converting-from-amd).
+1. Refactor the “CoffeeScript magic”, using [examples below](#refactoring-coffeescript-magic)
+1. If this conversion is being done at the same time as a feature, submit a PR using the [interstitial PR process](#interstitial-pr-process)
+
+## Converting from AMD
+
+An AMD style module looks like this:
+
+```javascript
+define(function(require, exports, module) {
+  var foo = require('foo');
+
+  var MyModel = Backbone.Model.extend(_.extend({
+    /* ... */
+  }, foo);
+
+  return MyModel;
+});
+```
+
+To convert to commonjs style, remove the surrounding `define` and assign the export to module.exports instead of returning it. It should end up looking about the same as modules in serverside projects.
+
+Be aware that some of our AMD style modules are currently getting away with using certain dependencies (like jquery or underscore) without requiring them. **This will not work** once the modules are converted, so require statements may need to be added in.
+
+```javascript
+var _ = require('underscore');
+var foo = require('foo');
+
+var MyModel = Backbone.Model.extend(_.extend({
+  /* ... */
+}, foo);
+
+module.exports = MyModel;
+```
+
+Once everything is commonjs style, we can remove more magic from our build process so it's closer to using vanilla browserify.
 
 ## Refactoring CoffeeScript magic
 
