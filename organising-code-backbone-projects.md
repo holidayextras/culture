@@ -5,14 +5,14 @@
 We've extended the [Backbone library](http://backbonejs.org/)'s implementation of MVC with some of our own concepts - when adding new code it will tend to fit into one of these layers:
 
 - **Routers** are initialised by the application's entry point, and map the URL you visit (including when the URL changes without a page reload) to a method on a controller.
-- **Controllers** create and manage the high-level state of the application (which models, collections and views are currently in play). We use [dependency injection](/clientside-javascript-best-practices.mkd#do-use-dependency-injection) to propagate this state further down.
+- **Controllers** create and manage the high-level state of the application (which models, collections and views are currently in play). We use [dependency injection](/clientside-javascript-best-practices.md#do-use-dependency-injection) to propagate this state further down.
 - **Views** watch part of the user interface (usually a HTML document) for interactions, and communicate them back to models or controllers. They can render templates on the client, or augment HTML returned by the server.
 - **Templates** can generate strings of HTML given simple data as a context. They contain minimal logic, and are preferably written in [handlebars](http://handlebarsjs.com/).
-- **Presenters** decorate models with presentation logic. If it's too complicated for a template but not factual enough to be considered application state, [it probably belongs in a presenter](/clientside-javascript-best-practices.mkd#do-transform-data-for-presentation-using-presenters).
+- **Presenters** decorate models with presentation logic. If it's too complicated for a template but not factual enough to be considered application state, [it probably belongs in a presenter](/clientside-javascript-best-practices.md#do-transform-data-for-presentation-using-presenters).
 - **Models** represent business entities (like Basket or User or Lounge), and contain the current state of the application.
 - **Collections** are groups of related models, and functionality that applies to the group (eg filtering and sorting)
 - **Factories** map simple data into instances of things. If you've got data representing a Product, and that Product might be a Hotel or a Carpark or a Lounge, feed the data to the factory and it'll give you a ready-to-use instance of the relevant subclass back.
-- **Mixins/Concerns** are bundles of methods and properties that can be used to augment functionality into other objects. They can [help prevent](/clientside-javascript-best-practices.mkd#do-choose-between-using-composition-and-inheritance-carefully) the inheritance graph getting too complicated.
+- **Mixins/Concerns** are bundles of methods and properties that can be used to augment functionality into other objects. They can [help prevent](/clientside-javascript-best-practices.md#do-choose-between-using-composition-and-inheritance-carefully) the inheritance graph getting too complicated.
 
 ## Entity relationships
 
@@ -24,7 +24,7 @@ While any module in the application _can_ require any other, sticking to certain
 
 - Routers must require controllers.
 - Controllers can create models, collections and views.
-- Views _can_ create models and collections, but [it's preferable for controllers to](/clientside-javascript-best-practices.mkd#do-use-controllers-to-set-up-instances).
+- Views _can_ create models and collections, but [it's preferable for controllers to](/clientside-javascript-best-practices.md#do-use-controllers-to-set-up-instances).
 - Views can require templates.
 
 -----
