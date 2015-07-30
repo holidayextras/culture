@@ -158,7 +158,7 @@ parent: function() {
 ```
 
 
-#### Desireable JavaScript
+#### Desirable JavaScript
 ```javascript
 parent: function() {
   var self = this;
@@ -223,7 +223,7 @@ Foo = (function(superClass) {
 };
 ```
 
-#### Desireable JavaScript
+#### Desirable JavaScript
 We can use the optional `classProperties` parameter in [Backbone's extend function](http://backbonejs.org/#Collection-extend) to achieve the same thing.
 
 ```javascript
