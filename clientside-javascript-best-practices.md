@@ -205,3 +205,24 @@ In the good example, an error thrown as soon as we realise something's not right
 Sometimes we'll get to points in our code where we expect certain data to be available in the vast majority of cases, but we know there might be cases when it's not. In these scenarios it's often useful to notify bugsnag with a warning or info message. Doing this allows us to keep tabs on the number of times these edge cases are occurring and lets us easily see when something looks wrong further down the line.
 
 A good example might be a 90 minute results timeout on tripapp. We expect this to happen some of the time, but we know it can lead to unexpected behaviour on the part of the user. By triggering a warning we can get a historical view of the number of results timeouts occurring, along with any additional information right in the bugsnag dashboard.
+
+## Don't use window reference
+With the very rare exception we should never need to use the window reference. We should be requiring in any shared resources we need not assigning them to the window.
+
+**Bad:**
+
+```javascript
+window.CONFIG = {
+  some: 'config',
+  that: 'does not',
+  belong: 'here'
+}
+```
+
+**Good:**
+
+```javascript
+var config = require('config');
+var hapiUrl = config.hapiURL;
+}
+```
