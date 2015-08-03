@@ -11,10 +11,10 @@
 - [ ] I’ve witnessed the work behaving as expected (this could be on the authors machine or screencast).
 - [ ] I’ve checked for coding anti-patterns.
 - [ ] I’ve checked for appropriate test coverage.
-- [ ] I’ve run all the tests locally and they pass.
+- [ ] I’ve checked all the tests are passing.
 
 #### Software Engineer or project guru review:
 - [ ] I’ve witnessed the work behaving as expected (this could be on the authors machine or screencast).
 - [ ] I’ve checked for coding anti-patterns.
 - [ ] I’ve checked for appropriate test coverage.
-- [ ] I’ve run all the tests locally and they pass.
+- [ ] I’ve checked all the tests are passing.
