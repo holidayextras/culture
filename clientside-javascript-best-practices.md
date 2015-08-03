@@ -224,5 +224,4 @@ window.CONFIG = {
 ```javascript
 var config = require('config');
 var hapiUrl = config.hapiURL;
-}
 ```
