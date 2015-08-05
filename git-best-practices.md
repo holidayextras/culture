@@ -67,7 +67,7 @@ something else i did"
 
 ### Squashing
 
-Squashing commits helps us keep out git history clean and easy to follow. We should avoid pull requests being submitted with a large amount of commits where possible. Sometimes multiple commits make sense, but not for example if they're just trying to fix tests or address PR comments. To achieve this there are a few things to keep in mind whilst working on your branch:
+Squashing commits helps us keep our git history clean and easy to follow. We should avoid pull requests being submitted with a large amount of commits where possible. Sometimes multiple commits make sense, but not for example if they're just trying to fix tests or address PR comments. To achieve this there are a few things to keep in mind whilst working on your branch:
   * It's a lot easier to squash commits if you use rebase in your workflow instead of merge. _Don't try to rebase/squash if you've already merged, it causes pain_.
   * If someone has branched off of your branch(:trollface:), you'll cause them pain by squashing so don't.
   * This [guide](http://gitready.com/advanced/2009/02/10/squashing-commits-with-rebase.html) is useful for getting to grips with rebasing/squashing.
