@@ -91,6 +91,36 @@ In the above example its easy to identify a module's dependencies and the module
 
 
 
+## Promises or Callbacks?
+
+Provided the orchestration of asynchronous actions are decoupled from the code that provides functionality, both conventions are acceptable. For example, both of the following examples are great:
+
+```javascript
+ourModuleName._orchestrate = function() {
+  return ourModuleName._firstThing()
+    .then(ourModuleName._secondThing)
+    .then(ourModuleName._thirdThing)
+    .then(ourModuleName._fourthThing)
+    .fail(function(err) {
+      //
+    });
+};
+```
+```javascript
+ourModuleName._orchestrate = function(callback) {
+  async.waterfall([
+    ourModuleName._firstThing,
+    ourModuleName._secondThing,
+    ourModuleName._thirdThing,
+    ourModuleName._fourthThing
+  ], callback);
+};
+```
+
+
+
+
+
 ## Return Early
 
 * Each logic block is isolated
@@ -255,67 +285,92 @@ obj._request = function(p1, p2, callback) {
 
 
 
-## Handling heavily sequential async code
+## Handling heavily sequential async code with callbacks
 
 * `async.waterfall` allows us to chain functions together
-* The closures around `_task1/2/3/4` allow us to pass data over each private function instead of needing to proxy data through functions.
-* One unit test can efficiently validate the entire code block
+* !! See the appendix at the end for a more testable version of this example.
 
 ```javascript
-async.waterfall([
-  // ... ,
-  function sendBook1Request(prebookingResponse, callback) {
-    createBooking._sendBook1Request(prebookingResponse, params, supplier, function(err, book1Response) {
-      return callback(err, book1Response);
-    });
-  },
-  function generatePaymentRequest(book1Response, callback) {
-    createBooking._generatePaymentRequest(params, payment, function(err, paymentRequest) {
-      return callback(err, book1Response, paymentRequest)
-    });
-  },
-  function processPayment(book1Response, paymentRequest, callback) {
-    createBooking._processPayment(paymentRequest, payment, function(err, bookingResponse) {
-      return callback(err, book1Response, paymentRequest, bookingResponse);
-    });
-  },
-  function sendBook2Request(book1Response, paymentRequest, bookingResponse, callback) {
-    createBooking._sendBook2Request(params, book1Response, paymentRequest, bookingResponse, supplier, payment, function(err, book2Response) {
-      return callback(err, bookingResponse, book2Response);
-    });
-  },
-  function generateBookingReference(bookingResponse, book2Response, callback) {
-    createBooking._generateBookingReference(self, bookingResponse, book2Response, callback);
-  },
-], callback);
+createBooking._orchestrate = function(data, callback) {
+  async.waterfall([
+    function(callback) { return callback(null, data); },
+    createBooking._sendBook1Request,
+    createBooking._generatePaymentRequest,
+    createBooking._processPayment,
+    createBooking._sendBook2Request,
+    createBooking._generateBookingReference
+  ], callback);
+};
 ```
 ```javascript
 var sandbox = sinon.sandbox.create();
-sandbox.stub(createBooking, '_sendBook1Request').callsArgWith(3, null, 'book1Response');
-sandbox.stub(createBooking, '_generatePaymentRequest').callsArgWith(2, null, 'paymentRequest');
-sandbox.stub(createBooking, '_processPayment').callsArgWith(2, null, 'bookingResponse');
-sandbox.stub(createBooking, '_sendBook2Request').callsArgWith(6, null, 'book2Response');
-sandbox.stub(createBooking, '_generateBookingReference').callsArgWith(3, null, 'AAbookingRef');
+sandbox.stub(createBooking, '_sendBook1Request').yields(null, 'data1');
+sandbox.stub(createBooking, '_generatePaymentRequest').yields(null, 'data2');
+sandbox.stub(createBooking, '_processPayment').yields(null, 'data3');
+sandbox.stub(createBooking, '_sendBook2Request').yields(null, 'data4');
+sandbox.stub(createBooking, '_generateBookingReference').yields(null, 'data5');
 
-var product = { _product: { } };
-var params = { booking: { params: { } } };
-var self = { se:'lf' };
-
-createBooking.call(self, product, params, 'upgrades', 'supplier', 'payment', function(err, result) {
+createBooking._orchestrate('data0', function(err, result) {
   assert.equal(err, null);
-  assert.ok(result, 'AAbookingRef');
+  assert.equal(result, 'data5');
 
-  assert.ok(createBooking._sendBook1Request.calledWith('lastResponse', params, 'supplier'));
-  assert.ok(createBooking._generatePaymentRequest.calledWith(params, 'payment'));
-  assert.ok(createBooking._processPayment.calledWith('paymentRequest', 'payment'));
-  assert.ok(createBooking._sendBook2Request.calledWith(params, 'book1Response', 'paymentRequest', 'bookingResponse', 'supplier', 'payment'));
-  assert.ok(createBooking._generateBookingReference.calledWith(self, 'bookingResponse', 'book2Response'));
+  assert.ok(createBooking._sendBook1Request.calledWith('data0'));
+  assert.ok(createBooking._generatePaymentRequest.calledWith('data1'));
+  assert.ok(createBooking._processPayment.calledWith('data2'));
+  assert.ok(createBooking._sendBook2Request.calledWith('data3'));
+  assert.ok(createBooking._generateBookingReference.calledWith('data4'));
 
   sandbox.restore();
-  done();
+  console.log("Pass");
 });
 ```
 
+
+
+
+
+## Handling heavily sequential async code with promises
+
+* !! See the appendix at the end for caveats with simple promise chaining.
+* The following test example uses `sinon-bluebird` to enable stubbing of promises. Any stubbing implementation is acceptable provided it allows us to control the data the stub resolves/fails with and provided we can assert against the data a stub is invoked with.
+
+```javascript
+createBooking._orchestrate = function(data) {
+  return createBooking._sendBook1Request(data)
+    .then(createBooking._generatePaymentRequest)
+    .then(createBooking._processPayment)
+    .then(createBooking._sendBook2Request)
+    .then(createBooking._generateBookingReference);
+};
+```
+```javascript
+require('sinon-bluebird');
+
+sinon.stub(createBooking, '_sendBook1Request').resolves('data1');
+sinon.stub(createBooking, '_generatePaymentRequest').resolves('data2');
+sinon.stub(createBooking, '_processPayment').resolves('data3');
+sinon.stub(createBooking, '_sendBook2Request').resolves('data4');
+sinon.stub(createBooking, '_generateBookingReference').resolves('data5');
+
+var data = 'data0';
+
+createBooking._orchestrate(data).then(function(result) {
+  assert.equal(result, 'data5');
+
+  assert.ok(createBooking._sendBook1Request.calledWithPromise('data0'));
+  assert.ok(createBooking._generatePaymentRequest.calledWithPromise('data1'));
+  assert.ok(createBooking._processPayment.calledWithPromise('data2'));
+  assert.ok(createBooking._sendBook2Request.calledWithPromise('data3'));
+  assert.ok(createBooking._generateBookingReference.calledWithPromise('data4'));
+
+  sinon.restore(createBooking._sendBook1Request);
+  sinon.restore(createBooking._generatePaymentRequest);
+  sinon.restore(createBooking._processPayment);
+  sinon.restore(createBooking._sendBook2Request);
+  sinon.restore(createBooking._generateBookingReference);
+  done();
+});
+```
 
 
 
@@ -340,6 +395,36 @@ var myAsyncFunction = function(a, b, callback) {
 };
 ```
 
+
+
+
+
+## Data returned from a function must be explicit
+
+* It should be clear what data we're expecting a function to provide back to its callee.
+* Here are 2x very contrived examples to demonstrate the difference:
+
+Bad (what data flows back to the callee??):
+```javascript
+// Callback pattern
+return database.query(data, callback);
+
+// Promise pattern
+return database.query(data);
+```
+Good:
+```javascript
+// Callback pattern
+database.query(data, function(err, result) {
+  if (err) return callback(err);
+  return callback(null, result);
+});
+
+// Promise pattern
+return database.query(data).then(function(result) {
+  return Promise.resolve(result);
+});
+```
 
 
 
@@ -705,4 +790,165 @@ Good
 ```
 config/config.js:
 ourUsername: "hapi",
+```
+
+# Appendix
+
+## Caveats with testing heavily async code
+
+Consider these functions:
+```javascript
+createBooking._orchestrate = function(data) {
+  return createBooking._sendBook1Request(data)
+    .then(createBooking._generatePaymentRequest)
+    .then(createBooking._processPayment);
+};
+
+createBooking._orchestrate = function(data) {
+  async.waterfall([
+    function(callback) { return callback(null, data); },
+    createBooking._sendBook1Request,
+    createBooking._generatePaymentRequest,
+    createBooking._processPayment,
+  ], callback);
+};
+
+```
+By looking at this code example, what do we know about `createBooking._generatePaymentRequest`? We know that it must be a function. We can't tell what params it is expecting, nor what data it should return. As far as testing goes, we can only make as assumption that "some data" is passed in, and "other data" comes back out.
+
+If someone were to come in and alter the behaviour of `createBooking._generatePaymentRequest` to make it return something else, there is no clear indication that we're breaking the expectations of `createBooking._processPayment`.
+
+On a side not, it is not possible to get data between `createBooking._sendBook1Request` and `createBooking._processPayment` WITHOUT passing it through `createBooking._generatePaymentRequest`, which shouldn't care about the requirements of the functions around it. Someone could modify `createBooking._generatePaymentRequest` and break the expectations of the other two functions.
+
+We could wrap things up to fix these issues, but it gets pretty nasty:
+```javascript
+// -- Promise Module --
+
+var createBooking = module.exports = { };
+
+var _ = require('underscore');
+
+createBooking._orchestrate = function(request) {
+  var data = {
+    request: request
+  };
+  var bookingRequestParams = _.pick(data, 'request');
+  return createBooking._sendBook1Request(bookingRequestParams).then(function(newData) {
+      data.bookingResult = newData;
+      return data;
+    })
+    .then(function(data) {
+      var paymentRequestParams = _.pick(data, 'request');
+      return createBooking._generatePaymentRequest(paymentRequestParams).then(function(newData) {
+        data.paymentRequest = newData;
+        return data;
+      });
+    })
+    .then(function(data) {
+      var processPaymentParams = _.pick(data, 'bookingResult', 'paymentRequest');
+      return createBooking._processPayment(processPaymentParams).then(function(newData) {
+        data.paymentResponse = newData;
+        return data;
+      });
+    })
+};
+
+createBooking._sendBook1Request = function() { };
+createBooking._generatePaymentRequest = function() { };
+createBooking._processPayment = function() { };
+
+// -- Test --
+
+var sinon = require('sinon');
+var assert = require('assert');
+require('sinon-bluebird');
+
+sinon.stub(createBooking, '_sendBook1Request').resolves('data1');
+sinon.stub(createBooking, '_generatePaymentRequest').resolves('data2');
+sinon.stub(createBooking, '_processPayment').resolves('data3');
+
+var data = 'data0';
+
+createBooking._orchestrate(data).then(function(result) {
+  assert.deepEqual(result, {
+    request: 'data0',
+    bookingResult: 'data1',
+    paymentRequest: 'data2',
+    paymentResponse: 'data3'
+  });
+
+  assert.ok(createBooking._sendBook1Request.calledWithPromise({
+    request: 'data0'
+  }));
+  assert.ok(createBooking._generatePaymentRequest.calledWithPromise({
+    request: 'data0'
+  }));
+  assert.ok(createBooking._processPayment.calledWithPromise({
+    bookingResult: 'data1',
+    paymentRequest: 'data2'
+  }));
+
+  sinon.restore(createBooking._sendBook1Request);
+  sinon.restore(createBooking._generatePaymentRequest);
+  sinon.restore(createBooking._processPayment);
+  console.log("Pass");
+});
+```
+
+The callback variation of the above looks like this:
+```javascript
+// -- Callback Module --
+
+var createBooking = module.exports = { };
+
+var async = require('async');
+
+createBooking._orchestrate = function(request, callback) {
+  async.waterfall([
+    function(callback) {
+      createBooking._sendBook1Request(request, function(err, book1Response) {
+        return callback(err, request, book1Response);
+      });
+    },
+    function(request, book1Response, callback) {
+      createBooking._generatePaymentRequest(request, function(err, paymentRequest) {
+        return callback(err, request, book1Response, paymentRequest)
+      });
+    },
+    function(request, book1Response, paymentRequest, callback) {
+      createBooking._processPayment(book1Response, paymentRequest, function(err, paymentResponse) {
+        return callback(err, request, book1Response, paymentRequest, paymentResponse);
+      });
+    }
+  ], callback);
+};
+
+createBooking._sendBook1Request = function() { };
+createBooking._generatePaymentRequest = function() { };
+createBooking._processPayment = function() { };
+
+// -- Test --
+
+var sinon = require('sinon');
+var assert = require('assert');
+var sandbox = sinon.sandbox.create();
+
+sandbox.stub(createBooking, '_sendBook1Request').yields(null, 'data1');
+sandbox.stub(createBooking, '_generatePaymentRequest').yields(null, 'data2');
+sandbox.stub(createBooking, '_processPayment').yields(null, 'data3');
+
+createBooking._orchestrate('data0', function(err, request, bookingResult, paymentRequest, paymentResponse) {
+  assert.equal(err, null);
+  assert.equal(request, 'data0');
+  assert.equal(bookingResult, 'data1');
+  assert.equal(paymentRequest, 'data2');
+  assert.equal(paymentResponse, 'data3');
+
+  assert.ok(createBooking._sendBook1Request.calledWith('data0'));
+  assert.ok(createBooking._generatePaymentRequest.calledWith('data0'));
+  assert.ok(createBooking._processPayment.calledWith('data1', 'data2'));
+
+  sandbox.restore();
+  console.log("Pass");
+});
 ```
