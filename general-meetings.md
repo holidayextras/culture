@@ -2,6 +2,11 @@
 
 This is a guide to meetings held by developers where a discussion is likely to occur, often with differing opinions of tech.
 
+## Structure
+* State a desired outcome of the meeting, clarify actions at the end
+* Set a time limit, try to stick to it and don't be afraid to end the meeting early
+* Have a chairperson, this role should be to ensure meeting sticks on topic
+
 ## Have an opinion
 * Challenge appropriately
 * Ask questions
