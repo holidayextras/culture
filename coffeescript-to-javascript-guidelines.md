@@ -269,6 +269,16 @@ var Foo = Bar.extend({
 });
 ```
 
+
+### Comments
+
+Please check all comments in the source coffeescript as converters such as http://js2.coffee/ will not convert comments and they will be removed in the Javascript output.
+
+Tripapp does not have many comments but those that are there normally indicate particular problem areas or complex logic which may reference JIRAs etc.
+
+If the comment is still relevant after the conversion please make sure the comment is kept on the appropriate place.
+
+
 ### Full conversion example of `models/carpark.coffee`
 https://gist.github.com/jackdcrawford/a8e5dacf6cecdb9b6bfe
 
