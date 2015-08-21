@@ -7,6 +7,11 @@
 - notify "some channels" (Slack, email tbc) of a success or failure of a build.
 - always keep built production artifacts in S3 for a minimum of X days.
 - automatically deploy non feature branches (staging/master).
+- always have access to any off box resources it needs.
+- be able to run containered tests.
+- not contain sensitive information in scripts/configuration files.
+- be able to run any build on any "agent/minion".
+- allow us to pay for more concurrency.
 
 #### Potential make targets
 
