@@ -11,13 +11,13 @@ This is a collection of documents that outline Holiday Extras' culture and devel
  * [Coding Principles](coding-principles.md)
  * [Organising code in backbone projects](organising-code-backbone-projects.md)
  * [PR template](pr-template.md)
- * [Holiday Extras Security Policy](security-policy.md)
  * [Server Side Javascript Best Practices](serverside-javascript-best-practices.md)
  * [Technical Planning Meetings](technical-planning-meeting.md)
  * [Deployment Guidelines](deployment-guidelines.md)
  * [Expedited Procedure](expedited-procedure.md)
  * [CoffeeScript to JavaScript Guidelines](coffeescript-to-javascript-guidelines.md)
  * [Javascript linting Rules](javascript-linting-rules.md)
+ * [Technical Resources](technical-resources.md)
 
 ## Contributing
 
