@@ -10,48 +10,82 @@ The links below should provide a good introduction into an item, further in dept
 
 ### jQuery
 
-### Underscore / Lodash (to limit reimplementing existing functionality)
+ * [https://jquery.com/](https://jquery.com/)
+
+### Underscore
+
+ * [http://underscorejs.org/](http://underscorejs.org/)
+
+### Lodash
+
+ * [https://lodash.com/](https://lodash.com/)
 
 ## Frameworks
 
 ### Backbone
 
+* [http://backbonejs.org/](http://backbonejs.org/)
+
 ### Express
 
+* [http://expressjs.com/](http://expressjs.com/)
 * [Learning the basics of express js](http://hungrygeek.holidayextras.co.uk/expressjs/2015/04/20/learning-the-basics-of-expressjs/)
 
 ### HapiJS
 
+* [http://hapijs.com/](http://hapijs.com/)
+
 ### React
+
+* [http://facebook.github.io/react/](http://facebook.github.io/react/)
 
 ## Patterns
 
 ### MVC
 
+* [Model–view–controller](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
+
 ### Callbacks
+
+* [Callback (computer programming)](https://en.wikipedia.org/wiki/Callback_(computer_programming))
 
 ### Factory
 
+* [Factory (object-oriented programming)](https://en.wikipedia.org/wiki/Factory_(object-oriented_programming))
+
 ### Concerns
+
+* [Separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns)
 
 ### Mixins
 
+* [Mixin](https://en.wikipedia.org/wiki/Mixin)
+
 ### Inheritance
+
+* [Inheritance (object-oriented programming)](https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming))
 
 ### Presenters
 
+* [pragmatic-backbone.com views](http://pragmatic-backbone.com/views)
+
 ### Anti-patterns
 
-* https://en.wikipedia.org/wiki/Anti-pattern#Software_engineering
+* [Software engineering anti-patterns](https://en.wikipedia.org/wiki/Anti-pattern#Software_engineering)
 
 ### Functional concepts
 
+* []()
+
 ### Promises
+
+* []()
 
 ## Other tech
 
 ### Git
 
+* []()
 * [Git For Humans](https://speakerdeck.com/dancork/2015)
 
 ### Shell (bash)
@@ -60,20 +94,42 @@ The links below should provide a good introduction into an item, further in dept
 
 ### Less
 
+* [http://lesscss.org/](http://lesscss.org/)
+
 ## Testing
 
-### Jasmine/Mocha
+### Jasmine
+
+* [http://jasmine.github.io/2.0/introduction.html](http://jasmine.github.io/2.0/introduction.html)
+
+### Mocha
+
+* [https://mochajs.org/](https://mochajs.org/)
 
 ### Sinon
 
-### Selenium/Nightwatch
+* [http://sinonjs.org/](http://sinonjs.org/)
+
+### Selenium
+
+* []()
+
+### Nightwatch
+
+* [http://nightwatchjs.org/](http://nightwatchjs.org/)
 
 ## Infrastructure
 
 ### Heroku
 
+* [https://www.heroku.com/home](https://www.heroku.com/home)
+
 ### AWS
+
+* []()
 
 ### Teamcity
 
 ### Travis
+
+* [http://blog.travis-ci.com/](http://blog.travis-ci.com/)
