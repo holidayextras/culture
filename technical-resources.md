@@ -20,6 +20,10 @@ The links below should provide a good introduction into an item, further in dept
 
  * [https://lodash.com/](https://lodash.com/)
 
+### Moment
+
+ * [http://momentjs.com/](http://momentjs.com/)
+
 ## Frameworks
 
 ### Backbone
