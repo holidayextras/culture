@@ -16,7 +16,11 @@ The links below should provide a good introduction into an item, further in dept
 
 ### Backbone
 
-### Express/HapiJS
+### Express
+
+* [Learning the basics of express js](http://hungrygeek.holidayextras.co.uk/expressjs/2015/04/20/learning-the-basics-of-expressjs/)
+
+### HapiJS
 
 ### React
 
