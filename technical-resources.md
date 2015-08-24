@@ -6,13 +6,13 @@ We do not expect our developers to be experts in all the areas below, just to ha
 
 The links below should provide a good introduction into an item, further in depth links can also be added.
 
-## Clientside basics
+## Libraries
 
-### JQuery
+### jQuery
 
 ### Underscore / Lodash (to limit reimplementing existing functionality)
 
-### Frameworks
+## Frameworks
 
 ### Backbone
 
@@ -57,8 +57,6 @@ The links below should provide a good introduction into an item, further in dept
 ### Shell (bash)
 
 ### SQL
-
-### CSS
 
 ### Less
 
