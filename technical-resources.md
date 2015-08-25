@@ -97,8 +97,9 @@ The links below should provide a good introduction into an item, further in dept
 
 ### Git
 
-* []()
 * [Git For Humans](https://speakerdeck.com/dancork/2015)
+* [Git from the Bottom Up](https://jwiegley.github.io/git-from-the-bottom-up/)
+* [Pro Git](http://git-scm.com/book)
 
 ### Shell (bash)
 
