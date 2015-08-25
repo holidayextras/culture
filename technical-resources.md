@@ -24,6 +24,14 @@ The links below should provide a good introduction into an item, further in dept
 
  * [http://momentjs.com/](http://momentjs.com/)
 
+### Winston
+
+ * [https://github.com/winstonjs/winston](https://github.com/winstonjs/winston)
+
+### Yargs
+
+ * [https://github.com/bcoe/yargs](https://github.com/bcoe/yargs)
+
 ## Frameworks
 
 ### Backbone
@@ -93,6 +101,8 @@ The links below should provide a good introduction into an item, further in dept
 * [Git For Humans](https://speakerdeck.com/dancork/2015)
 
 ### Shell (bash)
+
+* [ShellJS](https://github.com/arturadib/shelljs)
 
 ### SQL
 
