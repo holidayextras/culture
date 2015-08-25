@@ -6,6 +6,12 @@ We do not expect our developers to be experts in all the areas below, just to ha
 
 The links below should provide a good introduction into an item, further in depth links can also be added.
 
+## Languages
+
+### Javascript
+
+ * [Human Javascript](http://read.humanjavascript.com/)
+
 ## Libraries
 
 ### jQuery
