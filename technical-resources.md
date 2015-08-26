@@ -4,7 +4,7 @@ Below is a list of tech and concepts that we expect our developers to know eithe
 
 We do not expect our developers to be experts in all the areas below, just to have a one or more clues about how these items work.
 
-The links below should provide a good introduction into an item, further in depth links can also be added.
+The links below should provide a good introduction into an item, further in depth links can also be added. This is not the place to list project home pages or their documentation as these can be easily found via a search engine.
 
 ## Languages
 
@@ -17,46 +17,25 @@ The links below should provide a good introduction into an item, further in dept
 
 ### jQuery
 
- * [https://jquery.com/](https://jquery.com/)
-
 ### Underscore
-
- * [http://underscorejs.org/](http://underscorejs.org/)
 
 ### Lodash
 
- * [https://lodash.com/](https://lodash.com/)
-
 ### Moment
 
- * [http://momentjs.com/](http://momentjs.com/)
-
 ### Winston
-
- * [https://github.com/winstonjs/winston](https://github.com/winstonjs/winston)
-
-### Yargs
-
- * [https://github.com/bcoe/yargs](https://github.com/bcoe/yargs)
 
 ## Frameworks
 
 ### Backbone
 
-* [http://backbonejs.org/](http://backbonejs.org/)
-
 ### Express
 
-* [http://expressjs.com/](http://expressjs.com/)
 * [Learning the basics of express js](http://hungrygeek.holidayextras.co.uk/expressjs/2015/04/20/learning-the-basics-of-expressjs/)
 
 ### HapiJS
 
-* [http://hapijs.com/](http://hapijs.com/)
-
 ### React
-
-* [http://facebook.github.io/react/](http://facebook.github.io/react/)
 
 ## Patterns
 
@@ -96,12 +75,9 @@ The links below should provide a good introduction into an item, further in dept
 
 ### Functional concepts
 
-* []()
-
 ### Promises
 
 * [HTML5 Rocks guide to promises](http://www.html5rocks.com/en/tutorials/es6/promises/)
-* [Q promise library](https://github.com/kriskowal/q)
 
 ## Other tech
 
@@ -113,54 +89,32 @@ The links below should provide a good introduction into an item, further in dept
 * [Git from the Bottom Up](https://jwiegley.github.io/git-from-the-bottom-up/)
 * [Pro Git](http://git-scm.com/book)
 
-### Shell (bash)
-
-* [ShellJS](https://github.com/arturadib/shelljs)
+### Shell
 
 ### SQL
 
 ### Less
 
-* [Less project site](http://lesscss.org/)
-
 ### Sass
-
-* [Sass project site](http://sass-lang.com/)
 
 ## Testing
 
 ### Jasmine
 
-* [http://jasmine.github.io/2.0/introduction.html](http://jasmine.github.io/2.0/introduction.html)
-
 ### Mocha
-
-* [https://mochajs.org/](https://mochajs.org/)
 
 ### Sinon
 
-* [http://sinonjs.org/](http://sinonjs.org/)
-
 ### Selenium
 
-* []()
-
 ### Nightwatch
-
-* [http://nightwatchjs.org/](http://nightwatchjs.org/)
 
 ## Infrastructure
 
 ### Heroku
 
-* [https://www.heroku.com/home](https://www.heroku.com/home)
-
 ### AWS
-
-* []()
 
 ### Teamcity
 
 ### Travis
-
-* [http://blog.travis-ci.com/](http://blog.travis-ci.com/)
