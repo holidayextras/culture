@@ -63,6 +63,7 @@ The links below should provide a good introduction into an item, further in dept
 ### MVC
 
 * [Model–view–controller](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
+* [MV* Patterns - Essential JS Design Patterns - by Addy Osmani](http://addyosmani.com/resources/essentialjsdesignpatterns/book/#detailmvcmvp)
 
 ### Callbacks
 
@@ -71,6 +72,7 @@ The links below should provide a good introduction into an item, further in dept
 ### Factory
 
 * [Factory (object-oriented programming)](https://en.wikipedia.org/wiki/Factory_(object-oriented_programming))
+* [Factory - Essential JS Design Patterns - by Addy Osmani](http://addyosmani.com/resources/essentialjsdesignpatterns/book/#factorypatternjavascript)
 
 ### Concerns
 
@@ -98,12 +100,15 @@ The links below should provide a good introduction into an item, further in dept
 
 ### Promises
 
-* []()
+* [HTML5 Rocks guide to promises](http://www.html5rocks.com/en/tutorials/es6/promises/)
+* [Q promise library](https://github.com/kriskowal/q)
 
 ## Other tech
 
 ### Git
 
+* [Try Git: Code School](https://try.github.io/levels/1/challenges/1)
+* [Git & GitHub Secrets - by Zach Holman](http://zachholman.com/talk/more-git-and-github-secrets/)
 * [Git For Humans](https://speakerdeck.com/dancork/2015)
 * [Git from the Bottom Up](https://jwiegley.github.io/git-from-the-bottom-up/)
 * [Pro Git](http://git-scm.com/book)
@@ -116,7 +121,11 @@ The links below should provide a good introduction into an item, further in dept
 
 ### Less
 
-* [http://lesscss.org/](http://lesscss.org/)
+* [Less project site](http://lesscss.org/)
+
+### Sass
+
+* [Sass project site](http://sass-lang.com/)
 
 ## Testing
 
