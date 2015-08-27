@@ -4,80 +4,78 @@ Below is a list of tech and concepts that we expect our developers to know eithe
 
 We do not expect our developers to be experts in all the areas below, just to have a one or more clues about how these items work.
 
-The links below should provide a good introduction into an item, further in depth links can also be added.
+The links below should provide a good introduction into an item, further in depth links can also be added. This is not the place to list project home pages or their documentation as these can be easily found via a search engine.
+
+## Languages
+
+### Javascript
+
+ * [Human Javascript](http://read.humanjavascript.com/)
+ * [Learning to Love Javascript](https://www.youtube.com/watch?v=seX7jYI96GE)
+
+### Ruby
 
 ## Libraries
 
-### jQuery
+### [jQuery](https://jquery.com/)
 
- * [https://jquery.com/](https://jquery.com/)
+### [Lodash](https://lodash.com/)
 
-### Underscore
+### [Moment](http://momentjs.com/)
 
- * [http://underscorejs.org/](http://underscorejs.org/)
+### [Underscore](http://underscorejs.org/)
 
-### Lodash
-
- * [https://lodash.com/](https://lodash.com/)
+### [Winston](https://github.com/winstonjs/winston)
 
 ## Frameworks
 
-### Backbone
+### [Backbone](http://backbonejs.org/)
 
-* [http://backbonejs.org/](http://backbonejs.org/)
+### [Express](http://expressjs.com/)
 
-### Express
-
-* [http://expressjs.com/](http://expressjs.com/)
 * [Learning the basics of express js](http://hungrygeek.holidayextras.co.uk/expressjs/2015/04/20/learning-the-basics-of-expressjs/)
 
-### HapiJS
+### [HapiJS](http://hapijs.com/)
 
-* [http://hapijs.com/](http://hapijs.com/)
-
-### React
-
-* [http://facebook.github.io/react/](http://facebook.github.io/react/)
+### [React](http://facebook.github.io/react/)
 
 ## Patterns
 
-### MVC
+### Anti-patterns
 
-* [Model–view–controller](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
-* [MV* Patterns - Essential JS Design Patterns - by Addy Osmani](http://addyosmani.com/resources/essentialjsdesignpatterns/book/#detailmvcmvp)
+* [Software engineering anti-patterns](https://en.wikipedia.org/wiki/Anti-pattern#Software_engineering)
 
 ### Callbacks
 
 * [Callback (computer programming)](https://en.wikipedia.org/wiki/Callback_(computer_programming))
+
+### Concerns
+
+* [Separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns)
 
 ### Factory
 
 * [Factory (object-oriented programming)](https://en.wikipedia.org/wiki/Factory_(object-oriented_programming))
 * [Factory - Essential JS Design Patterns - by Addy Osmani](http://addyosmani.com/resources/essentialjsdesignpatterns/book/#factorypatternjavascript)
 
-### Concerns
-
-* [Separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns)
-
-### Mixins
-
-* [Mixin](https://en.wikipedia.org/wiki/Mixin)
+### Functional concepts
 
 ### Inheritance
 
 * [Inheritance (object-oriented programming)](https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming))
 
+### Mixins
+
+* [Mixin](https://en.wikipedia.org/wiki/Mixin)
+
+### MVC
+
+* [Model–view–controller](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
+* [MV* Patterns - Essential JS Design Patterns - by Addy Osmani](http://addyosmani.com/resources/essentialjsdesignpatterns/book/#detailmvcmvp)
+
 ### Presenters
 
 * [pragmatic-backbone.com views](http://pragmatic-backbone.com/views)
-
-### Anti-patterns
-
-* [Software engineering anti-patterns](https://en.wikipedia.org/wiki/Anti-pattern#Software_engineering)
-
-### Functional concepts
-
-* []()
 
 ### Promises
 
@@ -91,53 +89,35 @@ The links below should provide a good introduction into an item, further in dept
 * [Try Git: Code School](https://try.github.io/levels/1/challenges/1)
 * [Git & GitHub Secrets - by Zach Holman](http://zachholman.com/talk/more-git-and-github-secrets/)
 * [Git For Humans](https://speakerdeck.com/dancork/2015)
+* [Git from the Bottom Up](https://jwiegley.github.io/git-from-the-bottom-up/)
+* [Pro Git](http://git-scm.com/book)
 
-### Shell (bash)
+### [Less](http://lesscss.org/)
+
+### [Sass](http://sass-lang.com/)
+
+### Shell
 
 ### SQL
 
-### Less
-
-* [Less project site](http://lesscss.org/)
-
-### Sass
-
-* [Sass project site](http://sass-lang.com/)
-
 ## Testing
 
-### Jasmine
+### [Jasmine](http://jasmine.github.io/2.0/introduction.html)
 
-* [http://jasmine.github.io/2.0/introduction.html](http://jasmine.github.io/2.0/introduction.html)
+### [Mocha](https://mochajs.org/)
 
-### Mocha
-
-* [https://mochajs.org/](https://mochajs.org/)
-
-### Sinon
-
-* [http://sinonjs.org/](http://sinonjs.org/)
+### [Nightwatch](http://nightwatchjs.org/)
 
 ### Selenium
 
-* []()
-
-### Nightwatch
-
-* [http://nightwatchjs.org/](http://nightwatchjs.org/)
+### Sinon[Sinon](http://sinonjs.org/)
 
 ## Infrastructure
 
-### Heroku
+### [Amazon AWS](http://aws.amazon.com/)
 
-* [https://www.heroku.com/home](https://www.heroku.com/home)
-
-### AWS
-
-* []()
+### [Heroku](https://www.heroku.com/home)
 
 ### Teamcity
 
-### Travis
-
-* [http://blog.travis-ci.com/](http://blog.travis-ci.com/)
+### [Travis](http://blog.travis-ci.com/)
