@@ -34,18 +34,18 @@ Errors on our site are reported to [Bugsnag](https://bugsnag.com/holiday-extras/
 
 The errors are split by project and you can switch between these using the menu in the top left corner.
 
-![](https://cldup.com/BjzztadbNV-1200x1200.png)
+![](/images/bugsnag-process/project-selected.png)
 
 Errors can be viewed in either a grouped or ungrouped state.
 
-![](https://cldup.com/ev8JGkdlly-2000x2000.png)
+![](/images/bugsnag-process/grouping.png)
 
 Most people prefer the ungrouped view as the grouping isn't always accurate.
 
 #### Grouped View
 When viewing grouped errors you can however get an idea of the bugs importance.
 
-![](https://cldup.com/a7T6ox1IKh-1200x1200.png)
+![](/images/bugsnag-process/dashboard-bug-view.png)
 
 The stats show you:
 - occurrences (how many times has the happened)
@@ -56,7 +56,7 @@ The stats show you:
 
 You can use the search form on the left hand side to limit what bugs you see:
 
-![](htps://cldup.com/hmbTaL9r6A-2000x2000.png)
+![](/images/bugsnag-process/bug-filter.png)
 
 #### Ungrouped View
 Ungrouped view shows you a live error by error view of the project. It also shows you more information regarding each bug such as user and device settings.
@@ -68,11 +68,11 @@ To get more info on a bug you click on it from the dashboard view. This takes yo
 
 You can use the stats on this screen (such as the event count, user count, metrics and history) to figure out if the bug is affecting a lot of our users.
 
-![](https://cldup.com/Nva9Ij8LYr.png)
+![](/images/bugsnag-process/stats.png)
 
 You can use the information available in the tabs to find the cause and attempt to replicate the issue.
 
-![](https://cldup.com/c8FBs0rg2--1200x1200.png)
+![](/images/bugsnag-process/tabs.png)
 
 _The information and tabs available will change depending on the bug type and project._
 
@@ -84,12 +84,12 @@ This channel shows you the bugs as they happen and gives links direct to their d
 ### What do I do if I find a bug?
 Any bug worth mentioning is worth raising as a JIRA. There's a handy button on the Bugsnag detail view that will do this for you:
 
-![](https://cldup.com/DgnX_GGyjT-3000x3000.png)
+![](/images/bugsnag/create-jira.png)
 
 Add as much detail about the bug as you can. E.g. how can you duplicate it? Who is it affecting? If it's something which should be expedited then let people know and get working on it.
 
 ### Cleaning up
-At the end of your week on Bugsnag duty you should audit the bugs visible on the Bugsnag dashboard. Any that have not been reported within the previous two weeks should be deleted. This prevents us from getting into a state with a large and unmanageable backlog of bugs which are no longer occurring. 
+At the end of your week on Bugsnag duty you should audit the bugs on the Bugsnag dashboard. Any that have not been reported within the previous two weeks should be deleted. This prevents us from getting into a state whereby we have a large and unmanageable backlog of bugs which are no longer occurring. 
 
 If the Bugsnag issue you are removing also has a JIRA attached you should make a note on the JIRA that the bug has been closed as it is no longer occurring and close the ticket.
 
@@ -104,7 +104,7 @@ Clicking on "HTTP responses" for a system shows you a live view of the HTTP resp
 
 You can change the duration and times of search at the top in the navigation bar.
 
-![](https://cldup.com/j0Mc_DxPt5-3000x3000.png)
+![](/images/bugsnag-process/timeframe.png)
 
 Generally speaking, the higher a number is above the "error" and "error rate" graphs - the worse things are.
 
