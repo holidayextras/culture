@@ -34,7 +34,7 @@ Errors on our site are reported to [Bugsnag](https://bugsnag.com/holiday-extras/
 
 The errors are split by project and you can switch between these using the menu in the top left corner.
 
-![](/images/bugsnag-process/project-selected.png)
+![](/images/bugsnag-process/project-selector.png)
 
 Errors can be viewed in either a grouped or ungrouped state.
 
