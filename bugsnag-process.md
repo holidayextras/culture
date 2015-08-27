@@ -84,7 +84,7 @@ This channel shows you the bugs as they happen and gives links direct to their d
 ### What do I do if I find a bug?
 Any bug worth mentioning is worth raising as a JIRA. There's a handy button on the Bugsnag detail view that will do this for you:
 
-![](/images/bugsnag/create-jira.png)
+![](/images/bugsnag-process/create-jira.png)
 
 Add as much detail about the bug as you can. E.g. how can you duplicate it? Who is it affecting? If it's something which should be expedited then let people know and get working on it.
 
