@@ -13,71 +13,74 @@ The links below should provide a good introduction into an item, further in dept
  * [Human Javascript](http://read.humanjavascript.com/)
  * [Learning to Love Javascript](https://www.youtube.com/watch?v=seX7jYI96GE)
 
+### Ruby
+
 ## Libraries
 
-### jQuery
+### [jQuery](https://jquery.com/)
 
-### Underscore
+### [Lodash](https://lodash.com/)
 
-### Lodash
+### [Moment](http://momentjs.com/)
 
-### Moment
+### [Underscore](http://underscorejs.org/)
 
-### Winston
+### [Winston](https://github.com/winstonjs/winston)
 
 ## Frameworks
 
-### Backbone
+### [Backbone](http://backbonejs.org/)
 
-### Express
+### [Express](http://expressjs.com/)
 
 * [Learning the basics of express js](http://hungrygeek.holidayextras.co.uk/expressjs/2015/04/20/learning-the-basics-of-expressjs/)
 
-### HapiJS
+### [HapiJS](http://hapijs.com/)
 
-### React
+### [React](http://facebook.github.io/react/)
 
 ## Patterns
 
-### MVC
+### Anti-patterns
 
-* [Model–view–controller](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
-* [MV* Patterns - Essential JS Design Patterns - by Addy Osmani](http://addyosmani.com/resources/essentialjsdesignpatterns/book/#detailmvcmvp)
+* [Software engineering anti-patterns](https://en.wikipedia.org/wiki/Anti-pattern#Software_engineering)
 
 ### Callbacks
 
 * [Callback (computer programming)](https://en.wikipedia.org/wiki/Callback_(computer_programming))
+
+### Concerns
+
+* [Separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns)
 
 ### Factory
 
 * [Factory (object-oriented programming)](https://en.wikipedia.org/wiki/Factory_(object-oriented_programming))
 * [Factory - Essential JS Design Patterns - by Addy Osmani](http://addyosmani.com/resources/essentialjsdesignpatterns/book/#factorypatternjavascript)
 
-### Concerns
-
-* [Separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns)
-
-### Mixins
-
-* [Mixin](https://en.wikipedia.org/wiki/Mixin)
+### Functional concepts
 
 ### Inheritance
 
 * [Inheritance (object-oriented programming)](https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming))
 
+### Mixins
+
+* [Mixin](https://en.wikipedia.org/wiki/Mixin)
+
+### MVC
+
+* [Model–view–controller](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
+* [MV* Patterns - Essential JS Design Patterns - by Addy Osmani](http://addyosmani.com/resources/essentialjsdesignpatterns/book/#detailmvcmvp)
+
 ### Presenters
 
 * [pragmatic-backbone.com views](http://pragmatic-backbone.com/views)
 
-### Anti-patterns
-
-* [Software engineering anti-patterns](https://en.wikipedia.org/wiki/Anti-pattern#Software_engineering)
-
-### Functional concepts
-
 ### Promises
 
 * [HTML5 Rocks guide to promises](http://www.html5rocks.com/en/tutorials/es6/promises/)
+* [Q promise library](https://github.com/kriskowal/q)
 
 ## Other tech
 
@@ -89,32 +92,32 @@ The links below should provide a good introduction into an item, further in dept
 * [Git from the Bottom Up](https://jwiegley.github.io/git-from-the-bottom-up/)
 * [Pro Git](http://git-scm.com/book)
 
+### [Less](http://lesscss.org/)
+
+### [Sass](http://sass-lang.com/)
+
 ### Shell
 
 ### SQL
 
-### Less
-
-### Sass
-
 ## Testing
 
-### Jasmine
+### [Jasmine](http://jasmine.github.io/2.0/introduction.html)
 
-### Mocha
+### [Mocha](https://mochajs.org/)
 
-### Sinon
+### [Nightwatch](http://nightwatchjs.org/)
 
 ### Selenium
 
-### Nightwatch
+### Sinon[Sinon](http://sinonjs.org/)
 
 ## Infrastructure
 
-### Heroku
+### [Amazon AWS](http://aws.amazon.com/)
 
-### AWS
+### [Heroku](https://www.heroku.com/home)
 
 ### Teamcity
 
-### Travis
+### [Travis](http://blog.travis-ci.com/)
