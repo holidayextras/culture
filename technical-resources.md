@@ -110,7 +110,7 @@ The links below should provide a good introduction into an item, further in dept
 
 ### Selenium
 
-### Sinon[Sinon](http://sinonjs.org/)
+### [Sinon](http://sinonjs.org/)
 
 ## Infrastructure
 
