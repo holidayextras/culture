@@ -92,13 +92,30 @@ The links below should provide a good introduction into an item, further in dept
 * [Git from the Bottom Up](https://jwiegley.github.io/git-from-the-bottom-up/)
 * [Pro Git](http://git-scm.com/book)
 
-### [Less](http://lesscss.org/)
+### [LESS](http://lesscss.org/)
 
-### [Sass](http://sass-lang.com/)
+### [SASS](http://sass-lang.com/)
 
 ### Shell
 
 ### SQL
+
+## Design
+### Principles
+* [UX/UI Design Principles](https://docs.google.com/presentation/d/1R3FyAiFkL9X1q4l2-i1I2bqY7P712VzuUttnyAxgKSs/edit?usp=sharing)
+* [Atomic Web Design](http://bradfrost.com/blog/post/atomic-web-design/)
+* [Pattern Lab](http://patternlab.io/)
+* [Google Material Design](https://www.google.com/design/spec/material-design/introduction.html)
+
+### Tools
+* [UI Toolkit](http://ui-toolkit.com)
+* [Bootstrap](http://getbootstrap.com/)
+
+### Guidelines
+* [Holiday Extras Brand Guidelines](http://brand.holidayextras.com/)
+* [Airparks Brand Guidelines](http://brand.airparks.co.uk/)
+* [BCP Brand Guidelines](http://brand.parkbcp.co.uk/)
+* [Esssntial Travel Brand Guidelines (prototype)](http://stuartgiles.com/et)
 
 ## Testing
 
