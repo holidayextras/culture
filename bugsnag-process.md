@@ -9,7 +9,7 @@
 
 The Bugsnag duties rotate from developer to developer on a weekly basis.
 
-Bugsnag is an important part of our developer role here. It allows us time to catch and resolve bugs and issues which we would not otherwise see or prioritise. This creates a better development environment for us all as well as improving the customers experience on their site. 
+Bugsnag is an important part of our developer role here. It allows us time to catch and resolve bugs and issues which we would not otherwise see or prioritise. This creates a better development environment for us all as well as improving the customers experience on our site. 
 
 No one likes a buggy website, so why should we build one?
 
