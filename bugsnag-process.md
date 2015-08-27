@@ -56,7 +56,7 @@ The stats show you:
 
 You can use the search form on the left hand side to limit what bugs you see:
 
-![](htps://cldup.com/hmbTaL9r6A-2000x2000.png =x100)t
+![](htps://cldup.com/hmbTaL9r6A-2000x2000.png)
 
 #### Ungrouped View
 Ungrouped view shows you a live error by error view of the project. It also shows you more information regarding each bug such as user and device settings.
