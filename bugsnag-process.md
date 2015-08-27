@@ -88,6 +88,11 @@ Any bug worth mentioning is worth raising as a JIRA. There's a handy button on t
 
 Add as much detail about the bug as you can. E.g. how can you duplicate it? Who is it affecting? If it's something which should be expedited then let people know and get working on it.
 
+### Cleaning up
+At the end of your week on Bugsnag duty you should audit the bugs visible on the Bugsnag dashboard. Any that have not been reported within the previous two weeks should be deleted. This prevents us from getting into a state with a large and unmanageable backlog of bugs which are no longer occurring. 
+
+If the Bugsnag issue you are removing also has a JIRA attached you should make a note on the JIRA that the bug has been closed as it is no longer occurring and close the ticket.
+
 ## hxMetrics
 
 The [metrics system](https://metrics.holidayextras.com/) is a graph based tool which allows us to monitor the error rates on our systems. You will have to be on our WIFI or Junos to access this.
