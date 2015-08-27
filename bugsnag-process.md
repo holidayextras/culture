@@ -56,7 +56,7 @@ The stats show you:
 
 You can use the search form on the left hand side to limit what bugs you see:
 
-![](https://cldup.com/hmbTaL9r6A-2000x2000.png =x100px)
+![](htps://cldup.com/hmbTaL9r6A-2000x2000.png =x100)t
 
 #### Ungrouped View
 Ungrouped view shows you a live error by error view of the project. It also shows you more information regarding each bug such as user and device settings.
@@ -125,16 +125,25 @@ The email is designed to be blameless and to allow people to learn from mistakes
 
 ## FAQ
 Q. I've found a bug, is it important?
+
 A. It's mostly down to stats and your gut feeling. Is it affecting people and preventing bookings? If in doubt, ask! It's better that we catch a bug that is causing problems then assume it's not an issue and let it slide.
 
+
 Q. Everything is blowing up! What do I do?
+
 A. In event of nuclear war, run and don't look back. If major bugs are happening (not the Starship Troopers kind) then let people know and get involved with fixing, check the last deploy and get them involved. Should you roll back?
 
+
 Q. I've got a Bugsnag PR in review but I'm not on Bugsnag any more. What should I do?
+
 A. It's okay to hand over work to the next person on Bugsnag. Just before you do ask yourself what the importance of this PR is? Should you be owning this into production yourself and will you feel better if you do? If you're going to loose sleep over it then I suggest you baby-sit it into live. There's no problem in doing this and if your work is good then it shouldn't take too long anyway!
 
+
 Q. I have a question regarding Bugsnag, what should I do?
+
 A. Ask someone. Then write your question and answer in here so that other people can learn. The chances are if you're thinking it, then someone else will be as well. Be courageous and ask the question no one else does. There are no stupid questions.
 
+
 Q. Bugsy?
+
 A. Don't ask.
