@@ -38,11 +38,13 @@ Going back to the atomic design principles from the "What are components?" secti
  - **Atom and Molecule Components:** These go in the public [UI-Toolkit](https://github.com/holidayextras/ui-toolkit) project where they can be reused everywhere. This is because at the granular atomic and molecular level, components probably have applicability across all of the Hx platforms as well as to the wider world. In support of this, the UI-Toolkit project is open source.
  - **Organism Components:** These will sit in a separate private [UI-Components](https://github.com/holidayextras/UI-Components) project. This is because these components will have applicability mainly within Holiday Extras' products, and will be subject to rapid change and creation of lots of variants of a similar component for split testing purposes as well as the inclusion of Hx-only code, [react props](https://facebook.github.io/react/docs/reusable-components.html) and the like.
 
-If you're building a new component and you're unsure about where it should go, talk to one of the SAs or the UI-Toolkit team.
+If you're building a new component and you're unsure about where it should go, talk to one of the SAs or the UXUI team.
 
 ## Where can I read more?
 
  - **React**
   - [React Docs](http://facebook.github.io/react/)
+  - [UI Toolkit](http://hungrygeek.holidayextras.co.uk/ui-toolkit/)
+  - [Additional documentation on technical resources](https://github.com/holidayextras/culture/blob/master/technical-resources.md)
  - **React & Tripapp**
   - [Integrating React Components Docs (yet to be written)](#)
