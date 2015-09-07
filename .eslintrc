@@ -10,6 +10,7 @@
     "jquery": true
   },
   "plugins": [
+    "react"
   ],
   "ecmaFeatures": {
     "jsx": true
@@ -39,7 +40,7 @@
     "no-eval": 2,
     "no-extend-native": 2,
     "no-extra-bind": 2,
-    "no-extra-parens": [2, "all"],
+    "no-extra-parens": [2, "functions"],
     "no-implied-eval": 2,
     "no-iterator": 2,
     "no-label-var": 2,
@@ -74,6 +75,20 @@
     "object-curly-spacing": [2, "always"],
     "quotes": [2, "single", "avoid-escape"],
     "radix": 2,
+    "react/display-name": 0,
+    "react/jsx-quotes": [2, "double", "avoid-escape"],
+    "react/jsx-no-undef": 2,
+    "react/jsx-sort-props": 0,
+    "react/jsx-uses-react": 2,
+    "react/jsx-uses-vars": 2,
+    "react/no-did-mount-set-state": 2,
+    "react/no-did-update-set-state": 2,
+    "react/no-multi-comp": 0,
+    "react/no-unknown-property": 2,
+    "react/prop-types": 2,
+    "react/react-in-jsx-scope": 2,
+    "react/self-closing-comp": 2,
+    "react/wrap-multilines": 2,
     "semi": [2, "always"],
     "semi-spacing": [2, {"before": false, "after": true}],
     "space-after-keywords": [2, "always"],
