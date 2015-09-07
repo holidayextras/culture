@@ -28,13 +28,13 @@ Small images should be combined into sprites. I don't like DataURIs any more, th
 
 HTTP/2 will change a lot of this. But that's for another (fast approaching) day.
 
-\* Further talk on this at foot of page.
+\* Further notes on this and combining strategy at the foot of page.
 
 ## Use a CDN
 Put the assets closer to the user. HTML, CSS, JS. Make sure everything is loaded from static1 or static4.holidayextras.com. These also have the benefit of not including the sizeable HX cookies in every request, where they are completely irrelevant.
 
 ## Add an Expires header
-One for the IT guys as well. The headers should be set, we should have a set strategy for images, css and js.
+One for the IT guys as well. The headers should already be set, we should have a set strategy for images, css and js.
 
 Policies:
 
@@ -69,7 +69,7 @@ If anyone doubts the worth of this, have a look at the experiment above. The dif
 We have this situation on the SEO pages. Optimizely requires jQuery. On pages where Optimizely is choosing a variant and redirecting, it must be in the HEAD and as early in the page as possible. Otherwise the initial page is rendered, and then the screen goes blank once you are redirected. But on a variant, where the page is actually going to be loaded, we should shift Optimizely and jQuery to the foot of the page to prevent the Optimizely js from blocking.
 
 ## Optimise images
-'Optimise' - what do we mean by that? There's a great webinar/video by Guy Podjarny, I'll dig out the link. TODO
+'Optimise' - what do we mean by that? There's a great webinar/video by Guy Podjarny, http://www.oreilly.com/pub/e/3122?imm_mid=0bdf5b&cmp=em-na-webcast-info-webcast_20140616&sidebar-link 
 
 We have many images that are in the wrong format. Save photographs as jpgs, and logos as pngs.
 
