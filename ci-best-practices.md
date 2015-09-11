@@ -33,10 +33,10 @@
 
 It is often advantageous to split up a CI's tasks into multiple steps for speed or clarity, as these will often run in parallel.
 
-Make targets should be prefixed with `ci-` then use a descriptive name for the specific task, examples of this would be:
+Make targets should be prefixed with `ci_` then use a descriptive name for the specific task, examples of this would be:
 
-`make ci-lint`
-`make cli-selenium`
+`make ci_lint`
+`make cl_selenium`
 
 These tasks will include `make` in order to bring the box into a state where a specific task can be run.
 
