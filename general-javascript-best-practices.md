@@ -78,3 +78,13 @@ You can see above that in the bad example, the `notifyBookingComplete()` functio
 We avoid this issue in the good examples. Depending on the complexity of the condition in question it might be worth updating the function name, moving the condition out of the function or putting the condition into it's own function. These aid with understanding, readability and testability of code.
 
 **Caveat:** This approach isn't always practical with more complex functions. For example, a function may contain complex conditional logic that can't be succinctly reflected in its name, and that we don't want to inline and repeat everywhere. In this scenario, we can use things like throwing `Errors` or `true`/`false` return values for sync code and rejecting promises & erroring callbacks for async code. The ultimate aim is just to ensure that the programmer isn't mislead about the behaviour of the function, and encourage them to consider handling non-happy path behaviour.
+
+## Preferred libraries
+
+There are many 3rd party libraries to use on [npm.org](http://www.npm.org), but some are better than others. Any library listed below should be used over inferior competing libraries:
+
+### Lodash
+
+Use instead of underscore, due to correct semantic versioning and better performance and some extra features.
+
+Please only require the methods you need rather than the whole library in order to keep build sizes at a minimum.
