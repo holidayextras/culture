@@ -85,6 +85,6 @@ There are many 3rd party libraries to use on [npm.org](http://www.npm.org), but 
 
 ### Lodash
 
-Use instead of underscore, due to correct semantic versioning and better performance and some extra features.
+Use instead of underscore, due to correct semantic versioning, better performance and some extra features.
 
 Please only require the methods you need rather than the whole library in order to keep build sizes at a minimum.
