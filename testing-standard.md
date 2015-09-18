@@ -39,7 +39,7 @@ sinon.stub(someModule, '_add').returns(expectedResult);             // stubbing 
 var result = someModule._proxy(first, second);
 
 assert.equal(result, expectedResult);                               // assert the return value
-assert.ok(someModule._add.calledWith(first, second));               // assert the stub was invoked as expected
+sinon.assert.calledWith(someModule._add, first, second);            // assert the stub was invoked as expected
 someModule._add.restore();                                          // restore the stub
 ```
 
