@@ -19,6 +19,8 @@ The links below should provide a good introduction into an item, further in dept
 
 ### [jQuery](https://jquery.com/)
 
+ * [Performance Tips Cheat Sheet](http://dumitruglavan.com/jquery-performance-tips-cheat-sheet/)
+
 ### [Lodash](https://lodash.com/)
 
 ### [Moment](http://momentjs.com/)
