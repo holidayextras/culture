@@ -2,7 +2,7 @@
 #### What tests does this PR have?
 #### How can this be tested?
 #### Screenshots / Screencast
-#### What gif best describes how you feel about this work?
+#### The gif below is the cherry on top of my awesome PR cake
 ---
 #### Developer Definition of Done/Quality Checklist (for PR author to complete BEFORE code review):
 - [ ] I have checked the [contributing document](../blob/master/CONTRIBUTING.md) and I'm happy for this to be reviewed.
