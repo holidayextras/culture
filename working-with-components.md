@@ -47,4 +47,4 @@ If you're building a new React component and you're unsure about where it should
   - [UI Toolkit](http://hungrygeek.holidayextras.co.uk/ui-toolkit/)
   - [Additional documentation on technical resources](https://github.com/holidayextras/culture/blob/master/technical-resources.md)
  - **React & Tripapp**
-  - [Integrating React Components Docs (yet to be written)](#)
+  - [Integrating React Components Docs](https://github.com/holidayextras/tripapplite/blob/master/doc/WORKING_WITH_TRIPAPP.md#24-react-components)
