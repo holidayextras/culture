@@ -1,4 +1,4 @@
-# Working with components
+# Working with React
 
 ## What are components
 Components can be thought of as sections of user interface on our websites. There are small components, such as buttons and inputs, and larger components such as product tiles and search headers. Typically larger components will be _composed_ of many smaller components, but anything can be a component really. Designing many small components to compose together for larger reuseable components within a page is known as **atomic design**. To read more on Atomic Design see [Brad Frost's excellent post](http://bradfrost.com/blog/post/atomic-web-design/), but for the purposes of working with components at Hx we'll be referring to three of the 5 atomic design component levels:
@@ -29,8 +29,7 @@ As for when to use components, the answer to this question can be broken down in
 This should be componentised from the beginning, and this is the expectation for new pull requests. The UX/UI Team are on hand to offer advice and assistance with this if necessary.
 
 ### Modifying existing user interface code
-When modifying existing user interface code, existing user interface elements that can be replaced by shared components we already have should be replaced. If there are no existing user interface components we should look at building some when time allows.
-
+When modifying existing user interface code, existing user interface elements that can be replaced by shared components we already have should be replaced within reason. If there are no existing user interface components we should look at building some when time allows.
 
 ## Where do we put shared React components?
 Going back to the atomic design principles from the "What are components?" section we'd like to put our shared React components in the following places:
@@ -39,6 +38,13 @@ Going back to the atomic design principles from the "What are components?" secti
  - **Organism React Components:** For now, keep these in the repository of the project you're working on. Very shortly we'll be setting up a repository for all of our "organism" react components, at which point we can move components and their associated tests across into a shared area.
 
 If you're building a new React component and you're unsure about where it should go, talk to one of the SAs or the UXUI team.
+
+## React do's and dont's
+- DO keep internationalisation outside of your components: Internationalisation being translating strings to different languages, these strings should be passed in to the component for the component to render, they shouldn't exist within the component itself. DONT internationalise inside your components.
+- DO put localisation inside your components where sensible: Your component may expect some strings passed in to to contain dates and numbers, for these, localisation should take place _within_ the component itself unless there's a good reason to pass them in. [FormatJS](http://formatjs.io/react/) can be used to help with this, and there's an example integration in Tripapp's header search itinerary view.
+- DO keep state in one place: If you have a view that's orchestrating a lot of components, keep the state in that view and then pass it down to and up from components via props as it needs to change. This way the hierarchy of components can sensibly re-render as the props change. DON'T create unnecessary new state for every component you introduce into your hierarchy.
+- DO refactor the smallest pieces possible first: This means DON'T try to refactor an entire view hierarchy in one go, pick a small section of it and convert it to a react component, deploy that and then move on from there. More on this in this [excellent talk by Ryan Florence](https://www.youtube.com/watch?v=BF58ZJ1ZQxY).
+- DO separate your markup from your logic within your components. It should be easy to see from your render method the composition of components and markup that will be rendered to the page.
 
 ## Where can I read more?
 
