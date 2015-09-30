@@ -31,7 +31,11 @@ HTTP/2 will change a lot of this. But that's for another (fast approaching) day.
 \* Further notes on this and combining strategy at the foot of page.
 
 ## Use a CDN
-Put the assets closer to the user. HTML, CSS, JS. Make sure everything is loaded from static1 or static4.holidayextras.com. These also have the benefit of not including the sizeable HX cookies in every request, where they are completely irrelevant.
+Put the assets closer to the user. HTML, CSS, JS. We have a number of CDNs that we use. TripApp uses Cloudfront for their js & css assets, and even front static1 on cloudfront. The SEO and PPC pages use static1 and static4.holidayextras.com, which are both on Cloudflare. These also have the benefit of not including the sizeable HX cookies in every request, where they are completely irrelevant.
+
+Whatever system you are on, the important thing is to be consistent. Pick a CDN and use it for everything. More chance of reusing connections. Domain sharding is an anti-pattern now, and with HTTP/2 will actually be detrimental to performance.
+
+There are pages currently with assets called from www., secure., static1, static4 and cloudfront. Stop this. And if you see it, fix it.
 
 ## Add an Expires header
 One for the IT guys as well. The headers should already be set, we should have a set strategy for images, css and js.
