@@ -9,6 +9,8 @@ If you know the work will be undertaken by a specific POD then add a label with 
 
 If you are creating multiple issues around a topic or with a common goal then create a milestone and add all relevant issues to it.
 
+Please, when you begin working on an issue assign yourself to it and treat the issue as a mind-dump. Write all problems/ideas/blockers/designs/failures etc. that you have on there so that people can easily follow decisions you have made and discussion you have had. Try to update your issues at least once a day.
+
 ```
 #What is the problem you're trying to solve?
 
