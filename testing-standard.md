@@ -8,7 +8,8 @@ In order to keep test writing familiar across the Holiday Extras group, we shoul
 * [Mocha](https://mochajs.org/): Our test framework of choice
 * [Sinon](http://sinonjs.org/): For our stubs & spies
 * [Chai](http://chaijs.com/): For making assertions in our tests
-* [Sinon-chai](https://github.com/domenic/sinon-chai): For integrating Sinon with Chai
+  * [Sinon-chai](https://github.com/domenic/sinon-chai): For integrating Sinon with Chai
+  * [chai-as-promised](https://github.com/domenic/chai-as-promised/): For clean promise assertions
 * [React Test Utilities](https://facebook.github.io/react/docs/test-utils.html): Helpers for testing React components 
 
 ## 1.2 Good Test Folders
@@ -95,7 +96,7 @@ describe('nameHelper', function() {
 
 This looks fairly verbose, but it is a contrived example. In the real world when testing modules with many functions of varying degrees of complexity, this structure _saves_ code and keeps people having to read the tests sane.
 
-### 1.4 How many tests should I write?
+### How many tests should I write?
 In short you should write a test for:
 
 * Every path through a function
@@ -118,7 +119,7 @@ someModule._action = function(number) { // test with `null` on server
 };
 ```
 
-## 1.5 Good Stubs and Spies
+## 1.4 Good Stubs and Spies
 Stubs and Spies are similar but subtly different. In our unit tests we should stub wherever possible, but to know why we first need to understand the difference.
 
 Take a very basic function:
@@ -157,19 +158,29 @@ By stubbing `getHoursAtBirth` and `getHoursAtDeath` we can **a)** check that bot
 
 Other tests will check that `getHoursAtBirth` and `getHoursAtDeath` work, and by building up a suite of tests that ensure each function works as it's supposed to, we can build confidence that our codebase works correctly. It's for this reason that `stubs` are preferred to spies in our unit tests - we don't want to be running code outside of the function we're actually testing during a unit test.
 
-## 1.6 Good Tests
-Now that we've covered good folder structure, good test file structure and the purpose of stubs and spies, we've got everything we need to begin writing good tests. Good tests should:
+## 1.5 Good Unit Test Practice
+Now that we've covered good folder structure, good test file structure and the purpose of stubs and spies, we've got everything we need to begin writing good tests.
+
+### Within test suites in general:
+
+* Use fixture files with care. They're sensible for large data objects but usually not necessary.
+* Scope variables as close to the tests they're used in as possible (usually at the top of the current `context` block.
+
+### Within `beforeEach` and `afterEach` functions:
 
 * Use `sinon.stub` to limit behaviour with the `beforeEach(callback)` function, `it` block.
-* Check all return/callback values in individual `it` blocks
-* Check every stub is invoked with all expected parameters in individual `it` blocks
-* Scope variables as close to the tests as sensible.
-* Reference variables for expected results to ease duplication.
 * Restore all stubs after each test with the `afterEach(callback)` function
-* Use fixture files with care. They're sensible for large data objects but usually not necessary.
+* Reference variables for expected results to ease duplication.
 
-## 1.7 Testable code
-If you're finding a function too complex to test. Split it up into other functions to reduce the complexity:
+### Within `it` blocks:
+
+* Check all return/callback values
+* Check every stub is invoked with all expected parameters
+
+## 1.6 Unit Testing Gotchas
+
+### Hard to test functions
+Split it up into other functions to reduce the complexity:
 
 ```javascript
 someModule._action = function(number) {
@@ -198,6 +209,27 @@ someModule._action = function(number) {
   }
   return number;
 };
+```
+
+### Testing the result of callbacks
+Mocha makes this easy out of the box, we can pass a `done` callback to each `it` block if we're running asynchronous code in our test. For example:
+
+```javascript
+  it('the function calls back with the number 1337', function(done) {
+    myTestFunctionCall(function(result) {
+      expect(result).toEqual(1337);
+      done();
+    });
+  ); 
+```
+
+### Testing the result of promises
+Using the [chai-as-promised](https://github.com/domenic/chai-as-promised/) library makes this very easy:
+
+```javascript
+  it('the function calls back with the number 1337', function() {
+    expect(myTestFunctionCall()).to.eventually.equal(1337);
+  ); 
 ```
 
 # 2.0 Selenuim Tests
