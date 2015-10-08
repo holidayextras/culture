@@ -1,23 +1,8 @@
 # HX Testing Standards
 
-## Selenuim Tests
+# 1.0 Unit Tests
 
-TODO
-
-## System Tests
-
-### Each test should:
-* Use product codes that are guaranteed to be available
-* Use dynamic dates that are a fixed amount of time in the future
-* Not assert against any dynamic data (eg. content) that may change unexpectedly
-
-### How many tests should we write?
-* Only enough to cover expected customer journeys from start to finish
-
-
-# Unit Tests
-
-## Our Technology
+## 1.1 Our Technology
 In order to keep test writing familiar across the Holiday Extras group, we should use the following tech for writing our unit tests:
 
 * [Mocha](https://mochajs.org/): Our test framework of choice
@@ -26,12 +11,12 @@ In order to keep test writing familiar across the Holiday Extras group, we shoul
 * [Sinon-chai](https://github.com/domenic/sinon-chai): For integrating Sinon with Chai
 * [React Test Utilities](https://facebook.github.io/react/docs/test-utils.html): Helpers for testing React components 
 
-## Good File & Folder Structures
+## 1.2 Good Test Folders
 When addind new tests to projects, test files should sit in a folder hierarchy that mimics the hierarchy fo the source code. The test files themselves should be named similarly to the source files, but with `test` at the beginning of the file name. For example, if we have a source file `src/views/checkoutView.js` we should have a test file `test/unit/views/testCheckoutView.js` or similar. This makes finding tests an easy and logical process.
 
 The location of the tests directory may differ between existing projects, but for new projects tests should be located in a `test` directory at the root of the project. On existing projects we should work towards having this `test` directory in the root of the project.
 
-## Good Test Structure
+## 1.3 Good Test Files
 Test files should be clean and readable. This means making sensible use of some of Mocha's features to structure test files
 
 ### Using `describe` & `context` blocks
@@ -42,7 +27,7 @@ Mocha's `describe` and `context` syntax can be used to split out tests into logi
 Within describe blocks we can put `it` blocks, it's within these `it` blocks that we put the assertion for the thing we're testing. Keeping to **one** assertion per `it` block makes pinpointing the source of a test failure very easy, so this is considered good practice.
 
 ### The `beforeEach(callback)` function
-Within `describe` and `context` blocks we can call the `beforeEach` function with a callback we want to run before each test is run. This is useful for setting up your test configuration so that your `it` blocks only contain very core of your test; the call to the function being tested and the expected result. This is considered good practice as it makes it very easy to see what's broken when a test fails.
+Within `describe` and `context` blocks we can call the `beforeEach` function with a callback we want to run before each test is run. This is useful for setting up your test configuration so that your `it` blocks only contain very core of your test; the call to the function being tested and the expected result. This is considered good practice as it makes it very easy to see what's broken when a test fails. There's also an `afterEach(callback)` function which runs after each test - this is useful for tearing down stubs and generally restoring things to a pre-test state.
 
 Piecing the above together, for the following fake module:
 
@@ -110,7 +95,30 @@ describe('nameHelper', function() {
 
 This looks fairly verbose, but it is a contrived example. In the real world when testing modules with many functions of varying degrees of complexity, this structure _saves_ code and keeps people having to read the tests sane.
 
-## Good Stubs and Spies
+### 1.4 How many tests should I write?
+In short you should write a test for:
+
+* Every path through a function
+* Every error condition through a function
+* ***When writing serverside tests***, you should write one with params substitued for `null` to check that the function doesn't throw an Error. This is not a necessary consideration on clientside Javascript, where we'd rather fail fast than continue in a erroneous state.
+
+This piece of code should have 3 tests, with an extra null test on the server:
+
+```javascript
+someModule._action = function(number) { // test with `null` on server
+  if (number == 0) {
+    return 1;        // test we get here
+  }
+
+  if (number == 1) {
+    return 3;        // test we get here
+  }
+
+  return 5;          // test we get here
+};
+```
+
+## 1.5 Good Stubs and Spies
 Stubs and Spies are similar but subtly different. In our unit tests we should stub wherever possible, but to know why we first need to understand the difference.
 
 Take a very basic function:
@@ -149,74 +157,19 @@ By stubbing `getHoursAtBirth` and `getHoursAtDeath` we can **a)** check that bot
 
 Other tests will check that `getHoursAtBirth` and `getHoursAtDeath` work, and by building up a suite of tests that ensure each function works as it's supposed to, we can build confidence that our codebase works correctly. It's for this reason that `stubs` are preferred to spies in our unit tests - we don't want to be running code outside of the function we're actually testing during a unit test.
 
-## Each test should:
-* Use `sinon.stub` to limit behaviour
-* Assert all return/callback values
-* Assert every stub is invoked with all expected parameters
-* Use fake variables wherever possible
-* Reference stubbed data to ease duplication
-* Restore all stubs after the test
+## 1.6 Good Tests
+Now that we've covered good folder structure, good test file structure and the purpose of stubs and spies, we've got everything we need to begin writing good tests. Good tests should:
 
-Code:
+* Use `sinon.stub` to limit behaviour with the `beforeEach(callback)` function, `it` block.
+* Check all return/callback values in individual `it` blocks
+* Check every stub is invoked with all expected parameters in individual `it` blocks
+* Scope variables as close to the tests as sensible.
+* Reference variables for expected results to ease duplication.
+* Restore all stubs after each test with the `afterEach(callback)` function
+* Use fixture files with care. They're sensible for large data objects but usually not necessary.
 
-```javascript
-someModule._add = function(first, second) { };
-someModule._proxy = function(first, second) {
-  return someModule._add(first, second);
-};
-```
-
-Test:
-
-```javascript
-var first = 'first', second = 'second', expectedResult = 'result';  // using fake variables by reference
-sinon.stub(someModule, '_add').returns(expectedResult);             // stubbing with sinon
-var result = someModule._proxy(first, second);
-
-assert.equal(result, expectedResult);                               // assert the return value
-sinon.assert.calledWith(someModule._add, first, second);            // assert the stub was invoked as expected
-someModule._add.restore();                                          // restore the stub
-```
-
-## How many tests should we write?
-
-* One for every path through a function
-* One for every error condition through a function
-* One with params substitued for `null` (to check it won't crash)
-
-This piece of code should have 4x tests:
-
-```javascript
-someModule._action = function(number) { // test with `null`
-  if (number == 0) {
-    return 1;        // test we get here
-  }
-
-  if (number == 1) {
-    return 3;        // test we get here
-  }
-
-  return 5;          // test we get here
-};
-```
-
-This piece of code should have 2x tests: (clever choice of input value can cover all the code paths):
-
-```javascript
-someModule._action = function(number) { // test with `null`
-
-  for (var i=0; i<number; i++) {   // test we loop over here
-    if (i%3 == 0) number++;        // test we get here
-    number++;
-  }
-
-  return number;                   // should always finish here
-};
-```
-
-### My function is too complicated, this is too much effort!
-
-Split it up into other functions to reduce the complexity:
+## 1.7 Testable code
+If you're finding a function too complex to test. Split it up into other functions to reduce the complexity:
 
 ```javascript
 someModule._action = function(number) {
@@ -229,7 +182,7 @@ someModule._action = function(number) {
 };
 ```
 
-becomes:
+Becomes:
 
 ```javascript
 someModule._numberLoop = function(number) {
@@ -246,3 +199,17 @@ someModule._action = function(number) {
   return number;
 };
 ```
+
+# 2.0 Selenuim Tests
+
+TODO
+
+# 3.0 System Tests
+
+## Each test should:
+* Use product codes that are guaranteed to be available
+* Use dynamic dates that are a fixed amount of time in the future
+* Not assert against any dynamic data (eg. content) that may change unexpectedly
+
+## How many tests should we write?
+* Only enough to cover expected customer journeys from start to finish
