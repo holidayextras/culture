@@ -95,7 +95,7 @@ describe('nameHelper', function() {
 
      });
 	
-     context('When both the first name and last name are provided, function() {
+     context('When both the first name and last name are provided', function() {
 
        it('returns the first name and the last name concatenated', function() {
          // Test that nameHelper.prettyFullName(testFirstName, testLastName) returns 'Geoffrey Banks'
