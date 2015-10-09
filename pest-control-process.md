@@ -11,12 +11,12 @@ No one likes a buggy application, so why should we build one?
 
 ## Process
 
-Expedited issues are not covered here, please see the expedited proceed for details.
+Expedited issues are not covered here, please see the [Expedited Procedure](expedited-procedure.md) for details.
 
-The most important part of Bugsnag is communication. You should be talking to people about what you're seeing and updating on things you're working on etc. Don't suffer in silence on a tough bug, ask for help. And don't assume an issue is being looked at, check!
+The most important part of pest control is communication. You should be talking to people about what you're seeing and updating on things you're working on etc. Don't suffer in silence on a tough bug, ask for help. And don't assume an issue is being looked at, check!
 
 * Developer rotated on a weekly basis.
-  * Handled by SE's which are able to delegate as they see fit.
+  * Handled by SEs which are able to delegate as they see fit.
   * Spends ~1 hour a day on this work.
   * Organises the raising of new bugs,
     * Add customer impact to description
@@ -44,7 +44,7 @@ A member of each pod is encouraged to attend to assist in the assignment of bugs
 
 ### Bugsnag
 
-You'll require our Bugsnag credentials. Ask the last person on bugsnag for these.
+You'll require our Bugsnag credentials. Ask the last person on rotation for these.
 
 #### How do I find bugs?
 Errors on our site are reported to [Bugsnag](https://bugsnag.com/holiday-extras/trip-app-js/errors) and are visible in the dashboard.
@@ -60,7 +60,7 @@ Errors can be viewed in either a grouped or ungrouped state.
 Most people prefer the ungrouped view as the grouping isn't always accurate.
 
 ##### Grouped View
-When viewing grouped errors you can however get an idea of the bugs importance.
+When viewing grouped errors you can however get an idea of the bugs' importance.
 
 ![](/images/pest-control-process/dashboard-bug-view.png)
 
