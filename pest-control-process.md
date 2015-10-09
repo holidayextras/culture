@@ -20,7 +20,7 @@ The most important part of Bugsnag is communication. You should be talking to pe
   * Spends ~1 hour a day on this work.
   * Organises the raising of new bugs,
     * Add customer impact to description
-    from reporting systems (currently Bugsnag and HxMetrics)
+    * Found via reporting systems (currently Bugsnag and HxMetrics)
   * Remains in sprint.
   * Time spent will vary, but should not be influenced by pod/sprint deadlines.
 * Use the general web project on JIRA (not bugsnag queue).
@@ -38,7 +38,7 @@ A member of each pod is encouraged to attend to assist in the assignment of bugs
   * Monitor progress of bug completion.
   * Recurring themes.
 * Review current process.
-* Sent email update.
+* Send email update.
 
 ## Systems used
 
