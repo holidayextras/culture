@@ -1,6 +1,6 @@
 # Pest Control Process
 
-This is an important part of our developer role here. It allows us time to catch and resolve bugs and issues which we would not otherwise see or prioritised. This creates a better development environment for us all as well as improving the customers experience on our site. 
+This is an important part of our developer role here. It allows us time to catch and resolve bugs and issues which we would not otherwise be prioritised. This creates a better development environment for us all as well as improving the customers experience on our site. 
 
 No one likes a buggy application, so why should we build one?
 
