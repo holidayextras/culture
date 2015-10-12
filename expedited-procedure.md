@@ -1,6 +1,6 @@
 # Expedited Procedure
 
-Don't panic! Sometimes things do go wrong. It's important that these issues are fixed promptly, without compromising on quality. The process below will help guide you through how to identfiy whether an issue should be deemed 'expedited', and importantly how to proceed with providing a fix.
+Don't panic! Sometimes things do go wrong. It's important that these issues are fixed promptly, without compromising on quality. The process below will help guide you through how to identify whether an issue should be deemed 'expedited', and importantly how to proceed with providing a fix.
 
 ## Issue defined
 

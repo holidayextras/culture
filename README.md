@@ -10,6 +10,7 @@ This is a collection of documents that outline Holiday Extras' culture and devel
  * [Clientside Javascript (jQuery) Best Practices](clientside-jquery-best-practices.md)
  * [Coding Principles](coding-principles.md)
  * [Organising code in backbone projects](organising-code-backbone-projects.md)
+ * [Pest Control Process](pest-control-process.md)
  * [PR template](pr-template.md)
  * [Server Side Javascript Best Practices](serverside-javascript-best-practices.md)
  * [Technical Planning Meetings](technical-planning-meeting.md)
