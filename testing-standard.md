@@ -177,6 +177,10 @@ Now that we've covered good folder structure, good test file structure and the p
 * Check all return/callback values
 * Check every stub is invoked with all expected parameters
 
+### Generally:
+
+* Unit tests should not rely on any external services to run. If you can't run your unit tests without internet access, there's something wrong with your unit tests. Instead you should use stubs and fixtured data to remove the dependency on external services for your tests.
+
 ## 1.6 Unit Testing Gotchas
 
 ### Hard to test functions
@@ -231,10 +235,6 @@ Using the [chai-as-promised](https://github.com/domenic/chai-as-promised/) libra
     expect(myTestFunctionCall()).to.eventually.equal(1337);
   ); 
 ```
-
-# 2.0 Selenuim Tests
-
-TODO
 
 # 3.0 System Tests
 
