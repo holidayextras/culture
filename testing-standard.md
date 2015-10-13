@@ -10,7 +10,8 @@ In order to keep test writing familiar across the Holiday Extras group, we shoul
 * [Chai](http://chaijs.com/): For making assertions in our tests
   * [Sinon-chai](https://github.com/domenic/sinon-chai): For integrating Sinon with Chai
   * [chai-as-promised](https://github.com/domenic/chai-as-promised/): For clean promise assertions
-* [React Test Utilities](https://facebook.github.io/react/docs/test-utils.html): Helpers for testing React components 
+  * With Chai, we always use the `expect` syntax for our tests.
+* [React Test Utilities](https://facebook.github.io/react/docs/test-utils.html): Helpers for testing React components
 
 ## 1.2 Good Test Folders
 When addind new tests to projects, test files should sit in a folder hierarchy that mimics the hierarchy fo the source code. The test files themselves should be named similarly to the source files, but with `test` at the beginning of the file name. For example, if we have a source file `src/views/checkoutView.js` we should have a test file `test/unit/views/testCheckoutView.js` or similar. This makes finding tests an easy and logical process.
