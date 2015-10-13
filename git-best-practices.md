@@ -1,6 +1,18 @@
 # Git Best Practices
 
 
+## Repositories
+
+### Master branch protection
+
+Repositories hosted on GitHub **should** have their **master** branch
+[protected] (https://help.github.com/articles/about-protected-branches/). This
+will prevent the **master** branch from accidentally:
+
+* Being force pushed
+* Being deleted
+* Having changes merged into it until required status checks pass
+
 ## Branching
 
 ### The master or default branch
