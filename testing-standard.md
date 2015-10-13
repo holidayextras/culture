@@ -189,8 +189,13 @@ Split it up into other functions to reduce the complexity:
 ```javascript
 someModule._action = function(number) {
   for (var i=0; i<number; i++) {
-    if (i%3 == 0) number++;
-    if (i>4) number++;
+    if (i%3 == 0) {
+      number++;
+    }
+    
+    if (i>4) {
+      number++;
+    }
     number++;
   }
   return number;
@@ -201,8 +206,14 @@ Becomes:
 
 ```javascript
 someModule._numberLoop = function(number) {
-  if (i%3 == 0) number++;
-  if (i>4) number++;
+  if (i%3 == 0) {
+    number++;
+  }
+  
+  if (i>4) {
+    number++;
+  }
+   
   number++;
   return number;
 };
@@ -211,6 +222,7 @@ someModule._action = function(number) {
   for (var i=0; i<number; i++) {
     number = someModule._numberLoop(number);
   }
+
   return number;
 };
 ```
