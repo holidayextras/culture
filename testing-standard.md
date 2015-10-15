@@ -36,7 +36,7 @@ You may occasionally encounter a slight issue here with our linting, specificall
  * Use a library like [chai-lint](https://www.npmjs.com/package/chai-lint) to provide functions that replace the property getters provided by Chai.
 
 ## 1.2 Good Test Folders
-When addind new tests to projects, test files should sit in a folder hierarchy that mimics the hierarchy fo the source code. The test files themselves should be named similarly to the source files, but with `test` at the beginning of the file name. For example, if we have a source file `src/views/checkoutView.js` we should have a test file `test/unit/views/testCheckoutView.js` or similar. This makes finding tests an easy and logical process.
+When addind new tests to projects, test files should sit in a folder hierarchy that mimics the hierarchy fo the source code. The test files themselves should be named similarly to the source files, but with `test` at the beginning of the file name. For example, if we have a source file `src/views/checkoutView.js` we should have a test file `test/unit/views/checkoutView.js` or similar. This makes finding tests an easy and logical process.
 
 The location of the tests directory may differ between existing projects, but for new projects tests should be located in a `test` directory at the root of the project. On existing projects we should work towards having this `test` directory in the root of the project.
 
