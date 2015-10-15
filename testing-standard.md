@@ -10,8 +10,30 @@ In order to keep test writing familiar across the Holiday Extras group, we shoul
 * [Chai](http://chaijs.com/): For making assertions in our tests
   * [Sinon-chai](https://github.com/domenic/sinon-chai): For integrating Sinon with Chai
   * [chai-as-promised](https://github.com/domenic/chai-as-promised/): For clean promise assertions
-  * With Chai, we always use the `expect` syntax for our tests.
 * [React Test Utilities](https://facebook.github.io/react/docs/test-utils.html): Helpers for testing React components
+
+### Assertion Syntax
+With Chai, we always use the `expect` syntax for our tests. By keeping a single assertion syntax across the Holiday Extras group we're making it easy for developers to get going with writing tests on any of our projects. Chai + expect provides a clean, readable style of test writing, for example:
+
+```javascript
+expect(foo).to.be.a('string');
+expect(foo).to.equal('bar');
+expect(foo).to.have.length(3);
+expect(beverages).to.have.property('tea').with.length(3);
+```
+
+And with the addition of sinon-chai for sinon stubs:
+
+```javascript
+expect(myStub).to.have.been.calledWith('foo');
+```
+
+
+### Linting Issues
+You may occasionally encounter a slight issue here with our linting, specifically our linting complaining about unused expressions in the tests due to Chai's syntax. There are a couple of viable workarounds for this:
+
+ * Turn off `no-unused-expression` linting rule for your tests.
+ * Use a library like [chai-lint](https://www.npmjs.com/package/chai-lint) to provide functions that replace the property getters provided by Chai.
 
 ## 1.2 Good Test Folders
 When addind new tests to projects, test files should sit in a folder hierarchy that mimics the hierarchy fo the source code. The test files themselves should be named similarly to the source files, but with `test` at the beginning of the file name. For example, if we have a source file `src/views/checkoutView.js` we should have a test file `test/unit/views/testCheckoutView.js` or similar. This makes finding tests an easy and logical process.
@@ -181,6 +203,7 @@ Now that we've covered good folder structure, good test file structure and the p
 ### Generally:
 
 * Unit tests should not rely on any external services to run. If you can't run your unit tests without internet access, there's something wrong with your unit tests. Instead you should use stubs and fixtured data to remove the dependency on external services for your tests.
+* Making use of the [dependency injection pattern](https://en.wikipedia.org/wiki/Dependency_injection) can help to make your code more easily testable. If you have a class that requires a connector for some database, for example, injecting that database dependency when you create an instance of your class means it's simple to swap out for a mock dependency when you come to test the class. The alternative, building the dependency right into the class, would involve ruthless stubbing of a real database connector which puts you at risk of tests becoming brittle, as well as running code beyond the scope of your unit test. This would also mean your class was then tightly coupled to a single database connector type, making it harder to swap out in the future.
 
 ## 1.6 Unit Testing Gotchas
 
