@@ -11,9 +11,9 @@ Please also see the respective serverside and clientside best practice docs.
 
 ## ECMAScript version support
 
-We write ECMAScript 5 at Hx. This is up for debate, but until ECMAScript 6 is widely supported without polyfills and other supporting libraries, all of our code should be ECMAScript 5. 
+We use up to ECMAScript 6 at HX. This is fulfilled by Babel and Node v4 where applicable. We should use newer es6 features where it makes sense and can improve readability. Please have a look at our technical resources [section on ES6](technical-resources.md#ES6) to familiarise yourself with some of the new features available to us. If we come across any new anti-patterns that arise from using ES6 features we can add them to this document.
 
-## Function names should reflect behaviour (as much as possible): 
+## Function names should reflect behaviour (as much as possible):
 When writing functions, their names should give a good indication of what they do, for example:
 
 **Bad:**
