@@ -46,6 +46,9 @@ If you're building a new React component and you're unsure about where it should
 - DO refactor the smallest pieces possible first: This means DON'T try to refactor an entire view hierarchy in one go, pick a small section of it and convert it to a react component, deploy that and then move on from there. More on this in this [excellent talk by Ryan Florence](https://www.youtube.com/watch?v=BF58ZJ1ZQxY).
 - DO separate your markup from your logic within your components. It should be easy to see from your render method the composition of components and markup that will be rendered to the page.
 
+## Troubleshooting
+We are maintaining out own troubleshooting doc: [React Troubleshooter](react-troubleshooter.md)
+
 ## Where can I read more?
 
  - **React**
