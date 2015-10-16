@@ -112,10 +112,20 @@ script: npm run ci
 
 ### CircleCi
 
-1. Create a file named `circle.yml` in the root of the project.
+1. Enable circleCi on the project using the circleCi UI.
+1. Create a file named `circle.yml` in the root of the project ([Documentation](https://circleci.com/docs/configuration)).
+1. Push code.
 
 #### Example config
 
 ```YAML
-ADD: ME
+machine:
+  node:
+    version: 0.10.38
+dependencies:
+  cache_directories:
+    - node_modules
+test:
+  override:
+    - npm run ci
 ```
