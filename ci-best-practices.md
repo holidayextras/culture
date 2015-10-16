@@ -78,7 +78,7 @@ Points to note:
 
 ### Do not's
 
-* Do not to have any secret keys in config files or scripts as mentioned above.
+* Do not have any secret keys in config files or scripts as mentioned above.
     * Please pass these in via encrypted environment variables, until we have a better solution.
 * Do not use excessive multiple environments such as several nodejs versions, this will increase the Ci queue size and may slow down processing of others's builds.
     * Are the extra environments required on every build?
