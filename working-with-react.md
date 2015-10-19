@@ -47,7 +47,7 @@ If you're building a new React component and you're unsure about where it should
 - DO separate your markup from your logic within your components. It should be easy to see from your render method the composition of components and markup that will be rendered to the page.
 
 ## Troubleshooting
-We are maintaining out own troubleshooting doc: [React Troubleshooter](react-troubleshooter.md)
+We are maintaining our own troubleshooting doc: [React Troubleshooter](react-troubleshooter.md)
 
 ## Where can I read more?
 
