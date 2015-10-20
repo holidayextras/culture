@@ -3,16 +3,16 @@
 
 ## Repositories
 
-### Master branch protection
+### Branch protection
 
-Repositories hosted on GitHub **should** have their **master** (and **staging**
-when applicable) branch [protected]
+Repositories hosted on GitHub **should** have their **non-feature**
+(e.g. **master**, **staging**, **edge**, ...) branches [protected]
 (https://help.github.com/articles/about-protected-branches/). This will prevent
-the branch from accidentally:
+the branches from accidentally:
 
 * Being force pushed
 * Being deleted
-* [Optional] Having changes merged into it until required status checks pass
+* [Optional] Having changes merged into them until required status checks pass
 
 ## Branching
 
