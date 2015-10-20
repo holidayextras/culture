@@ -19,17 +19,15 @@
 - Give confidence that the code is shippable.
 - Allow stats to be gathered programmatically around our KPI's.
 
-## Potential make targets
+## Targets
 
-`make` // project setup, gathering/installing resources
-
-`make test` // runs tests/lint/hint prescribed by the repo (Selenium, unit tests, integration tests etc)
-
-`make deploy` // runs contextually any scripts/tasks associated with pushing code to infrastructure
+Make is used in the examples below but any method of running tasks can be used as long as the naming convention below is followed.
 
 ### Single step CI
 
-`make ci` (alias, may run all 3) // used by CI to bootstrap the entire deploy process
+`make ci`
+
+This task would install dependencies, run tests and if required begin the entire deploy process.
 
 ### Multiple step CI
 
@@ -40,7 +38,9 @@ Make targets should be prefixed with `ci_` then use a descriptive name for the s
 `make ci_lint`
 `make cl_selenium`
 
-These tasks will include `make` in order to bring the box into a state where a specific task can be run.
+Both of these tasks will require dependencies installed in order to bring the box into a state where a specific task can be run.
+
+If several tasks require the same initial setup having them split out can make the CI process slower due to an increase job queue.
 
 ## Recommended providers
 
@@ -59,4 +59,73 @@ There are some slight differences to the providers above as highlighted, but the
 
 ## Implementation
 
-When setting up CI for a project make sure not to have any secret keys in config files or scripts as mentioned above, instead please pass these in via encrypted environment variables.
+Points to note:
+
+### Do's
+
+* Do cache any dependency directories (such as `node_modules`).
+* Do fail the CI process as soon as one task fails.
+* Do run the quickest and / or most likely to fail tasks first, to enable a broken build to end quicker.
+* If a project has private dependencies, you must do the following:
+    * Add the HX Travis / CircleCi GitHub user SSH key to the project config on the travis UI.
+    * Give the HX Travis / CircleCi GitHub group access to project and all of its nested dependents.
+* Do use scripts if the CI tasks take more than a short line to type / read.
+    * With comments, so we know why any strangeness is being performed.
+    * Keep with the naming convention above (eg `scripts/ci.sh` or `scripts/ci_lint.sh`).
+* Do make sure that the language version specified on CI matches other versions specified elsewhere in the project.
+    * Local environments should be as similar to CI / deployment environments.
+    * `package.json` / `.nvmrc` / `Gemfile`
+
+### Do not's
+
+* Do not have any secret keys in config files or scripts as mentioned above.
+    * Please pass these in via encrypted environment variables, until we have a better solution.
+* Do not use excessive multiple environments such as several nodejs versions, this will increase the Ci queue size and may slow down processing of others's builds.
+    * Are the extra environments required on every build?
+* Do not install global packages on CI
+    * Use the language's package management for installing modules locally instead.
+    * Set the correct executable path if needed.
+* Do not re-purpose the default CI test script for running non test tasks.
+    * Use the naming convention specified above instead.
+
+### Travis
+
+1. Enable travis on the project using the travis UI.
+1. Create a file named `.travis.yml` in the root of the project.
+1. Push code.
+
+#### Example config
+
+```YAML
+sudo: false
+language: node_js
+
+node_js:
+  - 0.10
+
+cache:
+  directories:
+  - node_modules
+
+script: npm run ci
+```
+
+### CircleCi
+
+1. Enable circleCi on the project using the circleCi UI.
+1. Create a file named `circle.yml` in the root of the project ([Documentation](https://circleci.com/docs/configuration)).
+1. Push code.
+
+#### Example config
+
+```YAML
+machine:
+  node:
+    version: 0.10.38
+dependencies:
+  cache_directories:
+    - node_modules
+test:
+  override:
+    - npm run ci
+```
