@@ -26,8 +26,19 @@ It isn't possible to test the internal methods on a react component as they are 
 
 What we *do* want to be testing however is that whatever we expect to have happened within these calls, has happened.
 
+#### componentWillReceiveProps()
+
 Rather than plagiarize a blog post... here's a good link that explains how to deal with this issue: [http://jaketrent.com/post/test-react-componentwillreceiveprops/](http://jaketrent.com/post/test-react-componentwillreceiveprops/)
 
+Tl;dr: wrap your component in a parent where parent state controls child props, update state on parent to change props on the child, make sure child has a ref so you can test props on `parent.ref.childRef`.
+
+#### componentDidMount() / componentWillUnmount()
+
+*componentDidMount()*: in order to test anything inside `componentDidMount`, you will first need to `spy` on the things you want to test first before rendering the component (see above on how to test the DOM). From this point, you can do the usual `spy.calledOnce()` etc like you normally would.
+tl;dr: componentDidMount is only called after the component has been rendered.
+
+*componentWillUnmount()*: this will only be called on DOM removal. You can force this using [React.unmountComponentAtNode](https://facebook.github.io/react/docs/top-level-api.html#reactdom.unmountcomponentatnode) but this *must be on the parent node* ("If no component was mounted in the container, calling this function does nothing").
+eg: `React.unmountComponentAtNode(React.findDOMNode(child).parentNode);`
 
 ### Undefined / unexpected count of children
 If you are testing for a specific number of children on `this.props.children` you must be aware that children that are not defined will be part of the count:
