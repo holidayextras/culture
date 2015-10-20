@@ -27,13 +27,21 @@ The most important part of pest control is communication. You should be talking 
   * Use type of `bug`.
 * Bugs will be completed during normal sprint work by pods like all other work.
 
-## Working Group
+## Delegation meeting
 
-A member of each pod is encouraged to attend to assist in the assignment of bugs and contribute to improving this process.
+A member of each pod is encouraged to attend to assist in the assignment of bugs.
 
 * Chaired by developer on rotation.
+* Occurs before start of sprints.
 * Triage current bugs.
 * Assign bugs to pod backlogs.
+
+## Working Group
+
+A member of each pod is encouraged to attend to contribute to improving this process.
+
+* Chaired by developer on rotation.
+* Occurs every 4 weeks.
 * What’s happened since last time?
   * Monitor progress of bug completion.
   * Recurring themes.
@@ -131,4 +139,16 @@ A. Write your question on the working group agenda and attend the meeting. The c
 
 Q. Bugsy?
 
-A. Don't ask.
+A. He's not around any more, the cute stuffed toy is now known as `the pest`.
+
+Q. Hey, what's this new JIRA label `pestcontrol`?
+
+A. We use this to report on how the found JIRAs are progressing please don't remove the label.
+
+Q. Someone put a JIRA in my pod queue and it does not belong there, what do I do?
+
+A. Our delegation process takes into consideration current pod work and also number of JIRA already given to a pod that week, you are welcome move the JIRA to another pod, please discuss this with the other POs / SMs.
+
+Q. When do I need to complete pest control JIRAs?
+
+A. We do not expect these JIRAs to be done in the next sprint, but as long as they don't get closed or forgotten about for months then thats fine.
