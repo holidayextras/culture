@@ -30,7 +30,7 @@ What we *do* want to be testing however is that whatever we expect to have happe
 
 Rather than plagiarize a blog post... here's a good link that explains how to deal with this issue: [http://jaketrent.com/post/test-react-componentwillreceiveprops/](http://jaketrent.com/post/test-react-componentwillreceiveprops/)
 
-Tl;dr: wrap your component in a parent where parent state controls child props, update state on parent to change props on the child, make sure child has a ref so you can test props on `parent.ref.childRef`.
+Tl;dr: wrap your component in a parent where parent state controls child props, update state on parent to change props on the child, make sure child has a ref so you can test props on `parent.ref.childRef`. 
 
 #### componentDidMount() / componentWillUnmount()
 
