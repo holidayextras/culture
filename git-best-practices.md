@@ -5,13 +5,14 @@
 
 ### Master branch protection
 
-Repositories hosted on GitHub **should** have their **master** branch
-[protected] (https://help.github.com/articles/about-protected-branches/). This
-will prevent the **master** branch from accidentally:
+Repositories hosted on GitHub **should** have their **master** (and **staging**
+when applicable) branch [protected]
+(https://help.github.com/articles/about-protected-branches/). This will prevent
+the branch from accidentally:
 
 * Being force pushed
 * Being deleted
-* Having changes merged into it until required status checks pass
+* [Optional] Having changes merged into it until required status checks pass
 
 ## Branching
 
