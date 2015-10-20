@@ -53,4 +53,4 @@ Will return a count of `3`.
 
 ## State
 
-The consensus (at Holiday Extras) is to ensure state is handled at the highest possible component in the heirarchy. For this reason, unless there's a good use case, *no components should have state*
+The consensus (at Holiday Extras) is to ensure state is handled at the highest possible component in the heirarchy. Components should remain stateless where possible. In most cases the data required for a component should be passed in from a parent as a `prop`. This allows you to maintain state at a higher level and prevents multiple sources of truth from occurring.
