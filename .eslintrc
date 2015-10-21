@@ -7,35 +7,14 @@
     "amd": true,
     "browser": true,
     "jasmine": true,
-    "jquery": true
+    "jquery": true,
+    "es6": true
   },
   "plugins": [
     "react"
   ],
   "ecmaFeatures": {
-    "jsx": true,
-    "arrowFunctions": true,
-    "binaryLiterals": true,
-    "blockBindings": true,
-    "classes": true,
-    "defaultParams": true,
-    "destructuring": true,
-    "forOf": true,
-    "generators": true,
-    "modules": true,
-    "objectLiteralComputedProperties": true,
-    "objectLiteralDuplicateProperties": true,
-    "objectLiteralShorthandMethods": true,
-    "objectLiteralShorthandProperties": true,
-    "octalLiterals": true,
-    "regexUFlag": true,
-    "regexYFlag": true,
-    "restParams": true,
-    "spread": true,
-    "superInFunctions": true,
-    "templateStrings": true,
-    "unicodeCodePointEscapes": true,
-    "experimentalObjectRestSpread": true
+    "jsx": true
   },
   "rules": {
     "block-scoped-var": 2,
