@@ -35,8 +35,8 @@ When modifying existing user interface code, existing user interface elements th
 Going back to the atomic design principles from the "What are components?" section we'd like to put our shared React components in the following places:
 
  - **Atom and Molecule React Components:** These go in the public [UI-Toolkit](https://github.com/holidayextras/ui-toolkit) project where they can be reused everywhere. This is because at the granular atomic and molecular level, components have applicability across all of the Hx platforms _as well as_ to the wider world. An easy comparison to make is to the Twitter Bootstrap project, it was originally built by Twitter, but was designed for everyone to use. In the same way, the UI-Toolkit project and everything that goes into it is open source.
- - **Organism React Components:** For now, keep these in the repository of the project you're working on. Very shortly we'll be setting up a repository for all of our "organism" react components, at which point we can move components and their associated tests across into a shared area.
-
+ - **Organism React Components:** These should be built as standalone modules under their own repository. In order to assist with this we've created a [React Component Template](https://github.com/holidayextras/react-component-template) project which you can clone and push up under a new repository with your component code. You should use this template unless there's a good reason not to, as it saves time writing boilerplate code and ensures all of our component codebases are familiar.
+ 
 If you're building a new React component and you're unsure about where it should go, talk to one of the SAs or the UXUI team.
 
 ## React do's and dont's
