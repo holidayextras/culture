@@ -12,7 +12,7 @@ Usually, we would expect `React.Component.componentWillUnmount` to be triggered 
 
 React doc's comment about this with AJAX calls [here](https://facebook.github.io/react/tips/initial-ajax.html) is relevant as this issue can affect ajax calls that callback after the DOM has mutated so one fix is to use `React.Component.isMounted()` however if the DOM was completely removed, you may not even have access to `React.Component` anymore.
 
-Where we may encounter potential issues like this, it is better to wrap any functions that modify state or props in a try / catch to ensure the application doesn't fail in these edge cases.
+Where we may encounter potential issues like this, it is better to wrap any functions that modify state or props in a try / catch to ensure the application doesn't fail in these edge cases. 
 
 ## Testing
 
