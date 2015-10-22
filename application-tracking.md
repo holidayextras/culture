@@ -29,18 +29,21 @@ Everyone in the business should have easy access to application tracking results
 * Different events are tracked using different systems in a single application.
 * Different applications have varying levels of tracking.
 * Different areas of the business prefer to use different systems for reporting.
+* Tracking data is created via code and by accessing an element's HTML5 data attributes.
 
 ## Current goal
 
-* One tracking module to provide an agnostic API for all our application tracking needs.
+* One single tracking module to provide an agnostic API for all our application tracking needs.
 * All our applications / modules that require tracking will use the same tracking module.
 * Our current tracking systems will sit behind this thin layer.
 * Decide on tracking event data schema, so we are not bound to one or more current systems.
+* Keep specific application conventions and / or technology out of the tracking module.
+* Tracked elements are not accessed directly by the tracking module.
 * Each tracking event will be sent to all current systems (actual data may vary, base on system).
 * Different reporting systems can still be used.
 
 ## Next steps
 
 * Review current tracking systems in use.
-* Potentially change how chosen tracking systems are fired from the tracking module.
+* Potentially change how the preferred tracking systems are fired from the tracking module.
 * Review how tracking data enters the data pipeline.
