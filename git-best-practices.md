@@ -12,7 +12,7 @@ the branches from accidentally:
 
 * Being force pushed
 * Being deleted
-* [Optional] Having changes merged into them until required status checks pass
+* Having changes merged into them until required status checks pass
 
 ## Branching
 
