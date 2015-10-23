@@ -97,7 +97,7 @@
     "space-infix-ops": 2,
     "space-return-throw-case": 2,
     "space-unary-ops": [2, { "words": true, "nonwords": false }],
-    "strict": 2,
+    "strict": [2, "global"],
     "valid-jsdoc": 2,
     "yoda": [2, "never"]
   }
