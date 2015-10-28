@@ -6,7 +6,7 @@
 
 #### Unable to find element
 
-When the DOM has mutated & you try to modify props / state on a component, you will find that React will complain about not being able to find the element.
+When the DOM that your component is contained within has mutated & you try to modify props / state on a component, you will find that React will complain about not being able to find the element.
 
 Usually, we would expect `React.Component.componentWillUnmount` to be triggered before the component is unmounted from the DOM but this does not happen if the DOM element is destroyed by other methods outside or React's control (`document.body.innerHTML` for example).
 
