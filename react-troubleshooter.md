@@ -4,6 +4,16 @@
 
 ### __invariant violation__:
 
+#### Unable to find element
+
+When the DOM that your component is contained within has mutated & you try to modify props / state on a component, you will find that React will complain about not being able to find the element.
+
+Usually, we would expect `React.Component.componentWillUnmount` to be triggered before the component is unmounted from the DOM but this does not happen if the DOM element is destroyed by other methods outside or React's control (`document.body.innerHTML` for example).
+
+React doc's comment about this with AJAX calls [here](https://facebook.github.io/react/tips/initial-ajax.html) is relevant as this issue can affect ajax calls that callback after the DOM has mutated so one fix is to use `React.Component.isMounted()` however if the DOM was completely removed, you may not even have access to `React.Component` anymore.
+
+Where we may encounter potential issues like this, it is better to wrap any functions that modify state or listen for prop changes (`componentWillReceiveProps`) in a try / catch to ensure the application doesn't fail in these edge cases.
+
 ## Testing
 
 
