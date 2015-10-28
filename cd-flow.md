@@ -2,6 +2,8 @@
 
 The majority of the automated steps documented below will be handled by our CI setup detail in the [CI Best Practices](ci-best-practices.md).
 
+The process below details what process we are aiming for across the group.
+
 ## Planning
 
 1. Discussion with product owner regarding requirements.
