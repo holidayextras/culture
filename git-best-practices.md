@@ -13,6 +13,7 @@ the branches from accidentally:
 * Being force pushed
 * Being deleted
 * Having changes merged into them until required status checks pass
+  * __not recommended__ - this requires all pull requests to be up to date with master to be mergeable. Updating is a manual process even if an automatic merge is possible and it adds a lot of additional build workload.
 
 ## Branching
 
