@@ -43,6 +43,8 @@ The links below should provide a good introduction into an item, further in dept
 
  * [Luke's introduction presentation on React](https://docs.google.com/a/holidayextras.com/presentation/d/1uGMpaFImr7F75JSp-oZo5_4KIS42CXQ8XEgguCljm2o/edit?usp=sharing)
 
+* [React cheatsheet](http://reactcheatsheet.com/)
+
 ## Patterns
 
 ### Anti-patterns
