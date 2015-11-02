@@ -5,22 +5,41 @@
 This is a collection of documents that outline Holiday Extras' culture and developer expectations.
 
 ## Contents
+
+### Best practices
+
+ * [Coding Principles](coding-principles.md)
  * [General Javascript Best Practices](general-javascript-best-practices.md)
  * [Clientside Javascript (Backbone) Best Practices](clientside-javascript-best-practices.md)
  * [Clientside Javascript (jQuery) Best Practices](clientside-jquery-best-practices.md)
- * [Coding Principles](coding-principles.md)
- * [Organising code in backbone projects](organising-code-backbone-projects.md)
- * [Pest Control Process](pest-control-process.md)
- * [PR template](pr-template.md)
  * [Server Side Javascript Best Practices](serverside-javascript-best-practices.md)
+ * [CI Best Practices](ci-best-practices.md)
+ * [Git Best Practices](git-best-practices.md)
+ * [PR Best Practices](pr-best-practices.md)
+ * [Application Tracking](application-tracking.md)
+ * [Testing Standard](testing-standard.md)
+ * [Frontend Performance](frontend-performance.md)
+
+### Process
+
+ * [Pest Control Process](pest-control-process.md)
+ * [PR Template](pr-template.md)
+ * [Expedited Procedure](expedited-procedure.md)
+ * [General Meetings](general-meetings.md)
  * [Technical Planning Meetings](technical-planning-meeting.md)
  * [Deployment Guidelines](deployment-guidelines.md)
- * [Expedited Procedure](expedited-procedure.md)
+ * [Definition of Ready and Done](definition-of-ready-and-done.md)
+
+### Other
+
+ * [Organising Code in Backbone Projects](organising-code-backbone-projects.md)
  * [CoffeeScript to JavaScript Guidelines](coffeescript-to-javascript-guidelines.md)
- * [Javascript linting Rules](javascript-linting-rules.md)
- * [CI best practices](ci-best-practices.md)
- * [General meetings](general-meetings.md)
+ * [Javascript Linting Rules](javascript-linting-rules.md)
  * [Technical Resources](technical-resources.md)
+ * [Working with React](working-with-react.md)
+ * [React Troubleshooter](react-troubleshooter.md)
+ * [PR Template](pr-template.md)
+ * [PR Blog Post Template](pr-template-blogpost.md)
 
 ## Contributing
 
