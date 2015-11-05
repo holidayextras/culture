@@ -11,7 +11,7 @@ Please also see the respective serverside and clientside best practice docs.
 
 ## ECMAScript version support
 
-We use *some* ECMAScript 6 at HX. This is fulfilled by Babel and Node v4 where applicable. We should use these newer es6 features where it makes sense and can improve readability. Please have a look at our technical resources [section on ES6](technical-resources.md#es6) to familiarise yourself with some of the new features available to us. If we come across any new anti-patterns that arise from using ES6 features we should add them to this document.
+We use *some* ECMAScript 6 at HX. This is fulfilled by Babel and Node v4 where applicable. We should use these newer es6 features where it makes sense and can improve readability. Please have a look at our technical resources [section on ES6](technical-resources.md#what-antipatterns-could-i-run-into-with-my-newfound-es6-power) to familiarise yourself with some of the new features available to us. Please see [below](#es6-anti-patterns) for anti-patterns when using ES6. If we come across any new anti-patterns that arise from using ES6 features we should add them to this document.
 
 ## Function names should reflect behaviour (as much as possible):
 When writing functions, their names should give a good indication of what they do, for example:
@@ -88,3 +88,60 @@ There are many 3rd party libraries to use on [npm.org](http://www.npm.org), but 
 Use instead of underscore, due to correct semantic versioning, better performance and some extra features.
 
 Please only require the methods you need rather than the whole library in order to keep build sizes at a minimum.
+
+## What antipatterns could I run into with my newfound ES6 power?
+
+### Auto Destructuring
+https://leanpub.com/understandinges6/read#leanpub-auto-destructuring
+
+General rule of thumb here is to use this feature as a consumer, not a producer. You shouldn't be required to destructure the result of a function to use it.
+
+The case for destructuring function return values (for example, returning a tuple), can be more of a BAD practice than a good one. Consider this function:
+```
+function getData() { return [ "oliver", 27 ]; }
+```
+As a consumer of this function I'll get an array of two values. Without looking at the code, or hunting for documentation, I've got no idea what those data items mean. After some digging I might be able to destructure it like so:
+```
+var name, age;
+[name, age] = getData();
+```
+and from then on, all future consumers of the original function will have to go through the same process of "what does this data mean?!"
+
+The far better practice, that we currently implement, is whereby we always return a named object:
+```
+function getData() {
+  return {
+    name: "oliver"
+    age: "27"
+  };
+}
+```
+any consumer of this module can very quickly tell what data is coming back, and without looking at the code, just looking at the return value, it's extremely obvious what data they've got.
+
+
+### Auto Rest parameters + Spread operator
+https://leanpub.com/understandinges6/read#leanpub-auto-rest-parameters
+https://leanpub.com/understandinges6/read#leanpub-auto-the-spread-operator
+
+```
+// Great use case
+render: function(editing) {
+    return <SessionHeader {...this._headerProps()} />;
+  },
+
+  _headerProps: function() {
+    return {
+      locales: [window.locale],
+      onLogoutClick: this._onLogoutClick.bind(this)
+    };
+  }
+```
+
+Don't use it in node because we are currently always explicit in naming function arguments and reducing the params to each function:
+```
+var doStuff = function(name, list) { /* ... */ };
+
+var name = "oli";
+var list = [ 1, 4, 5, 7, 9 ];
+doStuff(name, list);
+```
