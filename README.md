@@ -55,4 +55,8 @@ The PR template in this repository is targeted at code changes, so we'd suggest 
 # Why?
 ```
 
-Pull requests to this repository are open to input / discussion / agreement by all, there is no requirement of approval by a fixed number of people with specific roles as in the template for code changes. If a PR has been open for several days with no unresolved comments, or it's otherwise clear from comments many people have had the chance to read and agree, we should consider it good to merge; further changes can always be raised through additional followup PRs.
+Pull requests to this repository are open to input / discussion / agreement by all, there is no requirement of approval by a fixed number of people with specific roles as in the template for code changes.
+
+If an update or addition refers to a process or technology which is, or is to be, implemented by the group, please ensure that the PR includes applicable reviewers from of each part of the group and notify a member of the group tech panel to discuss appropriate handling of the change.
+
+If a PR has been open for several days with no unresolved comments, or it's otherwise clear from comments many people have had the chance to read and agree, we should consider it good to merge; further changes can always be raised through additional followup PRs.
