@@ -90,7 +90,7 @@ We've turned these off on HXML & SEO. I've seen them on TripApp. If you're servi
 
 We have many images that are in the wrong format. Save photographs as jpgs, and anything with lines, drawing or text as pngs.
 
-Post-loading images doesn't absolve us from our responsibility to compress images. Render and TripApp hotel availability for Gatwick currently has the user download just short of 2MB of images. That is too much. Let's decide a file size budget and stick to it. I propose 1MB for the whole page as a starter. A year or two ago a leading supermarket committed to <400kb as a total page weight budget. Now the average web page has
+Post-loading images doesn't absolve us from our responsibility to compress images. Render and TripApp hotel availability for Gatwick currently has the user download just short of 2MB of images. That is too much. Let's decide a file size budget and stick to it. I propose 1MB for the whole page as a starter. A year or two ago a leading supermarket committed to <400kb as a total page weight budget.
 
 ### Useful tools ###
 - [Tiny PNG](https://tinypng.com/)
