@@ -8,21 +8,21 @@ This is a collection of rules and guidelines aimed at speeding up front-end deli
  * Use a CDN
  * Add an Expires header
  * Gzip components
- * Put stylesheets at the top
+ * Inline Critical CSS and DEFER everything else
  * Put javascript at the bottom
  * Avoid CSS expressions
- * Make javascript and stylesheets external
+ * Make javascript stylesheets external
  * Reduce DNS lookups
  * Minify javascript
  * Avoid redirects
  * Remove duplicate scripts
  * Configure (or LOSE) ETags
  * Make AJAX cacheable???
- 
- * Optimise images 
+
+ * Optimise images
 
 ## Make fewer HTTP requests
-Establishing connections is expensive. So are DNS lookups. So do it less often, combine files wherever possible. Make sure all scripts and styles are bundled into as few logical files as possible. This can be done at build time or on the fly by a plugin, like Previewable. 
+Establishing connections is expensive. So are DNS lookups. So do it less often, combine files wherever possible. Make sure all scripts and styles are bundled into as few logical files as possible. This can be done at build time or on the fly by a plugin, like Previewable.
 
 Small images should be combined into sprites. I don't like DataURIs any more, they cross the boundary of separating style and content and they invalidate caching. Change one style, all images have to be downloaded again by the client.
 
@@ -56,17 +56,19 @@ If you ever see content that is not compressed, shout about it to the Ops guys, 
 
 Do not attempt to zip images. This should be obvious, but you never know.
 
-## Put stylesheets at the top
-The browser cannot render the page without the styles. Download them in the HEAD, as an external file, not inline. 
+## Inline Critical CSS and DEFER everything else
+Critical styles can be placed in-line at the top of the page. Critical styles are defined as styles that occur visibly on page load. Without this, content on your page can't be rendered. See [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) or use [Critical](https://github.com/addyosmani/critical) by Addy Osmani.
 
-If certain styles are not used until later, it is fine to defer them, post load them with javascript. But that should not lead to Flash Of Unstyled Content! Deferring a stylesheet just to get a better score on some index is not the point. It's all about the user experience, and unstyled or partly styled content makes for a poor one. Break the styles into logical blocks, one file to be downloaded for initial render, another to be downloaded post-load.
+If certain styles are not used until later, then we need to defer them. To do this you can post load them with javascript.
 
-Put stylesheets in the document HEAD, with the LINK tag.
+**N.B.** Doing this should not lead to 'Flash' of unstyled content! Deferring a stylesheet just to get a better score on some index is not the point. It's all about the user experience, and unstyled or partly styled content makes for a poor one.
+
+Put stylesheets in the document with the LINK tag only.
 
 ## Put javascript at the bottom
-Javascript blocks rendering. Why would the browser do all that work straight away when we can change the DOM and styles via javascript? 
+Javascript blocks rendering. Why would the browser do all that work straight away when we can change the DOM and styles via javascript?
 
-http://www.webpagetest.org/video/compare.php?tests=150817_JR_YP3,150817_J5_YNJ
+See [Web Page Test](http://www.webpagetest.org/video/compare.php?tests=150817_JR_YP3,150817_J5_YNJ)
 
 If anyone doubts the worth of this, have a look at the experiment above. The difference is staggering, and particularly important where jQuery is involved. Not deferring anything here, this is simply a case of moving the javascript request to the foot of the page.
 
@@ -88,11 +90,15 @@ We've turned these off on HXML & SEO. I've seen them on TripApp. If you're servi
 ## Make AJAX cacheable???
 
 ## Optimise images
-'Optimise' - what do we mean by that? There's a great webinar/video by Guy Podjarny, http://www.oreilly.com/pub/e/3122?imm_mid=0bdf5b&cmp=em-na-webcast-info-webcast_20140616&sidebar-link 
+'Optimise' - what do we mean by that? There's a great [webinar/video](http://www.oreilly.com/pub/e/3122?imm_mid=0bdf5b&cmp=em-na-webcast-info-webcast_20140616&sidebar-link) by Guy Podjarny
 
-We have many images that are in the wrong format. Save photographs as jpgs, and logos as pngs.
+We have many images that are in the wrong format. Save photographs as jpgs, and anything with lines, drawing or text as pngs.
 
-Post-loading images doesn't absolve us from our responsibility to compress images. Render and TripApp hotel availability for Gatwick currently has the user download just short of 2MB of images. That is too much. Let's decide a file size budget and stick to it. I propose 1MB for the whole page as a starter. A year or two ago a leading supermarket committed to <400kb as a total page weight budget. Now the average web page has 
+Post-loading images doesn't absolve us from our responsibility to compress images. Render and TripApp hotel availability for Gatwick currently has the user download just short of 2MB of images. That is too much. Let's decide a file size budget and stick to it. I propose 1MB for the whole page as a starter. A year or two ago a leading supermarket committed to <400kb as a total page weight budget.
+
+### Useful tools ###
+- [Tiny PNG](https://tinypng.com/)
+- [Tiny JPG](https://tinyjpg.com/)
 
 ## Make fewer HTTP requests - file combining strategies
 As with all rules, there are caveats, you shouldn't just follow it blindly. "No rules, just tools". Our current strategy is to bundle everything up on a given page so that when the user comes back to that exact page, they have the file. But there is no concept of sitewide caching, the combined css and js files on foo.html can be different to bar.html if just one extra function or file is included. Some amount of redundancy could be permitted to allow reuse of files across pages, rather than a dedicated combined for every page. On the other hand, we have a situation in some SEO pages where >70% of styles are unused.
