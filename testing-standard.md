@@ -183,15 +183,7 @@ Other tests will check that `getHoursAtBirth` and `getHoursAtDeath` work, and by
 
 ### Sinon Sandbox
 
-Using **sinon.sandbox** object to hold your stubs and spies.
-
-Benefits:
-
-Allows you to be able to put multiple stubs within an object when creating them in a **beforeEach** and instead of restoring them one at a time can restore them all at once.
-This is nice because it means we can restore all of our stubs at once and removes a few lines of code.
-
-Code:
-Put the creation of your sandbox before the beforeEach because then your **afterEach** has scope to what is in your **beforeEach**.
+Using **sinon.sandbox** object to hold your stubs/spies. This allows you to be able to put multiple stubs within an object when creating them in a **beforeEach** and instead of restoring them one at a time, you can restore them all at once in the **afterEach**. This means we can restore all of our stubs/spies at once.
 
 ```javascript
 var sandbox = sinon.sandbox.create();
@@ -204,14 +196,12 @@ var sandbox = sinon.sandbox.create();
   sandbox.spy(obj3, 'method5');
  });
 ```
-Because all of the above are apart of the sandbox object in our **afterEach** we can restore all at once
 
  ```javascript
  afterEach(function() {
   sandbox.restore();
  });
 ```
- The above restores all of the spies after each **it block** is executed. You can use this for both spies and stubs.
 
 ## 1.5 Good Unit Test Practice
 Now that we've covered good folder structure, good test file structure and the purpose of stubs and spies, we've got everything we need to begin writing good tests.
