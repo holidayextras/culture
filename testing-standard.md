@@ -177,9 +177,41 @@ There are three things we should check for in the above function:
  2. That we retrieve the deathHours.
  3. That we correctly calculate the hours alive based on the two.
 
-By stubbing `getHoursAtBirth` and `getHoursAtDeath` we can **a)** check that both of these are called (ticking off points 1 and 2 above), and **b)** ensure that the real versions of `getHoursAtBirth` and `getHoursAtDeath` are never actually called. This is crucially important as we're **not testing that those functions work**. We only care that they've been called and that what we do in the `hoursAlive` function works. 
+By stubbing `getHoursAtBirth` and `getHoursAtDeath` we can **a)** check that both of these are called (ticking off points 1 and 2 above), and **b)** ensure that the real versions of `getHoursAtBirth` and `getHoursAtDeath` are never actually called. This is crucially important as we're **not testing that those functions work**. We only care that they've been called and that what we do in the `hoursAlive` function works.
 
 Other tests will check that `getHoursAtBirth` and `getHoursAtDeath` work, and by building up a suite of tests that ensure each function works as it's supposed to, we can build confidence that our codebase works correctly. It's for this reason that `stubs` are preferred to spies in our unit tests - we don't want to be running code outside of the function we're actually testing during a unit test.
+
+### Sinon Sandbox
+
+Using sinon.sandbox object to hold your stubs and spies.
+
+Benefits:
+
+Allows you to be able to put multiple stubs within an object when creating them in a **beforeEach** and instead of restoring them one at a time can restore them all at once.
+This is nice because it means we can restore all of our stubs at once and removes a few lines of code.
+
+Code:
+Put the creation of your sandbox before the beforeEach because then your **afterEach** has scope to what is in your **beforeEach**.
+
+```javascript
+var sandbox = sinon.sandbox.create();
+
+ beforeEach(function() {
+  sandbox.stub(obj1, 'method1');
+  sandbox.stub(obj1, 'method2');
+  sandbox.stub(obj2, 'method3');
+  sandbox.stub(obj2, 'method4');
+  sandbox.spy(obj3, 'method5');
+ });
+```
+Because all of the above are apart of the sandbox object in our **afterEach** we can restore all at once
+
+ ```javascript
+ afterEach(function() {
+  sandbox.restore();
+ });
+```
+ The above restores all of the spies after each **it block** is executed. You can use this for both spies and stubs.
 
 ## 1.5 Good Unit Test Practice
 Now that we've covered good folder structure, good test file structure and the purpose of stubs and spies, we've got everything we need to begin writing good tests.
