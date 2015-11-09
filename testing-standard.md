@@ -183,7 +183,7 @@ Other tests will check that `getHoursAtBirth` and `getHoursAtDeath` work, and by
 
 ### Sinon Sandbox
 
-Using sinon.sandbox object to hold your stubs and spies.
+Using **sinon.sandbox** object to hold your stubs and spies.
 
 Benefits:
 
