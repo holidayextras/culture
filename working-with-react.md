@@ -39,9 +39,12 @@ Going back to the atomic design principles from the "What are components?" secti
  
 If you're building a new React component and you're unsure about where it should go, talk to one of the SAs or the UXUI team.
 
+## Internationalisation (i18n)
+For internationalisation, we're betting on [FormatJS's React Intl](http://formatjs.io/react/) (`^2.0.0`). By adopting this throughout our React stack we'll get components that are easily reused in many different languages and locales with minimal effort. By adopting 'the standard' for React i18n rather than rolling our own we'll also get all the benefits of community knowledge, support and help with potential migrations to other tech in future.
+
+Defer to FormatJS best practices for handling internationalisations. For `^2.0.0` the i18n process is detailed in [this doc](https://github.com/yahoo/react-intl/issues/162).
+
 ## React do's and dont's
-- DO keep internationalisation outside of your components: Internationalisation being translating strings to different languages, these strings should be passed in to the component for the component to render, they shouldn't exist within the component itself. DONT internationalise inside your components.
-- DO put localisation inside your components where sensible: Your component may expect some strings passed in to to contain dates and numbers, for these, localisation should take place _within_ the component itself unless there's a good reason to pass them in. [FormatJS](http://formatjs.io/react/) can be used to help with this, and there's an example integration in Tripapp's header search itinerary view.
 - DO keep state in one place: If you have a view that's orchestrating a lot of components, keep the state in that view and then pass it down to and up from components via props as it needs to change. This way the hierarchy of components can sensibly re-render as the props change. DON'T create unnecessary new state for every component you introduce into your hierarchy.
 - DO refactor the smallest pieces possible first: This means DON'T try to refactor an entire view hierarchy in one go, pick a small section of it and convert it to a react component, deploy that and then move on from there. More on this in this [excellent talk by Ryan Florence](https://www.youtube.com/watch?v=BF58ZJ1ZQxY).
 - DO separate your markup from your logic within your components. It should be easy to see from your render method the composition of components and markup that will be rendered to the page.
