@@ -78,7 +78,7 @@ You can use the filters on the left hand side to quickly limit what bugs you see
 
 You can also use the search bar for more complex filtering, allowing you to search by **error message**, **release stage**, **browser version** and various other things.
 
-_Tip: searching by error message can be useful for working out the number of users impacted as Bugsnag's grouping isn't the most reliable and often leaves the same errors ungrouped._
+_:information_source: Tip: searching by error message can be useful for working out the number of users impacted as Bugsnag's grouping isn't the most reliable and often leaves the same errors ungrouped._
 
 ![](/images/pest-control-process/bug-search.png)
 
