@@ -1,6 +1,6 @@
 # Pest Control Process
 
-This is an important part of our developer role here. It allows us time to catch and resolve bugs and issues which we would not otherwise be prioritised. This creates a better development environment for us all as well as improving the customers experience on our site. 
+This is an important part of our developer role here. It allows us time to catch and resolve bugs and issues which we would not otherwise be prioritised. This creates a better development environment for us all as well as improving the customers experience on our site.
 
 No one likes a buggy application, so why should we build one?
 
@@ -55,43 +55,37 @@ A member of each pod is encouraged to attend to contribute to improving this pro
 You'll require our Bugsnag credentials. Ask the last person on rotation for these.
 
 #### How do I find bugs?
-Errors on our site are reported to [Bugsnag](https://bugsnag.com/holiday-extras/trip-app-js/errors) and are visible in the dashboard.
+Errors on our site are reported to [Bugsnag](https://bugsnag.com/holiday-extras/trip-app-js/errors) and are visible in the dashboard. Each bugsnag that occurs is also logged into our **#bugs** channel on slack.
 
 The errors are split by project and you can switch between these using the menu in the top left corner.
 
 ![](/images/pest-control-process/project-selector.png)
 
-Errors can be viewed in either a grouped or ungrouped state.
-
-![](/images/pest-control-process/grouping.png)
-
-Most people prefer the ungrouped view as the grouping isn't always accurate.
-
-##### Grouped View
-When viewing grouped errors you can however get an idea of the bugs' importance.
+##### Inbox View
+When viewing the dashboard errors in inbox you can get an idea of the bugs' importance.
 
 ![](/images/pest-control-process/dashboard-bug-view.png)
 
 The stats show you:
-- occurrences (how many times has the happened)
+- events (how many times has the happened)
 - users (how many individual people has it happened to)
 - last 2 weeks (instance graph of last two weeks)
-- stage (what environment is this happening in)
 - severity (how important do we think this is).
 
-You can use the search form on the left hand side to limit what bugs you see:
+You can use the filters on the left hand side to quickly limit what bugs you see, the **introduced today** filter is particularly helpful for the pest control process.
 
 ![](/images/pest-control-process/bug-filter.png)
 
-##### Ungrouped View
-Ungrouped view shows you a live error by error view of the project. It also shows you more information regarding each bug such as user and device settings.
+You can also use the search bar for more complex filtering, allowing you to search by **error message**, **release stage**, **browser version** and various other things.
 
-As with the grouped view you can click on a bug to view more information.
+_Tip: searching by error message can be useful for working out the number of users impacted as Bugsnag's grouping isn't the most reliable and often leaves the same errors ungrouped._
+
+![](/images/pest-control-process/bug-search.png)
 
 ##### Bug detail view
-To get more info on a bug you click on it from the dashboard view. This takes you to more information on that specific bug. 
+To get more info on a bug you click on it from the dashboard view. This takes you to more information on that specific bug.
 
-You can use the stats on this screen (such as the event count, user count, metrics and history) to figure out if the bug is affecting a lot of our users.
+You can use the stats on this screen, either in the summary on the left or the tabs along the top, to gather as much information as possible in order to assess the overall impact of a bug.
 
 ![](/images/pest-control-process/stats.png)
 
@@ -115,7 +109,7 @@ The [metrics system](https://metrics.holidayextras.com/) is a graph based tool w
 Clicking in the search bar shows all the available systems. You should mostly be concerned about production systems in your Bugsnag duties. Checking "HTTP responses" and "controllers" are the main focus points for HAPI and Render production. That doesn't mean don't check the others, just that these are the main concern.
 
 #### HTTP responses
-Clicking on "HTTP responses" for a system shows you a live view of the HTTP responses that aren't good. These are listed in their count order, summarised at the top and then divided among the different urls below. 
+Clicking on "HTTP responses" for a system shows you a live view of the HTTP responses that aren't good. These are listed in their count order, summarised at the top and then divided among the different urls below.
 
 You can change the duration and times of search at the top in the navigation bar.
 
