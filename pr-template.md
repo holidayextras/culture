@@ -17,11 +17,16 @@
 
 - [ ] I have checked the [contributing document](../blob/master/CONTRIBUTING.md) and I'm happy for this to be reviewed.
 
-#### Reviewers (edit comment to add your github username and then +1)
+#### Reviewers
 
-[ ] IP (optional)
-[ ] Dev
-[ ] SE/Guru
+IP _(optional)_
+- [ ] :+1:
+
+Dev
+- [ ] :+1:
+
+SE/Guru
+- [ ] :+1:
 
 By adding a +1 you are confirming you have...
 - Witnessed the work behaving as expected (this could be on the authors machine or screencast).
