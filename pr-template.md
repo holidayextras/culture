@@ -17,15 +17,15 @@
 
 - [ ] I have checked the [contributing document](../blob/master/CONTRIBUTING.md) and I'm happy for this to be reviewed.
 
-#### Reviewers
+#### Reviewers (replace _available with your username)
 
-IP _(optional)_
+IP: _available_
 - [ ] :+1:
 
-Dev
+Dev: _available_
 - [ ] :+1:
 
-SE/Guru
+SE/Guru: _available_
 - [ ] :+1:
 
 By adding a +1 you are confirming you have...
