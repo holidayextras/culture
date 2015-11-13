@@ -29,7 +29,7 @@
 - [ ] :+1:
 
 By adding a +1 you are confirming you have...
-- Witnessed the work behaving as expected (this could be on the authors machine or screencast).
+- Witnessed the work behaving as expected (this could be on the author's machine or screencast).
 - Checked for coding anti-patterns.
 - Checked for appropriate test coverage.
 - Checked all the tests are passing.
