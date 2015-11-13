@@ -19,13 +19,13 @@
 
 #### Reviewers
 
-**IP** _(optional)_
+**Review 1**
 - [ ] :+1:
 
-**Dev**
+**Review 2** \*
 - [ ] :+1:
 
-**SE/Guru**
+**Review 3** _(optional)_
 - [ ] :+1:
 
 By adding a +1 you are confirming you have...
@@ -33,3 +33,5 @@ By adding a +1 you are confirming you have...
 - Checked for coding anti-patterns.
 - Checked for appropriate test coverage.
 - Checked all the tests are passing.
+
+\*  for HX this review must be completed by an SE, SA or Project Guru
