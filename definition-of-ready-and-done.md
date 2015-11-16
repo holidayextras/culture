@@ -1,7 +1,7 @@
 #### Definition of Ready:
 - To be used by PO and SM in Backlog Review and by team in Sprint Planning.
 - [ ] Clear purpose for the end user (what’s in it for the customer, how are we considering the customer? etc).
-- [ ] No outstanding dependencies.
+- [ ] No outstanding dependencies (either people or tech).
 - [ ] Clear acceptance criteria (documented).
 - [ ] Clear measure of success.
 - [ ] Tech challenge understood.
