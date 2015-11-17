@@ -6,8 +6,8 @@ The process below details what process we are aiming for across the group.
 
 ## Planning
 
-1. Discussion with product owner regarding requirements.
-1. Discussion with tester regarding how to test the requirements.
+1. Discussion with product owner / stakeholder regarding requirements.
+1. Discussion with tester / QA regarding how to test the requirements.
 1. For substantial changes schedule a [Technical planning meeting](technical-planning-meeting.md).
 1. Metric decided for success of code change.
 1. Timeframe for success decided.
@@ -36,13 +36,13 @@ The process below details what process we are aiming for across the group.
 
 ## Staging (optional)
 
-1. Tester merges feature branch into the `staging` branch.
+1. Tester / QA merges feature branch into the `staging` branch.
 1. Changes to staging are automatically deployed to staging environment.
 1. Appropriate testing is performed alongside any other recent changes from the team.
 
 ## Go live
 
-1. Tester merges staging branch into the `master` branch.
+1. Tester / QA merges staging branch into the `master` branch.
 1. Changes to master are deployed automatically to production environment.
 1. Minimal automated tests are performed to ensure a successful deployment.
 1. Deployment notification sent out to team.
