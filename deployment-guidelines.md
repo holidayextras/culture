@@ -12,6 +12,7 @@
   - Try to communicate what you are merging as opposed to "I am merging to staging".
   - If your code will remain in a particular environment overnight, communicate with the team when you plan to merge.
   - If your plan is not communicated and blocks someones else's work, your work may be reverted. 
+7. When making a change, you should always increment the version according to the guidelines set out in [http://semver.org/](http://semver.org/).
 
 **Obviously the above is a rough guide and *shouldn't* replace common sense. e.g. If something happens out of hours and a developer can't get hold of a tester, they shouldn't hold off deploying a fix.**
 
