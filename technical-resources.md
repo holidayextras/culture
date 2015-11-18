@@ -133,9 +133,12 @@ The links below should provide a good introduction into an item, further in dept
 
 ### [Mocha](https://mochajs.org/)
 
-### [Nightwatch](http://nightwatchjs.org/)
+### [Chai](http://chaijs.com/)
+* [sinon-chai](https://github.com/domenic/sinon-chai)
+  * [Cheatsheet](http://ricostacruz.com/cheatsheets/sinon-chai.html)
 
 ### Selenium
+* [Nightwatch](http://nightwatchjs.org/)
 
 ### [Sinon](http://sinonjs.org/)
 
@@ -148,3 +151,7 @@ The links below should provide a good introduction into an item, further in dept
 ### Teamcity
 
 ### [Travis](http://blog.travis-ci.com/)
+
+## Cheatsheet Resources
+
+* http://ricostacruz.com/cheatsheets/
