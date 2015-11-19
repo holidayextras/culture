@@ -32,8 +32,8 @@ expect(myStub).to.have.been.calledWith('foo');
 ### Linting Issues
 You may occasionally encounter a slight issue here with our linting, specifically our linting complaining about unused expressions in the tests due to Chai's syntax. There are a couple of viable workarounds for this:
 
+ * Use packages like [dirty-chai](https://www.npmjs.com/package/dirty-chai) or [chai-lint](https://www.npmjs.com/package/chai-lint) to provide functions that replace the property getters provided by Chai **(recommended)**.
  * Turn off `no-unused-expression` linting rule for your tests.
- * Use a library like [chai-lint](https://www.npmjs.com/package/chai-lint) to provide functions that replace the property getters provided by Chai.
 
 ## 1.2 Good Test Folders
 When addind new tests to projects, test files should sit in a folder hierarchy that mimics the hierarchy fo the source code. The test files themselves should be named similarly to the source files, but with `test` at the beginning of the file name. For example, if we have a source file `src/views/checkoutView.js` we should have a test file `test/unit/views/checkoutView.js` or similar. This makes finding tests an easy and logical process.
