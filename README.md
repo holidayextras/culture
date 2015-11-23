@@ -16,6 +16,9 @@ This is a collection of documents that outline Holiday Extras' culture and devel
  * [CI Best Practices](ci-best-practices.md)
  * [Git Best Practices](git-best-practices.md)
  * [PR Best Practices](pr-best-practices.md)
+ * [Markdown Best Practices](markdown-best-practices.md)
+ * [CSS Best Practices](css-best-practices.md)
+ * [HTML Best Practices](html-best-practices.md)
  * [Application Tracking](application-tracking.md)
  * [Testing Standard](testing-standard.md)
  * [Frontend Performance](frontend-performance.md)
@@ -40,6 +43,8 @@ This is a collection of documents that outline Holiday Extras' culture and devel
  * [React Troubleshooter](react-troubleshooter.md)
  * [PR Template](pr-template.md)
  * [PR Blog Post Template](pr-template-blogpost.md)
+ * [Shortbreaks PR Template](shortbreaks/pr-template.md)
+ * [Shortbreaks QA PR Template](shortbreaks/pr-qa-template.md)
 
 ## Contributing
 
