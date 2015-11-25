@@ -17,3 +17,24 @@
 **Obviously the above is a rough guide and *shouldn't* replace common sense. e.g. If something happens out of hours and a developer can't get hold of a tester, they shouldn't hold off deploying a fix.**
 
 N.B. For expedited issues please refer to the following [guide](expedited-procedure.md).
+
+## Web Assets
+
+In order for new code to be deployed to our customers it first needs to be uploaded to the correct S3 bucket.
+
+A single page or app could use code from multiple S3 locations so to help simplify this we have decided on the following structure:
+
+* One S3 bucket per environment, not per project.
+* Each project has its own directory inside each environment's bucket.
+* Project directories are named the same as the GitHub repository name.
+
+Here is an example of this structure:
+
+    hx-staging-repo
+      hx-tracker
+      hx-wizard
+    hx-production-repo
+      hx-tracker
+      hx-wizard
+
+Please raise an `INF` JIRA if you require a new S3 directory to be created, once actioned you will be given the correct credentials for CI upload your assets.
