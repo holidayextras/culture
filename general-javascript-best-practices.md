@@ -145,3 +145,28 @@ var name = "oli";
 var list = [ 1, 4, 5, 7, 9 ];
 doStuff(name, list);
 ```
+
+## Module Template
+
+All modules should follow this order:
+
+1. define a local object and export it
+2. `require()` in any dependencies
+3. (all the logic goes here)
+
+For example:
+```javascript
+// define a local object and export it
+var ourModuleName = module.exports = { };
+
+// Next, require any dependencies:
+var _ = require('underscore');
+var moment = require('moment');
+var async = require('async');
+
+// Now attach all functionality to our local object:
+ourModuleName.somePublicFunction = function() { };
+ourModuleName._somePrivateFunction = function() { };
+```
+
+In the above example its easy to identify a module's dependencies and the module's exports without having to scroll anywhere. It also sets the scene to attach any public and private functions to the exported object to enable testing and it means all functions can be pushed up against the start of the line with no unnecessary indentation.
