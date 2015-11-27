@@ -32,6 +32,7 @@ This is a collection of documents that outline Holiday Extras' culture and devel
  * [Technical Planning Meetings](technical-planning-meeting.md)
  * [Deployment Guidelines](deployment-guidelines.md)
  * [Definition of Ready and Done](definition-of-ready-and-done.md)
+ * [Contributing to projects](CONTRIBUTIUNG.md)
 
 ### Other
 
