@@ -1,6 +1,6 @@
 # Contributing to Holiday Extras projects
 
-A BIG thank you from everyone using on of our projects and for taking the time to contribute! :clap:
+A BIG thank you from everyone using one of our projects and for taking the time to contribute! :clap:
 
 The following is a set of guidelines for contributing to our projects and its components,
 These are just guidelines, not rules, use your best judgment and feel free to
