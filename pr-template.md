@@ -15,7 +15,7 @@
 
 ---
 
-- [ ] I have checked the [contributing document](../blob/master/CONTRIBUTING.md) and I'm happy for this to be reviewed.
+- [ ] I have checked our general [contributing document](https://github.com/holidayextras/culture/blob/master/CONTRIBUTING.md) and the project specific [contributing document](../blob/master/CONTRIBUTING.md) (if present) and I'm happy for this to be reviewed.
 
 #### Reviewers
 

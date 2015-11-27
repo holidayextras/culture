@@ -1,5 +1,8 @@
 # PR Best Practices
 
+* Include screenshots and animated GIFs in your pull request whenever possible.
+* Include thoughtfully-worded, well-structured specs. See our [testing standard](testing-standard.md) document.
+
 ## Keep them small
 
 Keep your pull requests as small as possible. We should be looking for ways to split up our work into the smallest units that are sensible to merge. Some things we should be thinking:
