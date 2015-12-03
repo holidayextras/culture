@@ -30,7 +30,7 @@ expect(myStub).to.have.been.calledWith('foo');
 
 
 ### Linting Issues
-You may occasionally encounter a slight issue here with our linting, specifically our linting complaining about unused expressions in the tests due to Chai's syntax. The solution to this is to use [dirty-chai](https://www.npmjs.com/package/dirty-chai) or [chai-lint](https://www.npmjs.com/package/chai-lint) to provide functions that replace the property getters provided by Chai. This allows us to use syntax such as:
+You may occasionally encounter a slight issue here with our linting, specifically our linting complaining about unused expressions in the tests due to Chai's syntax. The solution to this is to use [dirty-chai](https://www.npmjs.com/package/dirty-chai) to provide functions that replace the property getters provided by Chai. This allows us to use syntax such as:
 
 ```javascript
 
