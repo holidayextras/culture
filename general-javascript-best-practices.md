@@ -79,6 +79,66 @@ We avoid this issue in the good examples. Depending on the complexity of the con
 
 **Caveat:** This approach isn't always practical with more complex functions. For example, a function may contain complex conditional logic that can't be succinctly reflected in its name, and that we don't want to inline and repeat everywhere. In this scenario, we can use things like throwing `Errors` or `true`/`false` return values for sync code and rejecting promises & erroring callbacks for async code. The ultimate aim is just to ensure that the programmer isn't mislead about the behaviour of the function, and encourage them to consider handling non-happy path behaviour.
 
+
+## Functional JavaScript
+
+JavaScript's
+[first-class functions](https://en.wikipedia.org/wiki/First-class_function)
+enable it to support the
+[functional programming paradigm](https://en.wikipedia.org/wiki/Functional_programming).
+This is _a good thing_: making your code **more functional** can improve its
+readability, testability and maintainability.
+
+### Partial (function) application
+
+Consider the following function:
+
+```javascript
+function subtract(x, y) {
+  return x - y;
+}
+```
+
+The following are all equivalent ways to implement the `subtractFrom5` and
+`subtract5` functions using `subtract`:
+
+* Wrapper functions:
+
+  ```javascript
+  var subtractFrom5 = function (x) {
+    return subtract(5, x);
+  }
+  var subtract5 = function (x) {
+    return subtract(x, 5);
+  }
+  ```
+
+* [Partial application](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind#Partial_Functions)
+ * **ES5**:
+
+   ```javascript
+   var subtractFrom5 = subtract.bind(null, 5);
+   // `subtract5` impossible using `bind` for partial application
+   ```
+ * **ES2015**:
+
+   ```javascript
+   var subtractFrom5 = subtract.bind(null, 5);
+   var subtractFrom5 = subtract.bind(null, x=5);  // more explicit
+   var subtract5 = subtract.bind(null, y=5);
+   ```
+* lodash (underscore) [`partial`](https://lodash.com/docs#partial) /
+  [`partialRight`](https://lodash.com/docs#partialRight):
+
+  ```javascript
+  var subtractFrom5 = _.partial(subtract, 5);
+  var subtract5 = _.partialRight(subtract, 5);
+  ```
+
+The functional alternatives created using partial application are more concise
+and _can_ be more readable.
+
+
 ## Preferred libraries
 
 There are many 3rd party libraries to use on [npm.org](http://www.npm.org), but some are better than others. Any library listed below should be used over inferior competing libraries:
