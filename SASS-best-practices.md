@@ -1,4 +1,4 @@
-# CSS Coding Guidelines
+# SASS Coding Guidelines
 
 If you want our scss-lint.yml then you can install [make-up](https://github.com/holidayextras/make-up) which has it packaged inside.
 
