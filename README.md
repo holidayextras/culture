@@ -17,7 +17,7 @@ This is a collection of documents that outline Holiday Extras' culture and devel
  * [Git Best Practices](git-best-practices.md)
  * [PR Best Practices](pr-best-practices.md)
  * [Markdown Best Practices](markdown-best-practices.md)
- * [CSS Best Practices](css-best-practices.md)
+ * [SASS Best Practices](SASS-best-practices.md)
  * [HTML Best Practices](html-best-practices.md)
  * [Application Tracking](application-tracking.md)
  * [Testing Standard](testing-standard.md)
