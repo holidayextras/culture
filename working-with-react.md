@@ -82,9 +82,9 @@ var ContrivedExample = React.createClass({
 
   handleClick() {
     this.setState({ clicked: true });
-	 if (this.props.onClick) {
-	   this.props.onClick();
-	 }
+    if (this.props.onClick) {
+      this.props.onClick();
+    }
   }
 	
   …
