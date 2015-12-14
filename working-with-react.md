@@ -45,9 +45,66 @@ For internationalisation, we're betting on [FormatJS's React Intl](http://format
 Defer to FormatJS best practices for handling internationalisations. For `^2.0.0` the i18n process is detailed in [this doc](https://github.com/yahoo/react-intl/issues/162).
 
 ## React do's and dont's
-- DO keep state in one place: If you have a view that's orchestrating a lot of components, keep the state in that view and then pass it down to and up from components via props as it needs to change. This way the hierarchy of components can sensibly re-render as the props change. DON'T create unnecessary new state for every component you introduce into your hierarchy.
-- DO refactor the smallest pieces possible first: This means DON'T try to refactor an entire view hierarchy in one go, pick a small section of it and convert it to a react component, deploy that and then move on from there. More on this in this [excellent talk by Ryan Florence](https://www.youtube.com/watch?v=BF58ZJ1ZQxY).
-- DO separate your markup from your logic within your components. It should be easy to see from your render method the composition of components and markup that will be rendered to the page.
+
+### DO keep state in one place:
+If you have a view that's orchestrating a lot of components, keep the state in that view and then pass it down to and up from components via props as it needs to change. This way the hierarchy of components can sensibly re-render as the props change. DON'T create unnecessary new state for every component you introduce into your hierarchy.
+
+### DO refactor the smallest pieces possible first:
+This means DON'T try to refactor an entire view hierarchy in one go, pick a small section of it and convert it to a react component, deploy that and then move on from there. More on this in this [excellent talk by Ryan Florence](https://www.youtube.com/watch?v=BF58ZJ1ZQxY).
+
+### DO separate your markup from your logic within your components:
+It should be easy to see from your render method the composition of components and markup that will be rendered to the page.
+
+###DO decouple your components from their application:
+For example, instead of embedding our tracking module directly into your component, add optional event function props to your component and then create a wrapping component to do things on those events.
+
+**Bad:** 
+
+```javascript
+var ContrivedExample = React.createClass({
+  … 
+
+  handleClick() {
+	this.setState({ clicked: true });
+	this.props.tracker.track('Tracked a click');
+  }
+
+  …
+});
+```
+The above example is bad because the `ContrivedExample` component is coupled to the tracker, making unsuitable for reuse on projects that don't want or need to use tracker.
+
+**Good:**
+
+```javascript
+var ContrivedExample = React.createClass({
+  …
+
+  handleClick() {
+    this.setState({ clicked: true });
+	 if (this.props.onClick) {
+	   this.props.onClick();
+	 }
+  }
+	
+  …
+});
+
+var TrackableContrivedExample = React.createClass({
+  …
+
+  handleClick() {
+    this.props.tracker.track('Tracked a click');
+  },
+	
+  render() {
+    return (<ContrivedExample onClick={this.handleClick} />);
+  }
+  
+  …
+});
+```
+The above example is good because the `ContrivedExample` component is no longer coupled to anything, it has an optional `onClick` function prop. This makes it suitable for use anywhere. In order to avoid loads of code duplication we've created a second `TrackableContrivedExample` component, which includes the tracker and is suitable for use on projects where we we want a trackable component.
 
 ## Troubleshooting
 We are maintaining our own troubleshooting doc: [React Troubleshooter](react-troubleshooter.md)
