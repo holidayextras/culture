@@ -94,7 +94,7 @@ var TrackableContrivedExample = React.createClass({
   …
 
   handleClick() {
-    this.props.tracker.track('Tracked a click');
+    tracker.track('Tracked a click');
   },
 	
   render() {
