@@ -65,8 +65,8 @@ var ContrivedExample = React.createClass({
   … 
 
   handleClick() {
-	this.setState({ clicked: true });
-	this.props.tracker.track('Tracked a click');
+    this.setState({ clicked: true });
+    tracker.track('Tracked a click');
   }
 
   …
