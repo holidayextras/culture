@@ -82,8 +82,8 @@ var ContrivedExample = React.createClass({
 
   handleClick() {
     this.setState({ clicked: true });
-    if (this.props.onClick) {
-      this.props.onClick();
+    if (this.props.handleClick) {
+      this.props.handleClick();
     }
   }
 	
@@ -98,7 +98,7 @@ var TrackableContrivedExample = React.createClass({
   },
 	
   render() {
-    return (<ContrivedExample onClick={this.handleClick} />);
+    return (<ContrivedExample handleClick={() => this.handleClick()} />);
   }
   
   …
