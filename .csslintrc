@@ -1,28 +1,3 @@
-{
-  "adjoining-classes": false,
-  "box-sizing": false,
-  "box-model": false,
-  "bulletproof-font-face": 2,
-  "display-property-grouping": 2,
-  "duplicate-background-images": 2,
-  "duplicate-properties": 2,
-  "empty-rules": 2,
-  "floats": 2,
-  "outline-none": 2,
-  "font-faces": 2,
-  "ids": 2,
-  "import": 2,
-  "important": 2,
-  "known-properties": 2,
-  "qualified-headings": 2,
-  "regex-selectors": 2,
-  "shorthand": 2,
-  "star-property-hack": 2,
-  "text-indent": 2,
-  "unqualified-attributes": false,
-  "underscore-property-hack": 2,
-  "unique-headings": 2,
-  "universal-selector": false,
-  "vendor-prefix": 2,
-  "zero-units": 2
-}
+--errors=bulletproof-font-face,display-property-grouping,duplicate-background-images,duplicate-properties,empty-rules,floats,outline-none,font-faces,ids,import,important,known-properties,qualified-headings,regex-selectors,shorthand,star-property-hack,text-indent,underscore-property-hack,unique-headings,vendor-prefix,zero-units
+--warnings=compatible-vendor-prefixes,fallback-colors,font-sizes,gradients,non-link-hover,overqualified-elements
+--ignore=adjoining-classes,box-model,box-sizing,unqualified-attributes,universal-selector
