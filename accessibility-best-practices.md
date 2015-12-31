@@ -11,7 +11,7 @@
 * [Hiding content in an accessible way](#hidden)
 
 <a name="text-alternatives"></a>
-##Text alternatives for images
+## Text alternatives for images
 
 Every ```img``` element must have an ```alt``` attribute, regardless of whether or not it holds a value. Without an ```alt``` attribute, screen readers and other assistive technology will often default to announcing the file name instead.
 
@@ -27,7 +27,7 @@ In the following example, an image of a telephone is displayed next to a phone n
 ```
 
 <a name="labels"></a>
-##Labels on form fields
+## Labels on form fields
 
 Every form field (apart from buttons) must have a ```label``` that describes its purpose.
 
@@ -46,29 +46,29 @@ In the example below, the "Flying from?" label has as ```for="location"``` attri
 
 Placeholder text (a default vaule in the field) should **not** be used instead of a separate ```label``` element. Placeholders are cleared on focus and often not announced at all by screen readers or other assistive technology.
 
-In some cases, it might be appropriate to visually hide a label. For example, where separate fields are provided for the day, month and year of a date, it is often unnecessary to display the label for each. In this situation, it is acceptable to hide the labels with CSS as long as they remain accessible to assistive technology in the HTML.
+In some cases, it might be appropriate to visually hide a label. For example, where separate fields are provided for the day, month and year of a date, it is often unnecessary to display the label for each. In this situation, it is acceptable to hide the labels with CSS as long as they remain accessible to assistive technology in the HTML. See the section on [Hiding content in an accessible way](#hidden) for an example of this.
 
 ```html
 <fieldset>
     <legend>Date of birth</legend>
-    <label for="day">Day</label>
+    <label for="day" class="hidden">Day</label>
     <input id="day" type="text">
-    <label for="month">Month</label>
+    <label for="month" class="hidden">Month</label>
     <select id="month">
         <option value="jan">January</option>
         <option value="feb">February</option>
         ...
     </select>
-    <label for="year">Year</label>
+    <label for="year" class="hidden">Year</label>
     <input id="year" type="text">
 </fieldset>
 ```
 
-###Labels for checkboxes and radio buttons
+### Labels for checkboxes and radio buttons
 As well as being explicitly associated with ```for``` and ```id``` attributes, labels for checkboxes and radio buttons should appear *after* the control in the markup and be displayed *to the right* of the control on screen. This convention ensures compatibility with the widest range of assistive technologies, and is also consisitent with UI patterns established by Microsoft and Apple.
 
 <a name="headings"></a>
-##Headings
+## Headings
 HTML heading elements (```h1``` to ```h6```) must be used to denote headings so that the structure of the page is clear.
 
 It not sufficient to simply make something *look* like a heading by, for example, increasing its font size or changing its colour; such changes are purely visual and do not convey any semantic meaning that can be interpreted by assistive technology. Equally, heading elements should not be used to apply styling to content that is not a heading.
@@ -76,7 +76,7 @@ It not sufficient to simply make something *look* like a heading by, for example
 Headings should follow a hierarchical structure and levels should not be skipped. For example, an ```h1``` should not be followed by an ```h3``` without an intervening ```h2```.
 
 <a name="links"></a>
-##Links
+## Links
 
 Generic link phrases such as "click here", "more information" or "this page" should not be used because their purpose is unknown without considering the wider context (e.g. without reading the sentence):
 
@@ -94,16 +94,22 @@ Instead, link phrases should describe their own purpose:
 The same link phrase should not be used more than once on the same page, unless those links point to the same place. Equally, avoid using different phrases to link to the same place wherever possible.
 
 <a name="title-attributes"></a>
-##Title attributes
+## Title attributes
 ```title``` attributes should not be used to provide important information because they are often ignored by screen readers and other assistive technology. They are also only displayed very briefly to mouse users and not at all on touch devices.
 
 <a name="keyboard"></a>
-##Keyboard accessibility
+## Keyboard accessibility
+
+
+<a name="landmarks"></a>
+## Landmark roles
+
 
 <a name="hidden"></a>
-##Hiding content in an accessible way
+## Hiding content in an accessible way
+The ```display: none``` and ```visibility: hidden;``` properties in CSS both hide content in a way that makes it inaccessible to screen readers and other assistive technology. They should therefore generally only be used if the intention is to hide the content from *all* users.
 
-The most reliable way to hide content while keeping it accessible to accessible technology is to position it off the viewport.
+The most reliable way to hide content visually while keeping it accessible to accessible technology behind the scenes is to position it off the viewport.
 
 ```css
 .hidden { 
@@ -115,3 +121,5 @@ The most reliable way to hide content while keeping it accessible to accessible 
     overflow: hidden;
     }
 ```
+
+If hidden content can receive keyboard focus, it should be made visible when focused. This avoids the confusing situation where keyboard focus disappears and then reappears when tabbing through a page.
