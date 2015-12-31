@@ -4,22 +4,25 @@
 
 * [Text alternatives for images](#text-alternatives)
 * [Labels on form fields](#labels)
-
+* [Headings](#headings)
+* [Links](#links)
+* [Title attributes](#title-attributes)
+* [Keyboard accessibility](#keyboard)
 
 <a name="text-alternatives"></a>
 ##Text alternatives for images
 
-Every ```img``` element must have an ```alt``` attribute, regardless of whether or not it holds a value.
+Every ```img``` element must have an ```alt``` attribute, regardless of whether or not it holds a value. Without an ```alt``` attribute, screen readers and other assistive technology will often default to announcing the file name instead.
 
 ### Decorative images
-If an ``img`` is purely decorative or does not contain any more information than is already available in text, the ```alt``` attribute should be empty. Images with empty ```alt``` attributes are ignored by assistive technology.
+If an ``img`` is purely decorative or does not contain any more information than is already available in text, the ```alt``` attribute should be empty. Images with empty ```alt``` attributes are ignored by assistive technology, avoiding unnecessary noise.
 
 In the following example, an image of a telephone is displayed next to a phone number. The heading already provides context and meaning for the number so there is no value in the image being announced as well. The image should therefore have an empty ```alt``` attribute so that it is ignored completely.
 
 ```html
 <h2>Call our free UK Helpline</h2>
 <img src="/images/telephone.png" alt="">
-0800 093 5478
+<p>0800 093 5478</p>
 ```
 
 <a name="labels"></a>
@@ -60,13 +63,38 @@ In some cases, it might be appropriate to visually hide a label. For example, wh
 </fieldset>
 ```
 
-###Checkboxes and radio buttons
-As well as being explicitly associated with ```for``` and ```id``` attributes, labels for checkboxes and radio buttons should appear after the control in the markup and be displayed to the right of the control on screen. This convention ensures compatibility with the widest range of assistive technology, and is also consisitent with the UI guidelines established by Microsoft and Apple.
+###Labels for checkboxes and radio buttons
+As well as being explicitly associated with ```for``` and ```id``` attributes, labels for checkboxes and radio buttons should appear *after* the control in the markup and be displayed *to the right* of the control on screen. This convention ensures compatibility with the widest range of assistive technologies, and is also consisitent with UI patterns established by Microsoft and Apple.
 
 <a name="headings"></a>
 ##Headings
 HTML heading elements (```h1``` to ```h6```) must be used to denote headings so that the structure of the page is clear.
 
-It not sufficient to simply make something look like a heading by, for example, increasing its font size or changing its colour; such changes are purely visual and do not convey any semantic meaning that can be interpreted by assistive technology. Equally, heading elements should not be used to apply styling to content that is not a heading.
+It not sufficient to simply make something *look* like a heading by, for example, increasing its font size or changing its colour; such changes are purely visual and do not convey any semantic meaning that can be interpreted by assistive technology. Equally, heading elements should not be used to apply styling to content that is not a heading.
 
 Headings should follow a hierarchical structure and levels should not be skipped. For example, an ```h1``` should not be followed by an ```h3``` without an intervening ```h2```.
+
+<a name="links"></a>
+##Links
+
+Generic link phrases such as "click here", "more information" or "this page" should not be used because their purpose is unknown without considering the wider context (e.g. without reading the sentence):
+
+```html
+// Anti-pattern, don't copy
+<a href="">Click here</a> to book airport parking now or see <a href="">more information</a> about upgrades.
+```
+
+Instead, link phrases should describe their own purpose:
+
+```html
+<a href="">Book airport parking now</a> or see more information about <a href="">upgrades</a>.
+```
+
+The same link phrase should not be used more than once on the same page, unless those links point to the same place. Equally, avoid using different phrases to link to the same place wherever possible.
+
+<a name="title-attributes"></a>
+##Title attributes
+```title``` attributes should not be used to provide important information because they are often ignored by screen readers and other assistive technology. They are also only displayed very briefly to mouse users and not at all on touch devices.
+
+<a name="keyboard"></a>
+##Keyboard accessibility
