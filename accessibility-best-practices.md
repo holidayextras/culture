@@ -8,6 +8,7 @@
 * [Links](#links)
 * [Title attributes](#title-attributes)
 * [Keyboard accessibility](#keyboard)
+* [Hiding content in an accessible way](#hidden)
 
 <a name="text-alternatives"></a>
 ##Text alternatives for images
@@ -98,3 +99,19 @@ The same link phrase should not be used more than once on the same page, unless 
 
 <a name="keyboard"></a>
 ##Keyboard accessibility
+
+<a name="hidden"></a>
+##Hiding content in an accessible way
+
+The most reliable way to hide content while keeping it accessible to accessible technology is to position it off the viewport.
+
+```css
+.hidden { 
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    }
+```
