@@ -135,5 +135,5 @@ The most reliable way to hide content visually while keeping it accessible to as
 
 If hidden content can receive keyboard focus, it should be made visible when focused. This avoids the confusing situation where keyboard focus disappears and then reappears when tabbing through a page.
 
-*[CSS]: Cascading Style Sheets
-*[HTML]: HyperText Markup Language
+*[CSS]:Cascading Style Sheets
+*[HTML]:HyperText Markup Language
