@@ -80,14 +80,14 @@ Headings should follow a hierarchical structure and levels should not be skipped
 Generic link phrases such as "click here", "more information" or "this page" should not be used because their purpose is unknown without considering the wider context (e.g. without reading the sentence):
 
 ```html
-// Anti-pattern, don't copy
+<!-- Anti-pattern, don't copy -->
 <a href="">Click here</a> to book airport parking now or see <a href="">more information</a> about upgrades.
 ```
 
 Instead, link phrases should describe their own purpose:
 
 ```html
-<a href="">Book airport parking now</a> or see more information about <a href="">upgrades</a>.
+<a href="">Book airport parking now</a> or see more <a href="">information about upgrades</a>.
 ```
 
 The same link phrase should not be used more than once on the same page, unless those links point to the same place. Equally, avoid using different phrases to link to the same place wherever possible.
