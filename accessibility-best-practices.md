@@ -60,6 +60,9 @@ In some cases, it might be appropriate to visually hide a label. For example, wh
 </fieldset>
 ```
 
+###Checkboxes and radio buttons
+As well as being explicitly associated with ```for``` and ```id``` attributes, labels for checkboxes and radio buttons should appear after the control in the markup and be displayed to the right of the control on screen. This convention ensures compatibility with the widest range of assistive technology, and is also consisitent with the UI guidelines established by Microsoft and Apple.
+
 <a name="headings"></a>
 ##Headings
 HTML heading elements (```h1``` to ```h6```) must be used to denote headings so that the structure of the page is clear.
