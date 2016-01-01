@@ -130,10 +130,12 @@ For a demonstration of landmark roles in action, watch the video on [How ARIA la
 
 The following roles are the most useful:
 
-* `role="banner"`: The main header of a page, often applied to the `header` element. Must only be used once per page.
-* `role="main"`: The main content of a document, often applied to a containing `div` or `main` element. Must only be used once per page.
-* `role="navigation"`: A list of links serving as a navigation menu.
-* `role="contentinfo"`: Information about the page including contact information and legal notices, usually applied to a `footer` element. Must only be used once per page.
+Role | Description
+:----|:----
+`role="banner"` | The main header of a page, often applied to the `header` element. Must only be used once per page.
+`role="main"` | The main content of a document, often applied to a containing `div` or `main` element. Must only be used once per page.
+`role="navigation"` | A list of links serving as a navigation menu, normally used on a `nav` element. There are often several instances of this landmark role on a page and therefore labels should be used to differentiate them (see below).
+`role="contentinfo"` | Information about the page including contact information and legal notices, usually applied to a `footer` element. Must only be used once per page.
 
 Note that the need for landmark roles will diminish as support for HTML elements improves but for the time being they offer an easy and unobtrusive way to increase accessibility.
 
