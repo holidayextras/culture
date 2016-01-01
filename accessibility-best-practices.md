@@ -111,6 +111,13 @@ The same link phrase should not be used more than once on the same page, unless 
 ## Title attributes
 `title` attributes should not be used to provide important information because they are often ignored by screen readers and other assistive technology. They are also only displayed very briefly to mouse users and not at all on touch devices.
 
+`title` attributes should also not simply repeat information that is already provided on the page. This is redundant and annoying for anyone who *can* access it.
+
+```html
+<!-- Anti-pattern, do not copy -->
+<a href="" title="Book airport parking now">Book airport parking now</a>
+```
+
 <a name="keyboard"></a>
 ## Keyboard accessibility
 
