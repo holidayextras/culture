@@ -13,10 +13,10 @@
 <a name="text-alternatives"></a>
 ## Text alternatives for images
 
-Every `img` element must have an `alt` attribute, regardless of whether or not it holds a value. Without an `alt` attribute, screen readers and other assistive technology will often default to announcing the file name instead.
+A text alternative is not always necessary (see below) but every `img` element must still have an `alt` attribute, regardless of whether or not it holds a value. Without an `alt` attribute, screen readers and other assistive technology will often default to announcing the file name, which does not provide a good user experience.
 
 ### Decorative images
-If an ``img`` is purely decorative or does not contain any more information than is already available in text, the `alt` attribute should be empty. Images with empty `alt` attributes are ignored by assistive technology, avoiding unnecessary noise.
+If an image is purely decorative or does not contain any more information than is already available in text, the `alt` attribute should be empty. Images with empty `alt` attributes are ignored by assistive technology, avoiding unnecessary noise.
 
 In the following example, an image of a telephone is displayed next to a phone number. The heading already provides context and meaning for the number so there is no value in the image being announced as well. The image should therefore have an empty `alt` attribute so that it is ignored completely.
 
@@ -25,6 +25,9 @@ In the following example, an image of a telephone is displayed next to a phone n
 <img src="/images/telephone.png" alt="">
 <p>0800 093 5478</p>
 ```
+
+### Images in links
+If an image is used as a link instead of text, the `alt` attribute on the `img` element should indicate the purpose of the link. Follow the principles described in [Links](#links).
 
 <a name="labels"></a>
 ## Labels on form fields
