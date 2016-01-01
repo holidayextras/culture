@@ -72,6 +72,9 @@ In some cases, it might be appropriate to visually hide a label. For example, wh
 ### Labels for checkboxes and radio buttons
 As well as being explicitly associated with `for` and `id` attributes, labels for checkboxes and radio buttons should appear *after* the control in the markup and be displayed *to the right* of the control on screen. This convention ensures compatibility with the widest range of assistive technologies, and is also consisitent with UI patterns established by Microsoft and Apple.
 
+### Identifying mandatory fields
+A mandatory field should be identified in its label, in a way that doesn't rely on vision, so that it can be announced by assistive technology when the field receives focus. This could be an asterisk (*) or simply say "required". Where an asterisk or other symbol is used, this should be explained at the top of the form (e.g. "fields marked with * are required.") Where all fields in a form are mandatory, it is acceptable to simply say "all fields are mandatory", but probably easier (technically) to adopt the same approach throughout and mark all individual fields.
+
 <a name="headings"></a>
 ## Headings
 HTML heading elements (`h1` to `h6`) must be used to denote headings so that the structure of the page is clear.
