@@ -123,8 +123,8 @@ The same link phrase should not be used more than once on the same page, unless 
 
 
 <a name="landmarks"></a>
-## Landmark roles
-Landmark roles are a way of extending the native semantics of HTML elements in order to better describe the structure of a page. They make it easier fo assstive technology users to understand and navigate content.
+### Landmark roles
+Landmark roles are a way of extending the native semantics of HTML elements in order to better describe the structure of a page. They make it easier fo assistive technology users to understand and navigate content.
 
 For a demonstration of landmark roles in action, watch the video on [How ARIA landmark roles help screen reader users](https://www.youtube.com/watch?v=IhWMou12_Vk).
 
@@ -137,7 +137,7 @@ The following roles are the most useful:
 
 Note that the need for landmark roles will diminish as support for HTML elements improves but for the time being they offer an easy and unobtrusive way to increase accessibility.
 
-### Providing labels for landmarks
+#### Providing labels for landmarks
 When more than one landmark with the same role is used on the same page, a descriptive label should be provided using either `aria-label` or `aria-labelledby` so that the user can identify the purpose of each landmark.
 
 ```html
