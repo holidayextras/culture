@@ -92,7 +92,7 @@ Headings should follow a hierarchical structure and levels should not be skipped
 <a name="links"></a>
 ## Links
 
-Generic link phrases such as "click here", "more information" or "this page" should not be used because their purpose is unknown without considering the wider context (e.g. without reading the sentence):
+Generic link phrases such as "click here", "more information" or "this page" should not be used because their purpose is unknown without considering the wider context (e.g. without reading the sentence). This makes it difficult for people to navigate and also has a negative impact on SEO.
 
 ```html
 <!-- Anti-pattern, do not copy -->
@@ -124,7 +124,36 @@ The same link phrase should not be used more than once on the same page, unless 
 
 <a name="landmarks"></a>
 ## Landmark roles
+Landmark roles are a way of extending the native semantics of HTML elements in order to better describe the structure of a page. They make it easier fo assstive technology users to understand and navigate content.
 
+For a demonstration of landmark roles in action, watch the video on [How ARIA landmark roles help screen reader users](https://www.youtube.com/watch?v=IhWMou12_Vk).
+
+The following roles are the most useful:
+
+* `role="banner"`: The main header of a page, often applied to the `header` element. Must only be used once per page.
+* `role="main"`: The main content of a document, often applied to a containing `div` or `main` element. Must only be used once per page.
+* `role="navigation"`: A list of links serving as a navigation menu.
+* `role="contentinfo"`: Information about the page including contact information and legal notices, usually applied to a `footer` element. Must only be used once per page.
+
+Note that the need for landmark roles will diminish as support for HTML elements improves but for the time being they offer an easy and unobtrusive way to increase accessibility.
+
+### Providing labels for landmarks
+When more than one landmark with the same role is used on the same page, a descriptive label should be provided using either `aria-label` or `aria-labelledby` so that the user can identify the purpose of each landmark.
+
+```html
+<!-- Providing a label with the aria-label attribute -->
+<nav role="navigation" aria-label="Products and services">
+    ...
+</nav>
+```
+
+```html
+<!-- Providing a label with the aria-labelledby attribute -->
+<nav role="navigation" aria-labelledby="heading">
+    <h2 id="heading">Products and services</h2>
+    ...
+</nav>
+```
 
 <a name="hidden"></a>
 ## Hiding content in an accessible way
