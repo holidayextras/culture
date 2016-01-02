@@ -124,6 +124,8 @@ The same link phrase should not be used more than once on the same page, unless 
 <a name="keyboard"></a>
 ## Keyboard accessibility
 
+### Focus visibility
+Keyboard focus should be visible at all times so that a sighted keyboard user can see which element of the page they are interacting with. By default, browsers present the `:focus` state with a dotted `outline`. The styling of the `outline` can be modified or replaced, as long as it remains visually obvious.
 
 <a name="landmarks"></a>
 ### Landmark roles
