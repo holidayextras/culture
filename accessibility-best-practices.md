@@ -162,6 +162,16 @@ When more than one landmark with the same role is used on the same page, a descr
 </nav>
 ```
 
+<a name="modal"></a>
+### Modal dialogs
+A modal dialog is a dialog that forces the user to interact with it, blocking the rest of the application.
+
+* Focus should be given to the first focusable element inside the dialog when it is opened.
+* Focus should be trapped inside the dialog, i.e. it should not be possible for the user to tab onto elements outside of the dialog while it is open.
+* When the dialog is closed, keyboard focus should be returned to its original position.
+* Pressing the escape key on the keyboard should close the dialog.
+* The dialog container should have a `role="dialog"` attribute and be labelled with either `aria-label` or `aria-labelledby`.
+
 <a name="hidden"></a>
 ## Hiding content in an accessible way
 The `display: none` and `visibility: hidden` properties in CSS both hide content in a way that makes it inaccessible to screen readers and other assistive technology. They should therefore generally only be used if the intention is to hide the content from *all* users.
