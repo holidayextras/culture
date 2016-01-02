@@ -170,7 +170,7 @@ A modal dialog is a dialog that forces the user to interact with it, blocking th
 
 * Focus should be given to the first focusable element or to the primary action inside the dialog when it is opened.
 * Focus should be trapped inside the dialog, i.e. it should not be possible for the user to tab onto elements outside of the dialog while it is open.
-* When the dialog is closed, keyboard focus should be returned to its original position.
+* When the dialog is closed, keyboard focus should be returned to its original position, or to a sensible point of continuation.
 * Pressing the escape key on the keyboard should close the dialog.
 * The dialog container should have a `role="dialog"` attribute and be labelled with either `aria-label` or `aria-labelledby`.
 
@@ -188,7 +188,7 @@ A modal dialog is a dialog that forces the user to interact with it, blocking th
 
 * `table` elements must be use to present tabular data. Don't use `div`s or other elements to simulate a tabular layout.
 * `table` elements must not be used purely to control page layout.
-* Row and column headings must be in `th` elements with `scope="row"` or `"scope="col"` attributes.
+* Row and column headings must be in `th` elements with `scope="row"` or `scope="col"` attributes.
 
 ```html
 <table>
