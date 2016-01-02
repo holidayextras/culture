@@ -164,13 +164,23 @@ When more than one landmark with the same role is used on the same page, a descr
 
 <a name="modal"></a>
 ### Modal dialogs
-A modal dialog is a dialog that forces the user to interact with it, blocking the rest of the application.
+A modal dialog is a dialog that forces the user to interact with it, blocking the rest of the application. They are often used to prompt for a 'yes' or 'no' response.
 
 * Focus should be given to the first focusable element inside the dialog when it is opened.
 * Focus should be trapped inside the dialog, i.e. it should not be possible for the user to tab onto elements outside of the dialog while it is open.
 * When the dialog is closed, keyboard focus should be returned to its original position.
 * Pressing the escape key on the keyboard should close the dialog.
 * The dialog container should have a `role="dialog"` attribute and be labelled with either `aria-label` or `aria-labelledby`.
+
+```html
+<div role="dialog" aria-labelledby="heading">
+    <h2 id="heading">For £40.00 more, add a steak dinner to your booking</h2>
+    <p>Grab yourself a delicious steak and a glass of wine at the Courtyard's popular Casterbridge Grill restaurant.</p>
+    <a href="">No thanks</a>
+    <a href="">Yes please</a>
+</div>
+```
+
 
 <a name="hidden"></a>
 ## Hiding content in an accessible way
