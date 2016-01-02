@@ -8,6 +8,8 @@
 * [Links](#links)
 * [Title attributes](#title-attributes)
 * [Keyboard accessibility](#keyboard)
+* [Modal dialogs](#modal)
+* [Tables](#tables)
 * [Hiding content in an accessible way](#hidden)
 
 <a name="text-alternatives"></a>
@@ -142,7 +144,7 @@ Role | Description
 `role="navigation"` | A list of links serving as a navigation menu, normally used on a `nav` element. There are often several instances of this landmark role on a page and therefore labels should be used to differentiate them (see below).
 `role="contentinfo"` | Information about the page including contact information and legal notices, usually applied to a `footer` element. Must only be used once per page.
 
-Note that the need for landmark roles will diminish as support for HTML elements improves but for the time being they offer an easy and unobtrusive way to increase accessibility.
+Note that the need for landmark roles will diminish as support for HTML5 elements improves but for the time being they offer an easy and unobtrusive way to increase accessibility.
 
 #### Providing labels for landmarks
 When more than one landmark with the same role is used on the same page, a descriptive label should be provided using either `aria-label` or `aria-labelledby` so that the user can identify the purpose of each landmark.
@@ -179,6 +181,39 @@ A modal dialog is a dialog that forces the user to interact with it, blocking th
     <a href="">No thanks</a>
     <a href="">Yes please</a>
 </div>
+```
+
+<a name="tables"></a>
+## Tables
+
+* `table` elements must be use to present tabular data. Don't use `div`s or other elements to simulate a tabular layout.
+* `table` elements must not be used purely to control page layout.
+* Row and column headings must be in `th` elements with `scope="row"` or `"scope="col"` attributes.
+
+```html
+<table>
+    <thead>
+        <th scope="col">Car Park</th>
+        <th scope="col">Distance</th>
+        <th scope="col">Transfers</th>
+        <th scope="col">Rating</th>
+        <th scope="col">Price</th>
+    </thead>
+    <tr>
+        <td>Purple Parking - Flexible</td>
+        <td>2.4 miles</td>
+        <td>Run every 20 minutes, take 15 minutes and are included in the price</td>
+        <td>86%</td>
+        <td>£4.00 per day</td>
+    </tr>
+    <tr>
+        <td>Long Stay South</td>
+        <td>On-airport</td>
+        <td>Run every 10 minutes, take 5 minutes and are included in the price</td>
+        <td>90%</td>
+        <td>£4.63 per day</td>
+    </tr>
+</table>
 ```
 
 
