@@ -8,7 +8,6 @@
 * [Links](#links)
 * [Title attributes](#title-attributes)
 * [Keyboard accessibility](#keyboard)
-* [Modal dialogs](#modal)
 * [Tables](#tables)
 * [Hiding content in an accessible way](#hidden)
 
@@ -163,9 +162,16 @@ When more than one landmark with the same role is used on the same page, a descr
     ...
 </nav>
 ```
+<a name="tabindex"></a>
+### Tabindex
+In general, elements should be left in the default tab order and `tabindex` attributes should not be used to change that order. However, `tabindex` can be used to add or remove elements from the tab order completely.
+
+* Set `tabindex="-1"` to remove an element from the tab cycle but keep it focusable with mouse or JavaScript.
+* Set `tabindex="0"` to make an element (such as a `div` or a `span`) receive focus in the tab cycle.
+* When an element is given focus in JavaScript rather than as a result of the user tabbing to it, visual focus styling must still be applied.
 
 <a name="modal"></a>
-### Modal dialogs
+### Keyboard accessibility in modal dialogs
 A modal dialog is a dialog that forces the user to interact with it, blocking the rest of the application. They are often used to prompt for a 'yes' or 'no' response.
 
 * Focus should be given to the first focusable element or to the primary action inside the dialog when it is opened.
