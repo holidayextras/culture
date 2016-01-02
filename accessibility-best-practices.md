@@ -166,7 +166,7 @@ When more than one landmark with the same role is used on the same page, a descr
 ### Modal dialogs
 A modal dialog is a dialog that forces the user to interact with it, blocking the rest of the application. They are often used to prompt for a 'yes' or 'no' response.
 
-* Focus should be given to the first focusable element inside the dialog when it is opened.
+* Focus should be given to the first focusable element or to the primary action inside the dialog when it is opened.
 * Focus should be trapped inside the dialog, i.e. it should not be possible for the user to tab onto elements outside of the dialog while it is open.
 * When the dialog is closed, keyboard focus should be returned to its original position.
 * Pressing the escape key on the keyboard should close the dialog.
