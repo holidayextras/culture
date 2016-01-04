@@ -369,4 +369,4 @@ Any selector that once compiled has more than 2 levels of nesting will fail a co
 }
 ```
 
-Credit goes to [Medium](https://medium.com) and [Fat](https://medium.com/@fat/mediums-css-is-actually-pretty-fucking-good-b8e2a6c78b06) as this has been ~~stolen from~~ built ontop of there code guidlines.
+Credit goes to [Medium](https://medium.com) and [Fat](https://medium.com/@fat/mediums-css-is-actually-pretty-fucking-good-b8e2a6c78b06) as this has been ~~stolen from~~ built ontop of their code guidelines.
