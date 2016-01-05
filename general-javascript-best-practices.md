@@ -149,6 +149,10 @@ Use instead of underscore, due to correct semantic versioning, better performanc
 
 Please only require the methods you need rather than the whole library in order to keep build sizes at a minimum.
 
+### grunt-shell
+
+Use instead of grunt-exec, due to a configurable max output buffer size option. Required if running a command with a lot of output.
+
 ## What antipatterns could I run into with my newfound ES6 power?
 
 ### Auto Destructuring
