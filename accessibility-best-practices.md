@@ -48,7 +48,7 @@ In the example below, the "Flying from?" label has as `for="location"` attribute
 </select>
 ```
 
-Placeholder text (a default vaule in the field) should **not** be used instead of a separate `label` element. Placeholders are cleared on focus and often not announced at all by screen readers or other assistive technology.
+Placeholder text (a default value in the field) should **not** be used instead of a separate `label` element. Placeholders are cleared on focus and often not announced at all by screen readers or other assistive technology.
 
 ### Hidden labels
 
