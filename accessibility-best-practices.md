@@ -240,8 +240,8 @@ The most reliable way to hide content visually while keeping it accessible to as
     position: absolute;
     left: -10000px;
     top: auto;
-    width: 1px;
-    height: 1px;
+    width: 1px; // VoiceOver fails to announce elements with 0 width
+    height: 1px; // VoiceOver fails to announce elements with 0 height
     overflow: hidden;
     }
 ```
