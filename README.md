@@ -19,6 +19,7 @@ This is a collection of documents that outline Holiday Extras' culture and devel
  * [Markdown Best Practices](markdown-best-practices.md)
  * [SASS Best Practices](SASS-best-practices.md)
  * [HTML Best Practices](html-best-practices.md)
+ * [Accessibility Best Practices](accessibility-best-practices.md)
  * [Application Tracking](application-tracking.md)
  * [Testing Standard](testing-standard.md)
  * [Frontend Performance](frontend-performance.md)
