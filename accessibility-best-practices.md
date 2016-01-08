@@ -168,6 +168,12 @@ When more than one landmark with the same role is used on the same page, a descr
     ...
 </nav>
 ```
+
+### Event handlers and keyboard traps
+* It must be possible to tab onto and away from all focusable elements on a page without becoming trapped. This often happens when a JavaScript function has been set to prevent all keypresses on an element without excluding the tab key.
+* Wherever possible, use device independent event handlers (`focus`, `blur`, `select`, `change`) so that they are triggered by both keyboard and mouse.
+* If a device dependent event is used, an equivalent keyboard event handler should also be set. For example, if content is revealed on hover using `mouseover` and hidden with `mouseout`, it should also be revealed with `focus` and hidden with `blur`.
+
 <a name="tabindex"></a>
 ### Tabindex
 In general, elements should be left in the default tab order and `tabindex` attributes should not be used to change that order. However, `tabindex` can be used to add or remove elements from the tab order completely.
