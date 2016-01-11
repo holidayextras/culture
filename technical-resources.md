@@ -146,6 +146,10 @@ The links below should provide a good introduction into an item, further in dept
 
 ### [Amazon AWS](http://aws.amazon.com/)
 
+### [Circle CI](https://circleci.com/)
+
+* [Deploying to S3](http://benlopatin.com/deploying-static-sites-circle-ci/)
+
 ### [Heroku](https://www.heroku.com/home)
 
 ### Teamcity
