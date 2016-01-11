@@ -31,6 +31,27 @@ var myUniqueArray = _.uniq(myArray);
 
 One might argue that extensive use of this syntactic sugar will lead to a slower codebase, but modern JavaScript engines do a great job of optimising the code we write to the point that the readibility benefits outweigh any minor performance quibbles. In browsers especially, a huge amount more CPU time is lost to rendering than actual application logic.
 
+## Keep arguments to functions simple
+Only pass a few to each function. If you find there are too many, re-consider the functions purpose or pass an object. The goal is to keep it readable:
+
+Bad:
+```javascript
+log( 1234, 201.99, 1, 4, 'Hotel', '/hotels', true );
+```
+
+Good:
+```javascript
+log({
+  sku: 1234,
+  price: 201.99,
+  quantity: 1,
+  position: 4,
+  type: 'Hotel',
+  page: '/hotels',
+  isPromoted: true
+});
+```
+
 ## Don't reinvent the wheel:
 In short, this means that if someone's created a popular, library or framework that solves your problem, you're better off using that than writing your own new code.
 
