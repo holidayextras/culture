@@ -44,6 +44,27 @@ For internationalisation, we're betting on [FormatJS's React Intl](http://format
 
 Defer to FormatJS best practices for handling internationalisations. For `^2.0.0` the i18n process is detailed in [this doc](https://github.com/yahoo/react-intl/issues/162).
 
+## Testing Rendering React Components
+At the very top of your React tree you will have a call that looks like this:
+```
+ReactDOM.render( <Component foo={'bar'} /> );
+```
+
+In order to test that the render method is being called correctly you can stub out `React.createElement`. This is what is called within the render method to turn the `<Component />` into DOM.
+
+In it's simplest form you do the following:
+
+```
+sinon.stub(React, 'createElement');
+ReactDOM.render(<Component foo={'bar'} />);
+expect(React.createElement).to.have.been.calledWith(Component, { foo: 'bar' });
+```
+
+To improve how this reads you can use [chai-jsx](https://github.com/ckknight/chai-jsx) so that your expect line reads:
+```
+expect(React.createElement).to.have.been.calledWith(<Componet foo{'bar'} />);
+```
+
 ## React do's and dont's
 
 ### DO keep state in one place:
