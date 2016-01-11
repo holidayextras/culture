@@ -60,11 +60,6 @@ ReactDOM.render(<Component foo={'bar'} />);
 expect(React.createElement).to.have.been.calledWith(Component, { foo: 'bar' });
 ```
 
-To improve how this reads you can use [chai-jsx](https://github.com/ckknight/chai-jsx) so that your expect line reads:
-```
-expect(React.createElement).to.have.been.calledWith(<Component foo{'bar'} />);
-```
-
 ## React do's and dont's
 
 ### DO keep state in one place:
