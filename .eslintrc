@@ -54,7 +54,7 @@
     "linebreak-style": [2, "unix"],
     "jsx-quotes": [2, "prefer-double"],
     "key-spacing": [2, { "beforeColon": false, "afterColon": true }],
-    "new-cap": 2,
+    "new-cap": [2, {"capIsNewExceptions": ["jQuery.Event", "$.Event", "$.Deferred"]}],
     "new-parens": 2,
     "no-alert": 2,
     "no-array-constructor": 2,
