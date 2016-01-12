@@ -32,7 +32,7 @@ var myUniqueArray = _.uniq(myArray);
 One might argue that extensive use of this syntactic sugar will lead to a slower codebase, but modern JavaScript engines do a great job of optimising the code we write to the point that the readibility benefits outweigh any minor performance quibbles. In browsers especially, a huge amount more CPU time is lost to rendering than actual application logic.
 
 ## Keep arguments to functions simple
-Only pass a few to each function. If you find there are too many, re-consider the functions purpose or pass an object. The goal is to keep it readable:
+Only pass a few to each function. If you find there are too many, re-consider the function's purpose or pass an object. Too many arguments is often a [code smell](https://en.wikipedia.org/wiki/Code_smell) indicating that the function should be refactored into smaller functions. The goal is to keep it readable & re-usable:
 
 Bad:
 ```javascript
@@ -50,6 +50,42 @@ log({
   page: '/hotels',
   isPromoted: true
 });
+```
+
+In the "good" example we should be dealing with validating the object passed in or merging default properties thus making the code "self-documenting":
+
+```javascript
+function log(options) {
+  var requirements = ['sku', 'price', 'quantity'];
+  
+  // Check `requirements` against `options` passed in & handle accordingly.
+
+  var defaults = {
+    isPromoted: false
+  };
+  
+  // Merge `options` with `defaults` here
+  ... etc
+}
+```
+
+We of course don't have to have "all params" OR "one object". Where applicable, group them logically:
+```javascript
+function log(itemInfo, pricing, position, isPromoted) {
+  
+  // Check if pricing is a float.
+
+  var itemInfoRequirements = ['sku', 'quantity'];
+  
+  // Check `itemInfo` against `itemInfoRequirements` passed in & handle accordingly.
+
+  var defaults = {
+    isPromoted: false
+  };
+  
+  // Merge `options` with `defaults` here
+  ... etc
+}
 ```
 
 ## Don't reinvent the wheel:
