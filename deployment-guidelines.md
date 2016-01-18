@@ -43,7 +43,7 @@ Please raise an `INF` JIRA if you require a new S3 directory to be created, once
 
 We are now using different AWS credentials for our different environments for increased security, however this mean that configuration is slightly more complex.
 
-First add your AWS IDs and keys as encrypted environment variables via the travis or Circle UI (not in the YAML files), the following names can be used here:
+First add your AWS IDs and keys as encrypted environment variables via the Travis or Circle UI (not in the YAML files), the following names can be used here:
 
 * PRODUCTION_AWS_ACCESS_KEY_ID
 * PRODUCTION_AWS_SECRET_ACCESS_KEY
@@ -56,7 +56,10 @@ The method we want to use as defined in [Continuous deployment flow](cd-flow.md)
 
 The deploy script `scripts/deploy.sh` which using the environment variable `DEPLOY_ENV` will choose the correct S3 bucket to use as this also changes.
 
-The credentials for the script will be taken from the environment variables mentioned above.
+The credentials for the script will be taken from the environment variables mentioned above and can be set via the AWS CLI as follows:
+
+    aws configure set aws_access_key_id $PRODUCTION_AWS_ACCESS_KEY_ID
+    aws configure set aws_secret_access_key $PRODUCTION_AWS_SECRET_ACCESS_KEY
 
 ### Travis
 
