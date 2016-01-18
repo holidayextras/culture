@@ -41,9 +41,9 @@ Please raise an `INF` JIRA if you require a new S3 directory to be created, once
 
 ## Implementation
 
-We are now using different AWS credentials for our different environments for increased security, however this mean that configuration is slightly more complex.
+We are now using different AWS credentials for our different environments for increased security, however this means that configuration is slightly more complex.
 
-First add your AWS IDs and keys as encrypted environment variables via the Travis or Circle UI (not in the YAML files), the following names can be used here:
+First add your AWS IDs and keys as encrypted environment variables via the Travis or Circle UI (not in the YAML files), the following names should be used here:
 
 * PRODUCTION_AWS_ACCESS_KEY_ID
 * PRODUCTION_AWS_SECRET_ACCESS_KEY
