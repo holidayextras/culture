@@ -72,11 +72,15 @@ All modules should follow this order:
 
 For example:
 ```javascript
+'use strict';
+
 // define a local object and export it
 var ourModuleName = module.exports = { };
 
 // Next, require any dependencies:
-var _ = require('underscore');
+var _ = {
+  clone: require('lodash.clone')
+};
 var moment = require('moment');
 var async = require('async');
 
