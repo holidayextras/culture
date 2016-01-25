@@ -66,9 +66,9 @@ Not Recommended
 
 ```
 it('returns x, calls y and err equals foo', function(err, result) {
+  expect(err).to.equal('foo');
   expect(result).to.equal('x');
   expect(y).to.have.been.called();
-  expect(err).to.equal('foo');
 });
 ```
 
