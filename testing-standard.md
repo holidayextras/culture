@@ -47,11 +47,30 @@ The location of the tests directory may differ between existing projects, but fo
 Test files should be clean and readable. This means making sensible use of some of Mocha's features to structure test files
 
 ### Using `describe` & `context` blocks
-Mocha's `describe` and `context` syntax can be used to split out tests into logical groups. Typically each function in a module would have its own `describe` block, and various paths through that function would have their own `context` block nested within the parent describe block. 
+Mocha's `describe` and `context` syntax can be used to split out tests into logical groups. Typically each function in a module would have its own `describe` block, and various paths through that function would have their own `context` block nested within the parent describe block.
 
 
 ### Using `it` blocks
-Within describe blocks we can put `it` blocks, it's within these `it` blocks that we put the assertion for the thing we're testing. Keeping to **one** assertion per `it` block makes pinpointing the source of a test failure very easy, so this is considered good practice.
+Within describe blocks we can put `it` blocks, it's within these `it` blocks that we put the assertion for the thing we're testing. Keeping to **one** assertion per `it` block makes pinpointing the source of a test failure very easy, so this is considered good practice when appropriate.
+
+Acceptable
+
+```
+it('returns x', function(err, result) {
+  expect(err).to.not.be.ok();
+  expect(result).to.equal('x');
+});
+```
+
+Not Recommended
+
+```
+it('returns x, calls y and err equals foo', function(err, result) {
+  expect(result).to.equal('x');
+  expect(y).to.have.been.called();
+  expect(err).to.equal('foo');
+});
+```
 
 ### The `beforeEach(callback)` function
 Within `describe` and `context` blocks we can call the `beforeEach` function with a callback we want to run before each test is run. This is useful for setting up your test configuration so that your `it` blocks only contain very core of your test; the call to the function being tested and the expected result. This is considered good practice as it makes it very easy to see what's broken when a test fails. There's also an `afterEach(callback)` function which runs after each test - this is useful for tearing down stubs and generally restoring things to a pre-test state.
