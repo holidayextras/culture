@@ -1,8 +1,7 @@
 #### What are the links to relevant tickets?
 #### What does this PR do?
 #### What functional/unit tests does this PR have?
-#### How should a developer review this?
-#### Any background context you want to provide?
+#### Is there anything a developer should be aware of when reviewing this?
 #### Screenshots (if appropriate)
 ---
 #### Quality checklist (for PR author to complete BEFORE code review):
