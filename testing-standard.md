@@ -11,6 +11,7 @@ In order to keep test writing familiar across the Holiday Extras group, we shoul
   * [Sinon-chai](https://github.com/domenic/sinon-chai): For integrating Sinon with Chai
   * [chai-as-promised](https://github.com/domenic/chai-as-promised/): For clean promise assertions
 * [React Test Utilities](https://facebook.github.io/react/docs/test-utils.html): Helpers for testing React components
+* [Enzyme](http://airbnb.io/enzyme/): Test React easily with a jQuery like API.
 
 ### Assertion Syntax
 With Chai, we always use the `expect` syntax for our tests. By keeping a single assertion syntax across the Holiday Extras group we're making it easy for developers to get going with writing tests on any of our projects. Chai + expect provides a clean, readable style of test writing, for example:
@@ -294,10 +295,72 @@ Using the [chai-as-promised](https://github.com/domenic/chai-as-promised/) libra
 ```javascript
   it('the function calls back with the number 1337', function() {
     expect(myTestFunctionCall()).to.eventually.equal(1337);
-  ); 
+  );
 ```
 
-# 3.0 System Tests
+## 1.7 Testing React
+
+### Enzyme
+Using Enzyme makes testing React components easier:
+
+#### Shallow rendering
+
+**With React TestUtils:**
+```javascript
+beforeEach(function() {
+  var shallowRenderer = TestUtils.createRenderer();
+  shallowRenderer.render(<Page {...props} />);
+  renderedPage = shallowRenderer.getRenderOutput();
+});
+
+context('page header', function() {
+
+  var renderedHeader = null;
+
+  beforeEach(function() {
+    renderedHeader = renderedPage.props.children[0];
+  });
+
+  context('h2', function() {
+
+    var h2 = null;
+
+    beforeEach(function() {
+      h2 = renderedHeader.props.children[0];
+    });
+
+    it('contains a translation', function() {
+      expect(h2.props.children).to.equal('a translation');
+    });
+
+  });
+
+});
+```
+
+**With Enzyme:**
+```javascript
+beforeEach(function() {
+  this.wrapper = shallow(<Page {...props} />);
+});
+
+context('page header', function() {
+
+  context('h2', function() {
+
+    it('contains a translation', function() {
+      expect(this.wrapper.find('h2').text()).to.equal('a translation');
+    });
+
+  });
+
+});
+```
+As you can see our `beforeEach` block is now much simpler. With the help of [Enzyme](https://airbnb.io/enzyme)'s jQuery like API we're able to find our `h2` element via readable selectors rather than repeating `props.children` many times.
+
+This is just one example of using [Enzyme](https://airbnb.io/enzyme) to make React testing more readable and concise. I would encourage everyone using [Enzyme](https://airbnb.io/enzyme) to read the well written [documentation](http://airbnb.io/enzyme/docs/api/index.html).
+
+# 2.0 System Tests
 
 ## Each test should:
 * Use product codes that are guaranteed to be available
