@@ -51,7 +51,7 @@ Mocha's `describe` and `context` syntax can be used to split out tests into logi
 
 
 ### Using `it` blocks
-Within describe blocks we can put `it` blocks, it's within these `it` blocks that we put the assertion for the thing we're testing. Keeping to **one** assertion per `it` block makes pinpointing the source of a test failure very easy, so this is considered good practice when appropriate.
+Within describe blocks we can put `it` blocks, it's within these `it` blocks that we put the assertion for the thing we're testing. Keeping to **one** assertion per `it` block makes pinpointing the source of a test failure very easy, so this is considered good practice when appropriate. For example, having multiple assertions in one `it` block might acceptable when testing computationally expensive tasks or assertions of multiple calls of the same function.
 
 Acceptable
 
