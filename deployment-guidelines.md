@@ -38,3 +38,73 @@ Here is an example of this structure:
       hx-wizard
 
 Please raise an `INF` JIRA if you require a new S3 directory to be created, once actioned you will be given the correct credentials for CI upload your assets.
+
+## Implementation
+
+We are now using different AWS credentials for our different environments for increased security, however this means that configuration is slightly more complex.
+
+First add your AWS IDs and keys as encrypted environment variables via the Travis or Circle UI (not in the YAML files), the following names should be used here:
+
+* PRODUCTION_AWS_ACCESS_KEY_ID
+* PRODUCTION_AWS_SECRET_ACCESS_KEY
+* STAGING_AWS_ACCESS_KEY_ID
+* STAGING_AWS_SECRET_ACCESS_KEY
+
+Next create a script that uses the [AWS CLI](https://aws.amazon.com/cli/), as this is installed by default on Circle boxes and easily on Travis.
+
+The method we want to use as defined in [Continuous deployment flow](cd-flow.md), is to deploy to a staging environment when pushing to the `staging` branch and deploy to a production environment when pushing to the `master` branch.
+
+The deploy script `scripts/deploy.sh` which using the environment variable `DEPLOY_ENV` will choose the correct S3 bucket to use as this also changes.
+
+The credentials for the script will be taken from the environment variables mentioned above and can be set via the AWS CLI as follows:
+
+    aws configure set aws_access_key_id $PRODUCTION_AWS_ACCESS_KEY_ID
+    aws configure set aws_secret_access_key $PRODUCTION_AWS_SECRET_ACCESS_KEY
+
+### Travis
+
+Example config:
+
+    before_install:
+      - pip install --user awscli
+      - export PATH=$PATH:$HOME/.local/bin
+    deploy:
+      provider: script
+      script: scripts/deploy.sh
+      on:
+        branch: staging
+        env:
+          - DEPLOY_ENV=staging
+      on:
+        branch: master
+        env:
+          - DEPLOY_ENV=production
+
+### Circle CI
+
+Example config:
+
+    deployment:
+      production:
+        branch: staging
+          commands:
+            - ./scripts/deploy.sh
+            environment
+              DEPLOY_ENV: staging
+      staging:
+        branch: master
+          commands:
+            - ./scripts/deploy.sh
+            environment
+              DEPLOY_ENV: production
+
+#### Local Testing
+
+For testing credentials:
+
+    aws configure
+    aws s3 cp some_test_file s3://your_bucket/your_repo_dir/ --region=eu-west-1
+
+The deploy script can be run as follows:
+
+    STAGING_AWS_ACCESS_KEY_ID=your_id STAGING_AWS_SECRET_ACCESS_KEY=your_key DEPLOY_ENV=staging ./scripts/deploy.sh
