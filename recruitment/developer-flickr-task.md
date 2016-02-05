@@ -7,8 +7,7 @@ we don't expect you to be aware of all of them! We've designed this task with th
 
 Your task is to consume the public [Flickr API](https://api.flickr.com/services/feeds/photos_public.gne?format=json) and display the results according to this basic wireframe:
 
-![mockup](http://i.imgur.com/vyDVR1e.png)
-_[Image source](http://i.imgur.com/vyDVR1e.png)_
+![mockup](vyDVR1e.png)
 
 We would expect this task to take a few hours, however there is no strict time limit and you won't be judged on how long it took you to complete. Please find a few pointers below:
 
