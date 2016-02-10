@@ -13,6 +13,7 @@
 - [ ] I've created a new route for this split test. (ONLY APPLICABLE IF RUNNING A FULL PAGE TEST)
 - [ ] I've checked this work against the requirements of the Jira.
 - [ ] This change passes all necessary tests (cross browser, automated or otherwise).
+- [ ] I have set up a reporting Jira to check and publish GTM work.
 - [ ] I am ready for this to be code reviewed, merged and tested.
 
 #### Reviewer 1
