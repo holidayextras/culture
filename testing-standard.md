@@ -314,7 +314,31 @@ Using the [chai-as-promised](https://github.com/domenic/chai-as-promised/) libra
 ```javascript
   it('the function calls back with the number 1337', function() {
     expect(myTestFunctionCall()).to.eventually.equal(1337);
-  );
+  });
+```
+
+### Testing side effects of promises
+
+Remember to include a `catch` in your test if you've put expectations of a promise's side effects inside a `then`
+
+```javascript
+  // Bad - your expectation might throw an error, which would be automatically caught.
+  // The test will never call `done`, and timeout instead of explaining why it failed
+  it('opens an alert', function(done) {
+    promisedOpenAlert().then(function() {
+      expect(window.alert).to.have.been.called();
+      done();
+    });
+  });
+
+  // Better - if `done` is called with an error argument it will fail your test with the
+  // details of the error; so you can pass it directly into `catch`
+  it('opens an alert', function(done) {
+    promisedOpenAlert().then(function() {
+      expect(window.alert).to.have.been.called();
+      done()
+    }).catch(done);
+  });
 ```
 
 ## 1.7 Testing React
