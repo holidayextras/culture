@@ -98,12 +98,16 @@ Example config:
             environment
               DEPLOY_ENV: production
 
+### Permissions
+
+Infrastructure will automatically create new buckets with "block all" by default therefore you will also need to set the Access Control List to "public-read", if you're using the CLI just add the following flag `--acl public-read`. The grantee will get `READ` and the owner will only have the access that the keys allow.
+
 #### Local Testing
 
 For testing credentials:
 
     aws configure
-    aws s3 cp some_test_file s3://your_bucket/your_repo_dir/ --region=eu-west-1
+    aws s3 cp some_test_file s3://your_bucket/your_repo_dir/ --region=eu-west-1 
 
 The deploy script can be run as follows:
 
