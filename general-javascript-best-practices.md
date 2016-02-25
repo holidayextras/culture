@@ -220,4 +220,4 @@ These are run every time the module is installed by a consuming project which wi
 
 If the module is being released to NPM consider using a `prerelease` script instead.
 
-For internal modules a separate `build` task can be used then the module release can be uploaded as an GitHub asset to accompany releases.
+For internal modules a separate `build` task can be used then the module packed and uploaded as an GitHub asset to accompany releases.
