@@ -1,20 +1,21 @@
 # HX Testing Standards
 
 # 1.0 Unit Tests
+The aim is for our unit test output to describe the functionality of our code. As long as our tests are readable and clearly structured, we should focus our time on ensuring we have high quality tests. Being able to use the test output as a description for a piece of work, where appropriate, ensures our code is unambiguous and that are tests cover expected functionality. We _should_ be able to use our test output as documentation to our code.
 
 ## 1.1 Our Technology
 In order to keep test writing familiar across the Holiday Extras group, we should use the following tech for writing our unit tests:
 
 * [Mocha](https://mochajs.org/): Our test framework of choice
 * [Sinon](http://sinonjs.org/): For our stubs & spies
-* [Chai](http://chaijs.com/): For making assertions in our tests
-  * [Sinon-chai](https://github.com/domenic/sinon-chai): For integrating Sinon with Chai
-  * [chai-as-promised](https://github.com/domenic/chai-as-promised/): For clean promise assertions
+* [Assert](https://www.npmjs.com/package/assert) or [Chai](http://chaijs.com/): For making assertions in our tests
+* [Sinon-chai](https://github.com/domenic/sinon-chai): For integrating Sinon with Chai
+* [chai-as-promised](https://github.com/domenic/chai-as-promised/): For clean promise assertions
 * [React Test Utilities](https://facebook.github.io/react/docs/test-utils.html): Helpers for testing React components
 * [Enzyme](http://airbnb.io/enzyme/): Test React easily with a jQuery like API.
 
 ### Assertion Syntax
-With Chai, we always use the `expect` syntax for our tests. By keeping a single assertion syntax across the Holiday Extras group we're making it easy for developers to get going with writing tests on any of our projects. Chai + expect provides a clean, readable style of test writing, for example:
+With Chai, we always use the `expect` syntax for our tests. Chai + expect provides a clean, readable style of test writing, for example:
 
 ```javascript
 expect(foo).to.be.a('string');
@@ -40,7 +41,7 @@ expect(myStub).to.have.been.called();
 
 
 ## 1.2 Good Test Folders
-When addind new tests to projects, test files should sit in a folder hierarchy that mimics the hierarchy fo the source code. The test files themselves should be named similarly to the source files, but with `test` at the beginning of the file name. For example, if we have a source file `src/views/checkoutView.js` we should have a test file `test/unit/views/checkoutView.js` or similar. This makes finding tests an easy and logical process.
+When adding new tests to projects, test files should sit in a folder hierarchy that mimics the hierarchy fo the source code. The test files themselves should be named similarly to the source files, but with `test` at the beginning of the file name. For example, if we have a source file `src/views/checkoutView.js` we should have a test file `test/unit/views/checkoutView.js` or similar. This makes finding tests an easy and logical process.
 
 The location of the tests directory may differ between existing projects, but for new projects tests should be located in a `test` directory at the root of the project. On existing projects we should work towards having this `test` directory in the root of the project.
 
