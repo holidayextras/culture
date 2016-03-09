@@ -221,3 +221,12 @@ These are run every time the module is installed by a consuming project which wi
 If the module is being released to NPM consider using a `prerelease` script instead.
 
 For internal modules a separate `build` task can be used then the module packed and uploaded as an GitHub asset to accompany releases.
+
+### Dependencies
+
+When specifying requirements first aim to use the `^` semver match. Only resort to using `~` or pinning the version if there is a known problem the module's
+versioning strategy.
+
+If a module is intended to be consumed by another one of our projects, try to use the same version of common modules to reduce build time and size.
+
+When choosing a third party module to use, prefer ones with a version number one or above, this will allow for more lenient semver matching.
