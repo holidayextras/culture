@@ -1,7 +1,7 @@
 # HX Testing Standards
 
 # 1.0 Unit Tests
-The aim is for our unit test output to describe the functionality of our code. As long as our tests are readable and clearly structured, we should focus our time on ensuring we have high quality tests. Being able to use the test output as a description for a piece of work, where appropriate, ensures our code is unambiguous and that are tests cover expected functionality. We _should_ be able to use our test output as documentation to our code.
+The aim is for our unit test output to describe the functionality of our code. As long as our tests are readable and clearly structured, we should focus our time on ensuring we have high quality tests which are readable and clearly structured. Being able to use the test output as a description for a piece of work, where appropriate, ensures our code is unambiguous and that are tests cover expected functionality. We _should_ be able to use our test output as documentation to our code.
 
 ## 1.1 Our Technology
 In order to keep test writing familiar across the Holiday Extras group, we should use the following tech for writing our unit tests:
@@ -30,7 +30,6 @@ And with the addition of sinon-chai for sinon stubs:
 expect(myStub).to.have.been.calledWith('foo');
 ```
 
-
 ### Linting Issues
 You may occasionally encounter a slight issue here with our linting, specifically our linting complaining about unused expressions in the tests due to Chai's syntax. The solution to this is to use [dirty-chai](https://www.npmjs.com/package/dirty-chai) to provide functions that replace the property getters provided by Chai. This allows us to use syntax such as:
 
@@ -41,7 +40,7 @@ expect(myStub).to.have.been.called();
 
 
 ## 1.2 Good Test Folders
-When adding new tests to projects, test files should sit in a folder hierarchy that mimics the hierarchy fo the source code. The test files themselves should be named similarly to the source files, but with `test` at the beginning of the file name. For example, if we have a source file `src/views/checkoutView.js` we should have a test file `test/unit/views/checkoutView.js` or similar. This makes finding tests an easy and logical process.
+When adding new tests to projects, test files should sit in a folder hierarchy that mimics the hierarchy of the source code. The test files themselves should be named similarly to the source files, but with `test` at the beginning of the file name. For example, if we have a source file `src/views/checkoutView.js` we should have a test file `test/unit/views/testCheckoutView.js` or similar. This makes finding tests an easy and logical process.
 
 The location of the tests directory may differ between existing projects, but for new projects tests should be located in a `test` directory at the root of the project. On existing projects we should work towards having this `test` directory in the root of the project.
 
@@ -85,11 +84,11 @@ module.exports = {
     if (!firstName) {
       return '';
     }
-    
+
     if (!lastName) {
       return firstName;
     }
-    
+
     return firstName + ' ' + lastName;
   }
 }
@@ -101,12 +100,12 @@ We'd end up writing the following test suite:
 var nameHelper = require('helpers/nameHelper.js');
 
 describe('nameHelper', function() {
-  
+
   describe('prettyFullName(firstName, lastName)', function() {
-  
+
   	  var testFirstName;
   	  var testLastName;
-  
+
   	  beforeEach(function() {
   	    testFirstName = 'Geoffrey';
   	    testLastName = 'Banks';
@@ -117,17 +116,17 @@ describe('nameHelper', function() {
        it('returns an empty string', function() {
          // Test that nameHelper.prettyFullName() returns an empty string
        });
-       	    
+
      });
-	
+
 	  context('when no last name is provided', function() {
-	  
+
        it('returns the first name', function() {
          // Test that nameHelper.prettyFullName(testFirstName) returns 'Geoffrey'
        });
 
      });
-	
+
      context('When both the first name and last name are provided', function() {
 
        it('returns the first name and the last name concatenated', function() {
@@ -262,7 +261,7 @@ someModule._action = function(number) {
     if (i%3 == 0) {
       number++;
     }
-    
+
     if (i>4) {
       number++;
     }
@@ -279,11 +278,11 @@ someModule._numberLoop = function(number) {
   if (i%3 == 0) {
     number++;
   }
-  
+
   if (i>4) {
     number++;
   }
-   
+
   number++;
   return number;
 };
@@ -306,7 +305,7 @@ Mocha makes this easy out of the box, we can pass a `done` callback to each `it`
       expect(result).toEqual(1337);
       done();
     });
-  ); 
+  );
 ```
 
 ### Testing the result of promises
