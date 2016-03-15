@@ -220,7 +220,7 @@ These are run every time the module is installed by a consuming project which wi
 
 If the module is being released to NPM consider using a `prepublish` script instead.
 
-For internal modules a separate `build` task can be used then the module packed and uploaded as an GitHub asset to accompany releases. For more information please see the [Deployment Guidelines for private NPM releases](deployment-guidelines.md#Private-NPM-Releases)
+For internal modules a separate `build` task can be used then the module packed and uploaded as an GitHub asset to accompany releases. For more information please see the [Deployment Guidelines for private NPM releases](deployment-guidelines.md#private-npm-releases)
 
 ### Dependencies
 
