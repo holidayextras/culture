@@ -218,14 +218,13 @@ When creating an NPM module for others to use (private or open source) it is wor
 
 These are run every time the module is installed by a consuming project which will increase CI and developer build time.
 
-If the module is being released to NPM consider using a `prerelease` script instead.
+If the module is being released to NPM consider using a `prepublish` script instead.
 
-For internal modules a separate `build` task can be used then the module packed and uploaded as an GitHub asset to accompany releases.
+For internal modules a separate `build` task can be used then the module packed and uploaded as an GitHub asset to accompany releases. For more information please see the [Deployment Guidelines for private NPM releases](deployment-guidelines.md#Private-NPM-Releases)
 
 ### Dependencies
 
-When specifying requirements first aim to use the `^` semver match. Only resort to using `~` or pinning the version if there is a known problem the module's
-versioning strategy.
+When specifying requirements first aim to use the `^` semver match. Only resort to using `~` or pinning the version if there is a known problem the module's versioning strategy.
 
 If a module is intended to be consumed by another one of our projects, try to use the same version of common modules to reduce build time and size.
 

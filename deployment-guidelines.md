@@ -39,7 +39,7 @@ Here is an example of this structure:
 
 Please raise an `INF` JIRA if you require a new S3 directory to be created, once actioned you will be given the correct credentials for CI upload your assets.
 
-## Implementation
+### Implementation
 
 We are now using different AWS credentials for our different environments for increased security, however this means that configuration is slightly more complex.
 
@@ -61,7 +61,7 @@ The credentials for the script will be taken from the environment variables ment
     aws configure set aws_access_key_id $PRODUCTION_AWS_ACCESS_KEY_ID
     aws configure set aws_secret_access_key $PRODUCTION_AWS_SECRET_ACCESS_KEY
 
-### Travis
+#### Travis
 
 Example config:
 
@@ -80,7 +80,7 @@ Example config:
         env:
           - DEPLOY_ENV=production
 
-### Circle CI
+#### Circle CI
 
 Example config:
 
@@ -98,11 +98,11 @@ Example config:
             environment
               DEPLOY_ENV: production
 
-### Permissions
+#### Permissions
 
 Infrastructure will automatically create new buckets with "block all" by default therefore you will also need to set the Access Control List to "public-read", if you're using the CLI just add the following flag `--acl public-read`. The grantee will get `READ` and the owner will only have the access that the keys allow.
 
-#### Local Testing
+##### Local Testing
 
 For testing credentials:
 
@@ -112,3 +112,28 @@ For testing credentials:
 The deploy script can be run as follows:
 
     STAGING_AWS_ACCESS_KEY_ID=your_id STAGING_AWS_SECRET_ACCESS_KEY=your_key DEPLOY_ENV=staging ./scripts/deploy.sh
+
+## Private NPM Releases
+
+To allow modules and applications to consume our private modules we use git releases named after the version specified in the `package.json` prefixed with a `v` (github convention).
+
+### Implementation
+
+The github release can be created automatically once a merge to the project's master branch has been performed, as shown below.
+
+#### Travis
+
+Example config:
+
+    deploy:
+      provider: script
+      script: node_modules/deployment-helpers/nodeApps/createPrivateRelease.sh
+      skip_cleanup: true
+      on:
+        branch: master
+
+Please make sure you have included the deployment helper in the project's `devDependencies` as follows:
+
+    "devDependencies": {
+      "deployment-helpers": "git+ssh://git@github.com:holidayextras/deployment-helpers.git#v1.2.0"
+    }
