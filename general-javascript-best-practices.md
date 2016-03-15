@@ -226,6 +226,6 @@ For internal modules a separate `build` task can be used then the module packed 
 
 When specifying requirements first aim to use the `^` semver match. Only resort to using `~` or pinning the version if there is a known problem the module's versioning strategy.
 
-If a module is intended to be consumed by another one of our projects, try to use the same version of common modules to reduce build time and size.
+If a module is intended to be consumed by another one of our own projects, try to use the same version of common modules to reduce build time and size.
 
-When choosing a third party module to use, prefer ones with a version number one or above, this will allow for more lenient semver matching.
+When choosing a third party module to use, prefer ones with a version number of one or above, this will allow for more lenient semver matching for dependencies and hopefully more reliable version behaviour from the module.
