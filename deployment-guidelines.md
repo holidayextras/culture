@@ -127,7 +127,7 @@ Example config:
 
     deploy:
       provider: script
-      script: node_modules/deployment-helpers/nodeApps/createPrivateRelease.sh
+      script: node_modules/\@holidayextras/deployment-helpers/nodeApps/createPrivateRelease.sh
       skip_cleanup: true
       on:
         branch: master
@@ -135,5 +135,5 @@ Example config:
 Please make sure you have included the deployment helper in the project's `devDependencies` as follows:
 
     "devDependencies": {
-      "deployment-helpers": "git+ssh://git@github.com:holidayextras/deployment-helpers.git#v1.2.0"
+      "@holidayextras/deployment-helpers": "^1.3.0"
     }
