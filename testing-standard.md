@@ -84,11 +84,11 @@ module.exports = {
     if (!firstName) {
       return '';
     }
-    
+
     if (!lastName) {
       return firstName;
     }
-    
+
     return firstName + ' ' + lastName;
   }
 }
@@ -100,12 +100,12 @@ We'd end up writing the following test suite:
 var nameHelper = require('helpers/nameHelper.js');
 
 describe('nameHelper', function() {
-  
+
   describe('prettyFullName(firstName, lastName)', function() {
-  
+
   	  var testFirstName;
   	  var testLastName;
-  
+
   	  beforeEach(function() {
   	    testFirstName = 'Geoffrey';
   	    testLastName = 'Banks';
@@ -116,17 +116,17 @@ describe('nameHelper', function() {
        it('returns an empty string', function() {
          // Test that nameHelper.prettyFullName() returns an empty string
        });
-       	    
+
      });
-	
+
 	  context('when no last name is provided', function() {
-	  
+
        it('returns the first name', function() {
          // Test that nameHelper.prettyFullName(testFirstName) returns 'Geoffrey'
        });
 
      });
-	
+
      context('When both the first name and last name are provided', function() {
 
        it('returns the first name and the last name concatenated', function() {
@@ -261,7 +261,7 @@ someModule._action = function(number) {
     if (i%3 == 0) {
       number++;
     }
-    
+
     if (i>4) {
       number++;
     }
@@ -278,11 +278,11 @@ someModule._numberLoop = function(number) {
   if (i%3 == 0) {
     number++;
   }
-  
+
   if (i>4) {
     number++;
   }
-   
+
   number++;
   return number;
 };
@@ -305,7 +305,7 @@ Mocha makes this easy out of the box, we can pass a `done` callback to each `it`
       expect(result).toEqual(1337);
       done();
     });
-  ); 
+  );
 ```
 
 ### Testing the result of promises
