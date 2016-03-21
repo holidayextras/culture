@@ -15,7 +15,7 @@ This is a good question to ask yourself before writing tests. If the answer is _
 It's also worth considering the net cost of tests before you write them. For example, if the business impact of a regression is small and unlikely enough, it could be that you're probably incurring a net cost to the business by writing a test that needs to be **1.** understood, **2.** run as part of your CI and **3.** maintained.
 
 ### Keep the system in mind
-Lastly, when making decisions about the scope of your testing, keep the system in mind that you're working on. For example, a single failure on the API is potentially going to affect hundreds of customers and could expose masses of customer data. Whereas a single failure in React component is only going to affect a single session at once, and probably won't be a showstopper.
+Lastly, when making decisions about the scope of your testing, keep the system in mind that you're working on. For example, a single failure on a data-sensitive area of the API is potentially going to affect hundreds of customers and could expose masses of customer data. Whereas a single failure in React component is only going to affect a single session at once, and probably won't be a showstopper.
 
 ## Types of Testing
 There are three major categories of testing that might be appropriate to use in your development.
