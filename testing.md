@@ -47,9 +47,11 @@ Integration tests are particularly useful for:
 However, integration tests have some drawbacks:
  - Expensive to write
  - Expensive to maintain
+ - Only accessible to developers
  - Dealing with real objects means that test setups can be hard to debug. Not everything is stubbed so finding what's broken a test, checking whether it should or should be stubbed and then addressing the issue can be a time consuming process.
  - They can test the code works as expected, but don't prove the application actually makes sense to the user.
  - Can be prone to slowdowns when left unchecked.
+ - Integration tests at the low-level extreme are sometimes better written as unit tests, and at the high-level extreme are sometimes better written as system tests. They can be a tricky judgement call to make sometimes.
 
 ### System Testing
 [System Testing](https://en.wikipedia.org/wiki/System_testing) involves testing the system as a whole. It sits "above" unit and integration testing conceptually and tests the application by using it the way the end user would use it. The goal with system tests is to make sure the application works as a product and that that it can be shown to perform its business requirements. Taking making a cake as an analogy, you can think of system testing as checking the baked, and iced carrot cake tastes like a good carrot cake.
@@ -58,13 +60,12 @@ System tests are particularly useful for:
  - Testing user journeys throughout the application. Proving the application meets business requirements.
  - Making _some_ testing available to non-developers. _Some_ system testing frameworks are human friendly enough that anyone can learn to write good system tests in a reasonable amount of time. This applies mainly to applications with a user interface.
  - Testing very complex regressions that are not practical to unit or integration test.
- - Testing visuals on applications with user interfaces. Some system testing frameworks allow us to generate, store and compare screenshots as well as testing user interface for clickability.
+ - Testing visuals on applications with user interfaces. Some system testing frameworks allow us to generate, store and compare screenshots as well as testing user interface elements for clickability.
 
 However, system tests have some drawbacks:
  - Slow to run. This can be overcome with parallelism, but that can be expensive and the suite will only ever be as fast as the slowest test.
  - Brittle and prone to false negatives. This can be overcome with data fixtures and awareness of best practices.
- - Loosely constrained. In laymens terms, your application code could be doing some horrible stuff under the hood, but your system test is only concerned with inputs and outputs at the system level.
-
+ - Loosely constrained. Your application code could be doing some _horrible_ stuff under the hood, but your system test is only concerned with inputs and outputs at the system level and so that probably won't be exposed in your system test.
 ---
 
 Different systems will be suited to a different mix of the above test types. Choose wisely based on what it is you're testing.
