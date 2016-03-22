@@ -8,7 +8,7 @@ There is no list of acceptable reasons for when it's "ok" to work remotely. You'
 
 - Will I be able to have good virtual access to the team from my remote location (i.e. internet speed able to support a Google Hangout)?
 - Will my environment allow me to focus on my work (i.e. minimal distraction from media, people and of course pets)?
-- Will my environment allow me to communicate easily with colleagues (i.e. minimal background noise and the ability to speak clearly)?
+- Will my environment allow me to communicate easily with colleagues (i.e. minimal background noise and the ability to speak clearly/openly)?
 - Will you still be able to make your commitment to any meetings?
 
 We all have various degrees of "cost" to being in the office, especially as we grow the team wider. It may be that you can peak personal productivity by saving your commute, immersing in the zen of working from the garden, being home to welcome a package so you don't have the chase around depots in the evening...
