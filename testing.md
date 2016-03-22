@@ -1,21 +1,21 @@
 # Testing
 
 ## Why write tests?
-
-We write automated tests to allow us to quickly demonstrate that our software meeting business requirements. They're one of a few tools we use to increase our confidence in our work prior to deployment.
+We write automated tests to allow us to demonstrate that our software meets business requirements, and that it continues to do so as changes are made to the codebase.
 
 ## When do I write tests?
-
-### Test necessity
-_"If this test fails, what business requirement is compromised?"_
-
-This is a good question to ask yourself before writing tests. If the answer is _"None"_, you shouldn't be writing it. If the answer is _"I don't know"_, it's possible the test you're writing has no value.
+Almost all of our code should be tested to some degree, the question is less about "when" and more "to what level do I test this code?". There are a few points to consider to help with this decision making.
 
 ### Net costs
-It's also worth considering the net cost of tests before you write them. For example, if the business impact of a regression is small and unlikely enough, it could be that you're probably incurring a net cost to the business by writing a test that needs to be **1.** understood, **2.** run as part of your CI and **3.** maintained.
+It's worth considering the net cost of tests before you write them. Simply put, ask yourself "Is this test likely to pay for itself over the course of it's lifetime?".
+
+If not, it could be that you're incurring a net cost to the business with a over-thorough test that needs to be **1.** understood, **2.** run as part of your CI and **3.** maintained. In this scenario it might be worth opting for a something less expensive that still gives the team an acceptable level of confidence that the code works as expected.
 
 ### Keep the system in mind
-Lastly, when making decisions about the scope of your testing, keep the system in mind that you're working on. For example, a single failure on a data-sensitive area of the API is potentially going to affect hundreds of customers and could expose masses of customer data. Whereas a single failure in React component is only going to affect a single session at once, and probably won't be a showstopper.
+When making decisions about the scope of your testing, keep the system in mind that you're working on. For example:
+ - A single failure on a data-sensitive area of an API is potentially going to affect hundreds of customers and could expose customer data. This needs extensive, thorough, testing to ensure customer data is never exposed.
+ - Conversely, s single failure in a simple React component is only going to affect a single session at once, and might just incur a slight visual glitch or formatting issue. We probably want to write a quick test to check this works as expected, but testing every possible edge case is likely to cost us more than the test is worth.
+ - Library code should always be tested extensively It's designed to be reused many times across many systems in many use cases - we need to be confident this works as advertised no matter how it's used.
 
 ## Types of Testing
 There are three major categories of testing that might be appropriate to use in your development.
@@ -29,7 +29,7 @@ Unit tests are particularly useful for things like:
  - Providing 100% thorough exercising of business critical code. E.g. Ensure a card number validator does not block valid cards.
  - Testing potential edge cases for functions. E.g. "What happens when I throw garbage into this?"
 
-However, unit tests have some drawbacks:
+However, unit tests have some limitations:
  - Expensive to write
  - Expensive to maintain
  - Only accessible to developers
@@ -44,7 +44,7 @@ Integration tests are particularly useful for:
  - Checking more complex regressions that can't be covered by unit tests.
  - Helping to formalise the intended interaction of entities within the system. E.g. "When I trigger a product selected event, is the product added to the basket, does the basket price then update to reflect the change?"
 
-However, integration tests have some drawbacks:
+However, integration tests have some limitations:
  - Expensive to write
  - Expensive to maintain
  - Only accessible to developers
@@ -62,7 +62,7 @@ System tests are particularly useful for:
  - Testing very complex regressions that are not practical to unit or integration test.
  - Testing visuals on applications with user interfaces. Some system testing frameworks allow us to generate, store and compare screenshots as well as testing user interface elements for clickability.
 
-However, system tests have some drawbacks:
+However, system tests have some limitations:
  - Slow to run. This can be overcome with parallelism, but that can be expensive and the suite will only ever be as fast as the slowest test.
  - Brittle and prone to false negatives. This can be overcome with data fixtures and awareness of best practices.
  - Loosely constrained. Your application code could be doing some _horrible_ stuff under the hood, but your system test is only concerned with inputs and outputs at the system level and so that probably won't be exposed in your system test.
