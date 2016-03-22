@@ -66,6 +66,7 @@ However, system tests have some limitations:
  - Slow to run. This can be overcome with parallelism, but that can be expensive and the suite will only ever be as fast as the slowest test.
  - Brittle and prone to false negatives. This can be overcome with data fixtures and awareness of best practices.
  - Loosely constrained. Your application code could be doing some _horrible_ stuff under the hood, but your system test is only concerned with inputs and outputs at the system level and so that probably won't be exposed in your system test.
+ 
 ---
 
 Different systems will be suited to a different mix of the above test types. Choose wisely based on what it is you're testing.
