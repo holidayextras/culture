@@ -1,6 +1,6 @@
 # Pairing
 
-Pair programming is the process of two or more people sitting at the same machine to solve a technical problem. Outside of programming, pairing can be a used to solve all manner of diverse problems. 
+Pair programming is the process of two or more people sharing a development environment to solve a technical problem. Outside of programming, pairing can be a used to solve all manner of diverse problems. 
 
 ## When should we pair?
 
@@ -37,6 +37,10 @@ There is a great paper on the costs and benefits of pair programming here: http:
 The study was pairing two experienced programmers. In short, the investigation found that the time take to complete a task was not doubled by working in a pair, with an average of only 15% increase in combined time spent. 
 
 The benefits included 15% fewer defects, significantly less (more concise) code and a more enjoyable experience for the pair. The long term benefit of knowledge share and better decision making are harder to prove, but for a 15% cost, the benefits are clear and worthwhile.
+
+## Remote working and pairing
+
+[remote info here]
 
 ## What to do next
 
