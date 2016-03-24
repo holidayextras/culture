@@ -10,6 +10,7 @@ Environment
 - Will I be able to have good virtual access to the team from my remote location (i.e. internet speed able to support a Google Hangout)?
 - Will my environment allow me to focus on my work (i.e. minimal distraction from media, people and of course pets)?
 - Will my environment allow me to communicate easily with colleagues (i.e. minimal background noise and the ability to speak clearly/openly)?
+- Will I be able to run all systems (i.e VM) necessary to complete my work and support the team?
 
 Commitment
 - Will you still be able to make your commitment to any meetings?
