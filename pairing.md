@@ -38,7 +38,7 @@ The study was pairing two experienced programmers. In short, the investigation f
 
 The benefits included 15% fewer defects, significantly less (more concise) code and a more enjoyable experience for the pair. The long term benefit of knowledge share and better decision making are harder to prove, but for a 15% cost, the benefits are clear and worthwhile.
 
-### What to do next
+## What to do next
 
 - Give it a go and consider what you're trying to achieve through pairing.
 - At the end of the session, reflect as a pair and give each other feedback.
