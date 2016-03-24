@@ -40,7 +40,7 @@ The benefits included 15% fewer defects, significantly less (more concise) code 
 
 ## Remote working and pairing
 
-[remote info here]
+Remote working and pairing are not mutually exclusive. In fact, there has been a suggestion recently that pairing over Screenhero can be more effective than pairing on the same physical machine, as it provided greater focus and more conversation between the pair.
 
 ## What to do next
 
