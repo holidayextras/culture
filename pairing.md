@@ -1,6 +1,6 @@
 # Pairing
 
-Pair programming is the process of two or more people sharing a development environment to solve a technical problem. Outside of programming, pairing can be a used to solve all manner of diverse problems. 
+Pair programming is the process of two people sharing a development environment to solve a technical problem. Outside of programming, pairing can be a used to solve all manner of diverse problems. 
 
 ## When should we pair?
 
@@ -30,7 +30,7 @@ There should still be an open, questioning dialogue between the pair. Thinking o
 
 ### Knowledge sharing
 
-The more critical a part of a system, the more we need to ensure we have the right solution, it's well built and we have resilience in our support of it. We would not want to find critical part of a system the be built using an unchecked strategy, in a confusing way, by one person who is on holiday. Especially on the day it's broken. So, we should identify these parts and use pairing as a way to mitigate against this risk.
+The more critical a part of a system the more we need to ensure we have the right solution, it's well built and we have resilience in our support of it. We would not want to find a critical part of a system has been built using an inconsistent strategy, in a confusing way, by one person who is on holiday. Especially on the day it's broken. So, we should identify these parts and use pairing as a way to mitigate against this risk.
 
 The approach to this pairing will be very similar to when pairing to problem solve. What we may find is that the solution is simple, but this mustn't stop us from pairing. The value is in knowing why the solution has been built that way and how it works.
 
