@@ -4,21 +4,21 @@ Pair programming is the process of two people sharing a development environment 
 
 ## When should we pair?
 
-There's no concrete right or wrong time, but it's worth keeping in mind that the way you pair needs modifying to make sure you're achieving that goal. At HX, we would typically use pairing to onboard new hires, solve difficult problems and spread knowledge. 
+There's no concrete right or wrong time, but it's worth keeping in mind that the way you pair needs modifying to make sure you're achieving that goal. At HX, we would typically use pairing to onboard new starters, solve difficult problems and spread knowledge. 
 
 The Scrum Alliance describe the pair as a Driver, in control of the development environment and a Navigator providing instruction. This slightly over simplifies the relationship, so we'll break out some of the different ways we pair depending on the situation.
 
 ### Onboarding
 
-During onboarding you would typically pair a new hire with an experienced engineer. The intention is for the experienced engineer to provide the context and safety net needed for the new hire to learn on a real platform. It has been proven, externally and internally, to be a really effective, supportive way of getting a new hire up to speed.
+During onboarding you would typically pair a new starter with an experienced engineer. The intention is for the experienced engineer to provide the context and safety net needed for the new starter to learn on a real platform. It has been proven, externally and internally, to be a really effective, supportive way of getting a new starter up to speed.
 
-This is the prime example where Driver and Navigator is an incomplete analogy. If the new hire is following instruction and doesn't understand *why* they're performing actions, they're unlikey to be able to complete a similar task independently in the future, which should be a key aim of pairing for onboarding. In pairing for onboarding the Navigator should more resemble a Coach. 
+This is the prime example where Driver and Navigator is an incomplete analogy. If the new starter is following instruction and doesn't understand *why* they're performing actions, they're unlikey to be able to complete a similar task independently in the future, which should be a key aim of pairing for onboarding. In pairing for onboarding the Navigator should more resemble a Coach. 
 
 Consider following the instruction of a Sat Nav. You've been told to turn left, turn right and keep on going and reached your destination. How likely would you be to be able to repeat the journey again? Would you be able to adjust the journey if you hit a problem? You would most likley need the Sat Nav again.
 
 Now imagine you had a local in the car who was providing context and maybe giving you a little test along the way. Instead of saying "turn left", they might say "you'll need to turn left after this pub, which has a great garden by the way" and you may ask "and if I overshoot the turning", and they may say "don't worry you can take the next left as they join up". You hopefully get the drift, and would agree you'd be much more likely to be able to repeat the journey. 
 
-An effective onboarding pair will typically have the new hire at the keyboard with the experienced engineer providing a mix of instruction and questioning. It's this questioning, and opportunity for the new hire to question their own understanding, that helps the new hire to build the context around the instruction. There is some [theory](https://en.wikipedia.org/wiki/Action_learning#Revans.27_formula) that supports this style of learning.
+An effective onboarding pair will typically have the new starter at the keyboard with the experienced engineer providing a mix of instruction and questioning. It's this questioning, and opportunity for the new starter to question their own understanding, that helps the new starter to build the context around the instruction. There is some [theory](https://en.wikipedia.org/wiki/Action_learning#Revans.27_formula) that supports this style of learning.
 
 ### Problem solving
 
