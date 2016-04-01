@@ -149,6 +149,27 @@ Use instead of underscore, due to correct semantic versioning, better performanc
 
 Please only require the methods you need rather than the whole library in order to keep build sizes at a minimum.
 
+**Good:**
+```javascript
+const _ = {
+  includes: require('lodash/collection/includes')
+};
+```
+
+**Bad:**
+```javascript
+const _ = require('lodash');
+```
+
+As an alternative (and where Lodash is not currently a dependency) you could install and require each Lodash package individually:
+
+**Better:**
+```javascript
+const _ = {
+  includes: require('lodash.includes')
+};
+```
+
 ### grunt-shell
 
 Use instead of grunt-exec, due to a configurable max output buffer size option. Required if running a command with a lot of output.
