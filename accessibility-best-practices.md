@@ -9,7 +9,7 @@
 * [Title attributes](#title-attributes)
 * [Keyboard accessibility](#keyboard)
 * [Tables](#tables)
-* [Hiding content in an accessible way](#hidden)
+* [Hidden content](#hidden)
 
 <a name="text-alternatives"></a>
 ## Text alternatives for images
@@ -230,8 +230,12 @@ A modal dialog is a dialog that forces the user to interact with it, blocking th
 
 
 <a name="hidden"></a>
-## Hiding content in an accessible way
-The `display: none` and `visibility: hidden` properties in CSS both hide content in a way that makes it inaccessible to screen readers and other assistive technology. They should therefore generally only be used if the intention is to hide the content from *all* users.
+## Hidden content
+
+### Hiding content from sighted users
+In some cases it might be appropriate to hide content from sighted users but keep it accessibile to screen readers and braille displays. For example, you might want to provide hidden links that jump to particular areas of the page, or provide text alternatives.
+
+The CSS `display: none` and `visibility: hidden` properties both hide content in a way that makes it inaccessible to everyone, including users of assistive technology. These properties should therefore generally only be used if the intention is to hide the content from *all* users.
 
 The most reliable way to hide content visually while keeping it accessible to assistive technology behind the scenes is to position it off the viewport.
 
@@ -246,4 +250,9 @@ The most reliable way to hide content visually while keeping it accessible to as
     }
 ```
 
-If hidden content can receive keyboard focus, it should be made visible when focused. This avoids the confusing situation where keyboard focus disappears and then reappears when tabbing through a page.
+Note that if this hidden content can receive keyboard focus (e.g. it is a link or a form control) it should be made visible when focused. This avoids the confusing situation where keyboard focus disappears and then reappears when tabbing through a page.
+
+### Hiding content from everyone
+
+
+### Hiding content from non-sighted users
