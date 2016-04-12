@@ -23,4 +23,4 @@ Alternatively if you regularly contribute to open-source and believe that we wil
 
 When you feel you've completed the task we would appreciate it if you could publish it online so we are in a position to be able to review it. We recommend that you upload your code to a Github/Bitbucket/Gitlab repository, however it's fine if you'd rather send it as an attachment in an email to your recruitment contact.
 
-We look forward to seeing the results of your efforts.
+If you have any questions please do not hesitate to come back to us. We look forward to seeing the results of your efforts.
