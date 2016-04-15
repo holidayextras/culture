@@ -18,6 +18,7 @@
   "rules": {
     "block-scoped-var": 2,
     "brace-style": [2, "1tbs"],
+    "callback-return": 2,
     "camelcase": [2, {"properties": "never"}],
     "comma-dangle": [2, "never"],
     "comma-spacing": 2,
