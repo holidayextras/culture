@@ -127,7 +127,7 @@ If you're collaborating on a hotfix, or you've finished development, you'll want
 
 ### Testing a hotfix
 
-Depends on the level of expedite, a hotfix may or may not need to go through the PR process. 
+Depending on the level of expedite, a hotfix may or may not need to go through the PR process. 
 
 ### Finishing a hotfix
 
