@@ -81,7 +81,7 @@ The release branch is tested as _the code_ that will be deployed on to the produ
 
 This will cut a new branch from develop. You do not need to include the `release/` or the version tag prefix. If you choose the semantic release number of `1.0.0` the release branch will be called `release/v1.0.0`.
 
-This command will check whether there is already a release name and make sure there is not already a tag of that name on Master. 
+This command will check whether there is already a release name and make sure there is not already a tag of that name on Master. You'll also be prompted to bump the version number, so you'll want to do this in your package.json or where relevant to your application.
 
 If you're collaborating on a release, or you've finished development, you'll want to publish it just like a feature.
 
@@ -102,6 +102,14 @@ On confirmation the release is ready for deploy it should be completed via a dev
 This command will merge the release, including any commits directly to it, in to master and back in to develop. It will also tag master with the version name and remove the release branch, opening the door for the next release. 
 
 _Hotfixes aside, this route should be the only way to push code in to Master and it should be an exact replica of the code tested on the staging environment. The only exception may if a hotfix was introduced after the release was cut from develop._
+
+Note that you'll need to run the push commands once the release has been merged and remember to push the tags too.
+
+```
+git push origin develop
+git push origin master
+git push --tags
+```
 
 ## Hotfixes
 
@@ -126,3 +134,11 @@ Depends on the level of expedite, a hotfix may or may not need to go through the
 `git flow hotfix finish <hotfix-name>`
 
 This command will merge the hotfix in to master, tag it and merge it back in to develop, as well as remove the hotfix branch.
+
+Note that you'll need to run the push commands once the hotfix has been merged and remember to push the tags too.
+
+```
+git push origin develop
+git push origin master
+git push --tags
+```
