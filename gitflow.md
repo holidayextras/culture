@@ -1,7 +1,7 @@
 # Git Flow and testing/deploy process
 
 This document is an overview of how Git Flow integrates with our testing and deployment procedures. It is not an overview of Git Flow, as there are great examples out there on the web already:
-- [Great overview and comparison of Git Flow] (https://www.atlassian.com/git/tutorials/comparing-)
+- [Great overview and comparison of Git Flow] (https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
 - [Handy, visual Git Flow cheatsheet] (http://danielkummer.github.io/git-flow-cheatsheet/)
 
 As an alternative to branching from and merging directly to the Master branch, Git Flow can bring the following benefits:
