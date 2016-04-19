@@ -10,9 +10,9 @@ The Scrum Alliance describe the pair as a Driver, in control of the development 
 
 ### Onboarding
 
-During onboarding you would typically pair a new starter with an experienced engineer. The intention is for the experienced engineer to provide the context and safety net needed for the new starter to learn on a real platform. It has been proven, externally and internally, to be a really effective, supportive way of getting a new starter up to speed.
+During onboarding you would typically pair a new starter with an experienced engineer. The intention is for the experienced engineer to provide the context and safety net needed for the new starter to learn on a real platform. It has been proven, externally and internally, to be a really effective, supportive way of getting someone up to speed.
 
-This is the prime example where Driver and Navigator is an incomplete analogy. If the new starter is following instruction and doesn't understand *why* they're performing actions, they're unlikey to be able to complete a similar task independently in the future, which should be a key aim of pairing for onboarding. In pairing for onboarding the Navigator should more resemble a Coach. 
+This is the prime example where Driver and Navigator is an incomplete analogy. If the new starter is following instruction and doesn't understand *why* they're performing actions, they're unlikely to be able to complete a similar task independently in the future, which should be a key aim of pairing for onboarding. In pairing for onboarding the Navigator should more resemble a Coach. 
 
 Consider following the instruction of a Sat Nav. You've been told to turn left, turn right and keep on going and reached your destination. How likely would you be to be able to repeat the journey again? Would you be able to adjust the journey if you hit a problem? You would most likley need the Sat Nav again.
 
