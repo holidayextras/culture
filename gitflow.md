@@ -63,7 +63,7 @@ When a feature is ready to be deployed we want to merge it back in to the develo
 
 _This is where a project's strategy may vary. For more continual deployment features can be finished when testing is complete. For staged deployments a project may decide to leave the feature in a ready state and only finished when it's to be incorporated in the next sprint._
 
-A feature can either be finished using the command line tools or via GitHub. Both will merge the feature in to the develop branch and remove the feature branch automatically. Usually we would expect this to be done in GitHub once the feedback has been reviewed, but the command line alternative is as follows.
+A feature can either be finished using the command line tools or via GitHub. Both will merge the feature in to the develop branch, but only the command line tool will remove the branch automatically so make sure you remove the branch after merging if doing so via GitHub. Usually we would expect this to be done in GitHub once the feedback has been reviewed, but the command line alternative is as follows.
 
 `git flow feature finish <feature-name>`
 
