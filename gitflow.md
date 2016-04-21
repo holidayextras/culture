@@ -45,6 +45,8 @@ Git Flow features are no different to Git feature branches. The only exception m
 
 `git flow feature start <feature-name>`
 
+Best practice is to use the JIRA ticket number where available as your feature name.
+
 This command will cut a new branch from the develop branch. You can add the `-F` flag to perform a pull on origin before you start, which is a good way to avoid unnecessary conflicts. Note that you don't need to add the `feature/` prefix, as this is added for you.
 
 If you're collaborating on a feature, or you've finished development, you'll want to publish the feature.
@@ -55,7 +57,7 @@ This simply performs a push, but you don't need to remember the prefix.
 
 ### Testing a feature
 
-Once the feature is in a finished state and pushed to the repo it should be converted in to a pull request using [the usual procedure](pr-best-practices.md) and the testers/reviews should be alerted on Slack.
+Once the feature is in a finished state and pushed to the repo it should be converted in to a pull request using [the usual procedure](pr-best-practices.md).
 
 ### Finishing a feature
 
@@ -68,8 +70,6 @@ A feature can either be finished using the command line tools or via GitHub. Bot
 Usually we would expect this to be done in GitHub once the feedback has been reviewed, but the command line alternative is as follows.
 
 `git flow feature finish <feature-name>`
-
-Best practice is to use the JIRA ticket number where available as your feature name.
 
 ## Releases
 
@@ -91,13 +91,13 @@ If you're collaborating on a release, or you've finished development, you'll wan
 
 ### Testing a release
 
-Once a release is ready for final testing the testers should be alerted, as per a feature. There is currently no review process for releases, but this may be introduced shortly. 
+Once a release is ready it should be tested again to make sure no new issues have been introduced. There is currently no review process for releases, but this may be introduced shortly. 
 
 If there are issues with the release, fixes should be committed directly to the release branch.
 
 ### Finishing a release
 
-On confirmation the release is ready for deploy it should be completed via a developer on the command line. This is because the Git Flow tooling completes multiple steps for us. 
+On confirmation the release is ready for deploy it should be completed on the command line. This is because the Git Flow tooling completes multiple steps for us. 
 
 `git flow release finish <version-name>`
 
@@ -121,7 +121,7 @@ Another advantage of maintaining a separate develop branch is that the master br
 
 `git flow hotfix start <hotfix-name>`
 
-Per releases and features, you don't need to specify the prefix `hotfix/`, so your name may be `1.0.1-XX-254`, where the version number and JIRA ticket number are available. 
+Per releases and features, you don't need to specify the prefix `hotfix/`, so your name may be `v1.0.1-XX-254`, where the JIRA ticket number is available (otherwise something descriptive). 
 
 If you're collaborating on a hotfix, or you've finished development, you'll want to publish it just like a hotfix.
 
