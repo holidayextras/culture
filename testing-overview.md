@@ -33,7 +33,7 @@ The diagram below explains how long we spend testing in each environment through
 How to test on HXML
 We use Junos pulse or change our DNS connection to the correct environment.
 
-![DNS connection](images/testing-overview-images/image03.png)
+<img src="images/testing-overview-images/image03.png" alt="DNS connection" width="400px" />
 
 We have four environments when using HXML:
 * Local
@@ -55,7 +55,7 @@ HX Admin (bits) - Work done on HXML can be wrapped in something called a â€œbitâ
 How to test on Render
 We use Junos pulse or change our DNS connection to the correct environment i.e Integration, Staging.
 
-![DNS connection](images/testing-overview-images/image03.png)
+<img src="images/testing-overview-images/image03.png" alt="DNS connection" width="400px" />
 
 Example Render site - https://www.airparks.co.uk 
 We have three environments when using Render:
