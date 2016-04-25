@@ -15,6 +15,7 @@ Depending on how customers approach our sites, will depend on what platform they
 ### Trip app deployment/testing procedure
 How to test on the Trip app
 We set our TripController to the correct environment. This depends on the platform we are working on and also the tester.
+
 ![Trip controller](images/testing-overview-images/image09.png)
 
 We have several environments when using TripApp:
@@ -25,11 +26,13 @@ We have several environments when using TripApp:
 TripApp site example https://www.holidayextras.co.uk 
 Worth noting Germany is on TripApp with most core products. (Keep that in mind)
 The diagram below explains how long we spend testing in each environment through to Production.
+
 ![Tripapp deployments](images/testing-overview-images/image07.png)
 
 ### HXML deployment/testing procedure
 How to test on HXML
 We use Junos pulse or change our DNS connection to the correct environment.
+
 ![DNS connection](images/testing-overview-images/image03.png)
 
 We have four environments when using HXML:
@@ -43,6 +46,7 @@ When testing SEO (Landing page) changes, the first environment that is tested is
 Medical Insurance for example is on HXML.
 
 The diagram below explains how long we spend testing in each environment through to Production.
+
 ![HXML deployments](images/testing-overview-images/image08.png)
 
 HX Admin (bits) - Work done on HXML can be wrapped in something called a “bit”. This means we can easily turn this bit of code on or off in any given environment. As Testers, this allows us the flexibility and control when testing specific work that is wrapped in a bit.
@@ -50,6 +54,7 @@ HX Admin (bits) - Work done on HXML can be wrapped in something called a “bit�
 ### Render deployment/testing procedure
 How to test on Render
 We use Junos pulse or change our DNS connection to the correct environment i.e Integration, Staging.
+
 ![DNS connection](images/testing-overview-images/image03.png)
 
 Example Render site - https://www.airparks.co.uk 
@@ -58,6 +63,7 @@ We have three environments when using Render:
 * Staging
 * Production
 The diagram below explains how long we spend testing in each environment through to Production.
+
 ![Render deployments](images/testing-overview-images/image02.png)
 
 ### HAPI deployment/testing procedure
@@ -69,6 +75,7 @@ We have three environments when using Hapi:
 * Production
 
 The diagram below explains how long we spend testing in each environment through to Production.
+
 ![HAPI deployments](images/testing-overview-images/image00.png)
 
 ## How we test:
@@ -98,17 +105,21 @@ The list goes on….
 There’s a number of tools available to us that we can use when testing. These enable us to check certain aspects with ease, here’s a list of some:
 
 * EditThisCookie - This is a cookie manager. You can add, delete, edit, search, protect and block cookies. This enables us to check for things like a split test and force this to show us the alternative. Checking for a cookie is incredibly simple.
+
 ![Edit this cookie](images/testing-overview-images/image01.png)
 
 * TinyGrab or CloudUp - These are simply screenshot based but provide us a link to the screenshot which we can use in our testing notes.
 
-* VirtualBox - This allows us to test Internet Explorer browsers from IE7 all the way up to the latest version on a number of different Windows Operating Systems. 
+* VirtualBox - This allows us to test Internet Explorer browsers from IE7 all the way up to the latest version on a number of different Windows Operating Systems.
+
 ![Virtual box](images/testing-overview-images/image04.png)
 
 * Gas Mask - This is a simple host file manager. It allows us to edit host files and switch between them meaning we can switch domains and test locally on our machine.
+
 ![Gas mask](images/testing-overview-images/image10.png)
 
 * GhostLab - This enables us to control multiple devices and check multiple browsers at the same time, enabling us to do a side by side comparison.
+
 ![Ghost Lab](images/testing-overview-images/image05.png)
 
 * RecordIt - This enables us to record our screen and input this into our testing notes or make it into a gif.
@@ -125,5 +136,6 @@ There’s a number of tools available to us that we can use when testing. These 
 
 * Github - This is used for all our platforms excluding HXML. Pull requests are created here for any work that has been done on any given platform and can be reviewed. As Testers this is where we merge a PR that is fully reviewed and ready for Staging. You can find any platform repository [here](https://github.com/holidayextras).
 
-* TeamCity - As mentioned in the deployments section this is where we can see the deployment pipelines and where are work is through the environments. Here we can also see when a deployment has failed and look into reason why this happened. 
+* TeamCity - As mentioned in the deployments section this is where we can see the deployment pipelines and where are work is through the environments. Here we can also see when a deployment has failed and look into reason why this happened.
+
 ![Team city](images/testing-overview-images/image06.png)
