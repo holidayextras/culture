@@ -43,10 +43,10 @@ For out of hours use the [web contact details](https://holidayextras.jira.com/wi
 
 ## Communication
 
-Regular communication is essential. By sending regular updates the Web Team and HX stakeholders are able to manage and mitigate the impact of the issue.
+Regular communication is essential. By sending regular updates the Web Team and HX stakeholders are able to manage and mitigate the impact of the issue. It's important that attention is not drawn away from fixing the immediate issue, so consider delegating the communication to someone else if you're involved with the fix itself.
 
 * Post in the main [#expedite](https://holidayextras.slack.com/messages/expedite/) slack channel.
-* If issue is complex enough consider a dedicated Slack channel. Although regular communication in the primary #expedite channel should still continue.
+* If issue is complex enough consider a dedicated Slack channel (regular communication in the primary #expedite channel should still continue).
 * If the issue is going to effect deployments, post in the [#deployments](https://holidayextras.slack.com/messages/deployments/) Slack channel.
 
 ## Fix
