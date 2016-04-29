@@ -6,21 +6,21 @@ Don't panic! Sometimes things do go wrong. It's important that these issues are 
 
 Confirmed with a metric such as:
 
-    X bugsnags being generated
+    X Bugsnags being generated
     Call centre reported issues
     Error screen showing raised booking errors
 
-## First web contact takes ownership
+## Ownership
 
 Generally the issue will be reported to web department or the someone in web will find the issue.
 
-The web contact follows issue through to the resolution or hand over to someone else to fill this role.
-
-Use online channels to keep all interested parties updated **regularly**.
+* First web contact takes ownership.
+* The web contact follows issue through to resolution or hands over to another team member to fulfill this role.
+* Use online channels to keep all interested parties updated **regularly**. See the communication section below for more info.
 
 ## Classification
 
-If web contact is unsure whether the issue should be expedited seek advice from a product owner before continuing.
+If the web contact is unsure whether the issue should be expedited seek advice from a product owner before continuing.
 
 Consider what metrics are being affected, eg:
 
@@ -28,7 +28,7 @@ Consider what metrics are being affected, eg:
 * Customer experience
 * Revenue
 
-As well as lifespan of the issue.
+As well as lifespan the of the issue.
 
 ## Team formed
 
@@ -40,6 +40,14 @@ Cross functional with the following elements:
 * Product owner.
 
 For out of hours use the [web contact details](https://holidayextras.jira.com/wiki/display/WEB/Web+Contact+Details) for contact info.
+
+## Communication
+
+Regular communication is essential. By sending regular updates the Web Team and HX stakeholders are able to manage and mitigate the impact of the issue. It's important that attention is not drawn away from fixing the immediate issue, so consider delegating the communication to someone else if you're involved with the fix itself.
+
+* Post in the main [#expedite](https://holidayextras.slack.com/messages/expedite/) slack channel.
+* If issue is complex enough consider a dedicated Slack channel (regular communication in the primary #expedite channel should still continue).
+* If the issue is going to effect deployments, post in the [#deployments](https://holidayextras.slack.com/messages/deployments/) Slack channel.
 
 ## Fix
 
@@ -63,5 +71,6 @@ Do we need to break any of the above, if so why?
 
 ## Conclusion
 
-* Summary email to web (Include any revelant PR's/JIRA's/links).
+* Summary email to web (Include any relevant PR's/JIRA's/links).
 * Communication to origin of report; call centre or other department.
+* The web contact that took ownership of the issue should schedule (or delegate to another to schedule) a [blameless postmortem](Blameless-Postmortems.md).
