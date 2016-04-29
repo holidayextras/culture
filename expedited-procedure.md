@@ -28,7 +28,7 @@ Consider what metrics are being affected, eg:
 * Customer experience
 * Revenue
 
-As well as lifespan the of the issue.
+As well as the life span the of the issue.
 
 ## Team formed
 
