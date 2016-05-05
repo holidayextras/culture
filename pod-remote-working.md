@@ -1,6 +1,9 @@
 ## Pod Remote Working - Recommended Practices
 
 ### General
+Remote working has many benefits - and with the HX Anytime+ policy we can all share in the benefits.
+Great remote working takes practice though and by sharing our ideas and experiences we can all work to make this even better.
+This document is designed to capture pod best practices and improve them gradually over time.
 
 #### Video Conferencing (Hangouts/Slack)
 
