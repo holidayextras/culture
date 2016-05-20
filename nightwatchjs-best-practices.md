@@ -1,7 +1,7 @@
 # NightwatchJS best practices  #
 ----------
 
-**Running tests**
+## Running tests ##
 
 ----------
 
@@ -15,7 +15,7 @@ To run a single test in nightwatch
 
     ./node_modules/.bin/nightwatch -c <path-to-config> -t <path-to-test>
 
-**Writing tests**
+## Writing tests ##
 
 
 ----------
@@ -48,7 +48,7 @@ How that would be called in the test:
         browser.page.essentialLanding().navigate().waitForPage();
     }
 
-**Do's and Don'ts**
+## Do's and Don'ts ##
 
 
 ----------
@@ -56,17 +56,17 @@ How that would be called in the test:
 
 **Do’s**
 
-Use the globals file for storing reusable test data such as product codes and test payment details.
-
-Keep css selectors out of your tests. Use page objects and page commands instead
-Use commands where possible to avoid code duplication and app specific logic in your tests
+- Use the globals file for storing reusable test data such as product codes and test payment details.
+- Keep css selectors out of your tests. Use page objects and page commands instead
+- Use commands where possible to avoid code duplication and app specific logic in your tests
 
 **Don'ts**
-Put functions in your globals file, instead create them as a custom command
-Use browser.pause, wait for element instead where possible
 
-**Resources**
-http://nightwatchjs.org/guide - Nightwatch documentation
-http://martinfowler.com/bliki/PageObject.html - Great guide on using page objects
+- Put functions in your globals file, instead create them as a custom command
+- Use browser.pause, wait for element instead where possible
+
+## Resources ##
+- [Nightwatch documentation] (http://nightwatchjs.org/guide)
+- [Great guide on using page objects] (http://martinfowler.com/bliki/PageObject.html)
 
 
