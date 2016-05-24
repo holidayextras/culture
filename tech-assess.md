@@ -34,7 +34,7 @@ In the Google Sheet you will find the following columns to complete. Some of the
 
 **Bonus points (R/A/G)** - Quality, structure and UX/UI are not catch-all and a candidate may find a way to impress outside of these criteria, so note those things under bonus points. We’re very interested in finding candidates who do go above and beyond, but also understand that some may not have the time to dedicate to the challenge. If you are unable to find any bonus points, please do mark the cell red. The main focus of deciding to take a candidate further will be on the criteria above.
 
-**Approximate skill level** - It’s difficult to judge on one assessment, and we’ll take your judgement with a pinch of salt, but try to estimate where the candidate would sit in terms of skill level within our team. 
+**Approximate skill level** - It’s difficult to judge on one technical assessment, and we’ll take your judgement in the context of other interviews, but try to estimate where the candidate would sit in terms of skill level within our team. 
 
 **Other notes** - Anything else you want to add!
 
