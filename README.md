@@ -52,6 +52,7 @@ This is a collection of documents that outline Holiday Extras' culture and devel
  * [PR Blog Post Template](pr-template-blogpost.md)
  * [Shortbreaks PR Template](shortbreaks/pr-template.md)
  * [Shortbreaks QA PR Template](shortbreaks/pr-qa-template.md)
+ * [Marking technical assessments](tech-assess.md)
 
 ## Contributing
 
