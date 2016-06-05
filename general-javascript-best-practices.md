@@ -82,12 +82,7 @@ We avoid this issue in the good examples. Depending on the complexity of the con
 
 ## Functional JavaScript
 
-JavaScript's
-[first-class functions](https://en.wikipedia.org/wiki/First-class_function)
-enable it to support the
-[functional programming paradigm](https://en.wikipedia.org/wiki/Functional_programming).
-This is _a good thing_: making your code **more functional** can improve its
-readability, testability and maintainability.
+JavaScript's [first-class functions](https://en.wikipedia.org/wiki/First-class_function) enable it to support the [functional programming paradigm](https://en.wikipedia.org/wiki/Functional_programming). This is _a good thing_: making your code **more functional** can improve its readability, testability and maintainability.
 
 ### Partial (function) application
 
@@ -99,41 +94,32 @@ function subtract(x, y) {
 }
 ```
 
-The following are all equivalent ways to implement the `subtractFrom5` and
-`subtract5` functions using `subtract`:
+The following are all equivalent ways to implement the `subtractFrom5` and `subtract5` functions using `subtract`:
 
-* Wrapper functions:
-
-  ```javascript
-  var subtractFrom5 = function (x) {
-    return subtract(5, x);
-  }
-  var subtract5 = function (x) {
-    return subtract(x, 5);
-  }
-  ```
-
-* [Partial application](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind#Partial_Functions)
- * **ES5**:
+ * Wrapper functions:
 
    ```javascript
-   var subtractFrom5 = subtract.bind(null, 5);
-   // `subtract5` impossible using `bind` for partial application
+   var subtractFrom5 = function (x) {
+     return subtract(5, x);
+   }
+   var subtract5 = function (x) {
+     return subtract(x, 5);
+   }
    ```
- * **ES2015**:
 
-   ```javascript
-   var subtractFrom5 = subtract.bind(null, 5);
-   var subtractFrom5 = subtract.bind(null, x=5);  // more explicit
-   var subtract5 = subtract.bind(null, y=5);
-   ```
-* lodash (underscore) [`partial`](https://lodash.com/docs#partial) /
-  [`partialRight`](https://lodash.com/docs#partialRight):
+ * [Partial application](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind#Partial_Functions):
+   * **ES5 / ES2015**:
 
-  ```javascript
-  var subtractFrom5 = _.partial(subtract, 5);
-  var subtract5 = _.partialRight(subtract, 5);
-  ```
+     ```javascript
+     var subtractFrom5 = subtract.bind(null, 5);
+     // `subtract5` impossible using `bind` for partial application
+     ```
+   * **lodash [`partial`](https://lodash.com/docs#partial) / [`partialRight`](https://lodash.com/docs#partialRight)**:
+
+     ```javascript
+     var subtractFrom5 = _.partial(subtract, 5);
+     var subtract5 = _.partialRight(subtract, 5);
+     ```
 
 The functional alternatives created using partial application are more concise
 and _can_ be more readable.
