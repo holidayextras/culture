@@ -25,3 +25,6 @@ If a test inconsistently fails, it's no good.
 
 ## Thy tests should be fast
 If a unit test takes more than 2 seconds to run, it's no good.
+
+## Thy tests should be described via emergent properties
+If a test can't be described by the impact it has on the consumer of the code, it probably doesn't warrant a test.
