@@ -1,7 +1,9 @@
 # HolidayExtras Automated Testing Commandments
 
+*DISCLAIMER* - Failure to meet any of these points doesn't mean new ideas or pull requests should be outright rejected. They should be used as points of discussion to ultimately help us ship code faster.
+
 ## Thou shalt be consistent within projects
-If a project has a de-facto standard, it should be maintained. The process for changing a de-facto standard should take the form of a whiteboard meeting, not a pull request.
+If a project has a de-facto standard, it should be maintained. The process for changing a de-facto standard should be people focused, and should not be initially communicated via a pull request.
 
 ## Thy tests should be obvious
 If the test behaviour isn't obvious by looking at it, it's no good. If I have to scroll for days to read a test, it's no good.
