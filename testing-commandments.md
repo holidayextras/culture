@@ -11,8 +11,8 @@ If a project has a de-facto standard, it should be maintained. The process for c
 ## Thy tests should be obvious
 If the test behaviour isn't obvious by looking at it, it's no good. If I have to scroll for days to read a test, it's no good.
 
-## Thy tests should be loosely coupled with thy code
-If I make a single code change and multiple tests fail, it's no good. Only test for something once.
+## Thy tests should only test for something once
+If I make a single code change and multiple tests fail, it's no good.
 
 ## Broken code should break thy tests
 If I can delete code and it's corresponding test suite still passes, it's no good.
