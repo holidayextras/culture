@@ -2,6 +2,9 @@
 
 *DISCLAIMER* - Failure to meet any of these points doesn't mean new ideas or pull requests should be outright rejected. They should be used as points of discussion to ultimately help us ship code faster.
 
+`code` is used in reference to the code being tested. The target, maybe?
+`test` is used in reference to the code that is exercising the codebase to validate correctness.
+
 ## Thou shalt be consistent within projects
 If a project has a de-facto standard, it should be maintained. The process for changing a de-facto standard should be people focused, and should not be initially communicated via a pull request.
 
