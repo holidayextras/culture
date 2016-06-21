@@ -4,7 +4,7 @@
 If a project has a de-facto standard, it should be maintained. The process for changing a de-facto standard should take the form of a whiteboard meeting, not a pull request.
 
 ## Thy tests should be obvious
-If the test behaviour isn't obvious by looking at it, it's no good.
+If the test behaviour isn't obvious by looking at it, it's no good. If I have to scroll for days to read a test, it's no good.
 
 ## Thy tests should be loosely coupled with thy code
 If I make a single code change and many tests fail, it's no good.
