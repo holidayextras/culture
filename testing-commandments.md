@@ -1,4 +1,4 @@
-# HolidayExtras Automated Testing Commandments
+# 8 Commandments of Automated Testing
 
 *DISCLAIMER* - Failure to meet any of these points doesn't mean new ideas or pull requests should be outright rejected. They should be used as points of discussion to ultimately help us ship code faster.
 
@@ -24,7 +24,7 @@ If I break a feature and a test fails, but it isn't obvious what is wrong, it's 
 If a test inconsistently fails, it's no good.
 
 ## Thy tests should be fast
-If a unit test takes more than 2 seconds to run, it's no good.
+If a single test takes more than 2 seconds to run, it's no good. Exceptions can be allowed for Selenium.
 
 ## Thy tests should be described via emergent properties
 If a test can't be described by the impact it has on the consumer of the code, it probably doesn't warrant a test.
