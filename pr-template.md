@@ -17,9 +17,15 @@
 
 ---
 
+**Notes**
+
+When reviewing Static Site Generator projects, please think carefully about what can be done to centralise common functionality. Please also pay attention to anything configurable that will also need updating in the Yeoman generator template
+
+---
+
 **Reviewer**
 - [ ] :+1:
-- [ ] This PR need any additional reviewers!
+- [ ] I don't think this PR needs any additional reviewers
 
 By adding a +1 you are confirming you have...
 - Witnessed the work behaving as expected (this could be on the author's machine or screencast).
