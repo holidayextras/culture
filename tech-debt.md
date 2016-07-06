@@ -4,7 +4,7 @@
 
 Tech Debt is an inevitable part of programming, a valuable tool even. Do not shy away from it. Embrace it! Subdue it! Make it your servant. Whatever you do, *do not just ignore it* and hope it goes away.
 
-*Note:* This document is aspirational, it doesn't necessarily reflect the current culture of technical debt at Holiday Extras. It does however reflect where we would like to be, and is a work in progress. If you have ideas about how to better manage technical debt please tell people. Good places to do this are the #developers, #guid-frontend-tech and #guild-backend-tech slack channels or with a PR for this page.
+*Note:* This document is aspirational, it doesn't necessarily reflect the current culture of technical debt at Holiday Extras. It does however reflect where we would like to be, and is a work in progress. If you have ideas about how to better manage technical debt please tell people. Good places to do this are the #developers, #guild-frontend-tech and #guild-backend-tech slack channels or with a PR for this page.
 
 ## The Seven Commandments of Tech Debt
 
@@ -19,8 +19,8 @@ This commandment comes from our general company values. All our values are relev
 Tech Debt to some extent is part and parcel of every piece of code that you write. Before you lay down a single line of code, you should be thinking about tech debt. Perhaps even as soon as you are aware of upcoming work. It is never too early to be thinking about:
 
 * existing debt that might slow you down
-* existing debt that it makes sense to pay off
-* potential new debt that it makes sense to accrue
+* existing debt that makes sense to pay off
+* potential new debt that makes sense to accrue
 * how you might be able to avoid adding more tech debt
 
 ### 3. Let's Talk About Tech Debt
@@ -72,7 +72,7 @@ When it comes to paying off existing debt, focus on debt that currently has or i
 
 ### 6. Little and often
 
-Technical debt should be paid of continuously in small payments. Exactly how much is up for debate. But here are some things to bare in mind:
+Technical debt should be paid off continuously in small payments. Exactly how much is up for debate. But here are some things to bear in mind:
 
 * Little and often over big and rarely.
 * Big payoffs may be required from time to time.
