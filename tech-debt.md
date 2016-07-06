@@ -2,7 +2,7 @@
 
 > a concept in programming that reflects the extra development work that arises when code that is easy to implement in the short run is used instead of applying the best overall solution
 
-Tech Debt is an inevitable part of programming, a valuable tool even. Do not shy away from it. Embrace it! Subdue it! Make it your servant. What ever you do, *do not just ignore it* and hope it goes away.
+Tech Debt is an inevitable part of programming, a valuable tool even. Do not shy away from it. Embrace it! Subdue it! Make it your servant. Whatever you do, *do not just ignore it* and hope it goes away.
 
 *Note:* This document is aspirational, it doesn't necessarily reflect the current culture of technical debt at Holiday Extras. It does however reflect where we would like to be, and is a work in progress. If you have ideas about how to better manage technical debt please tell people. Good places to do this are the #developers, #guid-front-end and #guild-back-end slack channels or with a PR for this page.
 
