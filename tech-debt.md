@@ -43,7 +43,7 @@ Once you have some picture of the above you should be constantly communicating y
 
 The existing communication channels are perfect for talking about tech debt. We just need to make sure we are using them.
 
-* *Stand ups* can be a great place to flag any technical debt you are facing or expecting to face in the immediate term.
+* *Stand-ups* can be a great place to flag any technical debt you are facing or expecting to face in the immediate term.
 * *Sprint planning* can be used to flag any technical debt that may impact upcoming work, and can be used to plan work to address existing debt.
 * *Retrospectives* are ideal for reflecting on whether technical debt had unforeseen consequences, the overall state of tech debt and whether we need to make any changes to deal with it.
 * *Work in Progress* pull requests can be used to get feedback on changes before they are ready for formal code review. *Early feedback can go a long way to avoid technical debt in the first place.*
@@ -52,13 +52,14 @@ The existing communication channels are perfect for talking about tech debt. We 
   * what, if anything, the changes do to help address existing tech debt
   * what technical debt the changes introduce or compound, and any justification for them
   * what GitHub issues and/or Jiras have been raised to address any new debt in the future
+* *Scrum of Scrums* is a great place to bring issues you are having with tech debt to other pods.
 * *Guilds* can be used to see if people in other pods are having a similar experience with an existing piece of tech debt.
 
 ### 4. Limit its influence
 
 Technical debt that is isolated has much less scope to interfere with other code. This tends to emerge naturally if code is loosely coupled and modular in nature.
 
-Say you have a module and its internal implementation is mess, but its interface is well thought out and does not change very often. This is an example of isolated technical debt. The messy internals will rarely interfere with work on the wider application. If however the interface becomes the subject of many changes, or it has a lot of bugs, it might be a good time to refactor or even just throw it out and start again.
+Say you have a module and its internal implementation is mess, but its interface is well thought out and does not change very often. This is an example of isolated technical debt. The messy internals will rarely interfere with work on the wider application. If however the interface becomes the subject of many changes, or it has a lot of bugs, it might be a good time to refactor or even just throw it out and start again. [The Facade Pattern](https://en.wikipedia.org/wiki/Facade_pattern) is one way to do this.
 
 ### 5. Be deliberate
 
@@ -82,7 +83,7 @@ Technical debt should be paid off continuously in small payments. Exactly how mu
 
 ### 7. Aspire to be a boy scout
 
-> Always leave the campground cleaner than you found it.
+#### "Always leave the campground cleaner than you found it."
 
 All other things being equal a change to the code base should leave it in a better state than you found it. In reality this might not be possible. Business demands may require things to go out without any improvements. Sometimes the only improvement you can make to code would be so comprehensive it risks confusing the purpose of the PR and justifies its own.
 
