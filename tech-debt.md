@@ -66,7 +66,7 @@ Whilst it is "okay" to take on technical debt, it has to be a deliberate decisio
 
 These decisions have to consider the business demands and the technical implications. They must be made by pod leads and developers in concert. By their nature it is impossible for either to do it on their own.
 
-It is the responsibility of developers to explain to leads the current state of technical debt and any implications it will have on current or future work. It is the responsibility of leads to explain to developers the priorities of the business and the urgency and importance of work.
+It is the responsibility of developers to explain to pod leads about potential new or current technical debt and the implications it will have on current or future work. It is the responsibility of pod leads to explain to developers the priorities of the business and the urgency and importance of work. Working together they must balance these concerns.
 
 When it comes to paying off existing debt, focus on debt that currently has or is likely to have in the near future a "high rate of interest". Technical debt that is isolated can be safely left for another day.
 
