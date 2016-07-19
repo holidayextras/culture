@@ -10,11 +10,11 @@ A perfect example of this is lodash. Lodash is used in many of our projects. If 
 
 When versions are matched:
 
-[Small footprint](/images/dependencies/small.png)
+![Small footprint](/images/dependencies/small.png)
 
 After I have updated the lodash version within our client application but not it's dependencies:
 
-[Larger footprint](/images/dependencies/small.png)
+![Larger footprint](/images/dependencies/small.png)
 
 The total bundle size has increased by 6.3%
 
