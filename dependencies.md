@@ -1,10 +1,12 @@
-# Dependencies
+# Client-side Dependencies
+
+## Version Mismatching
 
 During our recent work to reduce the footprint of our client-side JavaScript we have come across a reoccurring issue that causes our JavaScript bundle to keep increasing in size.
 
-Many of our applications have both internal and external code dependencies and these internal dependencies usually contain a set of their own dependencies. What we are finding is that when there are shared dependencies between the parent project and the child, there are occasions when dependencies are updated in one project and not another.
+Many of our applications have both internal and external code dependencies and these internal dependencies usually contain a set of their own dependencies. When there are shared dependencies between the parent project and the child, there are occasions when dependencies are updated in one project and not another.
 
-## Example
+### Example
 
 A perfect example of this is Lodash. Lodash is used in many of our projects and if versions are not kept in sync then you can see something like this:
 
@@ -21,3 +23,10 @@ The total bundle size has increased by 6.3%
 When we go to generate the minified JavaScript asset and it finds a version mismatch, it will usually bundle both versions of the package into the released asset, which will impact the size and performance of our applications.
 
 With this in mind, when upgrading/downgrading dependencies in any way then it would be beneficial to check that any applications that are dependent on these libraries have their versions kept in sync.
+
+## Choosing Good Dependencies
+
+In the majority of cases it is a better option to use an existing module that contains the functionality you require rather than implementing it yourself. When choosing modules it's worth evaluating them
+
+* Is the module well maintained? Are the owners receptive to issues and pull requests?
+* Is the module unnecessarily bloated?
