@@ -14,7 +14,7 @@ When versions are matched:
 
 After I have updated the lodash version within our client application but not it's dependencies:
 
-![Larger footprint](/images/dependencies/small.png)
+![Larger footprint](/images/dependencies/large.png)
 
 The total bundle size has increased by 6.3%
 
