@@ -236,8 +236,39 @@ For internal modules a separate `build` task can be used then the module packed 
 
 ### Dependencies
 
+#### Version Mismatching
+
+Many of our applications have both internal and external code dependencies and these internal dependencies usually contain a set of their own dependencies. When there are shared dependencies between the parent project and the child, there are occasions when dependencies are updated in one project and not another.
+
+##### Example
+
+A perfect example of this is Lodash. Lodash is used in many of our projects and if versions are not kept in sync then you can see something like this:
+
+When versions are matched:
+
+![Small footprint](/images/dependencies/small.png)
+
+After upgrading the Lodash version within our client application but not it's dependencies:
+
+![Larger footprint](/images/dependencies/large.png)
+
+The total bundle size has increased by 6.3%
+
+When we go to generate the minified JavaScript asset and it finds a version mismatch, it will usually bundle both versions of the package into the released asset, which will impact the size and performance of our applications.
+
+With this in mind, when upgrading/downgrading dependencies in any way then it would be beneficial to check that any applications that are dependent on these libraries have their versions kept in sync.
+
+#### Choosing Third-party Dependencies
+
+In the majority of cases it is a better option to use an existing module that contains the functionality you require rather than implementing it yourself. When choosing modules it's worth evaluating them
+
+* Is the module well maintained? Are the owners receptive to issues and pull requests?
+* Is the module unnecessarily bloated?
+
+
+#### Versioning
+
 When specifying requirements first aim to use the `^` semver match. Only resort to using `~` or pinning the version if there is a known problem the module's versioning strategy.
 
-If a module is intended to be consumed by another one of our own projects, try to use the same version of common modules to reduce build time and size.
 
-When choosing a third party module to use, prefer ones with a version number of one or above, this will allow for more lenient semver matching for dependencies and hopefully more reliable version behaviour from the module.
+Also, when choosing a third party module to use, prefer ones with a version number of one or above, this will allow for more lenient semver matching for dependencies and hopefully more reliable version behavior from the module.
