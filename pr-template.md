@@ -4,8 +4,6 @@
 
 #### How can this be tested?
 
-#### What domains are affected?
-
 #### Any tech debt?
 
 #### Screenshots / Screencast
@@ -14,12 +12,6 @@
 ![]()
 
 - [ ] I have checked our general [contributing document](https://github.com/holidayextras/culture/blob/master/CONTRIBUTING.md) and the project specific [contributing document](../blob/master/CONTRIBUTING.md) (if present) and I'm happy for this to be reviewed.
-
----
-
-**Notes**
-
-When reviewing Static Site Generator projects, please think carefully about what can be done to centralise common functionality. Please also pay attention to anything configurable that will also need updating in the Yeoman generator template
 
 ---
 
