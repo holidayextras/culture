@@ -24,6 +24,7 @@ This is a collection of documents that outline Holiday Extras' culture and devel
  * [Application Tracking](application-tracking.md)
  * [Testing Standard](testing-standard.md)
  * [Testing Overview](testing-overview.md)
+ * [SEO Best Practices and Principles](seo/README.md)
  * [Frontend Performance](front-end-performance.md)
 
 ### Process
