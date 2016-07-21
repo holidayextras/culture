@@ -1,6 +1,6 @@
 # Front end speed
 
-_**Any changes to front end scripts must not downgrade the speed and performance on front end.** - This means that just because we have an SDK or other 'best practice', if its means larger files or extra http requests on the browser then we shouldn't do it._
+_**Any changes to front end scripts must not downgrade the speed and performance on front end.** - This means that just because we have an SDK or other 'best practice', if its means larger files or extra http requests on the browser then we won't do it._
 
 Page speed is often confused with "site speed," which is actually the page speed for a sample of page views on a site. Page speed can be described in either "page load time" (the time it takes to fully display the content on a specific page) or "time to first byte" (how long it takes for your browser to receive the first byte of information from the web server).
 
