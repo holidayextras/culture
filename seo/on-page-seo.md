@@ -18,7 +18,7 @@ It can be an indicator of poor quality if every page on the website uses the sam
 Google has expressed that the meta keywords tag no longer provides any value within organic listings for websites of this nature. That said, Bing has been known to use the meta keywords tag as a negative ranking factor; if a large amount of keywords are used in a spammy fashion it can be interpreted as spam.
 
 ## Page Content
-The content of the page is one of the biggest factors within Google's (and many other search engine's) ranking algorithms. The search engine will use when determining how relevant a page is to a user's search query. You should aim to include the core keyword for the page within its content however because not to overuse it.
+The content of the page is one of the biggest factors within Google's (and many other search engine's) ranking algorithms. The search engine will use when determining how relevant a page is to a user's search query. You should aim to include the core keyword for the page within its content, however don't overuse it.
 
 There is no scientific rule of thumb as to how many times a keyword should be used within a page. Referring back to Google's basic principles you should "Make pages primarily for users, not for search engines". With this in mind it's usually worth asking yourself whether the content would make sense if read aloud.
 
