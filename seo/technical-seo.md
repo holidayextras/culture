@@ -10,6 +10,22 @@ Search engines like Google now support structured mark up known as schema which 
 There are certain guidelines that must be followed to have your pages schema included in the search results. If these are not met then an entire site can lose its markup in the results and would then force the SEO team to submit for a reconciliation request to Google to remove the ban.  
 Please refer to the [schema docs](schema.md)
 
+### Shared components
+All developers will understand the importance and benefits of sharing components and resources across different projects and templates. Sharing these allow us to not need to write the same component again and again, plus using the same assets allows for consistency and adding an asset to someones cache speeds up their experience too.
+
+There are some important things to remember however when it comes to front end SEO pages:
+* Sharing very small components is awesome, these are items such as:
+  * room dropdowns,
+  * airport location dropdowns,
+  * datepickers,
+* Sharing larger components across domains and subdomains is very bad, Google will see duplicate content and penalise the page or whole site.  
+These may include items such as:
+  * Headers
+  * footers
+  * combined components as a collection
+  * content included components
+  * components containing ids and classes that dont change
+
 ### Robots.txt
 The robots.txt file contains a series of directives that you wish the search engine robots/spiders to adhere to. It can be used to tell the search engine to ignore pages or directories. An incorrectly configured robots.txt file can stop whole sections of websites from being returned within the search results or in severe cases whole websites.  
 [See more about the robots.txt here](http://www.robotstxt.org/)
