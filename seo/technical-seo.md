@@ -5,6 +5,11 @@ Technical SEO refers to changes which need to be made by the developer or by mor
 A new but extremely important ranking factor is now download speed or each page and a site as a whole.
 There are many factors contributing to download speed, these have been addressed in the [front end speed](speed.md) docs.
 
+### Rich snippets and schema
+Search engines like Google now support structured mark up known as schema which follows the guildlines from the [schema.org](http://schema.org).  
+There are certain guidelines that must be followed to have your pages schema included in the search results. If these are not met then an entire site can lose its markup in the results and would then force the SEO team to submit for a reconciliation request to Google to remove the ban.  
+Please refer to the [schema docs](schema.md)
+
 ### Robots.txt
 The robots.txt file contains a series of directives that you wish the search engine robots/spiders to adhere to. It can be used to tell the search engine to ignore pages or directories. An incorrectly configured robots.txt file can stop whole sections of websites from being returned within the search results or in severe cases whole websites.  
 [See more about the robots.txt here](http://www.robotstxt.org/)
