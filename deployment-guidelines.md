@@ -87,16 +87,16 @@ Example config:
     deployment:
       production:
         branch: staging
-          commands:
-            - ./scripts/deploy.sh
-            environment
-              DEPLOY_ENV: staging
+        commands:
+          - ./scripts/deploy.sh
+        environment
+          DEPLOY_ENV: staging
       staging:
         branch: master
-          commands:
-            - ./scripts/deploy.sh
-            environment
-              DEPLOY_ENV: production
+        commands:
+          - ./scripts/deploy.sh
+        environment
+          DEPLOY_ENV: production
 
 #### Permissions
 
@@ -121,6 +121,19 @@ To allow modules and applications to consume our private modules we use git rele
 
 The github release can be created automatically once a merge to the project's master branch has been performed, as shown below.
 
+Please make sure you have included the deployment helper in the project's `devDependencies` as follows:
+
+    "devDependencies": {
+      "@holidayextras/deployment-helpers": "^1.4.1"
+    }
+
+On CI please set the following environment variables:
+
+    GITHUB_USER
+    GITHUB_API_TOKEN
+
+We have specific CircleCI and Travis github user credentials to use here, please ask an SA for details.
+
 #### Travis
 
 Example config:
@@ -132,8 +145,12 @@ Example config:
       on:
         branch: master
 
-Please make sure you have included the deployment helper in the project's `devDependencies` as follows:
+#### Circle CI
 
-    "devDependencies": {
-      "@holidayextras/deployment-helpers": "^1.3.0"
-    }
+Example config:
+
+    deployment:
+      production:
+        branch: master
+        commands:
+          - node_modules/\@holidayextras/deployment-helpers/nodeApps/createPrivateRelease.sh
