@@ -3,7 +3,22 @@ Technical SEO refers to changes which need to be made by the developer or by mor
 
 ### Download
 A new but extremely important ranking factor is now download speed or each page and a site as a whole.
-There are many factors contributing to download speed, these have been addressed in the [front end speed](speed.md) docs.
+There are many factors contributing to download speed that need to be taken into account.
+
+_**Any changes to front end scripts must not downgrade the speed and performance on front end.** - This means that just because we have an SDK or other 'best practice', if its means larger files or extra http requests on the browser then we won't do it._
+
+Page speed is often confused with "site speed," which is actually the page speed for a sample of page views on a site. Page speed can be described in either "page load time" (the time it takes to fully display the content on a specific page) or "time to first byte" (how long it takes for your browser to receive the first byte of information from the web server).
+
+No matter how you measure it, a faster page speed is better. Many people have found that faster pages both rank and convert better.
+
+#### SEO Speed Best Practices
+
+Google has indicated site speed (and as a result, page speed) is one of the signals used by its algorithm to rank pages. And research has shown that Google might be specifically measuring time to first byte as when it considers page speed. In addition, a slow page speed means that search engines can crawl fewer pages using their allocated crawl budget, and this could negatively affect your indexation.
+
+Page speed is also important to user experience. Pages with a longer load time tend to have higher bounce rates and lower average time on page. Longer load times have also been shown to negatively affect conversions.
+
+There is more information available in the [front end performance](../front-end-performance.md) docs.
+
 
 ### Rich snippets and schema
 Search engines like Google now support structured mark up known as schema which follows the guildlines from the [schema.org](http://schema.org).  
