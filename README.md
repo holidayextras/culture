@@ -24,6 +24,7 @@ This is a collection of documents that outline Holiday Extras' culture and devel
  * [Application Tracking](application-tracking.md)
  * [Testing Standard](testing-standard.md)
  * [Testing Overview](testing-overview.md)
+ * [SEO Best Practices and Principles](seo/README.md)
  * [Frontend Performance](front-end-performance.md)
 
 ### Process
@@ -52,6 +53,8 @@ This is a collection of documents that outline Holiday Extras' culture and devel
  * [PR Blog Post Template](pr-template-blogpost.md)
  * [Shortbreaks PR Template](shortbreaks/pr-template.md)
  * [Shortbreaks QA PR Template](shortbreaks/pr-qa-template.md)
+ * [SEO Technical Principals](seo/technical-seo.md)
+ * [SEO On Page Principals](seo/on-page-seo.md)
 
 ## Contributing
 
