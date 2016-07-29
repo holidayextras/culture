@@ -14,7 +14,7 @@ beforehand. An example would be if you had 10 or more members involved you could
 alternatively stay as one group and rotate between one person driving the mac and one person influencing what to
 test/check.
 
-Mob testing is most definitely not an excuse to leave all testing on a piece of code to the last minute. We should
+Mob Testing is most definitely not an excuse to leave all testing on a piece of code to the last minute. We should
 still be testing promptly and often to ensure we catch any issues early on.  
 
 If you need to arrange a Mob Testing session please consider the above points beforehand.
