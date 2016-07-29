@@ -40,7 +40,7 @@ This is a collection of documents that outline Holiday Extras' culture and devel
  * [Contributing to projects](CONTRIBUTIUNG.md)
  * [Pair programming] (pairing.md)
  * [Translations](translations.md)
- * [Mob Testing] (mob-tesing.md)
+ * [Mob Testing] (mob-testing.md)
 
 ### Other
 
