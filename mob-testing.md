@@ -9,6 +9,11 @@ potentially have a big impact. It is most effective when there is a group of 2 o
 and sharing Browsers and Devices between them. It is a quicker process in findings bugs and more of an exploratory
 approach is taken. 
 
+There is no limit to the amount of people that can be involved in Mob Testing providing the session is arranged
+beforehand. An example would be if you had 10 or more members involved you could split off into smaller groups or
+alternatively stay as one group and rotate between one person driving the mac and one person influencing what to
+test/check.
+
 If you need to arrange a Mob Testing session please consider the above points beforehand.
 
 ## Key features of Mob Testing:
