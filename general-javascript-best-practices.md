@@ -149,6 +149,18 @@ Use instead of underscore, due to correct semantic versioning, better performanc
 
 Please only require the methods you need rather than the whole library in order to keep build sizes at a minimum.
 
+**Good:**
+```javascript
+const _ = {
+  includes: require('lodash/collection/includes')
+};
+```
+
+**Bad:**
+```javascript
+const _ = require('lodash');
+```
+
 ### grunt-shell
 
 Use instead of grunt-exec, due to a configurable max output buffer size option. Required if running a command with a lot of output.
@@ -209,3 +221,54 @@ var name = "oli";
 var list = [ 1, 4, 5, 7, 9 ];
 doStuff(name, list);
 ```
+
+## NPM Modules
+
+When creating an NPM module for others to use (private or open source) it is worth giving consideration to the following points.
+
+### Post install scripts
+
+These are run every time the module is installed by a consuming project which will increase CI and developer build time.
+
+If the module is being released to NPM consider using a `prepublish` script instead.
+
+For internal modules a separate `build` task can be used then the module packed and uploaded as an GitHub asset to accompany releases. For more information please see the [Deployment Guidelines for private NPM releases](deployment-guidelines.md#private-npm-releases)
+
+### Dependencies
+
+#### Version Mismatching
+
+Many of our applications have both internal and external code dependencies and these internal dependencies usually contain a set of their own dependencies. When there are shared dependencies between the parent project and the child, there are occasions when dependencies are updated in one project and not another.
+
+##### Example
+
+A perfect example of this is Lodash. Lodash is used in many of our projects and if versions are not kept in sync then you can see something like this:
+
+When versions are matched:
+
+![Small footprint](/images/dependencies/small.png)
+
+After upgrading the Lodash version within our client application but not it's dependencies:
+
+![Larger footprint](/images/dependencies/large.png)
+
+The total bundle size has increased by 6.3%
+
+When we go to generate the minified JavaScript asset and it finds a version mismatch, it will usually bundle both versions of the package into the released asset, which will impact the size and performance of our applications.
+
+With this in mind, when upgrading/downgrading dependencies in any way then it would be beneficial to check that any applications that are dependent on these libraries have their versions kept in sync.
+
+#### Choosing Third-party Dependencies
+
+In the majority of cases it is a better option to use an existing module that contains the functionality you require rather than implementing it yourself. When choosing modules it's worth evaluating them
+
+* Is the module well maintained? Are the owners receptive to issues and pull requests?
+* Is the module unnecessarily bloated?
+
+
+#### Versioning
+
+When specifying requirements first aim to use the `^` semver match. Only resort to using `~` or pinning the version if there is a known problem the module's versioning strategy.
+
+
+Also, when choosing a third party module to use, prefer ones with a version number of one or above, this will allow for more lenient semver matching for dependencies and hopefully more reliable version behavior from the module.

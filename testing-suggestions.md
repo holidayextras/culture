@@ -1,4 +1,4 @@
-# HX Testing Standards
+# HX Testing Suggestions
 
 # 1.0 Unit Tests
 
@@ -84,11 +84,11 @@ module.exports = {
     if (!firstName) {
       return '';
     }
-    
+
     if (!lastName) {
       return firstName;
     }
-    
+
     return firstName + ' ' + lastName;
   }
 }
@@ -100,12 +100,12 @@ We'd end up writing the following test suite:
 var nameHelper = require('helpers/nameHelper.js');
 
 describe('nameHelper', function() {
-  
+
   describe('prettyFullName(firstName, lastName)', function() {
-  
+
   	  var testFirstName;
   	  var testLastName;
-  
+
   	  beforeEach(function() {
   	    testFirstName = 'Geoffrey';
   	    testLastName = 'Banks';
@@ -116,17 +116,17 @@ describe('nameHelper', function() {
        it('returns an empty string', function() {
          // Test that nameHelper.prettyFullName() returns an empty string
        });
-       	    
+
      });
-	
+
 	  context('when no last name is provided', function() {
-	  
+
        it('returns the first name', function() {
          // Test that nameHelper.prettyFullName(testFirstName) returns 'Geoffrey'
        });
 
      });
-	
+
      context('When both the first name and last name are provided', function() {
 
        it('returns the first name and the last name concatenated', function() {
@@ -261,7 +261,7 @@ someModule._action = function(number) {
     if (i%3 == 0) {
       number++;
     }
-    
+
     if (i>4) {
       number++;
     }
@@ -278,11 +278,11 @@ someModule._numberLoop = function(number) {
   if (i%3 == 0) {
     number++;
   }
-  
+
   if (i>4) {
     number++;
   }
-   
+
   number++;
   return number;
 };
@@ -305,7 +305,7 @@ Mocha makes this easy out of the box, we can pass a `done` callback to each `it`
       expect(result).toEqual(1337);
       done();
     });
-  ); 
+  );
 ```
 
 ### Testing the result of promises
@@ -314,7 +314,31 @@ Using the [chai-as-promised](https://github.com/domenic/chai-as-promised/) libra
 ```javascript
   it('the function calls back with the number 1337', function() {
     expect(myTestFunctionCall()).to.eventually.equal(1337);
-  );
+  });
+```
+
+### Testing side effects of promises
+
+Remember to include a `catch` in your test if you've put expectations of a promise's side effects inside a `then`
+
+```javascript
+  // Bad - your expectation might throw an error, which would be automatically caught.
+  // The test will never call `done`, and timeout instead of explaining why it failed
+  it('opens an alert', function(done) {
+    promisedOpenAlert().then(function() {
+      expect(window.alert).to.have.been.called();
+      done();
+    });
+  });
+
+  // Better - if `done` is called with an error argument it will fail your test with the
+  // details of the error; so you can pass it directly into `catch`
+  it('opens an alert', function(done) {
+    promisedOpenAlert().then(function() {
+      expect(window.alert).to.have.been.called();
+      done()
+    }).catch(done);
+  });
 ```
 
 ## 1.7 Testing React

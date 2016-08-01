@@ -15,6 +15,7 @@ This is a collection of documents that outline Holiday Extras' culture and devel
  * [Server Side Javascript Best Practices](serverside-javascript-best-practices.md)
  * [CI Best Practices](ci-best-practices.md)
  * [Git Best Practices](git-best-practices.md)
+ * [Git Flow Best Practices](gitflow.md)
  * [PR Best Practices](pr-best-practices.md)
  * [Markdown Best Practices](markdown-best-practices.md)
  * [SASS Best Practices](SASS-best-practices.md)
@@ -22,7 +23,9 @@ This is a collection of documents that outline Holiday Extras' culture and devel
  * [Accessibility Best Practices](accessibility-best-practices.md)
  * [Application Tracking](application-tracking.md)
  * [Testing Standard](testing-standard.md)
- * [Frontend Performance](frontend-performance.md)
+ * [Testing Overview](testing-overview.md)
+ * [SEO Best Practices and Principles](seo/README.md)
+ * [Frontend Performance](front-end-performance.md)
 
 ### Process
 
@@ -35,6 +38,9 @@ This is a collection of documents that outline Holiday Extras' culture and devel
  * [Publishing to npm](publishing-to-npm.md)
  * [Definition of Ready and Done](definition-of-ready-and-done.md)
  * [Contributing to projects](CONTRIBUTIUNG.md)
+ * [Pair programming] (pairing.md)
+ * [Translations](translations.md)
+ * [Mob Testing] (mob-testing.md)
 
 ### Other
 
@@ -48,6 +54,8 @@ This is a collection of documents that outline Holiday Extras' culture and devel
  * [PR Blog Post Template](pr-template-blogpost.md)
  * [Shortbreaks PR Template](shortbreaks/pr-template.md)
  * [Shortbreaks QA PR Template](shortbreaks/pr-qa-template.md)
+ * [SEO Technical Principals](seo/technical-seo.md)
+ * [SEO On Page Principals](seo/on-page-seo.md)
 
 ## Contributing
 

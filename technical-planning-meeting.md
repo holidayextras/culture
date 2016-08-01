@@ -24,8 +24,8 @@
 
 * 1 or more developers with a technical challenge
 * 1 or more software architects
-* 0 or more database gurus (if database work will be required)
-* 0 or more UXUI gurus (if frontend work will be required)
+* 1 or more database gurus (if database work will be required)
+* 1 or more UXUI gurus (if frontend work will be required)
 * 0 or more business owners (if the business requirements are sufficiently complex)
 * 0 or more testers (if there is a large testing requirement)
 * 0 or more project gurus (if developers might require additional technical assistance)
