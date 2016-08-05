@@ -104,7 +104,43 @@ var TrackableContrivedExample = React.createClass({
   …
 });
 ```
-The above example is good because the `ContrivedExample` component is no longer coupled to anything, it has an optional `onClick` function prop. This makes it suitable for use anywhere. In order to avoid loads of code duplication we've created a second `TrackableContrivedExample` component, which includes the tracker and is suitable for use on projects where we we want a trackable component.
+The above example is good because the `ContrivedExample` component is no longer coupled to anything, it has an optional `onClick` function prop. This makes it suitable for use anywhere. In order to avoid loads of code duplication we've created a second `TrackableContrivedExample` component, which includes the tracker and is suitable for use on projects where we want a trackable component.
+
+**ES6 classes**
+
+Using ES6 classes, we can rewrite the above **good** example as follows:
+```javascript
+class ContrivedExample extends React.Component{
+
+  handleClick() {
+    this.setState({ clicked: true });
+    if (this.props.handleClick) {
+      this.props.handleClick();
+    }
+  }
+	
+  …
+};
+
+class TrackableContrivedExample extends React.Component{
+
+  constructor(){
+    // if you use `this` in your method, you have to bind 
+    // it to the method in the constructor
+    // e.g. this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    tracker.track('Tracked a click');
+  }
+	
+  render() {
+    return (<ContrivedExample handleClick={() => this.handleClick()} />);
+  }
+  
+  …
+};
+``` 
 
 ## Troubleshooting
 We are maintaining our own troubleshooting doc: [React Troubleshooter](react-troubleshooter.md)
