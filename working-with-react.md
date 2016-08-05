@@ -110,7 +110,7 @@ The above example is good because the `ContrivedExample` component is no longer 
 
 Using ES6 classes, we can rewrite the above **good** example as follows:
 ```javascript
-class ContrivedExample extends React.Component{
+class ContrivedExample extends React.Component {
 
   handleClick() {
     this.setState({ clicked: true });
@@ -122,7 +122,7 @@ class ContrivedExample extends React.Component{
   …
 };
 
-class TrackableContrivedExample extends React.Component{
+class TrackableContrivedExample extends React.Component {
 
   constructor(){
     // if you use `this` in your method, you have to bind 
