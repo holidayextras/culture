@@ -7,7 +7,7 @@ No one likes a buggy application, so why should we build one?
 ## tl;dr
 - Process owned by Engineers through a working group
 - Facilitated by Janitorial stretch holders 
-  - Each Janitor will 'own' and oversee Pest Control for one system
+  - These Facilitators will 'own' and oversee Pest Control for one system they are expert in
 - One Engineer responsible for monitoring on a daily basis
 - Group meetings once a sprint
 - Monthly working group meetings to review the process.
