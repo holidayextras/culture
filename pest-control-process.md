@@ -25,6 +25,7 @@ This means communication is important. Engineers on rotation should be talking t
   * Time spent will vary, but should not be influenced by pod/sprint deadlines.
   * Keep an eye on reporting systems and logs e.g. Bugsnag, Metrics & Sumo Logic. 
     * When a new bug is caught
+      * If the bug meets Expedite criteria, raise in the `Expedite` slack channel and follow the [Expedited Procedure](expedited-procedure.md).
       * If you can recreate it, raise a `WEB` Jira with type set to `Bug`.
       * Add the `pestcontrol` label.
       * Giving details of the customer impact and how to recreate.
