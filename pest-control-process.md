@@ -1,46 +1,49 @@
 # Pest Control Process
 
-This is an important part of our developer role here. It allows us time to catch and resolve bugs and issues which we would not otherwise be prioritised. This creates a better development environment for us all as well as improving the customers experience on our site.
+This is a monitoring process owned by Engineers to ensure we catch and resolve bugs which slip through our automated and manual testing nets. This creates a better development environment for us all as well as improving customer experience on our site.
 
 No one likes a buggy application, so why should we build one?
 
 ## tl;dr
-- Check bug reporting systems regularly
-- One developer responsible on a daily basis
-- Group meetings once a sprint.
+- Process owned by Engineers through a working group
+- Facilitated by Janitorial stretch holders 
+  - These Facilitators will 'own' and oversee Pest Control for one system they are expert in
+- One Engineer responsible for monitoring on a daily basis
+- Group meetings once a sprint
+- Monthly working group meetings to review the process.
 
 ## Process
 
-Expedited issues are not covered here, please see the [Expedited Procedure](expedited-procedure.md) for details.
+Every Engineer who has at least 6-month experience in the business is included in the Pest Control rotation, they are then responsible for monitoring systems for uncaught bugs for 1 week for around an hour per day.
 
-The most important part of pest control is communication. You should be talking to people about what you're seeing and updating on things you're working on etc. Don't suffer in silence on a tough bug, ask for help. And don't assume an issue is being looked at, check!
+Not every Engineer will have the extensive knowledge needed to triage bugs in every system, so our Janitorial stretch holders make themselves available to facilitate this triage where necessary.
 
-* Developer rotated on a weekly basis.
-  * Handled by SEs which are able to delegate as they see fit.
-  * Spends ~1 hour a day on this work.
-  * Organises the raising of new bugs,
-    * Add customer impact to description
-    * Found via reporting systems (currently Bugsnag and HxMetrics)
-  * Remains in sprint.
+This means communication is important. Engineers on rotation should be talking to people about what they're seeing and  working on. Don't suffer in silence on a tough bug, ask for help. And don't assume an issue is being looked at, check!
+
+* Engineer rotated on a weekly basis.
+  * Spend ~1 hour a day on Pest Control, but still continue with sprint work.
   * Time spent will vary, but should not be influenced by pod/sprint deadlines.
-* Use the general web project on JIRA (not bugsnag queue).
-  * Use type of `bug`.
-* Bugs will be completed during normal sprint work by pods like all other work.
+  * Keep an eye on reporting systems and logs e.g. Bugsnag, Metrics & Sumo Logic. 
+    * When a new bug is caught
+      * If the bug meets Expedite criteria, raise in the `Expedite` slack channel and follow the [Expedited Procedure](expedited-procedure.md).
+      * If you can recreate it, raise a `WEB` Jira with type set to `Bug`.
+      * Add the `pestcontrol` label.
+      * Giving details of the customer impact and how to recreate.
+      * If you are unsure, consult with a Janitorial stretch holder for that system.
 
 ## Delegation meeting
 
-A member of each pod is encouraged to attend to assist in the assignment of bugs.
+The last three Engineers on rotation should attend.
 
-* Chaired by developer on rotation.
 * Occurs before start of sprints.
-* Triage current bugs.
-* Assign bugs to pod backlogs.
+* Chaired by the Engineer currently on rotation.
+* Re-triage current bugs, to ensure they can be recreated.
+* Move bug Jiras to relevant pod backlogs.
 
 ## Working Group
 
-A member of each pod is encouraged to attend to contribute to improving this process.
+Janitorial stretch holders as experts attend this meeting to contribute to improving the process.
 
-* Chaired by developer on rotation.
 * Occurs every 4 weeks.
 * What’s happened since last time?
   * Monitor progress of bug completion.
