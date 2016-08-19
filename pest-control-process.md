@@ -42,7 +42,7 @@ The last three Engineers on rotation should attend.
 
 ## Working Group
 
-Janitorial stretch holders and any interested Engineers are encouraged to attend to contribute to improving this process.
+Janitorial stretch holders as experts attend this meeting to contribute to improving the process.
 
 * Occurs every 4 weeks.
 * What’s happened since last time?
