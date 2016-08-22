@@ -272,3 +272,29 @@ When specifying requirements first aim to use the `^` semver match. Only resort 
 
 
 Also, when choosing a third party module to use, prefer ones with a version number of one or above, this will allow for more lenient semver matching for dependencies and hopefully more reliable version behavior from the module.
+
+## ES6 modules
+
+ES6 modules can be used if the environment in which your code is executed allows such mastery.
+
+### Import
+
+There are a few ways to import using this syntax, the following are advised:
+
+1. ```import { methodA, methodB } from 'foo';```
+*Import only the named methods*
+
+2. ```import foo from 'foo';```
+*Imports a default export module*
+
+### Export
+
+The simplest way to export a module in ES6 syntax is to export a single value as a `default export`
+
+```export default function () { return true; };```
+
+You can also utalise the named exports approach like this:
+
+```export { foo, bar };```
+
+For more information on the approaches above, [checkout the MDN docs](https://developer.mozilla.org/en/docs/web/javascript/reference/statements/import)
