@@ -2,6 +2,7 @@
 
 **Table of contents**
 
+* [Testing](#testing)
 * [Text alternatives for images](#text-alternatives)
 * [Labels on form fields](#labels)
 * [Headings](#headings)
@@ -10,6 +11,21 @@
 * [Keyboard accessibility](#keyboard)
 * [Tables](#tables)
 * [Hiding content in an accessible way](#hidden)
+
+<a name="testing"></a>
+## Testing
+
+### Using a screenreader
+VoiceOver is a screen reader that is pre-installed on Mac computers, iPhones, iPads and iPod touches. It is a popular solution, particularly with Apple users, but is not the most widely used across all platforms. Testing with one screen reader is much like testing with one browser in that will give some insight into the likely problems but will not be fully representitive. For more information on the limitations of testing with VoiceOver see WebAIM's article on the [three things you should know before using VoiceOver for testing](http://webaim.org/blog/three-things-voiceover/). WebAIM also provides a list of [keyboard shortcuts for controlling VoiceOver](http://webaim.org/articles/voiceover/).
+
+### Other tools
+
+Tool | Description
+:----|:----
+[tota11y](https://khan.github.io/tota11y/) | A JavaScript bookmarklet that annotates a web page to highlight accessibility features and problems.
+[Chrome Accessibility Developer Tools](https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en) | An extension from Google's accessibility team that adds an Accessibility audit and an Accessibility sidebar pane in the Elements tab in Chrome.
+[WAVE Chrome Extension](http://wave.webaim.org/extension/) | An evaluation tool developed by WebAIM that provides visual feedback about the accessibility of web content by injecting icons and indicators into the page.
+[Colour Contrast Analyser](https://www.paciellogroup.com/resources/contrastanalyser/) | Available for Mac and Windows, provides a pass/fail assessment against WCAG 2.0 colour contrast success criteria as well as a simulation of certain visual conditions.
 
 <a name="text-alternatives"></a>
 ## Text alternatives for images
@@ -236,7 +252,7 @@ The `display: none` and `visibility: hidden` properties in CSS both hide content
 The most reliable way to hide content visually while keeping it accessible to assistive technology behind the scenes is to position it off the viewport.
 
 ```css
-.hidden { 
+.hidden {
     position: absolute;
     left: -10000px;
     top: auto;
