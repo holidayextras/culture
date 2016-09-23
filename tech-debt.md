@@ -55,13 +55,33 @@ The existing communication channels are perfect for talking about tech debt. We 
 * *Scrum of Scrums* is a great place to bring issues you are having with tech debt to other pods.
 * *Guilds* can be used to see if people in other pods are having a similar experience with an existing piece of tech debt.
 
-### 4. Limit its influence
+### 4. Track it
+
+In order to deal with technical debt and anticipate its impact we need to have a picture for what technical debt exists, and how and when we might deal with it in the future.
+
+#### In our heads
+
+Engineers need to hold a general picture for the code they work on on a day to day basis. This becomes harder to do with monolithic applications or where multiple pods are working on the same code. But we need to try, drawing on other engineers knowledge where our own is lacking.
+
+#### Jiras
+
+When technical debt has a direct impact on sprint work it can be outlined in the Jira for the respective feature. Alternatively it can be broken out into its own dedicated Jira. This can make it easier to make the business case for addressing the debt and prioritising it against other work.
+
+#### GitHub issues
+
+More general issues with a code base can be tracked in GitHub issues. This can be more appropriate when the debt is more closely coupled to the code, and the team's general ability to deliver features, than it is one specific Jira.
+
+#### Roadmaps and documentation
+
+When debt is more architectural in nature it may be necessary to document the problems and vision for a solution in a long form document or road map. This exists for trip app and trip planner, other code bases may benefit from this approach.
+
+### 5. Limit its influence
 
 Technical debt that is isolated has much less scope to interfere with other code. This tends to emerge naturally if code is loosely coupled and modular in nature.
 
 Say you have a module and its internal implementation is mess, but its interface is well thought out and does not change very often. This is an example of isolated technical debt. The messy internals will rarely interfere with work on the wider application. If however the interface becomes the subject of many changes, or it has a lot of bugs, it might be a good time to refactor or even just throw it out and start again. [The Facade Pattern](https://en.wikipedia.org/wiki/Facade_pattern) is one way to do this.
 
-### 5. Be deliberate
+### 6. Be deliberate
 
 Whilst it is "okay" to take on technical debt, it has to be a deliberate decision. The short term gains of shipping it now have to be weighed against the long term interest that will need to be paid off over its lifetime, not to mention the debt itself.
 
@@ -71,7 +91,7 @@ It is the responsibility of developers to explain to pod leads about potential n
 
 When it comes to paying off existing debt, focus on debt that currently has or is likely to have in the near future a "high rate of interest". Technical debt that is isolated can be safely left for another day.
 
-### 6. Little and often
+### 7. Little and often
 
 Technical debt should be paid off continuously in small payments. Exactly how much is up for debate. But here are some things to bear in mind:
 
@@ -81,9 +101,9 @@ Technical debt should be paid off continuously in small payments. Exactly how mu
 * If a big rewrite is required do everything you can to transition to a new design incrementally.
 * Even if a sprint solely addresses tech debt it should be split into iterative chunks if possible.
 
-### 7. Aspire to be a boy scout
+#### Aspire to be a boy scout
 
-#### "Always leave the campground cleaner than you found it."
+##### "Always leave the campground cleaner than you found it."
 
 All other things being equal a change to the code base should leave it in a better state than you found it. In reality this might not be possible. Business demands may require things to go out without any improvements. Sometimes the only improvement you can make to code would be so comprehensive it risks confusing the purpose of the PR and justifies its own.
 
