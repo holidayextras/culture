@@ -403,7 +403,7 @@ As you can see our `beforeEach` block is now much simpler. With the help of [Enz
 
 This is just one example of using [Enzyme](https://airbnb.io/enzyme) to make React testing more readable and concise. I would encourage everyone using [Enzyme](https://airbnb.io/enzyme) to read the well written [documentation](http://airbnb.io/enzyme/docs/api/index.html).
 
-#### Bad Practice
+#### Best Practices
 **Bad**
 ```
 it('returns the expect props', () => {
