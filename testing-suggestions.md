@@ -403,6 +403,82 @@ As you can see our `beforeEach` block is now much simpler. With the help of [Enz
 
 This is just one example of using [Enzyme](https://airbnb.io/enzyme) to make React testing more readable and concise. I would encourage everyone using [Enzyme](https://airbnb.io/enzyme) to read the well written [documentation](http://airbnb.io/enzyme/docs/api/index.html).
 
+#### Bad Practice
+**Bad**
+```
+it('returns the expect props', () => {
+  expect(view.props()).to.have.keys([
+    'foo',
+    'bar',
+    'onClick'
+  ])
+});
+```
+By only testing the keys we don't test any of the actual values which are sent to the child component.
+
+**Better**
+```
+beforeEach(() => {
+  view = shallow(<Container {...props} />);
+});
+
+it('passes the foo prop', () => {
+  expect(view.prop('foo')).to.equal('test');
+});
+```
+
+**Better**
+```
+beforeEach(() => {
+  view = shallow(<Container foo="test" bar={true} onClick={() => {}} />);
+});
+
+it('passes the name prop', () => {
+  expect(view.props()).to.deep.equal({
+    foo: 'test',
+    bar: 'baz'
+  });
+});
+```
+Test the props that are sent to the child components. Using `view.prop()` or `view.props()` returns the [props passed to the root node rendered](https://github.com/airbnb/enzyme/blob/master/docs/api/ShallowWrapper/props.md#props--object).
+
+**Bad**
+```
+beforeEach(() => {
+  view = shallow(<Container {...props} />);  
+  instance = view.instance();
+});
+
+describe('handle click', () => {
+  beforeEach(() => {
+    instance.handleClick();
+  });
+
+  it('does something', () => {
+    ...
+  });
+});
+```
+By testing the instance of the method we check that the method does what is expected, but by not checking it on the child component we are not testing it's integration within the child's context and that the component receives the function as intended.
+
+**Better**
+```
+beforeEach(() => {
+  view = shallow(<Container {...props} />);
+});
+
+describe('handle click', () => {
+  beforeEach(() => {
+    view.prop('onClick')();
+  });
+
+  it('does something', () => {
+    ...
+  });
+});
+```
+Test the results of calling a handler by calling the handler via the rendered component's props. This ensures that, within the context of the child component, the handler will perform as expected.
+
 # 2.0 System Tests
 
 ## Each test should:
