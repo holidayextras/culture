@@ -405,7 +405,7 @@ This is just one example of using [Enzyme](https://airbnb.io/enzyme) to make Rea
 
 #### Best Practices
 **Bad**
-```
+```javascript
 it('returns the expect props', () => {
   expect(view.props()).to.have.keys([
     'foo',
@@ -417,7 +417,7 @@ it('returns the expect props', () => {
 By only testing the keys we don't test any of the actual values which are sent to the child component.
 
 **Better**
-```
+```javascript
 beforeEach(() => {
   view = shallow(<Container {...props} />);
 });
@@ -428,7 +428,7 @@ it('passes the foo prop', () => {
 ```
 
 **Better**
-```
+```javascript
 beforeEach(() => {
   view = shallow(<Container foo="test" bar={true} onClick={() => {}} />);
 });
@@ -443,7 +443,7 @@ it('passes the name prop', () => {
 Test the props that are sent to the child components. Using `view.prop()` or `view.props()` returns the [props passed to the root node rendered](https://github.com/airbnb/enzyme/blob/master/docs/api/ShallowWrapper/props.md#props--object).
 
 **Bad**
-```
+```javascript
 beforeEach(() => {
   view = shallow(<Container {...props} />);  
   instance = view.instance();
@@ -462,7 +462,7 @@ describe('handle click', () => {
 By testing the instance of the method we check that the method does what is expected, but by not checking it on the child component we are not testing it's integration within the child's context and that the component receives the function as intended.
 
 **Better**
-```
+```javascript
 beforeEach(() => {
   view = shallow(<Container {...props} />);
 });
