@@ -32,6 +32,7 @@ This is a collection of documents that outline Holiday Extras' culture and devel
 
  * [Pest Control Process](pest-control-process.md)
  * [PR Template](pr-template.md)
+ * [Readme Template](readme-template.md)
  * [Expedited Procedure](expedited-procedure.md)
  * [General Meetings](general-meetings.md)
  * [Technical Planning Meetings](technical-planning-meeting.md)
