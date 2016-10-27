@@ -14,8 +14,7 @@ As an alternative to branching from and merging directly to the Master branch, G
 
 There is a Git Flow toolset that makes the adoption and use of the concepts much easier. The rest of this document assumes you have this installed.
 
-Install instructions for Mac (and other OS) can be found here:
-https://github.com/nvie/gitflow/wiki/Mac-OS-X
+Install instructions for Mac (and other OS) can be found [here](https://github.com/petervanderdoes/gitflow-avh/wiki/Installation)
 
 ## Initialise GitFlow
 
