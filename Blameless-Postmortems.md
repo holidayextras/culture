@@ -1,21 +1,19 @@
-Blameless postmortems should be used to discuss issues that have affected our customers and how we can help to avoid similar situations from occurring in the future. The Postmortem should include all involved at their earliest opportunity after the event. 
+No Longer a Post Mortem...... It's a WashUp 
 
-Please use this format for all Blameless Postmortems so that we have a consistent set of data on how we handle situations. Please add all notes from Blameless Postmortem to the Jira project (Incident Recovery), for reference.
+We have been looking at addressing the language that we use in the web team to ensure that we are better communicating the processes that we have in place and how best to communicate these across the business. Because of this we have decided it's time to refresh the process formally known as blameless post mortem's and label these more generically as wash-ups.  We believe that this helps us to refocus on finding positive actions and encourages stronger team collaboration and reflection on issues.
 
-    1. Summary
-    
-    2. Who is attending the meeting?
-    
-    3. Who was involved?
-    
-    4. What was the cause?
-    
-    5. Details
-    
-    6. When did the incident occur?
-    
-    7. How did we solve it? 
-    
-    8. What can we improve or avoid in future?
-    
-    9. Actions to be taken by the team
+Here are the notes of what's been agreed moving forward: 
+A wash-up can be held after any significant event that has happened where we believe actions can be taken so that we can better improve process moving forward.  This could be following an expedite issue, or at the end of a large project.
+
+A new wash-up meeting template has been created that should help people to prepare for the meeting and ensure that all information on why the meeting is taking place has been filled in and circulated to all relevant parties in advance.
+
+The wash-up meeting itself should be totally focused on what we have learned and what we can improve for next time.
+
+After each wash-up gathering, one attendee will be nominated to send an update round to the rest of the team with a brief email summary and attach the meeting notes.
+
+We are putting all of this in place following the successful first trial of the new template last week.
+
+For additional info - or any other questions on holding a wash-up please feel free to contact myself or any of the other Scrum Masters who are happy to help facilitate these future meetings.
+
+WASH UP DOC 
+https://docs.google.com/document/d/1zq3x3pRJfUQb_-8iqzQCza0YaqGiOJ-92uc9oM8A6cY/edit
