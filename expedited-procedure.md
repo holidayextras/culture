@@ -18,6 +18,8 @@ Generally the issue will be reported to web department or the someone in web wil
 * The web contact follows issue through to resolution or hands over to another team member to fulfill this role.
 * Use online channels to keep all interested parties updated **regularly**. See the communication section below for more info.
 
+The owner should not also be working on resolving the issue. If this is the case, ownership should be transferred. This is to ensure that communications continue without distracting from resolution.
+
 ## Classification
 
 If the web contact is unsure whether the issue should be expedited seek advice from a product owner before continuing.
@@ -43,11 +45,21 @@ For out of hours use the [web contact details](https://holidayextras.jira.com/wi
 
 ## Communication
 
+### Slack
+
 Regular communication is essential. By sending regular updates the Web Team and HX stakeholders are able to manage and mitigate the impact of the issue. It's important that attention is not drawn away from fixing the immediate issue, so consider delegating the communication to someone else if you're involved with the fix itself.
 
-* Post in the main [#expedite](https://holidayextras.slack.com/messages/expedite/) slack channel.
+* Post in the main [#expedite](https://holidayextras.slack.com/messages/expedite/) slack channel. #expedite should be used for owner updates only, so encourage questions to be sent direct. Include when you'll next update in each post. 
 * If issue is complex enough consider a dedicated Slack channel (regular communication in the primary #expedite channel should still continue).
 * If the issue is going to effect deployments, post in the [#deployments](https://holidayextras.slack.com/messages/deployments/) Slack channel.
+
+### Email
+
+There should be three key email communications sent during an expedite. 
+
+* An incident report email to let affected teams/individuals know of the issue.
+* An email to confirm the end of the incident, with brief notes on the solution and ongoing issues.
+* An email after the post-mortem to include a full summary of the incident, solution and any learning outcomes.
 
 ## Fix
 
