@@ -11,9 +11,9 @@ The wash-up meeting itself should be totally focused on what we have learned and
 
 After each wash-up gathering, one attendee will be nominated to send an update round to the rest of the team with a brief email summary and attach the meeting notes.
 
-We are putting all of this in place following the successful first trial of the new template last week.
+We are putting all of this in place following the successful first trial of the new template over the last few week.
 
-For additional info - or any other questions on holding a wash-up please feel free to contact myself or any of the other Scrum Masters who are happy to help facilitate these future meetings.
+For additional info - or any other questions on holding a wash-up please feel free to contact any of the Scrum Masters who are happy to help facilitate these future meetings.
 
 WASH UP DOC 
 https://docs.google.com/document/d/1zq3x3pRJfUQb_-8iqzQCza0YaqGiOJ-92uc9oM8A6cY/edit
