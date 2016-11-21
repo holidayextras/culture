@@ -217,7 +217,7 @@ In general, elements should be left in the default tab order and `tabindex` attr
 ### Keyboard accessibility in modal dialogs
 A modal dialog is a dialog that forces the user to interact with it, blocking the rest of the application. They are often used to prompt for a 'yes' or 'no' response.
 
-* Focus should be given to the first focusable element or to the primary action inside the dialog when it is opened.
+* Focus should be given to the first focusable element, the primary action inside the dialog or the dialog container when it is opened.
 * Focus should be trapped inside the dialog, i.e. it should not be possible for the user to tab onto elements outside of the dialog while it is open.
 * When the dialog is closed, keyboard focus should be returned to its original position, or to a sensible point of continuation.
 * Pressing the escape key on the keyboard should close the dialog.
@@ -267,7 +267,7 @@ A modal dialog is a dialog that forces the user to interact with it, blocking th
 
 
 <a name="hidden"></a>
-## Hiding content in an accessible way
+## Providing hidden content for assistive technology
 The `display: none` and `visibility: hidden` properties in CSS both hide content in a way that makes it inaccessible to screen readers and other assistive technology. They should therefore generally only be used if the intention is to hide the content from *all* users.
 
 The most reliable way to hide content visually while keeping it accessible to assistive technology behind the scenes is to position it off the viewport.
@@ -284,3 +284,6 @@ The most reliable way to hide content visually while keeping it accessible to as
 ```
 
 If hidden content can receive keyboard focus, it should be made visible when focused. This avoids the confusing situation where keyboard focus disappears and then reappears when tabbing through a page.
+
+## Hiding content from assistive technology
+The `aria-hidden="true"` and `role="presentation"` attributes can be used to exclude elements from the Accessibility API, hiding them from assistive technology while keeping them visible on the page. This should only be done with the aim of improving the experience for assistive technology users (e.g. to remove duplication) and only if the hidden content is provided elsewhere. Use both attributes to ensure best compatibility across user agents.
