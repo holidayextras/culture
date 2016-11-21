@@ -11,6 +11,7 @@
 * [Keyboard accessibility](#keyboard)
 * [Tables](#tables)
 * [Hiding content in an accessible way](#hidden)
+* [Announcing changes](#live)
 
 <a name="testing"></a>
 ## Testing
@@ -287,3 +288,18 @@ If hidden content can receive keyboard focus, it should be made visible when foc
 
 ## Hiding content from assistive technology
 The `aria-hidden="true"` and `role="presentation"` attributes can be used to exclude elements from the Accessibility API, hiding them from assistive technology while keeping them visible on the page. This should only be done with the aim of improving the experience for assistive technology users (e.g. to remove duplication) and only if the hidden content is provided elsewhere. Use both attributes to ensure best compatibility across user agents.
+
+<a name="live"></a>
+## Announcing changes elsewhere on the page
+A screen reader can only focus on one element at a time and is unaware of changes happening elsewhere on the page. This is problematic in modern web applications where performing an action on one page of the page may cause changes or notifications to appear somewhere else.
+
+WAI-ARIA Live Regions allow these changes to be exposed to screen readers so that they can be announced to the user.
+
+Attribute | Effect
+:----|:----
+`aria-live="polite"` | Sets an element as a live region and will announce changes at the next opportunity.
+`aria-live="assertive"` | Sets an element as a live region and will interrupt the current task to notify the user of changes.
+`aria-atomic="true"` | Announces the whole live region whenever it changes.
+`aria-atomic="false"` | Announces only the part that has changed.
+
+Note that screen reader behaviour can be erratic, particularly with complex interfaces. You may need to experiment with different configurations markup and `aria-live` attributes in order to achieve the best experience.
