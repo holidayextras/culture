@@ -302,4 +302,4 @@ Attribute | Effect
 `aria-atomic="true"` | Announces the whole live region whenever it changes.
 `aria-atomic="false"` | Announces only the part that has changed.
 
-Note that screen reader behaviour can be erratic, particularly with complex interfaces. You may need to experiment with different configurations markup and `aria-live` attributes in order to achieve the best experience.
+Note that screen reader behaviour can be erratic, particularly with complex interfaces. You may need to experiment with different configurations of markup and `aria-live` attributes in order to achieve the best experience.
