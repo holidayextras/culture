@@ -110,6 +110,13 @@ Mandatory fields can also be identified programmatically using ARIA's `aria-requ
 
 Where all fields in a form are mandatory, it is acceptable to simply say "all fields are mandatory", but probably easier (technically) to adopt the same approach throughout and mark all individual fields.
 
+### Form validation
+Invalid fields can be identified programmatically using ARIA's `aria-invalid="true"` attribute. Note that `aria-invalid` should not be set to `true` before validation has taken place.
+
+```html
+<input id="name" type="text" aria-invalid="true">
+```
+
 <a name="headings"></a>
 ## Headings
 HTML heading elements (`h1` to `h6`) must be used to denote headings so that the structure of the page is clear.
