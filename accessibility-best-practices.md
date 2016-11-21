@@ -134,6 +134,8 @@ Headings should follow a hierarchical structure and levels should not be skipped
 </p>
 ```
 
+Note that there are situations in which lower level headings appear before the `h1` due to page layout. This is fine as long as they themselves follow a logical hierarchy.
+
 <a name="links"></a>
 ## Links
 
