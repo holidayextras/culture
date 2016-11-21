@@ -291,7 +291,7 @@ The `aria-hidden="true"` and `role="presentation"` attributes can be used to exc
 
 <a name="live"></a>
 ## Announcing changes elsewhere on the page
-A screen reader can only focus on one element at a time and is unaware of changes happening elsewhere on the page. This is problematic in modern web applications where performing an action on one page of the page may cause changes or notifications to appear somewhere else.
+A screen reader can only focus on one element at a time and is unaware of changes happening elsewhere on the page. This is problematic in modern web applications where performing an action on one part of the page may cause changes or notifications to appear somewhere else.
 
 WAI-ARIA Live Regions allow these changes to be exposed to screen readers so that they can be announced to the user.
 
