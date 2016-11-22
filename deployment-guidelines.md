@@ -69,16 +69,18 @@ Example config:
       - pip install --user awscli
       - export PATH=$PATH:$HOME/.local/bin
     deploy:
-      provider: script
-      script: scripts/deploy.sh
-      on:
-        branch: staging
-        env:
-          - DEPLOY_ENV=staging
-      on:
-        branch: master
-        env:
-          - DEPLOY_ENV=production
+      - provider: script
+        script: scripts/deploy.sh
+        on:
+          branch: staging
+          env:
+            - DEPLOY_ENV=staging
+      - provider: script
+        script: scripts/deploy.sh            
+        on:
+          branch: master
+          env:
+            - DEPLOY_ENV=production
 
 #### Circle CI
 
