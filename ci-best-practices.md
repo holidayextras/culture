@@ -63,6 +63,7 @@ Points to note:
 
 ### Do's
 
+* Do create an artifact and promote it toward production (rather than eg re-building the project 3x on integration, staging & production)
 * Do cache any dependency directories (such as `node_modules`).
 * Do fail the CI process as soon as one task fails.
 * Do run the quickest and / or most likely to fail tasks first, to enable a broken build to end quicker.
