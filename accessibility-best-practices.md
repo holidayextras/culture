@@ -11,6 +11,7 @@
 * [Keyboard accessibility](#keyboard)
 * [Tables](#tables)
 * [Hiding content in an accessible way](#hidden)
+* [Announcing changes](#live)
 
 <a name="testing"></a>
 ## Testing
@@ -100,13 +101,22 @@ In some cases, it might be appropriate to visually hide a label. For example, wh
 As well as being explicitly associated with `for` and `id` attributes, labels for checkboxes and radio buttons should appear *after* the control in the markup and be displayed *to the right* of the control on screen. This convention ensures compatibility with the widest range of assistive technologies, and is also consisitent with UI patterns established by Microsoft and Apple.
 
 ### Identifying mandatory fields
-A mandatory field should be identified in its label, in a way that doesn't rely on vision, so that it can be announced by assistive technology when the field receives focus. This could be an asterisk (*) or simply say "required". Where an asterisk or other symbol is used, this should be explained at the top of the form (e.g. "fields marked with * are required") and an `abbr` should be included on the symbol itself:
+A mandatory field should be identified in its label, in a way that doesn't rely on vision, so that it can be identified by both signed and non-sighted users. This could be an asterisk (*) or simply say "required". Where an asterisk or other symbol is used, this should be explained at the top of the form (e.g. "fields marked with * are required") and an `abbr` should be included on the symbol itself:
 
 ```html
 <label>Email address <abbr title="required field">*</abbr></label>
 ```
 
+Mandatory fields can also be identified programmatically using ARIA's `aria-required="true"` attribute and HTML5's `required` attribute.
+
 Where all fields in a form are mandatory, it is acceptable to simply say "all fields are mandatory", but probably easier (technically) to adopt the same approach throughout and mark all individual fields.
+
+### Form validation
+Invalid fields can be identified programmatically using ARIA's `aria-invalid="true"` attribute. Note that `aria-invalid` should not be set to `true` before validation has taken place.
+
+```html
+<input id="name" type="text" aria-invalid="true">
+```
 
 <a name="headings"></a>
 ## Headings
@@ -124,6 +134,8 @@ Headings should follow a hierarchical structure and levels should not be skipped
 ...
 </p>
 ```
+
+Note that there are situations in which lower level headings appear before the `h1` due to page layout. This is fine as long as they themselves follow a logical hierarchy.
 
 <a name="links"></a>
 ## Links
@@ -206,7 +218,7 @@ In general, elements should be left in the default tab order and `tabindex` attr
 ### Keyboard accessibility in modal dialogs
 A modal dialog is a dialog that forces the user to interact with it, blocking the rest of the application. They are often used to prompt for a 'yes' or 'no' response.
 
-* Focus should be given to the first focusable element or to the primary action inside the dialog when it is opened.
+* Focus should be given to the first focusable element, the primary action inside the dialog or the dialog container when it is opened.
 * Focus should be trapped inside the dialog, i.e. it should not be possible for the user to tab onto elements outside of the dialog while it is open.
 * When the dialog is closed, keyboard focus should be returned to its original position, or to a sensible point of continuation.
 * Pressing the escape key on the keyboard should close the dialog.
@@ -256,7 +268,7 @@ A modal dialog is a dialog that forces the user to interact with it, blocking th
 
 
 <a name="hidden"></a>
-## Hiding content in an accessible way
+## Providing hidden content for assistive technology
 The `display: none` and `visibility: hidden` properties in CSS both hide content in a way that makes it inaccessible to screen readers and other assistive technology. They should therefore generally only be used if the intention is to hide the content from *all* users.
 
 The most reliable way to hide content visually while keeping it accessible to assistive technology behind the scenes is to position it off the viewport.
@@ -273,3 +285,21 @@ The most reliable way to hide content visually while keeping it accessible to as
 ```
 
 If hidden content can receive keyboard focus, it should be made visible when focused. This avoids the confusing situation where keyboard focus disappears and then reappears when tabbing through a page.
+
+## Hiding content from assistive technology
+The `aria-hidden="true"` and `role="presentation"` attributes can be used to exclude elements from the Accessibility API, hiding them from assistive technology while keeping them visible on the page. This should only be done with the aim of improving the experience for assistive technology users (e.g. to remove duplication) and only if the hidden content is provided elsewhere. Use both attributes to ensure best compatibility across user agents.
+
+<a name="live"></a>
+## Announcing changes elsewhere on the page
+A screen reader can only focus on one element at a time and is unaware of changes happening elsewhere on the page. This is problematic in modern web applications where performing an action on one part of the page may cause changes or notifications to appear somewhere else.
+
+[WAI-ARIA Live Regions](https://www.w3.org/TR/wai-aria/states_and_properties#attrs_liveregions) allow these changes to be exposed to screen readers so that they can be announced to the user.
+
+Attribute | Effect
+:----|:----
+`aria-live="polite"` | Sets an element as a live region and will announce changes at the next opportunity.
+`aria-live="assertive"` | Sets an element as a live region and will interrupt the current task to notify the user of changes.
+`aria-atomic="true"` | Announces the whole live region whenever it changes.
+`aria-atomic="false"` | Announces only the part that has changed.
+
+Note that screen reader behaviour can be erratic, particularly with complex interfaces. You may need to experiment with different configurations of markup and `aria-live` attributes in order to achieve the best experience.
