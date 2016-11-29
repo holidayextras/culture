@@ -53,6 +53,8 @@ Regular communication is essential. By sending regular updates the Web Team and 
 * If issue is complex enough consider a dedicated Slack channel (regular communication in the primary #expedite channel should still continue).
 * If the issue is going to effect deployments, post in the [#deployments](https://holidayextras.slack.com/messages/deployments/) Slack channel.
 
+Note that Germany and the Shift Manager may not be on Slack, so you should open a separate communcation channel with them where appropriate.
+
 ### Email
 
 There should be three key email communications sent during an expedite. 
@@ -60,6 +62,8 @@ There should be three key email communications sent during an expedite.
 * An incident report email to let affected teams/individuals know of the issue.
 * An email to confirm the end of the incident, with brief notes on the solution and ongoing issues.
 * An email after the post-mortem to include a full summary of the incident, solution and any learning outcomes.
+
+Email recipients should include our System Maintenance list.
 
 ## Fix
 
