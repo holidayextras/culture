@@ -57,6 +57,7 @@ This is a collection of documents that outline Holiday Extras' culture and devel
  * [Shortbreaks QA PR Template](shortbreaks/pr-qa-template.md)
  * [SEO Technical Principals](seo/technical-seo.md)
  * [SEO On Page Principals](seo/on-page-seo.md)
+ * [Using Workspaces and Versions in GTM](https://docs.google.com/document/d/1dbfr8U6fysOTezxd0SskXKz6LUuT3BEJ44dCJbtgfNM/edit)
 
 ## Contributing
 
