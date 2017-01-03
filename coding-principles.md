@@ -69,7 +69,7 @@ In this context "battle tested" refers to:
 
 The document below details the most common security problems affecting web applications, it's worth being mindful of the points made here when writing code:
 
-[OWASP Top Ten 2013](http://owasptop10.googlecode.com/files/OWASP%20Top%2010%20-%202013.pdf)
+[OWASP Top Ten 2013](https://www.owasp.org/images/f/f8/OWASP_Top_10_-_2013.pdf)
 
 There are many open source tools and white papers to help understand and test the issues mentioned in the above document. Google is your friend here and searching for terms such as "XSS whitepaper" or "XSS tools" will yield good results.
 
