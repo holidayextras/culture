@@ -12,7 +12,7 @@
 * When starting a new project
 * When adding new features or functionality
 * When the technical implementation is not clear for a feature iteration
-* When undertaking work that requires multiple teams to collaborate on a techincal solution
+* When undertaking work that requires multiple teams to collaborate on a technical solution
 
 ## Expected Outcomes
 
@@ -26,7 +26,7 @@
 ## Probable Attendees
 
 * Engineer(s) with a technical challenge
-* Engineer(s) to support the disucssion and agree a technical solution/ next steps
+* Engineer(s) to support the discussion and agree a technical solution/ next steps
 * Database gurus (if database work will be required)
 * UXUI gurus (if frontend work will be required)
 * Business owners (if the business requirements are sufficiently complex and to assess the business value)
