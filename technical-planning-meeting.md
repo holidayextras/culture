@@ -12,7 +12,7 @@
 * When starting a new project
 * When adding new features or functionality
 * When the technical implementation is not clear for a feature iteration
-* When undertaking work that requires multiple teams to collaborate
+* When undertaking work that requires multiple teams to collaborate on a techincal solution
 
 ## Expected Outcomes
 
