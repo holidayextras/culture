@@ -3,7 +3,7 @@
 
 ## Definition
 
-* A technical planning meeting is an informal discussion aimed at streamlining our development processes and agreeing a technical solution.
+* A technical planning meeting (TPM) is an informal discussion aimed at streamlining our development processes and agreeing a technical solution.
 * They can be as short or as long as necessary.
 * They should be requested by engineers.
 
@@ -40,7 +40,7 @@
 3. The developers explain their technical solution and open it up for discussion
 4. We exchange thoughts and ideas, fill in any blanks and compromise where necessary to reach a good solution - using the TPM template agenda as a meeting guide
 5. We break the work down into small chunks
-6. If the chunks of work are not small enough to begin work, arrange for future technical planning meetings to dig deeper into the problem (an example of when this might be necessary - "We want to start selling Coach")
+6. If the chunks of work are not small enough to begin work, arrange for future TPMs to dig deeper into the problem (an example of when this might be necessary - "We want to start selling Coach")
 7. Following the TPM, the engineer discusses the outcome with the Pod Lead and/ or key stakeholders to agree next steps and confirm business value
 8. Pod Leads prioritise the work as appropriate
 9. Once the TPM template has been completed in full, circulate a link with the TL;DR section to relevant groups (e.g. webit email group).
