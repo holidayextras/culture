@@ -3,7 +3,7 @@
 
 ## Definition
 
-* A technical planning meeting (TPM) is an informal discussion aimed at streamlining our development processes and agreeing on a technical solution
+* A technical planning meeting (TPM) is an informal discussion aimed at streamlining our development processes and agreeing on a technical solution and/ or next steps
 * They can be as short or as long as necessary
 * They should be requested by engineers
 
