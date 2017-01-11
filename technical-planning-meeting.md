@@ -16,7 +16,7 @@
 
 ## Expected Outcomes
 
-* High level documentation of the business problem, the technical solution and/ or next steps and the business value (at a high level, it should be established how complex the task is in order that we can establish the business value)
+* High level documentation of the business problem, the technical solution and/ or next steps and the business impact (at a high level, it should be established how complex the task is in order that we can establish the business impact)
 * Engineers should have a clear understanding of what is expected moving forward
 * What the next steps are, this could be a set of Jiras for Pod Leads to prioritise 
 * A definition of done/ acceptance criteria
@@ -29,9 +29,9 @@
 * Engineer(s) to support the discussion and agree a technical solution/ next steps
 * Database gurus (if data engineer required. If so, ask in #pod-data for a rep)
 * UXUI gurus (if frontend work will be required. If so, ask in #pod-uxui for a rep)
-* Business owners (if the business requirements are sufficiently complex and to assess the business value)
+* Business owners (if the business requirements are sufficiently complex and to assess the business impact)
 * Testers (if there is a large testing requirement. If so, ask in #testers)
-* Project gurus (engineers might require additional technical assistance - If INF required, invite Damien Turner and if Multimedia required, invite Jess Everton)
+* Project gurus (engineers might require additional technical assistance - if INF required, invite Damien Turner and if Multimedia required, invite Jess Everton)
 
 ## The Process
 
@@ -49,6 +49,6 @@
 
 ##### Part 3 - After the TPM
 
-* Following the TPM, the engineer discusses the outcome with the Pod Lead and/ or key stakeholders to agree next steps and confirm business value
+* Following the TPM, the engineer discusses the outcome with the Pod Lead and/ or key stakeholders to agree next steps and confirm business impact
 * Pod Leads prioritise the work as appropriate
 * Once the TPM template has been completed in full, circulate a link with the TL;DR section to relevant groups (e.g. webit email group)
