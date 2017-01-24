@@ -4,5 +4,5 @@
 ---
 
 By approving this PR I agree that;
-- My work is ready to be merged to Production.
-- This PR contains **only** the changes in the original PR.
+- I know what code changes are in this PR.
+- I am happy for the work in this PR to be merged to Master.
