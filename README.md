@@ -57,6 +57,7 @@ This is a collection of documents that outline Holiday Extras' culture and devel
  * [Shortbreaks QA PR Template](shortbreaks/pr-qa-template.md)
  * [SEO Technical Principals](seo/technical-seo.md)
  * [SEO On Page Principals](seo/on-page-seo.md)
+ * [How to make a deployment bundle](deployment-bundle-steps.md)
 
 ## Contributing
 
