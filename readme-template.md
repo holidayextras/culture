@@ -5,8 +5,6 @@
 
 <!--Short sentence on what the repo does-->
 
-<!-- possibly list experts in this repo for who to go to when encountering a problem-->
-
 ##Contents
 * [Further Documentation](#further-documentation)
 * [System Overview](#system-overview)
@@ -91,4 +89,4 @@ Include any other relevant documentation in this section.
 ## Common Questions
 
 * Frequently asked questions that will help engineers
-* Link to repo experts if not listed
+* Link/State which stretch/guild would be best to chat with to answer questions not listed here
