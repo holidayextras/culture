@@ -1,6 +1,6 @@
 # How to setup a project with deployment to S3
 
-1. Create S3 bucket for production / staging (your-bucket-name-production & your-bucket-name-staging). (If using cloudfront, see [optional settings](#optional-settings))
+This document assumes you have already setup the S3 bucket.
 
 ## Using [CircleCi](https://circleci.com/)
 
