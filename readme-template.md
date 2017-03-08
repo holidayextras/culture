@@ -51,6 +51,7 @@ Include any other relevant documentation in this section.
 ## Testing
 
 * What CI do the test run on?
+  * Link to CI website/status page
 * What testing framework is used?
 * How are the tests structured in this repo? Is there a strict writing style to follow?
 
@@ -78,7 +79,7 @@ Include any other relevant documentation in this section.
 
 ## Deploying
 
-* How do deploys work for new pull requests?]
+* How do deploys work for new pull requests?
 * Steps on how to get a feature branch merged and deployed into production environment
 
 ## Contributing Rules
