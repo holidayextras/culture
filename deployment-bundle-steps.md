@@ -11,7 +11,7 @@ This document assumes you have already setup the S3 bucket.
     - GRAPHITE_API_KEY
     - GRAPHITE_ENDPOINT_PREFIX
     - CLOUDFRONT_DISTRIBUTION_ID (if using cloudfront for your production bundle)
-  - AWS CodeDeploy
+  - AWS Permissions
     - Access Key Id
     - Secret Access Key
 
