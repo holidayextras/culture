@@ -5,7 +5,7 @@
 
 <!--Short sentence on what the repo does-->
 
-##Contents
+## Contents
 * [Further Documentation](#further-documentation)
 * [System Overview](#system-overview)
 * [Installation](#installation)
