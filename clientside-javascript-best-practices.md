@@ -7,9 +7,9 @@
  - Make everyone aware of clientside patterns.
  - Provide a point of reference for what good code looks like clientside.
  - Get people writing code in a similar way
- 
-As with any of the doucments in this repository, this is completely up for discussion and open to new pull requests. If you'd like to see something changed just put in a pull request with your point of view and we can discuss the issue
- 
+
+As with any of the documents in this repository, this is completely up for discussion and open to new pull requests. If you'd like to see something changed just put in a pull request with your point of view and we can discuss the issue
+
 ## (Backbone) Favour getters over proxy methods:
 When working with Backbone.js, unless we need to modify an attribute, we should use the built-in getters to get the attribute rather than writing an unecessary accessor method.
 
@@ -30,7 +30,7 @@ model.name(); // "Hilton"
 **Good:**
 
 ```javascript
-// Inside of the model (nothing...) 
+// Inside of the model (nothing...)
 
 // Outside of the model
 model.get('name'); // "Hilton"
@@ -41,7 +41,7 @@ Using the built in getters means:
  - No extra code in the model.
  - Less cognitive load because we don't need to check what the method is doing.
  - We can tell immediately the attribute hasn't been transformed, because we know `get` just returns the raw attribute.
- 
+
 ## (Backbone) Don't call render from initialize:
 This one is quite simple, don't call `this.render()` from your Backbone view's `initialize` method. It might seem nice to not have to manually call `render`, but it ties the view's rendering to its instantiation, and means that we can't add additional initialize actions in subclasses without it calling `render` half way through its initialization.
 
@@ -69,8 +69,8 @@ render: function() {
   // Some rendering code
 }
 ```
- 
- 
+
+
 ## Do transform data for presentation using presenters:
 If you need to transform a given piece or lots of pieces of data for presentation purposes (i.e. to be used in a template), do this in a presenter.
 
@@ -99,7 +99,7 @@ As an example, we've got a small dependency injection pattern for views going in
  - Enforce our dependencies (throw an exception if they're not met).
  - Keep track of our instances.
 
-**Bad:** 
+**Bad:**
 
 ```javascript
 // In parent view
@@ -163,7 +163,7 @@ this.upgrade = new Upgrade({
 this.upgrade.fetch().then(this._renderUpgradeView);
 ```
 
-In the bad example we're leaving the responsibility of fetching the upgrade itself to the view that needs the upgrade. This means setup logic gets stuck in views, and we're likely to have several different views that will need to fetch upgrades. 
+In the bad example we're leaving the responsibility of fetching the upgrade itself to the view that needs the upgrade. This means setup logic gets stuck in views, and we're likely to have several different views that will need to fetch upgrades.
 
 In the good example, by keeping all of this setup in the controllers we can pass our view a fully instantiated and fetched upgrade. This means we can keep the views responsible for orchestrating rendering and handling DOM interactions only, and allows us to more easily share upgrade-setup logic between different points in the app without needing to resort to complex mixins.
 
@@ -175,7 +175,7 @@ There's no hard rule about this, but we should consider carefully [S.O.L.I.D](ht
 In these instances, composing behaviour might offer a cleaner and more sensible solution than simply inheriting from something that does *most* of what we want.
 
 ## Do throw Errors
-In clientside JS, if things go wrong they'll go wrong for one user at a time. Because of this, we like to throw exceptions early when something happens that we don't expect. Our Bugsnag account will pick this up and give us a detailed overview of how often the error is occurring and a stack trace at the point it occurred. 
+In clientside JS, if things go wrong they'll go wrong for one user at a time. Because of this, we like to throw exceptions early when something happens that we don't expect. Our Bugsnag account will pick this up and give us a detailed overview of how often the error is occurring and a stack trace at the point it occurred.
 
 **Bad:**
 
