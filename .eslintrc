@@ -14,7 +14,8 @@
   },
   "plugins": [
     "mocha",
-    "react"
+    "react",
+    "json"
   ],
   "parserOptions": {
     "ecmaVersion": 6,
