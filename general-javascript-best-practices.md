@@ -137,7 +137,7 @@ Please only require the methods you need rather than the whole library in order 
 
 **Good:**
 ```javascript
-const _ = {
+var _ = {
   includes: require('lodash/collection/includes')
 };
 ```
