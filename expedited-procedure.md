@@ -74,12 +74,13 @@ There should be two key email communications sent during an expedite.
 	* What next?
 
 Email recipients should include those involved and the below:
-shortbreaksweb@holidayextras.com
-system.maintenance@holidayextras.com 
-expedite@holidayextras.com 
-shift.manager@holidayextras.com 
-systems@holidayextras.de 
-webit@holidayextras.com 
+
+	shortbreaksweb@holidayextras.com
+	system.maintenance@holidayextras.com 
+	expedite@holidayextras.com 
+	shift.manager@holidayextras.com 
+	systems@holidayextras.de 
+	webit@holidayextras.com 
 
 ## Fix
 
