@@ -71,16 +71,9 @@ There should be two key email communications sent during an expedite.
 	* What happened technically? 
 	* What was the customer impact? 
 	* What was the resolution?
-	* What next?
+	* What's next?
 
-Email recipients should include those involved and the below:
-
-	shortbreaksweb@holidayextras.com
-	system.maintenance@holidayextras.com 
-	expedite@holidayextras.com 
-	shift.manager@holidayextras.com 
-	systems@holidayextras.de 
-	webit@holidayextras.com 
+Email recipients should include those involved and [this list](https://docs.google.com/a/holidayextras.com/spreadsheets/d/1I0dkaNqEv7_eQ-eRYLZ5cKY51HLz6x2wWCxYokmgps8/edit?usp=sharing)
 
 ## Fix
 
