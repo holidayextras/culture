@@ -39,7 +39,7 @@ This is a collection of documents that outline Holiday Extras' culture and devel
  * [Deployment Guidelines](deployment-guidelines.md)
  * [Publishing to npm](publishing-to-npm.md)
  * [Definition of Ready and Done](definition-of-ready-and-done.md)
- * [Contributing to projects](CONTRIBUTIUNG.md)
+ * [Contributing to projects](CONTRIBUTING.md)
  * [Pair programming] (pairing.md)
  * [Translations](translations.md)
  * [Mob Testing] (mob-testing.md)
