@@ -11,7 +11,7 @@ Will these changes be visible on the site?
 
 *Testing notes*
 
-These notes should outline how we can test this work and any information you think would help us. If you have any Postman links they could be included in here.
+These notes should outline how we can test this work and any information you think would help us. *If you have any Postman links and the details about expected results as response, they could be included in here.*
 
 *PR attached*
 
