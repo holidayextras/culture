@@ -11,7 +11,11 @@ Will these changes be visible on the site?
 
 *Testing notes*
 
-These notes should outline how we can test this work and any information you think would help us.
+These notes should outline how we can test this work and any information you think would help us. If you have any Postman links they could be included in here.
+
+*PR attached*
+
+Paste the link to the pull request from github.
 
 _Screenshots go a long way- if you feel we can benefit from seeing before and after shots, please label and attach them_
 
