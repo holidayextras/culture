@@ -13,6 +13,9 @@
 * [Hiding content in an accessible way](#hidden)
 * [Announcing changes](#live)
 
+## Need help with accessibility?
+Have an accessibility question? Want us to check your work for accessibility issues? Speak to any of the Accessibility stretch holders who can be found in the [#stretch-accessibility](https://holidayextras.slack.com/messages/stretch-accessibility) channel on Slack.
+
 <a name="testing"></a>
 ## Testing
 
