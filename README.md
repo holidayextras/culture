@@ -22,7 +22,7 @@ This is a collection of documents that outline Holiday Extras' culture and devel
  * [HTML Best Practices](html-best-practices.md)
  * [Accessibility Best Practices](accessibility-best-practices.md)
  * [Application Tracking](application-tracking.md)
- * [Nightwatchjs Best Practices] (nightwatchjs-best-practices.md)
+ * [Nightwatchjs Best Practices](nightwatchjs-best-practices.md)
  * [Testing Standard](testing-standard.md)
  * [Testing Overview](testing-overview.md)
  * [SEO Best Practices and Principles](seo/README.md)
@@ -42,7 +42,7 @@ This is a collection of documents that outline Holiday Extras' culture and devel
  * [Contributing to projects](CONTRIBUTING.md)
  * [Pair programming] (pairing.md)
  * [Translations](translations.md)
- * [Mob Testing] (mob-testing.md)
+ * [Mob Testing](mob-testing.md)
 
 ### Other
 
