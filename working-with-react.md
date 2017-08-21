@@ -55,7 +55,7 @@ This means DON'T try to refactor an entire view hierarchy in one go, pick a smal
 ### DO separate your markup from your logic within your components:
 It should be easy to see from your render method the composition of components and markup that will be rendered to the page.
 
-###DO decouple your components from their application:
+### DO decouple your components from their application:
 For example, instead of embedding our tracking module directly into your component, add optional event function props to your component and then create a wrapping component to do things on those events.
 
 **Bad:** 

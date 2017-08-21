@@ -13,6 +13,9 @@
 * [Hiding content in an accessible way](#hidden)
 * [Announcing changes](#live)
 
+## Need help with accessibility?
+Have an accessibility question? Want us to check your work for accessibility issues? Speak to any of the Accessibility stretch holders who can be found in the [#stretch-accessibility](https://holidayextras.slack.com/messages/stretch-accessibility) channel on Slack.
+
 <a name="testing"></a>
 ## Testing
 
@@ -30,6 +33,7 @@ WebAIM provides a list of [keyboard shortcuts for controlling VoiceOver](http://
 
 Tool | Description
 :----|:----
+[aXe for Chrome](https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd) | Adds the ability to analyse a web page for accessibility problems. Appears as a separate tab in Chrome developer tools.
 [tota11y](https://khan.github.io/tota11y/) | A JavaScript bookmarklet that annotates a web page to highlight accessibility features and problems.
 [Chrome Accessibility Developer Tools](https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en) | An extension from Google's accessibility team that adds an Accessibility audit and an Accessibility sidebar pane in the Elements tab in Chrome.
 [WAVE Chrome Extension](http://wave.webaim.org/extension/) | An evaluation tool developed by WebAIM that provides visual feedback about the accessibility of web content by injecting icons and indicators into the page.
