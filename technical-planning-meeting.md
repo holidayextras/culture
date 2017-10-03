@@ -33,18 +33,18 @@
 
 ## How does the process work?
 
-##### Part 1 - Before the TPM
+### Part 1 - Before the TPM
 
 * **Important update:** Prepare a solution to the problem. Try not to take an open or unconsidered problem case to the group, using it to refine and validate instead.
 * Make a copy of the [TPM template](https://docs.google.com/document/d/1cnVQXn5NuRiR7zMWDP4qXF9Qeqiwo2_glxFfEX5zjeM/edit) and fill out the top part. Announce the TPM in the Slack Channel #tpm, but make sure you consider and reach out to the people you think need to attend, as above.
 
-##### Part 2 - During the TPM
+### Part 2 - During the TPM
 
 * At the TPM, the host(s) explain the business problem they're trying to solve and open it up for discussion.
 * The host(s) explain their technical solution and opens it up for discussion.
 * Attendees challenge decisions and help to refine the solution, which is documented in the template copy shared on Slack.
 
-##### Part 3 - After the TPM
+### Part 3 - After the TPM
 
 * Following the TPM, the host(s) discuss the outcome with the Pod Lead and/ or key stakeholders to agree next steps and confirm business impact.
 * Once the TPM template has been completed in full it is shared again on the #tpm channel with a TL;DR of the decisions that were made.
