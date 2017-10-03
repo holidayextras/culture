@@ -9,10 +9,10 @@
 
 * When starting a new project.
 * When adding new features or functionality that are:
- * Technically complex.
- * Highly dependent on platforms/code.
- * Changing or introducing a new fundamental piece.
- * Likely to impact the work of other pods.
+  * Technically complex.
+  * Highly dependent on platforms/code.
+  * Changing or introducing a new fundamental piece.
+  * Likely to impact the work of other pods.
 
 ## What do you get from it?
 
