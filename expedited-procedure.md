@@ -12,18 +12,20 @@ Confirmed with a metric such as:
 
 ## Ownership
 
-Generally the issue will be reported to web department or the someone in web will find the issue.
+Generally the issue will be reported to the Web Team or the someone in Web will find the issue.
 
-* First web contact starts the expedite process in slack channel.
-* The web contact begins investigating the expedite with support from an engineer to diagnose the issue and someone with communication skills to own the expedite.
-* The owner follows issue through to resolution or hands over to another team member to fulfill this role.
-* Owner to use online channels (slack, hangouts and email) to keep all interested parties updated **regularly**. See the communication section below for more info.
+* First Web contact starts the expedite process in Slack channel.
+* The Web contact begins investigating the expedite with support from an engineer with the required expertise (if not themselves) to diagnose the issue. 
+* The Web contact must also find someone independent of the investigation / fix (if not themselves) who can communicate the progress and resolution of the expedite. This ensures that communication continues without impeding the progress of the expedite.
+* The owner follows the expedite through to resolution or hands over to another team member to fulfill this role.
+* The owner uses online channels (Slack, hangouts and email) to keep all interested parties updated **regularly**. See the "Communication" section below for more info.
+* The owner speaks face to face to key internal teams, such as the Shift Manager, to gather more information on cause or symptoms of the expedite and provide feedback and reassurance that the issue is in hand. This includes providing an estimated timescale for a resolution (where possible) to help with planning any mitigating measures. For example, where the issue causes a spike in call volume a decision can be taken to add more people to the phones.
 
-The owner should not also be working on resolving the issue. If this is the case, ownership should be transferred. This is to ensure that communications continue without distracting from resolution.
+
 
 ## Classification
 
-If the web contact is unsure whether the issue should be expedited seek advice from a Pod Lead/Project Manager before continuing.
+If the Web contact is unsure whether the issue should be expedited seek advice from a Pod Lead before continuing.
 
 Consider what metrics are being affected, eg:
 
@@ -36,7 +38,7 @@ Consider what metrics are being affected, eg:
 
 Cross functional with the following elements:
 
-* Owner with communication skills
+* Owner independent from investigation and resolution, to focus exclusively on communicating progress.
 * Engineers to assist fix.
 * Engineers to be available to review code promptly.
 * Tester
@@ -49,7 +51,7 @@ For out of hours use the [web contact details](https://docs.google.com/spreadshe
 
 Regular communication is essential. By sending regular updates the Web Team and HX stakeholders are able to manage and mitigate the impact of the issue. 
 
-* Post in the main [#expedite](https://holidayextras.slack.com/messages/expedite/) slack channel. This should trigger the bot and will ask you to confirm this is a new expedite.
+* Post in the main [#expedite](https://holidayextras.slack.com/messages/expedite/) Slack channel. This should trigger the bot and will ask you to confirm this is a new expedite.
 ![](/images/expedited-procedure/new_expedite.png)
 
 * You will then be asked if you are the owner of the expedite. When confirming, this will create a new expedite channel with the current date to move all conversation away from the main channel.
@@ -58,9 +60,9 @@ Regular communication is essential. By sending regular updates the Web Team and 
 * #expedite should be used for owner updates only, so encourage questions to be sent directly to the temporary dated channel. 
 * #expedite should have the customer impact clearly communicated and regularly updated to allow for wider business information.
 * Owner to include when you'll next update in each post in #expedite.
-* If the issue is going to effect deployments, post in the [#deployments](https://holidayextras.slack.com/messages/deployments/) Slack channel.
+* If the issue is going to affect deployments, post in the [#deployments](https://holidayextras.slack.com/messages/deployments/) Slack channel.
 
-Note that Germany and the Shift Manager may not be on Slack, so you should open a separate communcation channel with them where appropriate e.g. hangouts.
+Note that Germany and the Shift Manager may not be on Slack, so you should open a separate communcation channel with them where appropriate e.g. face to face (preference) or hangouts.
 
 ### Email
 
@@ -97,8 +99,8 @@ Do we need to break any of the above, if so why?
 
 ## Conclusion
 
-* Summary email to web (Include any relevant PR's/JIRA's/links).
+* Summary email to Web (Include any relevant PR's/JIRA's/links).
 * Communication to origin of report; call centre or other department.
-* The owner should schedule (or delegate to another to schedule) a [Wash-Up/Post-Mortem](https://github.com/holidayextras/culture/blob/master/Blameless-Postmortems.md), which will include next steps (including any Jiras to be raised to clear any Tech Debt, for example).
-* An email should be sent after the Wash-Up/Post-Mortem to include a full summary of the incident, solution and any learning outcomes.
+* The owner should schedule (or delegate to another to schedule) a [Wash-Up](https://github.com/holidayextras/culture/blob/master/Blameless-Postmortems.md), which will include next steps (including any Jiras to be raised to clear any Tech Debt, for example).
+* An email should be sent after the Wash-Up to include a full summary of the incident, solution and any learning outcomes.
 
