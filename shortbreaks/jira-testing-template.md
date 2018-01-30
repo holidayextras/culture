@@ -1,13 +1,14 @@
 *What does this work change?*
 
-What brands/Platform does this effect?
+*What brands/Platform does this effect?*
 Sometimes the title or description can be either too technical, and sometimes the actual fix doesn’t always appear clear in the original text. Therefore in this section, please can you simply describe what your code changes, and if necessary, why this change has been implemented.
 
 *What changes to the site (if any) should see with this change?*
 
-When we come to test, what are the changes we should be aware of? 
+*When we come to test, what are the changes we should be aware of?*
 *OR/ If there are changes made to the back end, what should we see?*
-Will these changes be visible on the site?
+
+*Will these changes be visible on the site?*
 
 *Testing notes*
 
