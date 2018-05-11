@@ -70,10 +70,12 @@ There should be two key email communications sent during an expedite.
 
 * An incident report email to let affected teams/individuals know of the issue.
 * An email to confirm the end of the incident, with brief notes on the solution and ongoing issues.
-	* What happened technically? 
-	* What was the customer impact? 
+* Please use the following headings:
+	* What happened technically?
+	* What was the customer impact?
 	* What was the resolution?
 	* What's next?
+* Don't embiggen the wording to distract from the facts, please use plain English.
 
 Email recipients should include those involved and [this list](https://docs.google.com/a/holidayextras.com/spreadsheets/d/1I0dkaNqEv7_eQ-eRYLZ5cKY51HLz6x2wWCxYokmgps8/edit?usp=sharing)
 
