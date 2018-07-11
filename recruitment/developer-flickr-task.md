@@ -11,6 +11,7 @@ We would expect this task to take a few hours, however there is no strict time l
 * Your app should support the major browsers (Chrome, Firefox, Safari, IE10+).
 * We would encourage that you use a framework to speed up development time.
 * If you do decide to use other Flickr API feeds to show us what you can do, be aware that some endpoints do require an API key. You can apply for your own [here](https://www.flickr.com/services/api/keys).
+* Where possible, only request images with a 'safe' tag to ensure the application remains suitable for all ages.
 
 Although the main outcomes of the task are listed above, if you feel like you want to go that extra mile and show us what you're capable of, here is a list of potential enhancements that we have come up with:
 
