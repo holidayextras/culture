@@ -24,11 +24,11 @@ Alternatively if you regularly contribute to open-source and believe that we wil
 When you feel you have completed the task, we would like you to share your solution with us by publishing your code to a Github/Bitbucket/Gitlab repository so that we are in a position to review your work.
 We would also like you to provide either
 
-- clear instructions on how to run your solution from a fresh install of your repository
+- clear instructions on how to run your solution from a fresh install of your repository.
 
 or
 
-- a deployed working version of your solution, we do not mind where it is hosted, as long as we can access your submission
+- a deployed working version of your solution, we do not mind where it is hosted, as long as we can access your submission via a url.
 
 To earn bonus points, you can include a Dockerfile with your repository.
 
