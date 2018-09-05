@@ -28,7 +28,7 @@ We would also like you to provide either
 
 or
 
-- a deployed working version of your solution, we do not mind where it is hosted, as long as we can access your submission via a url.
+- a deployed working version of your solution, we do not mind where it is hosted, as long as we can access your submission via a URL.
 
 To earn bonus points, you can include a Dockerfile with your repository.
 
