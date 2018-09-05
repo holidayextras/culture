@@ -27,4 +27,10 @@ Alternatively if you can think of any other features that you feel would further
 
 ## ⚠ Important implementation note!
 
-Your solution to this assessment _should_ be implemented using technologies with cross-platform support. We can't really think of any modern web technologies that aren't supported across all major operating systems (do let us know if you know about one). If you wish to implement your solution using .NET, please make sure you use **[.NET Core](https://www.microsoft.com/net)** which is supported on Linux, macOS and Windows.
+Your solution to this assessment _should_ be implemented using technologies with cross-platform support. We can't really think of any modern web technologies that aren't supported across all major operating systems (do let us know if you know about one).
+
+### .NET
+
+ _(Please ignore this section if your solution isn't implemented using .NET.)_
+
+If you wish to implement your solution using .NET, please make sure you use **[.NET Core](https://www.microsoft.com/net)** which is supported on Linux, macOS and Windows. Your solution is expected to **build** with the .NET Core SDK by simply running `dotnet build`. If more complex steps are required to build your solution, you are expected to provide _complete and detailed_ instructions for a successful build.
