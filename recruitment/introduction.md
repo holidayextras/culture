@@ -21,6 +21,15 @@ Alternatively if you regularly contribute to open-source and believe that we wil
 
 #### What to do after completing the task(s)?
 
-When you feel you have completed the task, we would like you to host it and provide a link. We do not mind where it is hosted, as long as we can access your submission. We would also like you to publish your code to a Github/Bitbucket/Gitlab repository, so that we are in a position to review your work. Alternatively, you can earn bonus points by providing a Dockerfile.
+When you feel you have completed the task, we would like you to share your solution with us by publishing your code to a Github/Bitbucket/Gitlab repository so that we are in a position to review your work.
+We would also like you to provide either
+
+- clear instructions on how to run your solution from a fresh install of your repository.
+
+or
+
+- a deployed working version of your solution, we do not mind where it is hosted, as long as we can access your submission via a URL.
+
+To earn bonus points, you can include a Dockerfile with your repository.
 
 If you have any questions please do not hesitate to come back to us. We look forward to seeing the results of your efforts.
