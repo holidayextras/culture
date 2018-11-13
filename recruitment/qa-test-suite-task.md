@@ -1,4 +1,4 @@
-## QA Engineer Task
+## Software Tester Automation Task
 
 ##### Your task is to create a suite of automated tests against an open API.
 
