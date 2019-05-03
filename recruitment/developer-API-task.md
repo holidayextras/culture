@@ -25,6 +25,8 @@ Although the main outcomes of the task are listed above, if you feel like you wa
 
 Alternatively if you can think of any other features that you feel would further enhance your API, then we'd love to see what you can come up with!
 
+Since we care more about having a holistic picture of your software engineering skills than your proficiency in particular technologies or programming languages, you are free to use the tools and technologies you feel most confident with and that will present your work in the best possible light (while taking into account the caveats in the sections below). Node.js is our technology of choice for back end development and implementing your assessment using Node.js will be a point in your favour. However, be sure to weigh that choice against the fact that, if you're a successful candidate past this stage, you will be expected to demonstrate in person your proficiency with the tools and technologies you chose to implement this assessment. As we mentioned initially, what matters most is how well rounded a software engineer you are, since any tools, technologies and programming languages can always be learned.
+
 ## ⚠ Important implementation note!
 
 Your solution to this assessment _should_ be implemented using technologies with cross-platform support. We can't really think of any modern web technologies that aren't supported across all major operating systems (do let us know if you know about one).
