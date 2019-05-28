@@ -23,7 +23,7 @@ This is a collection of documents that outline Holiday Extras' culture and devel
  * [Accessibility Best Practices](accessibility-best-practices.md)
  * [Application Tracking](application-tracking.md)
  * [Nightwatchjs Best Practices](nightwatchjs-best-practices.md)
- * [Testing Standard](testing-standard.md)
+ * [Testing Commandments](testing-commandments.md)
  * [Testing Overview](testing-overview.md)
  * [SEO Best Practices and Principles](seo/README.md)
  * [Frontend Performance](front-end-performance.md)
