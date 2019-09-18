@@ -69,7 +69,7 @@ Ideally page objects should contain the following standard functions:
 - When logic is shared use configuration passed in from a test to determine what needs to be interacted with, do not use `XifExists` style helpers.
 - Share page objects across products and devices where possible - do not unnecessarily duplicate page logic.
 - Use nightwatch tests to test user journeys and complex logic involving DOM interactions. Try not to use them for testing static markup that can be better test using other methods.
-- Return `this` in your methods to allow method chainging in your tests
+- Return `this` in your methods to allow method chaining in your tests
 
 ## Resources ##
 ----------
