@@ -41,6 +41,7 @@ This is a collection of documents that outline Holiday Extras' culture and devel
  * [Pair programming](pairing.md)
  * [Translations](translations.md)
  * [Mob Testing](mob-testing.md)
+ * [Wash Ups](wash-ups.md)
 
 ### Other
 
