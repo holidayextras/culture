@@ -28,7 +28,6 @@ This is a collection of documents that outline Holiday Extras' culture and devel
 
 ### Process
 
- * [Pest Control Process](pest-control-process.md)
  * [PR Template](pr-template.md)
  * [Readme Template](readme-template.md)
  * [Expedited Procedure](expedited-procedure.md)
@@ -45,8 +44,6 @@ This is a collection of documents that outline Holiday Extras' culture and devel
 
 ### Other
 
- * [Organising Code in Backbone Projects](organising-code-backbone-projects.md)
- * [CoffeeScript to JavaScript Guidelines](coffeescript-to-javascript-guidelines.md)
  * [Javascript Linting Rules](javascript-linting-rules.md)
  * [Technical Resources](technical-resources.md)
  * [Working with React](working-with-react.md)
