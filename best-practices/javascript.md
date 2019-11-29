@@ -11,9 +11,10 @@ Please also see the respective serverside and clientside best practice docs.
 
 ## ECMAScript version support
 
-We use *some* ECMAScript 6 at HX. This is fulfilled by Babel and Node v4 where applicable. We should use these newer es6 features where it makes sense and can improve readability. Please have a look at our technical resources [section on ES6](technical-resources.md#es6) to familiarise yourself with some of the new features available to us. Please see [below](#what-antipatterns-could-i-run-into-with-my-newfound-es6-power) for advice when using some ES6 features. If we come across any new anti-patterns that arise from using ES6 features we should add them to this document.
+We use _some_ ECMAScript 6 at HX. This is fulfilled by Babel and Node v4 where applicable. We should use these newer es6 features where it makes sense and can improve readability. Please have a look at our technical resources [section on ES6](technical-resources.md#es6) to familiarise yourself with some of the new features available to us. Please see [below](#what-antipatterns-could-i-run-into-with-my-newfound-es6-power) for advice when using some ES6 features. If we come across any new anti-patterns that arise from using ES6 features we should add them to this document.
 
 ## Function names should reflect behaviour (as much as possible):
+
 When writing functions, their names should give a good indication of what they do, for example:
 
 **Bad:**
@@ -24,7 +25,7 @@ var notifyThingies = function() {
   if (userLoggedIn) {
     trigger("booking_complete");
   }
-}
+};
 
 notifyThingies();
 ```
@@ -34,8 +35,8 @@ notifyThingies();
 ```javascript
 // Check the condition outside the function:
 var notifyBookingComplete = function() {
-   trigger("booking_complete");
-}
+  trigger("booking_complete");
+};
 
 if (userLoggedIn) {
   notifyBookingComplete();
@@ -50,7 +51,7 @@ var notifyBookingCompleteIfAuthenticated = function() {
   if (userLoggedIn) {
     trigger("booking_complete");
   }
-}
+};
 
 notifyBookingCompleteIfAuthenticated();
 ```
@@ -60,17 +61,16 @@ notifyBookingCompleteIfAuthenticated();
 ```javascript
 // With a more complex condition, use an external function:
 var userLoggedIn = function() {
-  return (user.get('email') && session.get('authenticated'));
-}
+  return user.get("email") && session.get("authenticated");
+};
 
 var notifyBookingComplete = function() {
-   trigger("booking_complete");
-}
+  trigger("booking_complete");
+};
 
 if (userLoggedIn()) {
   notifyBookingComplete();
 }
-
 ```
 
 You can see above that in the bad example, the `notifyBookingComplete()` function suggests it's going to notify some thingies, but that notification is actually condition. If the programmer weren't to read the code in that function they've have no idea, in essence, the function name doesn't accurately reflect the function.
@@ -78,7 +78,6 @@ You can see above that in the bad example, the `notifyBookingComplete()` functio
 We avoid this issue in the good examples. Depending on the complexity of the condition in question it might be worth updating the function name, moving the condition out of the function or putting the condition into it's own function. These aid with understanding, readability and testability of code.
 
 **Caveat:** This approach isn't always practical with more complex functions. For example, a function may contain complex conditional logic that can't be succinctly reflected in its name, and that we don't want to inline and repeat everywhere. In this scenario, we can use things like throwing `Errors` or `true`/`false` return values for sync code and rejecting promises & erroring callbacks for async code. The ultimate aim is just to ensure that the programmer isn't mislead about the behaviour of the function, and encourage them to consider handling non-happy path behaviour.
-
 
 ## Functional JavaScript
 
@@ -96,34 +95,35 @@ function subtract(x, y) {
 
 The following are all equivalent ways to implement the `subtractFrom5` and `subtract5` functions using `subtract`:
 
- * Wrapper functions:
+- Wrapper functions:
 
-   ```javascript
-   var subtractFrom5 = function (x) {
-     return subtract(5, x);
-   }
-   var subtract5 = function (x) {
-     return subtract(x, 5);
-   }
-   ```
+  ```javascript
+  var subtractFrom5 = function(x) {
+    return subtract(5, x);
+  };
+  var subtract5 = function(x) {
+    return subtract(x, 5);
+  };
+  ```
 
- * [Partial application](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind#Partial_Functions):
-   * **ES5 / ES2015**:
+- [Partial application](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind#Partial_Functions):
 
-     ```javascript
-     var subtractFrom5 = subtract.bind(null, 5);
-     // `subtract5` impossible using `bind` for partial application
-     ```
-   * **lodash [`partial`](https://lodash.com/docs#partial) / [`partialRight`](https://lodash.com/docs#partialRight)**:
+  - **ES5 / ES2015**:
 
-     ```javascript
-     var subtractFrom5 = _.partial(subtract, 5);
-     var subtract5 = _.partialRight(subtract, 5);
-     ```
+    ```javascript
+    var subtractFrom5 = subtract.bind(null, 5);
+    // `subtract5` impossible using `bind` for partial application
+    ```
+
+  - **lodash [`partial`](https://lodash.com/docs#partial) / [`partialRight`](https://lodash.com/docs#partialRight)**:
+
+    ```javascript
+    var subtractFrom5 = _.partial(subtract, 5);
+    var subtract5 = _.partialRight(subtract, 5);
+    ```
 
 The functional alternatives created using partial application are more concise
 and _can_ be more readable.
-
 
 ## Preferred libraries
 
@@ -136,15 +136,17 @@ Use instead of underscore, due to correct semantic versioning, better performanc
 Please only require the methods you need rather than the whole library in order to keep build sizes at a minimum.
 
 **Good:**
+
 ```javascript
 const _ = {
-  includes: require('lodash/collection/includes')
+  includes: require("lodash/collection/includes")
 };
 ```
 
 **Bad:**
+
 ```javascript
-const _ = require('lodash');
+const _ = require("lodash");
 ```
 
 ### grunt-shell
@@ -153,23 +155,27 @@ Use instead of grunt-exec, due to a configurable max output buffer size option. 
 
 ## What antipatterns could I run into with my newfound ES6 power?
 
-### Auto Destructuring
-https://leanpub.com/understandinges6/read#leanpub-auto-destructuring
+### [Auto Destructuring](https://leanpub.com/understandinges6/read#leanpub-auto-destructuring)
 
 General rule of thumb here is to use this feature as a consumer, not a producer. You shouldn't be required to destructure the result of a function to use it.
 
 The case for destructuring function return values (for example, returning a tuple), can be more of a BAD practice than a good one. Consider this function:
+
 ```
 function getData() { return [ "oliver", 27 ]; }
 ```
+
 As a consumer of this function I'll get an array of two values. Without looking at the code, or hunting for documentation, I've got no idea what those data items mean. After some digging I might be able to destructure it like so:
+
 ```
 var name, age;
 [name, age] = getData();
 ```
+
 and from then on, all future consumers of the original function will have to go through the same process of "what does this data mean?!"
 
 The far better practice, that we currently implement, is whereby we always return a named object:
+
 ```
 function getData() {
   return {
@@ -178,12 +184,10 @@ function getData() {
   };
 }
 ```
+
 any consumer of this module can very quickly tell what data is coming back, and without looking at the code, just looking at the return value, it's extremely obvious what data they've got.
 
-
-### Auto Rest parameters + Spread operator
-https://leanpub.com/understandinges6/read#leanpub-auto-rest-parameters
-https://leanpub.com/understandinges6/read#leanpub-auto-the-spread-operator
+### [Auto Rest parameters](https://leanpub.com/understandinges6/read#leanpub-auto-rest-parameters) + [Spread operator](https://leanpub.com/understandinges6/read#leanpub-auto-the-spread-operator)
 
 ```
 // Great use case
@@ -200,6 +204,7 @@ render: function(editing) {
 ```
 
 Don't use it in node because we are currently always explicit in naming function arguments and reducing the params to each function:
+
 ```
 var doStuff = function(name, list) { /* ... */ };
 
@@ -232,11 +237,11 @@ A perfect example of this is Lodash. Lodash is used in many of our projects and 
 
 When versions are matched:
 
-![Small footprint](/images/dependencies/small.png)
+![Small footprint](../images/dependencies/small.png)
 
 After upgrading the Lodash version within our client application but not it's dependencies:
 
-![Larger footprint](/images/dependencies/large.png)
+![Larger footprint](../images/dependencies/large.png)
 
 The total bundle size has increased by 6.3%
 
@@ -248,13 +253,11 @@ With this in mind, when upgrading/downgrading dependencies in any way then it wo
 
 In the majority of cases it is a better option to use an existing module that contains the functionality you require rather than implementing it yourself. When choosing modules it's worth evaluating them
 
-* Is the module well maintained? Are the owners receptive to issues and pull requests?
-* Is the module unnecessarily bloated?
-
+- Is the module well maintained? Are the owners receptive to issues and pull requests?
+- Is the module unnecessarily bloated?
 
 #### Versioning
 
 When specifying requirements first aim to use the `^` semver match. Only resort to using `~` or pinning the version if there is a known problem the module's versioning strategy.
-
 
 Also, when choosing a third party module to use, prefer ones with a version number of one or above, this will allow for more lenient semver matching for dependencies and hopefully more reliable version behavior from the module.
