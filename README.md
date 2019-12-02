@@ -6,23 +6,7 @@ This is a collection of documents that outline Holiday Extras' culture and devel
 
 ## Contents
 
-### Best practices
-
-- [Coding Principles](coding-principles.md)
-- [General Javascript Best Practices](general-javascript-best-practices.md)
-- [Clientside Javascript (Backbone) Best Practices](clientside-javascript-best-practices.md)
-- [Clientside Javascript (jQuery) Best Practices](clientside-jquery-best-practices.md)
-- [Server Side Javascript Best Practices](serverside-javascript-best-practices.md)
-- [CI Best Practices](ci-best-practices.md)
-- [Git Best Practices](git-best-practices.md)
-- [PR Best Practices](pr-best-practices.md)
-- [Markdown Best Practices](markdown-best-practices.md)
-- [HTML Best Practices](html-best-practices.md)
-- [Accessibility Best Practices](accessibility-best-practices.md)
-- [Nightwatchjs Best Practices](nightwatchjs-best-practices.md)
-- [Testing Commandments](testing-commandments.md)
-- [SEO Best Practices and Principles](seo/README.md)
-- [Frontend Performance](front-end-performance.md)
+### [Best practices](/best-practices)
 
 ### Process
 
