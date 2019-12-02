@@ -1,8 +1,8 @@
 # Testing at HX
 
-- [unit tests](/unit-tests.md)
-- [system tests](/system-tests.md)
-- [nightwatch.js tests](/nightwatchjs.md)
+- [unit tests](/best-practices/testing/unit-tests.md)
+- [system tests](/best-practices/testing/system-tests.md)
+- [nightwatch.js tests](/best-practices/testing/nightwatchjs.md)
 
 ## 8 Commandments of Automated Testing
 
