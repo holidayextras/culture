@@ -8,7 +8,7 @@ _A project may use additional rules to ones listed here, but these would not be 
 
 ## Current Rules
 
-These are stored in the [.eslintrc](https://raw.githubusercontent.com/holidayextras/culture/master/.eslintrc) in this repository.
+These are stored in the [.eslintrc](https://raw.githubusercontent.com/holidayextras/culture/master/templates/.eslintrc) in this repository.
 
 For an explanation of these rules please refer to the [ESLint documentation](http://eslint.org/docs/rules/).
 
@@ -16,7 +16,7 @@ For an explanation of these rules please refer to the [ESLint documentation](htt
 
 For the lazy here is a brief description of the rules decided by SA's:
 
-1. `"no-underscore-dangle": 0`  Allow variables beginning with `_`.
+1. `"no-underscore-dangle": 0` Allow variables beginning with `_`.
 1. `"curly": [2, "multi-line"]` Force curly braces except on single line statements.
 1. `"camelcase": [2, {"properties": "never"}]` Force camel case variables except on object properties.
 1. `"space-before-blocks": [2, "always"]` Force spaces before starting a block.
@@ -42,9 +42,9 @@ Rules which are not in the above list are taken from the eslint recommended rule
 
 In general the format of the rules specified are:
 
-* A rule name, these may be prefixed with `no-` to not allow something if enabled, otherwise turning on a rule sets a requirement on the code, such as "must use single quotes etc."
-* A rule ID, this enable (2) or disables (0) a rule and also sets a warning (1). If a rule is enabled and the code is not compliant eslint with exit with an error.
-* Rule options, these vary from rule to rule but generally allow fine tuning of a rule.
+- A rule name, these may be prefixed with `no-` to not allow something if enabled, otherwise turning on a rule sets a requirement on the code, such as "must use single quotes etc."
+- A rule ID, this enable (2) or disables (0) a rule and also sets a warning (1). If a rule is enabled and the code is not compliant eslint with exit with an error.
+- Rule options, these vary from rule to rule but generally allow fine tuning of a rule.
 
 ## Implementation
 
@@ -85,4 +85,3 @@ In order for a rule to be added to the above list it requires the following:
 
 1. A valid reason for adoption the rule.
 1. Agreement from the SA's.
-
