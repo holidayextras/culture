@@ -10,15 +10,11 @@ This is a collection of documents that outline Holiday Extras' culture and devel
 
 ### Process
 
-- [PR Template](pr-template.md)
-- [Readme Template](readme-template.md)
 - [Expedited Procedure](expedited-procedure.md)
 - [General Meetings](general-meetings.md)
 - [Technical Planning Meetings](technical-planning-meeting.md)
 - [Deployment Guidelines](deployment-guidelines.md)
 - [Publishing to npm](publishing-to-npm.md)
-- [Definition of Ready and Done](definition-of-ready-and-done.md)
-- [Contributing to projects](CONTRIBUTING.md)
 - [Pair programming](pairing.md)
 - [Translations](translations.md)
 - [Mob Testing](mob-testing.md)
@@ -39,8 +35,6 @@ This is a collection of documents that outline Holiday Extras' culture and devel
 - [Technical Resources](technical-resources.md)
 - [Working with React](working-with-react.md)
 - [React Troubleshooter](react-troubleshooter.md)
-- [PR Template](pr-template.md)
-- [PR Blog Post Template](pr-template-blogpost.md)
 - [Shortbreaks PR Template](shortbreaks/pr-template.md)
 - [Shortbreaks QA PR Template](shortbreaks/pr-qa-template.md)
 - [SEO Technical Principals](seo/technical-seo.md)
