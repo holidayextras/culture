@@ -24,6 +24,15 @@ This is a collection of documents that outline Holiday Extras' culture and devel
 - [Mob Testing](mob-testing.md)
 - [Wash Ups](wash-ups.md)
 
+### Templates
+
+- [.csslintrc](/templates/.csslintrc)
+- [.eslintrc](/templates/.eslintrc)
+- [CONTRIBUTING](/templates/CONTRIBUTING-template.md)
+- [README](templates/README-template.md)
+- [definition of read and done](templates/definition-of-ready-and-done.md)
+- [PR](templates/pr-template.md)
+
 ### Other
 
 - [Javascript Linting Rules](javascript-linting-rules.md)
