@@ -1,8 +1,8 @@
-# Holiday Extras Coding Culture
+# Holiday Extras Engineering Culture
 
 ## Overview
 
-This is a collection of documents that outline Holiday Extras' culture and developer expectations.
+Our intention is to define a set of values and expectations for engineers and to have a place where best practices may be outlined. By doing so we aim to create a sense of pride, accountability and creativity within our engineering team at Holiday Extras.
 
 ## Contents
 
