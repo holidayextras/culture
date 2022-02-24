@@ -18,9 +18,9 @@
 
 * High level documentation of the business problem, the technical solution and/ or next steps and the business impact (at a high level, it should be established how complex the task is in order that we can analyse the business impact)
 * Engineers should have a clear understanding of what is expected moving forward
-* What the next steps are, this could be a set of Jiras for Pod Leads to prioritise 
+* What the next steps are, this could be a set of Jiras for Pod Leads to prioritise
 * A definition of done/ acceptance criteria
-* Pod Leads or Stakeholders should be clear what [Tech Debt](https://github.com/holidayextras/culture/blob/master/tech-debt.md) there is with any MVP (Minimum Viable Product)
+* Pod Leads or Stakeholders should be clear what [Tech Debt](/best-practices/tech-debt.md) there is with any MVP (Minimum Viable Product)
 
 
 ## Probable Attendees

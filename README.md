@@ -13,7 +13,7 @@ This is a collection of documents that outline Holiday Extras' culture and devel
 - [Expedited Procedure](expedited-procedure.md)
 - [General Meetings](general-meetings.md)
 - [Technical Planning Meetings](technical-planning-meeting.md)
-- [Deployment Guidelines](deployment-guidelines.md)
+- [Deployment Guidelines](/best-practices/deployments.md)
 - [Publishing to npm](publishing-to-npm.md)
 - [Pair programming](pairing.md)
 - [Translations](translations.md)

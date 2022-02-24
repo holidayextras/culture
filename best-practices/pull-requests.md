@@ -1,7 +1,7 @@
 # PR Best Practices
 
 - Include screenshots and animated GIFs in your pull request whenever possible.
-- Include thoughtfully-worded, well-structured specs. See our [testing standard](testing-standard.md) document.
+- Include thoughtfully-worded, well-structured specs. See our [testing standard](./testing) document.
 
 ## Keep them small
 
@@ -16,7 +16,7 @@ Smaller PRs are easier to review and easier to keep up to date with master/edge 
 ## Landing page changes need SEO
 
 There are many docs in the [SEO culture folder](../seo/README.md) to help everyone to understand some of the principles and best practices used in SEO.
-The best way to make sure is to just approach the an SEO member and ask for their help.
+The best way to make sure is to just approach a SEO member and ask for their help.
 When pushing changes to live that may affect the landing pages of our core sites then these will require being checked by the the SEO department to make sure they adhere to the best practices we have developed over the many years.
 Any work pushed live that has not been checked could result in a whole domain being dropped from the Search engine index and a loss of millions of pounds so if in doubt, best to check.
 

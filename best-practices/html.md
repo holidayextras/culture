@@ -96,9 +96,10 @@ Quickly and easily ensure proper rendering of your content by declaring an expli
 
 <p>Per HTML5 spec, typically there is no need to specify a <code>type</code> when including CSS and JavaScript files as <code>text/css</code> and <code>text/javascript</code> are their respective defaults.</p>
 <h4>HTML5 spec links</h4>
-* [Using link](http://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-link-element)
-* [Using style](http://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-style-element)
-* [Using script](http://www.w3.org/TR/2011/WD-html5-20110525/scripting-1.html#the-script-element)
+
+- [Using link](http://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-link-element)
+- [Using style](http://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-style-element)
+- [Using script](http://www.w3.org/TR/2011/WD-html5-20110525/scripting-1.html#the-script-element)
 
 ```html
 <!-- External CSS -->
@@ -190,4 +191,4 @@ Whenever possible, avoid superfluous parent elements when writing HTML. Many tim
 
 Writing markup in a JavaScript file makes the content harder to find, harder to edit, and less performant. Avoid it whenever possible.
 
-Credit goes to [MDO](http://mdo.github.io/) as this has been ~~stolen from~~ built ontop of his code [guidlines](http://mdo.github.io/code-guide/).
+Credit goes to [MDO](https://mdo.fm) as this has been ~~stolen from~~ built ontop of his code [guidelines](http://mdo.github.io/code-guide/).
