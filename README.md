@@ -10,7 +10,7 @@ This is a collection of documents that outline Holiday Extras' culture and devel
 
 ### Process
 
-- [Expedited Procedure](expedited-procedure.md)
+- [Expedited Procedure](https://sites.google.com/holidayextras.com/hxexpediteprocedure/what-is-an-expedite)
 - [General Meetings](general-meetings.md)
 - [Technical Planning Meetings](technical-planning-meeting.md)
 - [Deployment Guidelines](/best-practices/deployments.md)
