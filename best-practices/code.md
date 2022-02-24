@@ -40,7 +40,7 @@ There are a few caveats to this:
  * Untested libraries shouldn't be used.
  * Libraries that are not actively maintained shouldn't be used.
  * Pulling in a massive library to use a single function of what it has to offer, especially on the front end.
- 
+
 It's tempting and fun to write your own stuff, but we've got more than enough work to get on with writing our code means the following:
 
  * More code for us to review.
@@ -48,7 +48,7 @@ It's tempting and fun to write your own stuff, but we've got more than enough wo
  * More code for us to write tests for.
  * More documentation to write and maintain.
  * It's almost definitely not as good as something with a community of PHDs and Geniuses behind it. *(If it is as good, then you should probably open-source it because people will care.)*
- 
+
 Remember, If you need to change the way an open source project you use works, you can always [submit a pull request](https://github.com/hallelujah/valid_email/pull/27).
 
 ## Where possible, automate:
@@ -75,7 +75,7 @@ There are many open source tools and white papers to help understand and test th
 
 [Exploit database - Security Papers and Articles](http://www.exploit-db.com/papers/)
 
-[The ultimate XSS protection cheatsheet for developers](http://www.exploit-db.com/wp-content/themes/exploit/docs/33931.pdf)
+[The ultimate XSS protection cheatsheet for developers](https://www.exploit-db.com/exploits/33931)
 
 ### Deployment:
 
@@ -91,4 +91,4 @@ The above would be performed in conjuction with IT and project owners would need
 
 All new projects must have code linting enabled and configured to fail CI if the standard are not met.
 
-The preferred way of implementing this is to see our [linting rules documentation](javascript-linting-rules.md#adding-to-your-project), as this simplifies the approach provides further consistency among project.
+The preferred way of implementing this is to see our [linting rules documentation](../javascript-linting-rules.md#adding-to-your-project), as this simplifies the approach provides further consistency among project.
