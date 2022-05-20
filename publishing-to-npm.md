@@ -1,6 +1,6 @@
 # Publishing to npm
 
-For any problems that are not specific to the business, we should look to use publicly available modules and release our own when no suitable existing options are available. Many of our projects are javascript, so these modules will probably live on [npm](http://npmjs.com/).
+For any problems that are not specific to the business, we should look to use publicly available modules and release our own when no suitable existing options are available. Many of our projects are JavaScript, so these modules will probably live on [npm](http://npmjs.com/).
 
 The guidance below covers the absolute basics, some modules may automate this process and if they do should provide details of how to release them in their own README/documentation.
 

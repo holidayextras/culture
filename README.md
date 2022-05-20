@@ -31,7 +31,7 @@ This is a collection of documents that outline Holiday Extras' culture and devel
 
 ### Other
 
-- [Javascript Linting Rules](javascript-linting-rules.md)
+- [JavaScript Linting Rules](javascript-linting-rules.md)
 - [Technical Resources](technical-resources.md)
 - [Working with React](working-with-react.md)
 - [React Troubleshooter](react-troubleshooter.md)

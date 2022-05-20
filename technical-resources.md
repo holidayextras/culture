@@ -8,10 +8,10 @@ The links below should provide a good introduction into an item, further in dept
 
 ## Languages
 
-### Javascript
+### JavaScript
 
- * [Human Javascript](http://read.humanjavascript.com/)
- * [Learning to Love Javascript](https://www.youtube.com/watch?v=seX7jYI96GE)
+ * [Human JavaScript](http://read.humanjavascript.com/)
+ * [Learning to Love JavaScript](https://www.youtube.com/watch?v=seX7jYI96GE)
 
 #### ES6
  * [es6features](http://git.io/es6features)
