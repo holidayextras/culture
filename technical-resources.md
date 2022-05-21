@@ -12,17 +12,11 @@ The links below should provide a good introduction into an item, further in dept
 
  * [Human JavaScript](http://read.humanjavascript.com/)
  * [Learning to Love JavaScript](https://www.youtube.com/watch?v=seX7jYI96GE)
-
-#### ES6
- * [es6features](http://git.io/es6features)
-
-### Ruby
+ * [ES6 Features](http://git.io/es6features)
 
 ## Libraries
 
 ### [jQuery](https://jquery.com/)
-
- * [Performance Tips Cheat Sheet](http://dumitruglavan.com/jquery-performance-tips-cheat-sheet/)
 
 ### [Lodash](https://lodash.com/)
 
@@ -34,20 +28,17 @@ The links below should provide a good introduction into an item, further in dept
 
 ## Frameworks
 
-### [Backbone](http://backbonejs.org/)
-
 ### [Express](http://expressjs.com/)
 
-* [Learning the basics of express js](http://hungrygeek.holidayextras.co.uk/expressjs/2015/04/20/learning-the-basics-of-expressjs/)
+* [Learning the basics of Express](http://hungrygeek.holidayextras.co.uk/expressjs/2015/04/20/learning-the-basics-of-expressjs/)
 
 ### [HapiJS](http://hapijs.com/)
 
 ### [React](http://facebook.github.io/react/)
 
  * [Luke's introduction presentation on React](https://docs.google.com/a/holidayextras.com/presentation/d/1uGMpaFImr7F75JSp-oZo5_4KIS42CXQ8XEgguCljm2o/edit?usp=sharing)
-
 * [React cheatsheet](http://reactcheatsheet.com/)
-* [React Intl](http://formatjs.io/react/) React Components for internationalization.
+* [React Intl](https://formatjs.io/docs/react-intl/) - React Components for internationalization.
 
 ## Patterns
 
@@ -68,7 +59,7 @@ The links below should provide a good introduction into an item, further in dept
 * [Factory (object-oriented programming)](https://en.wikipedia.org/wiki/Factory_(object-oriented_programming))
 * [Factory - Essential JS Design Patterns - by Addy Osmani](http://addyosmani.com/resources/essentialjsdesignpatterns/book/#factorypatternjavascript)
 
-### Functional concepts
+## Functional concepts
 
 ### Inheritance
 
@@ -82,10 +73,6 @@ The links below should provide a good introduction into an item, further in dept
 
 * [Model–view–controller](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
 * [MV* Patterns - Essential JS Design Patterns - by Addy Osmani](http://addyosmani.com/resources/essentialjsdesignpatterns/book/#detailmvcmvp)
-
-### Presenters
-
-* [pragmatic-backbone.com views](http://pragmatic-backbone.com/views)
 
 ### Promises
 
@@ -115,21 +102,18 @@ The links below should provide a good introduction into an item, further in dept
 * [UX/UI Design Principles](https://docs.google.com/presentation/d/1R3FyAiFkL9X1q4l2-i1I2bqY7P712VzuUttnyAxgKSs/edit?usp=sharing)
 * [Atomic Web Design](http://bradfrost.com/blog/post/atomic-web-design/)
 * [Pattern Lab](http://patternlab.io/)
-* [Google Material Design](https://www.google.com/design/spec/material-design/introduction.html)
 
 ### Tools
-* [UI Toolkit](http://ui-toolkit.com)
 * [Bootstrap](http://getbootstrap.com/)
 
 ### Guidelines
 * [Holiday Extras Brand Guidelines](http://brand.holidayextras.com/)
 * [Airparks Brand Guidelines](http://brand.airparks.co.uk/)
 * [BCP Brand Guidelines](http://brand.parkbcp.co.uk/)
-* [Esssntial Travel Brand Guidelines (prototype)](http://stuartgiles.com/et)
 
 ## Testing
 
-### [Jasmine](http://jasmine.github.io/2.0/introduction.html)
+### [Jasmine](https://jasmine.github.io/pages/getting_started.html)
 
 ### [Mocha](https://mochajs.org/)
 
