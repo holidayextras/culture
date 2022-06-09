@@ -20,7 +20,7 @@ The process below details what process we are aiming for across the group.
 1. Work is tested locally during development.
 1. Commits are created.
 1. The new branch is pushed up to GitHub.
-1. A new PR is created using the [PR template](pr-template.md).
+1. A new PR is created.
 1. Project's contributing document is double checked.
 1. Automated tests and quality checks run on project.
 

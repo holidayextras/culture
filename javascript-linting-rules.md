@@ -1,6 +1,6 @@
-# Javascript Linting Rules
+# JavaScript Linting Rules
 
-The following rules should be applied to all of our javascript projects.
+The following rules should be applied to all of our JavaScript projects.
 
 If a rule is absent from rule set below, please adhere to the conventions used in the current project.
 
@@ -14,7 +14,7 @@ For an explanation of these rules please refer to the [ESLint documentation](htt
 
 ### TLDR
 
-For the lazy here is a brief description of the rules decided by SA's:
+Here is a brief description of the rules:
 
 1. `"no-underscore-dangle": 0` Allow variables beginning with `_`.
 1. `"curly": [2, "multi-line"]` Force curly braces except on single line statements.
@@ -84,4 +84,4 @@ For more information on this tool please see the [make-up documentation](https:/
 In order for a rule to be added to the above list it requires the following:
 
 1. A valid reason for adoption the rule.
-1. Agreement from the SA's.
+1. Agreement from the tech team.

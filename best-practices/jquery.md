@@ -1,4 +1,4 @@
-# Clientside Javascript (jQuery) Best Practices
+# Clientside JavaScript (jQuery) Best Practices
 
 ## Checking The DOM Has Loaded
 

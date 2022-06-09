@@ -36,8 +36,6 @@ Returning to a project you haven’t worked on for a period of time can require 
 
 Within Holiday Extras we have metrics which highlight the level of documentation within each repository. Each project repository in GitHub is owned by a team and it is their responsibility to maintain the documentation therein. Following the introduction of metrics around this documentation we have seen an improvement in our documentation coverage, but we think we can do more!
 
-We document our teams and processes through the use of Google Sites. Our roadmaps are shared through a team owned [site](https://sites.google.com/holidayextras.com/journey/home) which allows for collaboration and general enquiry into the direction of our products and platforms. Our processes are documented in much the same way with Google Sites around learning and development through to agile processes.
-
 ## How do we get there?
 
 There are some really simple changes we can make to the way that we work to ensure that documentation remains up to date and isn’t a chore to write. When you have to do bulk writes and updates it takes time. We should instead be focussing on a little and often approach, the same approach we take when writing features.
@@ -55,7 +53,7 @@ For small changes and quick fixes this could just be a well defined JIRA and a d
 
 For larger projects such as integrations with suppliers the documentation might be a TPM doc, a README on the repo which describes the integration and the purpose and a write up in a shared drive of the business rules surrounding a project. This will help technical people understand how the integration is implemented and anyone non-technical understand how and why we work with the supplier.
 
-There are multiple levels at which documentation can be written and we can’t be overly prescriptive on defining exactly is required for each instance. It requires a level of pragmatism when deciding what to record and how. A few things to consider might be how likely the thing you’re documenting is to change, how long are we going to be investing in it and how complex or different to the norm is it. These are just a few examples of the questions you can ask yourself, always look to balance the investment spent with the benefit gained and remember that we can always do more retrospectively if required.
+There are multiple levels at which documentation can be written and we can’t be overly prescriptive on defining exactly what is required for each instance. It requires a level of pragmatism when deciding what to record and how. A few things to consider might be how likely the thing you’re documenting is to change, how long are we going to be investing in it and how complex or different to the norm is it. These are just a few examples of the questions you can ask yourself, always look to balance the investment spent with the benefit gained and remember that we can always do more retrospectively if required.
 
 **Review existing documentation when making changes.** 
 When you write code you’re changing how a system works, so check the documentation first to see what might need updating and do so within your PRs or as a part of your definition of done.
@@ -85,7 +83,5 @@ If we all chip in with documentation we can help set everyone up for success.
 
 ## Links for HXers
 
-*   [dockyard metrics](https://services-hub.dock-yard.io/)
-*   [team roadmaps](https://sites.google.com/holidayextras.com/journey/home)
-*   [learning and development hub](https://sites.google.com/holidayextras.com/tech-team-ld-hub)
-*   [agile processes hub ](https://sites.google.com/holidayextras.com/hx-agile-coaches/home)
+*   [Learning and development hub](https://sites.google.com/holidayextras.com/tech-team-ld-hub)
+*   [Agile processes hub ](https://sites.google.com/holidayextras.com/hx-agile-coaches/home)

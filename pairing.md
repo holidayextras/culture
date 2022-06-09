@@ -14,7 +14,7 @@ During onboarding you would typically pair a new starter with an experienced eng
 
 This is the prime example where Driver and Navigator is an incomplete analogy. If the new starter is following instruction and doesn't understand *why* they're performing actions, they're unlikely to be able to complete a similar task independently in the future, which should be a key aim of pairing for onboarding. In pairing for onboarding the Navigator should more resemble a Coach.
 
-Consider following the instruction of a Sat Nav. You've been told to turn left, turn right and keep on going and reached your destination. How likely would you be to be able to repeat the journey again? Would you be able to adjust the journey if you hit a problem? You would most likely need the Sat Nav again.
+Consider following the instruction of a Sat Nav. You've been told to turn left, turn right and keep on going straight. Eventually, you reach your destination. Would you be able to repeat the journey again? Would you be able to adjust the journey if you hit a problem? You would most likely need the Sat Nav again.
 
 Now imagine you had a local in the car who was providing context and maybe giving you a little test along the way. Instead of saying "turn left", they might say "you'll need to turn left after this pub, which has a great garden by the way" and you may ask "and if I overshoot the turning", and they may say "don't worry you can take the next left as they join up". You hopefully get the drift, and would agree you'd be much more likely to be able to repeat the journey.
 

@@ -142,7 +142,7 @@ In short you should write a test for:
 
 - Every path through a function
 - Every error condition through a function
-- **_When writing serverside tests_**, you should write one with params substitued for `null` to check that the function doesn't throw an Error. This is not a necessary consideration on clientside Javascript, where we'd rather fail fast than continue in a erroneous state.
+- **_When writing serverside tests_**, you should write one with params substitued for `null` to check that the function doesn't throw an Error. This is not a necessary consideration on clientside JavaScript, where we'd rather fail fast than continue in a erroneous state.
 
 This piece of code should have 3 tests, with an extra null test on the server:
 

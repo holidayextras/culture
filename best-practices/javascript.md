@@ -1,4 +1,4 @@
-# General Javascript Best Practices
+# General JavaScript Best Practices
 
 ## Purpose of this document
 

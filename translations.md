@@ -8,7 +8,7 @@ Where internationalisation is available you should endeavour to always provide t
 It is recommended that translations be based around entire sentences or phrases and do not include any markup. This is to prevent cases where word order, sentence structure and changing genders, ordinals etc. could create incorrect translations.
 
 ## Where can I get translations?
-To get translations for text you can raise a ticket on the [European Translations Kanban board](https://holidayextras.jira.com/secure/RapidBoard.jspa?rapidView=292&projectKey=DEM). When doing so please specify which languages you require the text to be translated into.
+To get translations for text, you can send your required translations to the designated translation email address. When doing so please specify which languages you require the text to be translated into.
 
 The languages supported currently are German (DE), Dutch (NL), French (FR), Italian (IT), Portuguese (PT) and Spanish (ES).
 

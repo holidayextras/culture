@@ -6,6 +6,4 @@ The wash-up meeting itself should be focused on what we have learned and what we
 
 For extra guidance on running a wash-up, please check the [Expedite website.](https://sites.google.com/holidayextras.com/hxexpediteprocedure/how-do-i-run-a-wash-up)
 
-After the meeting the facilitator should circulate the notes to the wider team as per the [Expedite website.](https://sites.google.com/holidayextras.com/hxexpediteprocedure/how-do-i-run-a-wash-up) with a summary explaining the key findings and actions. Any actions from the meeting should then be recorded on the [wash-up board on Jira.](https://holidayextras.jira.com/secure/RapidBoard.jspa?rapidView=453)
-
-For additional info or any other questions on holding a wash-up please feel free to contact any of the People Leads or Agile Coaches who are happy to help.
+After the meeting the facilitator should circulate the notes to the wider team as per the [Expedite website.](https://sites.google.com/holidayextras.com/hxexpediteprocedure/how-do-i-run-a-wash-up) with a summary explaining the key findings and actions. Any actions from the meeting should be shared and assigned to a volunteer who is happy to take the action.
