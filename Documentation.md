@@ -83,6 +83,5 @@ If we all chip in with documentation we can help set everyone up for success.
 
 ## Links for HXers
 
-*   [Dockyard metrics](https://services-hub.dock-yard.io/)
 *   [Learning and development hub](https://sites.google.com/holidayextras.com/tech-team-ld-hub)
 *   [Agile processes hub ](https://sites.google.com/holidayextras.com/hx-agile-coaches/home)
