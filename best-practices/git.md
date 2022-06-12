@@ -5,7 +5,7 @@
 ### Branch protection
 
 Repositories hosted on GitHub **should** have their **non-feature**
-(e.g. **master**, **staging**, **edge**, ...) branches [protected](https://help.github.com/articles/about-protected-branches/). This will prevent
+(e.g. **master**, **staging**) branches [protected](https://help.github.com/articles/about-protected-branches/). This will prevent
 the branches from accidentally:
 
 - Being force pushed

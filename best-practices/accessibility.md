@@ -14,7 +14,7 @@
 * [Announcing changes](#live)
 
 ## Need help with accessibility?
-Have an accessibility question? Want us to check your work for accessibility issues? Speak to any of the Accessibility stretch holders who can be found in the [#stretch-accessibility](https://holidayextras.slack.com/messages/stretch-accessibility) channel on Slack.
+Have an accessibility question? Want us to check your work for accessibility issues? Post your question to the UXUI Guild. They can be reached in the _#guild-uxui_ channel on Slack.
 
 <a name="testing"></a>
 ## Testing
@@ -35,9 +35,8 @@ Tool | Description
 :----|:----
 [aXe for Chrome](https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd) | Adds the ability to analyse a web page for accessibility problems. Appears as a separate tab in Chrome developer tools.
 [tota11y](https://khan.github.io/tota11y/) | A JavaScript bookmarklet that annotates a web page to highlight accessibility features and problems.
-[Chrome Accessibility Developer Tools](https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en) | An extension from Google's accessibility team that adds an Accessibility audit and an Accessibility sidebar pane in the Elements tab in Chrome.
 [WAVE Chrome Extension](http://wave.webaim.org/extension/) | An evaluation tool developed by WebAIM that provides visual feedback about the accessibility of web content by injecting icons and indicators into the page.
-[Colour Contrast Analyser](https://www.paciellogroup.com/resources/contrastanalyser/) | Available for Mac and Windows, provides a pass/fail assessment against WCAG 2.0 colour contrast success criteria as well as a simulation of certain visual conditions.
+[Colour Contrast Analyser](https://www.tpgi.com/color-contrast-checker/) | Available for Mac and Windows, provides a pass/fail assessment against WCAG 2.0 colour contrast success criteria as well as a simulation of certain visual conditions.
 
 ### Beware automated testing
 While tools and automation can detect rudimentary accessibility problems, many more issues can only be identified by a human tester. For example, tools can identify images without `alt` attributes but cannot judge whether the text alternatives that have been provided are appropriate.
@@ -126,7 +125,7 @@ Invalid fields can be identified programmatically using ARIA's `aria-invalid="tr
 ## Headings
 HTML heading elements (`h1` to `h6`) must be used to denote headings so that the structure of the page is clear.
 
-It not sufficient to simply make something *look* like a heading by, for example, increasing its font size or changing its colour; such changes are purely visual and do not convey any semantic meaning that can be interpreted by assistive technology. Equally, heading elements should not be used to apply styling to content that is not a heading.
+It is not sufficient to simply make something *look* like a heading by, for example, increasing its font size or changing its colour; such changes are purely visual and do not convey any semantic meaning that can be interpreted by assistive technology. Equally, heading elements should not be used to apply styling to content that is not a heading.
 
 Headings should follow a hierarchical structure and levels should not be skipped. For example, an `h2` should not be followed by an `h4` without an intervening `h3`.
 
@@ -178,7 +177,7 @@ Keyboard focus should be visible at all times so that a sighted keyboard user ca
 
 <a name="landmarks"></a>
 ### Landmark roles
-Landmark roles are a way of extending the native semantics of HTML elements in order to better describe the structure of a page. They make it easier fo assistive technology users to understand and navigate content.
+Landmark roles are a way of extending the native semantics of HTML elements in order to better describe the structure of a page. They make it easier for assistive technology users to understand and navigate content.
 
 For a demonstration of landmark roles in action, watch the video on [How ARIA landmark roles help screen reader users](https://www.youtube.com/watch?v=IhWMou12_Vk).
 
@@ -240,7 +239,7 @@ A modal dialog is a dialog that forces the user to interact with it, blocking th
 <a name="tables"></a>
 ## Tables
 
-* `table` elements must be use to present tabular data. Don't use `div`s or other elements to simulate a tabular layout.
+* `table` elements must be used to present tabular data. Don't use `div`s or other elements to simulate a tabular layout.
 * `table` elements must not be used purely to control page layout.
 * Row and column headings must be in `th` elements with `scope="row"` or `scope="col"` attributes.
 
@@ -297,7 +296,7 @@ The `aria-hidden="true"` and `role="presentation"` attributes can be used to exc
 ## Announcing changes elsewhere on the page
 A screen reader can only focus on one element at a time and is unaware of changes happening elsewhere on the page. This is problematic in modern web applications where performing an action on one part of the page may cause changes or notifications to appear somewhere else.
 
-[WAI-ARIA Live Regions](https://www.w3.org/TR/wai-aria/states_and_properties#attrs_liveregions) allow these changes to be exposed to screen readers so that they can be announced to the user.
+[WAI-ARIA Live Regions](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) allow these changes to be exposed to screen readers so that they can be announced to the user.
 
 Attribute | Effect
 :----|:----

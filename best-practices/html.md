@@ -9,7 +9,6 @@
 - [Encoding](#html-encoding)
 - [CSS and JavaScript includes](#html-style-script)
 - [Practicality over purity](#html-practicality-over-purity)
-- [Attribute order](#html-attribute-order)
 - [Boolean attributes](#html-boolean-attributes)
 - [Reducing markup](#html-reducing-markup)
 - [JavaScript generated markup](#html-javascript-markup)
@@ -119,31 +118,6 @@ Quickly and easily ensure proper rendering of your content by declaring an expli
 ## Practicality over purity
 
 Strive to maintain HTML standards and semantics, but not at the expense of practicality. Use the least amount of markup with the fewest intricacies whenever possible.
-
-<a name="html-attribute-order"></a>
-
-## Attribute order
-
-HTML attributes should come in this particular order for easier reading of code.
-
-- `class`
-- `id`, `name`
-- `data-*`
-- `src`, `for`, `type`, `href`
-- `title`, `alt`
-- `aria-*`, `role`
-
-Classes make for great reusable components, so they come first. Ids are more specific and should be used sparingly (e.g., for in-page bookmarks), so they come second.
-
-```html
-<a class="..." id="..." data-modal="toggle" href="#">
-  Example link
-</a>
-
-<input class="form-control" type="text" />
-
-<img src="..." alt="..." />
-```
 
 <a name="html-boolean-attributes"></a>
 

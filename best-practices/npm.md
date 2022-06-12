@@ -1,20 +1,20 @@
 # NPM Command Structure
 
 ## What is this?
-This document is an attempt to loosely standardise the names of npm commands we use within our JavaScript projects. This is being proposed to introduce a level of familiarity between projects so that:
+This document is an attempt to loosely standardise the names of NPM commands we use within our JavaScript projects. This is being proposed to introduce a level of familiarity between projects so that:
 
  - The learning time common project commands for new developers is shortened.
  - Context switching between projects is less of a headache.
  - Developers make fewer mistakes during project setup.
  - Boilerplate project code becomes more reusable, shortening time to create new projects and encourage similarity between projects at the same time.
 
-This guide has been developed by analysing which npm commands and command patterns are already in use at Holiday Extras, and doing our best to preserve that while establishing a common standard.
+This guide has been developed by analysing which NPM commands and command patterns are already in use at Holiday Extras, and doing our best to preserve that while establishing a common standard.
 
 ## Observations from our repositories
 The following observations have been made from analysing the scripts blocks of all of the `package.json` files within the Holiday Extras Github organisation's projects.
 
 ### Types of command
-Our npm commands tend to be structured into 5 main categories:
+Our NPM commands tend to be structured into 5 main categories:
 
  - Build related commands
  - Test related commands

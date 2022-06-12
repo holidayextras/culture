@@ -59,7 +59,7 @@ Within describe blocks we can put `it` blocks, it's within these `it` blocks tha
 
 Acceptable
 
-```
+```javascript
 it('returns x', function(err, result) {
   expect(err).to.not.be.ok();
   expect(result).to.equal('x');
@@ -68,7 +68,7 @@ it('returns x', function(err, result) {
 
 Not Recommended
 
-```
+```javascript
 it('returns x, calls y and err equals foo', function(err, result) {
   expect(err).to.equal('foo');
   expect(result).to.equal('x');
@@ -82,7 +82,7 @@ Within `describe` and `context` blocks we can call the `beforeEach` function wit
 
 Piecing the above together, for the following fake module:
 
-```
+```javascript
 module.exports = {
   prettyFullName: function(firstName, lastName) {
     if (!firstName) {

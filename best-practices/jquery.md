@@ -6,7 +6,7 @@ In most Holiday Extras projects we favour loading jQuery asynchronously so there
 
 ##### Bad
 
-```
+```javascript
 $(document).ready(function(){
 
   // DOM is ready
@@ -16,7 +16,7 @@ $(document).ready(function(){
 
 ##### Good
 
-```
+```javascript
 (function(init) {
 
   init(window.jQuery, window, document);
@@ -42,7 +42,7 @@ Prefix your variable with a `$` to denote it as a jquery object.
 
 ##### Bad
 
-```
+```javascript
 $('a').on('click', function(){
   $('div').append('a');
 });
@@ -51,7 +51,7 @@ $('a').on('click', function(){
 
 ##### Good
 
-```
+```javascript
 var $div = $('div');
 
 $('a').on('click', function(){
@@ -65,7 +65,7 @@ Most jQuery methods will return the current object allowing you to chain them, w
 
 ##### Bad
 
-```
+```javascript
 var $div = $('div');
 
 $div.addClass('a-class');
@@ -77,7 +77,7 @@ $div.show();
 
 ##### Good
 
-```
+```javascript
 $('div')
   .addClass('a-class')
   .height('22px')
@@ -90,7 +90,7 @@ When traversing the DOM however it is best to break the chain.
 
 ##### Bad
 
-```
+```javascript
 $('div')
   .children('a-class')
   .hide()
@@ -101,7 +101,7 @@ $('div')
 
 ##### Good
 
-```
+```javascript
 var $div = $('div');
 
 $div
@@ -121,13 +121,13 @@ Pick simple selectors as these will be easier to read and relate to native JavaS
 
 ##### Bad
 
-```
+```javascript
 $('.wrapper span.my-element').text();
 ```
 
 ##### Good
 
-```
+```javascript
 $('.my-element').text();
 ```
 
@@ -143,20 +143,20 @@ Using a class e.g. `$('.my-class')` is the least favoured option of the three. T
 
 When traversing the DOM, where possible it is best to start with an ID and work your way up/down using `.children()`, `.find()`, `.parent()` etc.
 
-This will improve performance when navigating through dependant, especially in older browsers that don't natively support getElementsByClassName.
+This will improve performance when navigating through dependant, especially in older browsers that don't natively support `getElementsByClassName`.
 
 It will also help to ensure the use of simple selectors and works best when the parent object is stored in a variable.
 
 ##### Bad
 
-```
+```javascript
 $('#wrapper > .child').css({ color: '#fff' });
 $('#wrapper .descendant').css({ color: '#f00' });
 ```
 
 ##### Good
 
-```
+```javascript
 var $wrapper = $('#wrapper');
 
 $wrapper
@@ -176,7 +176,7 @@ The older jQuery methods `bind`, `live` and `delegate` along with the individual
 
 Instead use the `on` and `off` methods.
 
-```
+```javascript
 $('#my-link').on('click',function(){
   // my special function
 });
@@ -190,7 +190,7 @@ When attaching multiple events it is better to pass in an object.
 
 ##### Bad
 
-```
+```javascript
 $('div').on('mouseenter',function(){
   // mouseenter action
 });
@@ -202,7 +202,7 @@ $('div').on('mouseleave',function(){
 
 ##### Good
 
-```
+```javascript
 $('div').on({
   'mouseenter': function(){
     // mouseenter action
@@ -219,7 +219,7 @@ When attaching a single event handler to many elements it is more efficient to a
 
 ##### Bad
 
-```
+```javascript
 $('#my-list li').on('click',function(){
   // my event
 });
@@ -227,7 +227,7 @@ $('#my-list li').on('click',function(){
 
 ##### Good
 
-```
+```javascript
 $('#my-list').on('click','li',function(){
   // my event
 });
@@ -239,7 +239,7 @@ In more complex applications where you may be attaching/detaching many events yo
 
 ##### Bad
 
-```
+```javascript
 $('a').on('click',function(){
   // first event handler
 });
@@ -254,7 +254,7 @@ $('a').off('click');
 
 ##### Good
 
-```
+```javascript
 $('a').on('click.first',function(){
   // first event handler
 });

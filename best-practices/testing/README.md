@@ -1,8 +1,9 @@
 # Testing at HX
 
-- [unit tests](/best-practices/testing/unit-tests.md)
-- [system tests](/best-practices/testing/system-tests.md)
-- [nightwatch.js tests](/best-practices/testing/nightwatchjs.md)
+## Related Pages
+- [Unit tests](/best-practices/testing/unit-tests.md)
+- [System tests](/best-practices/testing/system-tests.md)
+- [Nightwatch.js tests](/best-practices/testing/nightwatchjs.md)
 
 ## 8 Commandments of Automated Testing
 
@@ -25,7 +26,7 @@ If I make a single code change and multiple tests fail, it's no good.
 
 ### Broken code should break thy tests
 
-If I can delete code and it's corresponding test suite still passes, it's no good.
+If I can delete code that is needed and it's corresponding test suite still passes, it's no good.
 
 ### Thy broken tests should be helpful
 
