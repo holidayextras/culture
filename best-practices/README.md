@@ -12,7 +12,7 @@ These files aim to outline our best practices when it comes to engineering at Ho
 - [JavaScript](/best-practices/javascript.md)
 - [jQuery](/best-practices/jquery.md)
 - [Markdown](/best-practices/markdown.md)
-- [NPM](/best-practices/npm.md)
+- [npm](/best-practices/npm.md)
 - [Nightwatch.js](/best-practices/testing/nightwatchjs.md)
 - [Pull Requests (PRs)](/best-practices/pull-requests.md)
 - [Tech Debt](/best-practices/tech-debt.md)

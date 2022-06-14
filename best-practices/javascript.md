@@ -207,15 +207,15 @@ var list = [ 1, 4, 5, 7, 9 ];
 doStuff(name, list);
 ```
 
-## NPM Modules
+## npm Modules
 
-When creating an NPM module for others to use (private or open source) it is worth giving consideration to the following points.
+When creating an npm module for others to use (private or open source) it is worth giving consideration to the following points.
 
 ### Post install scripts
 
 These are run every time the module is installed by a consuming project which will increase CI and developer build time.
 
-If the module is being released to NPM consider using a `prepublish` script instead.
+If the module is being released to npm consider using a `prepublish` script instead.
 
 For internal modules a separate `build` task can be used then the module packed and uploaded as a GitHub asset to accompany releases.
 

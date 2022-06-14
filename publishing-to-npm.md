@@ -10,7 +10,7 @@ It's much easier to manage access through adding and removing owners than throug
 
 ### Creating a new module
 
-NPM's docs cover the basics of [creating](https://docs.npmjs.com/getting-started/creating-node-modules) and [publishing](https://docs.npmjs.com/getting-started/publishing-npm-packages) modules. Once your module is in a usable state, you should `npm publish`, then add the [@holidayextras](https://www.npmjs.com/~holidayextras) user as an owner (`npm owner add holidayextras module-name`) - we recommend this to ensure every module we release is under the ownership of at least two people in the organisation.
+npm's docs cover the basics of [creating](https://docs.npmjs.com/getting-started/creating-node-modules) and [publishing](https://docs.npmjs.com/getting-started/publishing-npm-packages) modules. Once your module is in a usable state, you should `npm publish`, then add the [@holidayextras](https://www.npmjs.com/~holidayextras) user as an owner (`npm owner add holidayextras module-name`) - we recommend this to ensure every module we release is under the ownership of at least two people in the organisation.
 
 ### Updating actively used modules
 

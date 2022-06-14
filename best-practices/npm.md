@@ -1,20 +1,20 @@
-# NPM Command Structure
+# npm Command Structure
 
 ## What is this?
-This document is an attempt to loosely standardise the names of NPM commands we use within our JavaScript projects. This is being proposed to introduce a level of familiarity between projects so that:
+This document is an attempt to loosely standardise the names of npm commands we use within our JavaScript projects. This is being proposed to introduce a level of familiarity between projects so that:
 
  - The learning time common project commands for new developers is shortened.
  - Context switching between projects is less of a headache.
  - Developers make fewer mistakes during project setup.
  - Boilerplate project code becomes more reusable, shortening time to create new projects and encourage similarity between projects at the same time.
 
-This guide has been developed by analysing which NPM commands and command patterns are already in use at Holiday Extras, and doing our best to preserve that while establishing a common standard.
+This guide has been developed by analysing which npm commands and command patterns are already in use at Holiday Extras, and doing our best to preserve that while establishing a common standard.
 
 ## Observations from our repositories
 The following observations have been made from analysing the scripts blocks of all of the `package.json` files within the Holiday Extras Github organisation's projects.
 
 ### Types of command
-Our NPM commands tend to be structured into 5 main categories:
+Our npm commands tend to be structured into 5 main categories:
 
  - Build related commands
  - Test related commands
@@ -28,7 +28,7 @@ There's also a long tail of miscellaneous commands.
 We seem to almost universally use `:` as a separator to namespace our commands. E.g. `build:js` and `build:css`.
 
 ### Commands to run at a certain time
-Excluding NPM supported hooks (`prestop`, `prestart`, etc), we have a not insignificant number of other commands with names that reflect _when_ tasks should be run. This is in contrast to the majority of our commands have names that reflect _what_ the command does.
+Excluding npm supported hooks (`prestop`, `prestart`, etc), we have a not insignificant number of other commands with names that reflect _when_ tasks should be run. This is in contrast to the majority of our commands have names that reflect _what_ the command does.
 
 ## Recommendations
 Based on the above, we've come up with the following recommendations for command names.
@@ -57,4 +57,4 @@ npm run test:browser
 ```
 
 ### Keep commands reflecting the _what_ as well as _when_ where possible
-Commands names should succinctly reflect what the command is doing, not just when it should be run. Adding a namespace can help here. For example, instead of `npm run postci`, `npm run postci:clear-cache` might be a better command name that gives more insight as to what's going on. The obvious exception to this is [NPM supported hooks](https://docs.npmjs.com/misc/scripts).
+Commands names should succinctly reflect what the command is doing, not just when it should be run. Adding a namespace can help here. For example, instead of `npm run postci`, `npm run postci:clear-cache` might be a better command name that gives more insight as to what's going on. The obvious exception to this is [npm supported hooks](https://docs.npmjs.com/misc/scripts).
