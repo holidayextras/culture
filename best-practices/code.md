@@ -39,9 +39,9 @@ There are a few caveats to this:
  * Check the licensing of the library you're using to see if it's legally appropriate for your project.
  * Untested libraries shouldn't be used.
  * Libraries that are not actively maintained shouldn't be used.
- * Pulling in a massive library to use a single function of what it has to offer, especially on the front end.
+ * Pulling in a massive library to use a single function of what it has to offer (especially on the front end), should be avoided if possible.
 
-It's tempting and fun to write your own stuff, but we've got more than enough work to get on with writing our code means the following:
+It's tempting and fun to write your own stuff, but we've got more than enough work to be getting on with. Writing our own code means the following:
 
  * More code for us to review.
  * More code for us to maintain.
@@ -49,7 +49,7 @@ It's tempting and fun to write your own stuff, but we've got more than enough wo
  * More documentation to write and maintain.
  * It's almost definitely not as good as something with a community of PHDs and Geniuses behind it. *(If it is as good, then you should probably open-source it because people will care.)*
 
-Remember, If you need to change the way an open source project you use works, you can always [submit a pull request](https://github.com/hallelujah/valid_email/pull/27).
+Remember, If you need to change the way an open source project you use works, you can always submit your own pull request.
 
 ## Where possible, automate:
 Automation allows us to do things quickly, perfectly and often for free. Things like running selenium tests against pull requests automatically and grouping complex sequences of commands behind a single task save us time and give us confidence that things will work correctly in future.
@@ -67,11 +67,11 @@ In this context "battle tested" refers to:
  * Have a fairly large community behind the project/idea.
  * Actively maintained.
 
-The document below details the most common security problems affecting web applications, it's worth being mindful of the points made here when writing code:
+The website below details the most common security problems affecting web applications, it's worth being mindful of the points made here when writing code:
 
-[OWASP Top Ten 2013](https://www.owasp.org/images/f/f8/OWASP_Top_10_-_2013.pdf)
+[OWASP Top Ten](https://owasp.org/www-project-top-ten/)
 
-There are many open source tools and white papers to help understand and test the issues mentioned in the above document. Google is your friend here and searching for terms such as "XSS whitepaper" or "XSS tools" will yield good results.
+There are many open source tools and white papers to help understand and test the issues mentioned on the OWASP website. Google is your friend here and searching for terms such as "XSS whitepaper" or "XSS tools" will yield good results.
 
 [Exploit database - Security Papers and Articles](http://www.exploit-db.com/papers/)
 
@@ -89,6 +89,6 @@ The above would be performed in conjuction with IT and project owners would need
 
 ## Linting:
 
-All new projects must have code linting enabled and configured to fail CI if the standard are not met.
+All new projects must have code linting enabled and configured to fail CI if the standards are not met.
 
-The preferred way of implementing this is to see our [linting rules documentation](../javascript-linting-rules.md#adding-to-your-project), as this simplifies the approach provides further consistency among project.
+The preferred way of implementing this is to see our [linting rules documentation](../javascript-linting-rules.md#adding-to-your-project), as this simplifies the approach and provides further consistency among project.

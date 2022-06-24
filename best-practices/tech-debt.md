@@ -1,10 +1,10 @@
 # Technical Debt
 
-> a concept in programming that reflects the extra development work that arises when code that is easy to implement in the short run is used instead of applying the best overall solution
+> A concept in programming that reflects the extra development work that arises when code that is easy to implement in the short run is used instead of applying the best overall solution
 
 Tech Debt is an inevitable part of programming, a valuable tool even. Do not shy away from it. Embrace it! Subdue it! Make it your servant. Whatever you do, *do not just ignore it* and hope it goes away.
 
-*Note:* This document is aspirational, it doesn't necessarily reflect the current culture of technical debt at Holiday Extras. It does however reflect where we would like to be, and is a work in progress. If you have ideas about how to better manage technical debt please tell people. Good places to do this are the #developers, #guild-frontend-tech and #guild-backend-tech slack channels or with a PR for this page.
+*Note:* This document is aspirational, it doesn't necessarily reflect the current culture of technical debt at Holiday Extras. It does however reflect where we would like to be, and is a work in progress. If you have ideas about how to better manage technical debt please tell people. Good places to do this are the #engineers, #guild-frontend-quality and #guild-backend-quality Slack channels or with a PR for this page.
 
 ## The Seven Commandments of Tech Debt
 
@@ -27,17 +27,17 @@ Tech Debt to some extent is part and parcel of every piece of code that you writ
 
 Once you have some picture of the above you should be constantly communicating your thoughts on tech debt to others:
 
-* your pod lead
-  * tech debt impacts cost and cost impact priorities
-  * any decision to accrue tech debt *has to* accept the long term cost
-* developers/software engineers
-  * you may have insights into tech debt that will impact their work (and they yours)
-  * you may be able to help them avoid tech debt in the first place (and they you)
-* software architects
-  * they have some of the best knowledge on existing tech debt
-  * they will be able to advise how to avoid tech debt in the first place
-  * they can help make your case to others that a certain piece of tech debt needs to be addressed
-  * you can help keep them up to date with the general picture of tech debt
+* Delivery/Product Managers
+  * Tech debt impacts cost and cost impact priorities
+  * Any decision to accrue tech debt *has to* accept the long term cost
+* Software Engineers
+  * You may have insights into tech debt that will impact their work (and they yours)
+  * You may be able to help them avoid tech debt in the first place (and they you)
+* Tech Leads and Principal Engineers
+  * They have some of the best knowledge on existing tech debt
+  * They will be able to advise how to avoid tech debt in the first place
+  * They can help make your case to others that a certain piece of tech debt needs to be addressed
+  * You can help keep them up to date with the general picture of tech debt
 
 #### Where to do this?
 
@@ -52,7 +52,6 @@ The existing communication channels are perfect for talking about tech debt. We 
   * what, if anything, the changes do to help address existing tech debt
   * what technical debt the changes introduce or compound, and any justification for them
   * what GitHub issues and/or Jiras have been raised to address any new debt in the future
-* *Scrum of Scrums* is a great place to bring issues you are having with tech debt to other pods.
 * *Guilds* can be used to see if people in other pods are having a similar experience with an existing piece of tech debt.
 
 ### 4. Track it
@@ -79,15 +78,15 @@ When debt is more architectural in nature it may be necessary to document the pr
 
 Technical debt that is isolated has much less scope to interfere with other code. This tends to emerge naturally if code is loosely coupled and modular in nature.
 
-Say you have a module and its internal implementation is mess, but its interface is well thought out and does not change very often. This is an example of isolated technical debt. The messy internals will rarely interfere with work on the wider application. If however the interface becomes the subject of many changes, or it has a lot of bugs, it might be a good time to refactor or even just throw it out and start again. [The Facade Pattern](https://en.wikipedia.org/wiki/Facade_pattern) is one way to do this.
+Say you have a module and its internal implementation is messy, but its interface is well thought out and does not change very often. This is an example of isolated technical debt. The messy internals will rarely interfere with work on the wider application. If however the interface becomes the subject of many changes, or it has a lot of bugs, it might be a good time to refactor or even just throw it out and start again. [The Facade Pattern](https://en.wikipedia.org/wiki/Facade_pattern) is one way to do this.
 
 ### 6. Be deliberate
 
-Whilst it is "okay" to take on technical debt, it has to be a deliberate decision. The short term gains of shipping it now have to be weighed against the long term interest that will need to be paid off over its lifetime, not to mention the debt itself.
+Whilst it is _okay_ to take on technical debt, it has to be a deliberate decision. The short term gains of shipping it now have to be weighed against the long term interest that will need to be paid off over its lifetime, not to mention the debt itself.
 
-These decisions have to consider the business demands and the technical implications. They must be made by pod leads and developers in concert. By their nature it is impossible for either to do it on their own.
+These decisions have to consider the business demands and the technical implications. They must be made by product managers and engineers together. By their nature it is impossible for either to do it on their own.
 
-It is the responsibility of developers to explain to pod leads about potential new or current technical debt and the implications it will have on current or future work. It is the responsibility of pod leads to explain to developers the priorities of the business and the urgency and importance of work. Working together they must balance these concerns.
+It is the responsibility of engineers to explain to product managers about potential new or current technical debt and the implications it will have on current or future work. It is the responsibility of product managers to explain to engineers the priorities of the business and the urgency and importance of work. Working together they must balance these concerns.
 
 When it comes to paying off existing debt, focus on debt that currently has or is likely to have in the near future a "high rate of interest". Technical debt that is isolated can be safely left for another day.
 
@@ -98,7 +97,7 @@ Technical debt should be paid off continuously in small payments. Exactly how mu
 * Little and often over big and rarely.
 * Big payoffs may be required from time to time.
 * Avoid big refactors that drag on for more than one sprint, aka "Refactor Purgatory".
-* If a big rewrite is required do everything you can to transition to a new design incrementally.
+* If a big rewrite is required, do everything you can to transition to a new design incrementally.
 * Even if a sprint solely addresses tech debt it should be split into iterative chunks if possible.
 
 #### Aspire to be a boy scout

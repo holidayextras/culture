@@ -1,4 +1,4 @@
-# NPM Command Structure
+# npm Command Structure
 
 ## What is this?
 This document is an attempt to loosely standardise the names of npm commands we use within our JavaScript projects. This is being proposed to introduce a level of familiarity between projects so that:
@@ -28,7 +28,7 @@ There's also a long tail of miscellaneous commands.
 We seem to almost universally use `:` as a separator to namespace our commands. E.g. `build:js` and `build:css`.
 
 ### Commands to run at a certain time
-Excluding NPM supported hooks (`prestop`, `prestart`, etc), we have a not insignificant number of other commands with names that reflect _when_ tasks should be run. This is in contrast to the majority of our commands have names that reflect _what_ the command does.
+Excluding npm supported hooks (`prestop`, `prestart`, etc), we have a not insignificant number of other commands with names that reflect _when_ tasks should be run. This is in contrast to the majority of our commands have names that reflect _what_ the command does.
 
 ## Recommendations
 Based on the above, we've come up with the following recommendations for command names.
@@ -57,4 +57,4 @@ npm run test:browser
 ```
 
 ### Keep commands reflecting the _what_ as well as _when_ where possible
-Commands names should succinctly reflect what the command is doing, not just when it should be run. Adding a namespace can help here. For example, instead of `npm run postci`, `npm run postci:clear-cache` might be a better command name that gives more insight as to what's going on. The obvious exception to this is [NPM supported hooks](https://docs.npmjs.com/misc/scripts).
+Commands names should succinctly reflect what the command is doing, not just when it should be run. Adding a namespace can help here. For example, instead of `npm run postci`, `npm run postci:clear-cache` might be a better command name that gives more insight as to what's going on. The obvious exception to this is [npm supported hooks](https://docs.npmjs.com/misc/scripts).

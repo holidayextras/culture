@@ -15,11 +15,4 @@ Smaller PRs are easier to review and easier to keep up to date with master/edge 
 
 ## Landing page changes need SEO
 
-There are many docs in the [SEO culture folder](../seo/README.md) to help everyone to understand some of the principles and best practices used in SEO.
-The best way to make sure is to just approach a SEO member and ask for their help.
-When pushing changes to live that may affect the landing pages of our core sites then these will require being checked by the the SEO department to make sure they adhere to the best practices we have developed over the many years.
-Any work pushed live that has not been checked could result in a whole domain being dropped from the Search engine index and a loss of millions of pounds so if in doubt, best to check.
-
-## When to push SEO changes
-
-As SEO has to move fast and innovate quickly on design and functional iterations we require the PR process on small simple changes to be speedy and readily available, also whenever changes are made that are done purely for Search engines or SEO benefits, these must be reviewed by a member within the SEO department.
+There are many docs in the [SEO culture folder](../seo/README.md) to help everyone to understand some of the principles and best practices used in SEO. When pushing changes to live that may affect the landing pages of our core sites, we need to make sure they adhere to the best SEO practices that we have developed over many years. If a piece of deployed work were to have a negative imact on the SEO of one of our pages/sites, it could result in a whole domain being dropped from the Search engine index and a loss of revenue.

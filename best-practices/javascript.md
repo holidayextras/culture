@@ -4,14 +4,8 @@
 
 - Make everyone aware of and discourage general antipatterns.
 - Make everyone aware of general patterns.
-- Provide a point of reference for what good code looks like at Hx.
+- Provide a point of reference for what good code looks like at Holiday Extras.
 - Get people writing code in a similar way.
-
-Please also see the respective serverside and clientside best practice docs.
-
-## ECMAScript version support
-
-We use _some_ ECMAScript 6 at HX. This is fulfilled by Babel and Node v4 where applicable. We should use these newer es6 features where it makes sense and can improve readability. Please have a look at our technical resources [section on ES6](../technical-resources.md#es6) to familiarise yourself with some of the new features available to us. Please see [below](#what-antipatterns-could-i-run-into-with-my-newfound-es6-power) for advice when using some ES6 features. If we come across any new anti-patterns that arise from using ES6 features we should add them to this document.
 
 ## Function names should reflect behaviour (as much as possible):
 
@@ -155,19 +149,19 @@ Use instead of grunt-exec, due to a configurable max output buffer size option. 
 
 ## What antipatterns could I run into with my newfound ES6 power?
 
-### [Auto Destructuring](https://leanpub.com/understandinges6/read#leanpub-auto-destructuring)
+### Auto Destructuring
 
 General rule of thumb here is to use this feature as a consumer, not a producer. You shouldn't be required to destructure the result of a function to use it.
 
 The case for destructuring function return values (for example, returning a tuple), can be more of a BAD practice than a good one. Consider this function:
 
-```
+```javascript
 function getData() { return [ "oliver", 27 ]; }
 ```
 
 As a consumer of this function I'll get an array of two values. Without looking at the code, or hunting for documentation, I've got no idea what those data items mean. After some digging I might be able to destructure it like so:
 
-```
+```javascript
 var name, age;
 [name, age] = getData();
 ```
@@ -176,7 +170,7 @@ and from then on, all future consumers of the original function will have to go 
 
 The far better practice, that we currently implement, is whereby we always return a named object:
 
-```
+```javascript
 function getData() {
   return {
     name: "oliver"
@@ -185,11 +179,11 @@ function getData() {
 }
 ```
 
-any consumer of this module can very quickly tell what data is coming back, and without looking at the code, just looking at the return value, it's extremely obvious what data they've got.
+Any consumer of this module can very quickly tell what data is coming back, and without looking at the code, just looking at the return value, it's extremely obvious what data they've got.
 
 ### [Auto Rest parameters](https://leanpub.com/understandinges6/read#leanpub-auto-rest-parameters) + [Spread operator](https://leanpub.com/understandinges6/read#leanpub-auto-the-spread-operator)
 
-```
+```javascript
 // Great use case
 render: function(editing) {
     return <SessionHeader {...this._headerProps()} />;
@@ -205,7 +199,7 @@ render: function(editing) {
 
 Don't use it in node because we are currently always explicit in naming function arguments and reducing the params to each function:
 
-```
+```javascript
 var doStuff = function(name, list) { /* ... */ };
 
 var name = "oli";
@@ -213,17 +207,17 @@ var list = [ 1, 4, 5, 7, 9 ];
 doStuff(name, list);
 ```
 
-## NPM Modules
+## npm Modules
 
-When creating an NPM module for others to use (private or open source) it is worth giving consideration to the following points.
+When creating an npm module for others to use (private or open source) it is worth giving consideration to the following points.
 
 ### Post install scripts
 
 These are run every time the module is installed by a consuming project which will increase CI and developer build time.
 
-If the module is being released to NPM consider using a `prepublish` script instead.
+If the module is being released to npm consider using a `prepublish` script instead.
 
-For internal modules a separate `build` task can be used then the module packed and uploaded as an GitHub asset to accompany releases. For more information please see the [Deployment Guidelines for private NPM releases](deployment-guidelines.md#private-npm-releases)
+For internal modules a separate `build` task can be used then the module packed and uploaded as a GitHub asset to accompany releases.
 
 ### Dependencies
 

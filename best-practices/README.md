@@ -14,6 +14,6 @@ These files aim to outline our best practices when it comes to engineering at Ho
 - [Markdown](/best-practices/markdown.md)
 - [npm](/best-practices/npm.md)
 - [Nightwatch.js](/best-practices/testing/nightwatchjs.md)
-- [Pull requests (PRs)](/best-practices/pull-requests.md)
-- [Tech debt](/best-practices/tech-debt.md)
+- [Pull Requests (PRs)](/best-practices/pull-requests.md)
+- [Tech Debt](/best-practices/tech-debt.md)
 - [Testing](/best-practices/testing)
