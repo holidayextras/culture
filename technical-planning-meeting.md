@@ -36,7 +36,7 @@
 
 #### Part 1 - Before the TPM
 
-* Make a copy of the [TPM template](https://docs.google.com/a/holidayextras.com/document/d/1zVbOz0dRAnzZ6UhjYO1Ce1YGI2dzvEoYvZfkTK7qjYU/edit?usp=sharing). Part 1 is completed and to increase visibility that the TPM is taking place, notification of the TPM is posted with a link to the document in the Slack Channel #tpm
+* Make a copy of the TPM template (Ask a tech lead for details). Part 1 is completed and to increase visibility that the TPM is taking place, notification of the TPM is posted with a link to the document in the Slack Channel #tpm
 * Place the TPM in the shared drive.
 
 #### Part 2 - During the TPM
