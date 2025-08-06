@@ -13,20 +13,6 @@ The links below should provide a good introduction into an item, further in dept
  * [Human Javascript](http://read.humanjavascript.com/)
  * [Learning to Love Javascript](https://www.youtube.com/watch?v=seX7jYI96GE)
 
-### Ruby
-
-## Libraries
-
-### [jQuery](https://jquery.com/)
-
-### [Lodash](https://lodash.com/)
-
-### [Moment](http://momentjs.com/)
-
-### [Underscore](http://underscorejs.org/)
-
-### [Winston](https://github.com/winstonjs/winston)
-
 ## Frameworks
 
 ### [Express](http://expressjs.com/)
@@ -36,8 +22,6 @@ The links below should provide a good introduction into an item, further in dept
 ### [HapiJS](http://hapijs.com/)
 
 ### [React](http://facebook.github.io/react/)
-
- * [Luke's introduction presentation on React](https://docs.google.com/a/holidayextras.com/presentation/d/1uGMpaFImr7F75JSp-oZo5_4KIS42CXQ8XEgguCljm2o/edit?usp=sharing)
 * [React cheatsheet](http://reactcheatsheet.com/)
 * [React Intl](https://formatjs.io/docs/react-intl/) - React Components for internationalization.
 
