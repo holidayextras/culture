@@ -13,33 +13,15 @@ The links below should provide a good introduction into an item, further in dept
  * [Human Javascript](http://read.humanjavascript.com/)
  * [Learning to Love Javascript](https://www.youtube.com/watch?v=seX7jYI96GE)
 
-### Ruby
-
-## Libraries
-
-### [jQuery](https://jquery.com/)
-
-### [Lodash](https://lodash.com/)
-
-### [Moment](http://momentjs.com/)
-
-### [Underscore](http://underscorejs.org/)
-
-### [Winston](https://github.com/winstonjs/winston)
-
 ## Frameworks
 
 ### [Express](http://expressjs.com/)
 
 * [Learning the basics of Express](http://hungrygeek.holidayextras.co.uk/expressjs/2015/04/20/learning-the-basics-of-expressjs/)
 
-### [HapiJS](http://hapijs.com/)
+### [React](https://react.dev/)
 
-### [React](http://facebook.github.io/react/)
-
- * [Luke's introduction presentation on React](https://docs.google.com/a/holidayextras.com/presentation/d/1uGMpaFImr7F75JSp-oZo5_4KIS42CXQ8XEgguCljm2o/edit?usp=sharing)
-* [React cheatsheet](http://reactcheatsheet.com/)
-* [React Intl](https://formatjs.io/docs/react-intl/) - React Components for internationalization.
+### [Emotion](https://emotion.sh/docs/introduction)
 
 ## Patterns
 
@@ -92,15 +74,12 @@ The links below should provide a good introduction into an item, further in dept
 
 ### [LESS](http://lesscss.org/)
 
-### [SASS](http://sass-lang.com/)
-
 ### Shell
 
 ### SQL
 
 ## Design
 ### Principles
-* [UX/UI Design Principles](https://docs.google.com/presentation/d/1R3FyAiFkL9X1q4l2-i1I2bqY7P712VzuUttnyAxgKSs/edit?usp=sharing)
 * [Atomic Web Design](http://bradfrost.com/blog/post/atomic-web-design/)
 * [Pattern Lab](http://patternlab.io/)
 
@@ -134,10 +113,6 @@ The links below should provide a good introduction into an item, further in dept
 ### [Circle CI](https://circleci.com/)
 
 * [Deploying to S3](http://benlopatin.com/deploying-static-sites-circle-ci/)
-
-### [Heroku](https://www.heroku.com/home)
-
-### Teamcity
 
 ### [Travis](http://blog.travis-ci.com/)
 
